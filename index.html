@@ -4,107 +4,170 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OMOGO PETER ONYEDIKA | Full-Stack Developer</title>
-  <meta name="description" content="Portfolio of OMOGO PETER, a Full-Stack Developer specializing in React, Node.js, and scalable web apps.">
+  <meta name="description" content="Portfolio of Omogo Peter Onyedika, a Full-Stack Developer specializing in React, Node.js, and scalable web apps.">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3b82f6',
+            secondary: '#10b981',
+            accent: '#8b5cf6',
+            dark: '#1e293b',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 text-gray-800 font-sans">
 
   <!-- Header -->
-  <header class="bg-white shadow py-6 px-4 md:px-12">
+  <header class="bg-gradient-to-r from-primary to-accent text-white shadow-lg py-6 px-4 md:px-12">
     <div class="max-w-7xl mx-auto">
       <h1 class="text-3xl font-bold">OMOGO PETER ONYEDIKA</h1>
-      <p class="text-lg text-gray-600">Full-Stack Developer | React | Node.js | Remote-First</p>
-      <nav class="mt-4 space-x-4">
-        <a href="#about" class="text-blue-600 hover:underline">About</a>
-        <a href="#projects" class="text-blue-600 hover:underline">Projects</a>
-        <a href="#skills" class="text-blue-600 hover:underline">Skills</a>
-        <a href="#contact" class="text-blue-600 hover:underline">Contact</a>
+      <p class="text-lg text-gray-100">Full-Stack Developer | React | Node.js | Remote-First</p>
+      <nav class="mt-4 space-x-6">
+        <a href="#about" class="text-white hover:text-yellow-200 transition duration-300">About</a>
+        <a href="#projects" class="text-white hover:text-yellow-200 transition duration-300">Projects</a>
+        <a href="#skills" class="text-white hover:text-yellow-200 transition duration-300">Skills</a>
+        <a href="#contact" class="text-white hover:text-yellow-200 transition duration-300">Contact</a>
       </nav>
     </div>
   </header>
 
   <!-- About -->
-  <section id="about" class="py-12 px-4 md:px-12 max-w-4xl mx-auto">
-    <h2 class="text-2xl font-semibold mb-4">About Me</h2>
-    <p class="mb-4">Hi, I’m a Full-Stack Developer with 4+ years of experience crafting robust, user-centric web applications for startups, SMEs, and remote teams across the globe.</p>
-    <p>I specialize in React.js, Node.js, MySQL, and RESTful APIs. From developing e-learning platforms to secure fintech apps, I build clean, scalable, and performant solutions.</p>
+  <section id="about" class="py-12 px-4 md:px-12 max-w-4xl mx-auto bg-gradient-to-b from-white to-blue-50 rounded-xl shadow-sm">
+    <h2 class="text-2xl font-semibold mb-4 text-primary border-b-2 border-secondary pb-2 inline-block">About Me</h2>
+    <p class="mb-4 text-gray-700">Hi, I'm a <span class="text-primary font-semibold">Full-Stack Developer</span> with 4+ years of experience crafting robust, user-centric web applications for startups, SMEs, and remote teams across the globe.</p>
+    <p class="text-gray-700">I specialize in <span class="text-accent font-semibold">React.js</span>, <span class="text-secondary font-semibold">Node.js</span>, <span class="text-primary font-semibold">MySQL</span>, and <span class="text-accent font-semibold">RESTful APIs</span>. From developing e-learning platforms to secure fintech apps, I build clean, scalable, and performant solutions.</p>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="bg-white py-12 px-4 md:px-12">
+  <section id="projects" class="bg-gradient-to-r from-gray-50 to-blue-50 py-12 px-4 md:px-12">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-2xl font-semibold mb-6">Projects</h2>
+      <h2 class="text-2xl font-semibold mb-6 text-primary border-b-2 border-secondary pb-2 inline-block">Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-gray-100 rounded-2xl shadow-md p-6">
-          <h3 class="text-xl font-bold mb-2">iLearnova (E-learning Platform)</h3>
-          <p>Led a dev team to build an e-learning platform serving 500+ users. Designed REST APIs and optimized frontend for 40% faster load times.<a href="https://ilearnovafrontend.vercel.app.com" target="_blank"><button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">View the Project</button></a>><img src="img/ilearnova.png"></p>
+        <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 border-t-4 border-indigo-600">
+          <h3 class="text-xl font-bold mb-2 text-indigo-600">ATOM Group (AI Company Landing Page)</h3>
+          <p>Designed and developed a modern, responsive landing page for an AI technology company. Created engaging UI with animated elements, service showcases, and product highlights.<a href="https://atom-landing-five.vercel.app/" target="_blank"><button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded mt-3 transition duration-300">View the Project</button></a>><img src="img/atom.png"></p>
         </div>
-        <div class="bg-gray-100 rounded-2xl shadow-md p-6">
-          <h3 class="text-xl font-bold mb-2">Selfany (UI Development)</h3>
-          <p>Built dynamic React UIs that improved user engagement by 25%. Collaborated closely with backend teams and conducted performance audits.<a href="https://selfany.com" target="_blank"><button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">View the Project</button></a>><img src="img/selfany.png"></p>
+        <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 border-t-4 border-teal-500">
+          <h3 class="text-xl font-bold mb-2 text-teal-600">Handyman NG (Service Marketplace)</h3>
+          <p>Developed the frontend for a service marketplace connecting skilled professionals with clients. Implemented responsive UI with service categories, provider profiles, and booking system.<a href="https://handymanng.com" target="_blank"><button class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded mt-3 transition duration-300">View the Project</button></a>><img src="img/Handymann.png"></p>
         </div>
-        <div class="bg-gray-100 rounded-2xl shadow-md p-6">
-          <h3 class="text-xl font-bold mb-2">Pension App (Fintech Platform)</h3>
-          <p>Developed secure pension management tools, implemented scalable architecture, and created real-time dashboards.<a href="https://Pensionapp.com" target="_blank"><button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">View the Project</button></a>><img src="img/pension.png"></p>
+        <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 border-t-4 border-primary">
+          <h3 class="text-xl font-bold mb-2 text-primary">iLearnova (E-learning Platform)</h3>
+          <p>Led a dev team to build an e-learning platform serving 500+ users. Designed REST APIs and optimized frontend for 40% faster load times.<a href="https://ilearnovafrontend.vercel.app.com" target="_blank"><button class="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 transition duration-300">View the Project</button></a>><img src="img/ilearnova.png"></p>
         </div>
-        <div class="bg-gray-100 rounded-2xl shadow-md p-6">
-          <h3 class="text-xl font-bold mb-2">Placebet (Betting Platform)</h3>
-          <p>Developed a betting website just like bet9ja that contains all games like sports, casino etc.<a href="https://m.placebet247.com" target="_blank"><button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">View the Project</button></a>><img src="img/placement.png"></p>
+        <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 border-t-4 border-secondary">
+          <h3 class="text-xl font-bold mb-2 text-secondary">Selfany (UI Development)</h3>
+          <p>Built dynamic React UIs that improved user engagement by 25%. Collaborated closely with backend teams and conducted performance audits.<a href="https://selfany.com" target="_blank"><button class="bg-secondary hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-3 transition duration-300">View the Project</button></a>><img src="img/selfany.png"></p>
         </div>
-        <div class="bg-gray-100 rounded-2xl shadow-md p-6">
-          <h3 class="text-xl font-bold mb-2">Sub-Saharan Africa Brain Health Initiative (SSABHI) (NGO Platform)</h3>
-          <p>Managing a NGO website as their wordpress developer, mailchimp integrations, SMTP integrations and building the websites backend for user flow.<a href="https://ssabhi.org" target="_blank"><button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">View the Project</button></a>><img src="img/ssabhi.png"></p>
+        <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 border-t-4 border-accent">
+          <h3 class="text-xl font-bold mb-2 text-accent">Pension App (Fintech Platform)</h3>
+          <p>Developed secure pension management tools, implemented scalable architecture, and created real-time dashboards.<a href="https://Pensionapp.com" target="_blank"><button class="bg-accent hover:bg-purple-700 text-white font-bold py-2 px-4 rounded mt-3 transition duration-300">View the Project</button></a>><img src="img/pension.png"></p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 border-t-4 border-yellow-500">
+          <h3 class="text-xl font-bold mb-2 text-yellow-600">Placebet (Betting Platform)</h3>
+          <p>Developed a betting website just like bet9ja that contains all games like sports, casino etc.<a href="https://m.placebet247.com" target="_blank"><button class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-3 transition duration-300">View the Project</button></a>><img src="img/placement.png"></p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 border-t-4 border-red-500">
+          <h3 class="text-xl font-bold mb-2 text-red-600">Sub-Saharan Africa Brain Health Initiative (SSABHI) (NGO Platform)</h3>
+          <p>Managing a NGO website as their wordpress developer, mailchimp integrations, SMTP integrations and building the websites backend for user flow.<a href="https://ssabhi.org" target="_blank"><button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-3 transition duration-300">View the Project</button></a>><img src="img/ssabhi.png"></p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="py-12 px-4 md:px-12 max-w-4xl mx-auto">
-    <h2 class="text-2xl font-semibold mb-4">Skills</h2>
-    <ul class="list-disc list-inside space-y-2">
-      <li>JavaScript / TypeScript</li>
-      <li>React.js / Next.js</li>
-      <li>Angular.js / Vue.js</li>
-      <li>Node.js / Express</li>
-      <li>MySQL / MongoDB</li>
-      <li>REST APIs / WebSockets</li>
-      <li>Git / CI/CD / Agile</li>
-      <li>Mailchimp API Integration</li>
-      <li>Blade / C++</li>
-      <li>Django / Python</li>
-      <li>Java / Nuxt.js</li>
-      <li>PHP / Node.js</li>
-      <li>Laravel / Symfony</li>
-      <li>MongoDB</li>
-      <li>Team Collaboration</li>
-      <li>UI/UX Implementation</li>
-      <li>Database & Storage</li>
-      <li>Research and Analysis</li>
-      <li>CLI / Linux / Postman</li>
-      <li>Software Development</li>
-      <li> API Development & Integration</li> 
-      <li>Critical Thinking</li>
-      <li>Email Automation</li>
-      <li>Team Management and Leadership</li>
-      <li>Project Management</li>
-      <li>Time Management</li>
-      <iframe src="Document/Peter Omogo Resume.pdf" width="100%" height="500px"></iframe>
-    </ul>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="bg-white py-12 px-4 md:px-12">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-2xl font-semibold mb-4">Contact</h2>
-      <p class="mb-2">Interested in working together or want to chat tech?</p>
-      <p>Email: <a href="mailto:omogopeter48@gmail.com" class="text-blue-600 hover:underline">omogopeter48@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/peteromogo" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/peteromogo</a></p>
-      <p>GitHub: <a href="https://github.com/onyedika-glitch" target="_blank" class="text-blue-600 hover:underline">github.com/onyedika-glitch</a></p>
+  <section id="skills" class="py-12 px-4 md:px-12 max-w-4xl mx-auto bg-gradient-to-b from-white to-purple-50 rounded-xl shadow-sm">
+    <h2 class="text-2xl font-semibold mb-4 text-accent border-b-2 border-primary pb-2 inline-block">Skills</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div>
+        <h3 class="font-semibold text-primary mb-2">Frontend</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>JavaScript / TypeScript</li>
+          <li>React.js / Next.js</li>
+          <li>Angular.js / Vue.js</li>
+          <li>UI/UX Implementation</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-secondary mb-2">Backend</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>Node.js / Express</li>
+          <li>Django / Python</li>
+          <li>PHP / Laravel / Symfony</li>
+          <li>Java</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-accent mb-2">Database & APIs</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>MySQL / MongoDB</li>
+          <li>REST APIs / WebSockets</li>
+          <li>API Development & Integration</li>
+          <li>Mailchimp API Integration</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-yellow-600 mb-2">DevOps & Tools</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>Git / CI/CD / Agile</li>
+          <li>CLI / Linux / Postman</li>
+          <li>Database & Storage</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-red-600 mb-2">Soft Skills</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>Team Management and Leadership</li>
+          <li>Project Management</li>
+          <li>Critical Thinking</li>
+          <li>Time Management</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-green-600 mb-2">Other Skills</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>Blade / C++</li>
+          <li>Research and Analysis</li>
+          <li>Team Collaboration</li>
+          <li>Email Automation</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-8 p-4 bg-white rounded-lg shadow-sm">
+      <iframe src="Document/Peter Omogo Resume.pdf" width="100%" height="500px" class="border-0"></iframe>
     </div>
   </section>
 
-  <footer class="text-center text-gray-500 py-6">
+  <!-- Contact -->
+  <section id="contact" class="bg-gradient-to-r from-dark to-gray-800 text-white py-12 px-4 md:px-12">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl font-semibold mb-4 border-b-2 border-primary pb-2 inline-block">Contact</h2>
+      <p class="mb-2">Interested in working together or want to chat tech?</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+        <div class="bg-gray-900 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+          <p class="font-semibold text-primary">Email</p>
+          <a href="mailto:omogopeter48@gmail.com" class="text-white hover:text-blue-300 transition duration-300">omogopeter48@gmail.com</a>
+        </div>
+        <div class="bg-gray-900 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+          <p class="font-semibold text-secondary">Twitter</p>
+          <a href=" https://x.com/PeterOmogo2/" target="_blank" class="text-white hover:text-green-300 transition duration-300"> x.com/PeterOmogo2/</a>
+        </div>
+
+        <div class="bg-gray-900 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+          <p class="font-semibold text-accent">GitHub</p>
+          <a href="https://github.com/onyedika-glitch" target="_blank" class="text-white hover:text-purple-300 transition duration-300">github.com/onyedika-glitch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center text-white py-6 bg-dark">
     <p>&copy; 2025 Omogo Peter Onyedika. All rights reserved.</p>
   </footer>
 
