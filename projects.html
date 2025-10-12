@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -320,3 +321,327 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title - Onyedika</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a192f;
+            color: #ccd6f6;
+        }
+        .glass-effect {
+            background: rgba(23, 42, 77, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .accent-color { color: #64ffda; }
+        .accent-bg { background-color: #64ffda; }
+        .accent-border { border-color: #64ffda; }
+        .section-heading {
+            margin-bottom: 1rem;
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: #e6f1ff;
+        }
+        /* Simple syntax highlighting colors */
+        pre[class*="language-"] {
+            background: #112240;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            overflow: auto;
+            font-size: 0.9em;
+        }
+        .token.comment, .token.prolog, .token.doctype, .token.cdata { color: #809393; }
+        .token.punctuation { color: #ccd6f6; }
+        .token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted { color: #ff8383; }
+        .token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted { color: #64ffda; }
+        .token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string { color: #d1dce5; }
+        .token.atrule, .token.attr-value, .token.keyword { color: #82aaff; }
+        .token.function, .token.class-name { color: #ffca86; }
+        .token.regex, .token.important, .token.variable { color: #ffca86; }
+    </style>
+</head>
+<body class="leading-relaxed antialiased">
+
+    <!-- Header -->
+    <header id="header" class="sticky top-0 left-0 right-0 z-50 transition-all duration-300 glass-effect shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold accent-color">O.</a>
+            <a href="project.html" class="border accent-border text-cyan-300 px-4 py-2 rounded-md hover:bg-cyan-300/10 transition-colors duration-300">Back to Projects</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 md:px-12 lg:px-24 py-16 lg:py-24">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- Project Header -->
+            <div class="mb-12">
+                <p class="accent-color mb-2">Featured Project</p>
+                <h1 class="text-5xl font-bold text-slate-100">Atom Landing</h1>
+                <div class="flex items-center space-x-6 mt-6">
+                    <a href="https://atom-landing-five.vercel.app/" class="inline-block border accent-border accent-color px-6 py-2 rounded-md font-medium hover:bg-cyan-300/10 transition-all duration-300">Live Site</a>
+                    <a href="https://github.com/onyedika-glitch/atom-landing.git" class="inline-block border accent-border accent-color px-6 py-2 rounded-md font-medium hover:bg-cyan-300/10 transition-all duration-300">View on GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project Overview -->
+            <section class="mb-10">
+                <p class="text-slate-300 text-lg mb-6">Designed and developed a modern, responsive landing page for an AI technology company. The goal was to create an engaging and professional online presence that effectively communicates the company's brand and services. The site features animated elements, detailed service showcases, and highlights of their key products to capture user interest.</p>
+ <img src="img/atom.png" alt="Project Screenshot" class="rounded-lg shadow-xl w-full">
+            </section>
+
+            <!-- Technical Details -->
+            <section class="mb-10">
+                <h2 class="section-heading">Technologies Used</h2>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">Vue</span>
+                    <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">Typescript</span>
+                    <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
+                    <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">Vercel</span>
+                </div>
+            </section>
+
+             <!-- Code Snippet Section -->
+             <section>
+                <h2 class="section-heading">Code Snippet</h2>
+                <p class="text-slate-400 mb-4">Here's a snippet of code I'm particularly proud of. It demonstrates a complex feature or a clean implementation of a specific algorithm.</p>
+                <pre class="language-javascript"><code>// Example Vue component
+const atomRef = ref(null)
+onMounted(() => {
+  gsap.to(atomRef.value, {
+    rotation: 360,
+    duration: 20,
+    repeat: -1,
+    ease: 'linear',
+    transformOrigin: '50% 50%',
+  })
+})
+
+const cards = [
+  {
+    icon: mlIcon,
+    text: 'Machine learning allows AI systems to improve over time — just like we learn from experience.',
+    position: 'md:top-0 md:left-[150px]'
+  },
+  {
+    icon: dataIcon,
+    text: 'AI analyzes huge amounts of data in seconds, helping businesses make faster, smarter decisions.',
+    position: 'md:top-[80px] md:left-[360px]'
+  },
+  {
+    icon: smartphoneIcon,
+    text: 'From your smartphone keyboard to Netflix recommendations — AI is behind many tools you use daily.',
+    position: 'md:top-[220px] md:left-0'
+  },
+  {
+    icon: customIcon,
+    text: 'AI isn’t one-size-fits-all — businesses can build tailored models that solve their specific challenges.',
+    position: 'md:top-[220px] md:left-[420px]'
+  },
+  {
+    icon: industryIcon,
+    text: 'AI is revolutionizing healthcare, finance, education, agriculture, and beyond.',
+    position: 'md:top-[350px] md:left-[210px]'
+  }
+]</code></pre>
+            </section>
+
+ <div class="mb-12"></div>
+             <h1 class="text-5xl font-bold text-slate-100">FUTO Student-Board</h1>
+                <div class="flex items-center space-x-6 mt-6">
+                    <a href="https://student-board.onrender.com/" class="inline-block border accent-border accent-color px-6 py-2 rounded-md font-medium hover:bg-cyan-300/10 transition-all duration-300">Live Site</a>
+                    <a href="https://github.com/onyedika-glitch/Student-board.git" class="inline-block border accent-border accent-color px-6 py-2 rounded-md font-medium hover:bg-cyan-300/10 transition-all duration-300">View on GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project Overview -->
+            <section class="mb-10">
+                <p class="text-slate-300 text-lg mb-6">A web application designed to serve as a digital bulletin board for students. It facilitates the sharing of information, announcements, and resources within an educational institution, creating a centralized place for student-related communications.</p>
+                <img src="img/student-board.png" alt="Project Screenshot" class="rounded-lg shadow-xl w-full">
+            </section>
+
+            <!-- Technical Details -->
+            <section class="mb-10">
+                <h2 class="section-heading">Technologies Used</h2>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">PHP</span>
+                    <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">Render</span>
+                    <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">Web App</span>
+                     <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">Dockerfile</span>
+                      <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">Blade</span>
+                       <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">PostgreSQL</span>
+                    </div>
+            </section>
+
+             <!-- Code Snippet Section -->
+             <section>
+                <h2 class="section-heading">Code Snippet</h2>
+                <p class="text-slate-400 mb-4">Here's a snippet of code I'm particularly proud of. It demonstrates a complex feature or a clean implementation of a specific algorithm.</p>
+                <pre class="language-javascript"><code>// Example PHP component
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use App\Models\User;
+use App\Models\Announcement;
+use App\Models\Event;
+use App\Models\Timetable;
+
+class AdminDashboardController extends Controller
+{
+    public function index()
+    {
+        return view('admin.dashboard', [
+            'studentCount'     => User::where('role', 'student')->count(),
+            'announcementCount'=> Announcement::count(),
+            'eventCount'       => Event::count(),
+            'timetableCount'   => Timetable::count(),
+        ]);
+    }
+}
+</code></pre>
+            </section>
+
+<div class="mb-12"></div>
+             <h1 class="text-5xl font-bold text-slate-100">Enugu State Student-Board</h1>
+                <div class="flex items-center space-x-6 mt-6">
+                    <a href="https://e-portal-seven.vercel.app/" class="inline-block border accent-border accent-color px-6 py-2 rounded-md font-medium hover:bg-cyan-300/10 transition-all duration-300">Live Site</a>
+                    <a href="https://github.com/onyedika-glitch/ePortal.git" class="inline-block border accent-border accent-color px-6 py-2 rounded-md font-medium hover:bg-cyan-300/10 transition-all duration-300">View on GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project Overview -->
+            <section class="mb-10">
+                <p class="text-slate-300 text-lg mb-6">This website serves as a central hub for communication and information for all schools within the Enugu State district. It provides students, parents, and staff with access to announcements, events, results, and other important school-related resources.</p>
+                <img src="img/ePortal.png" alt="Project Screenshot" class="rounded-lg shadow-xl w-full">
+            </section>
+
+            <!-- Technical Details -->
+            <section class="mb-10">
+                <h2 class="section-heading">Technologies Used</h2>
+                <div class="flex flex-wrap gap-3">
+<span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">HTML5</span>
+                    <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">Vercel</span>
+                    <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">CSS3</span>
+                     <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">javascript</span>
+                   </div>
+            </section>
+
+             <!-- Code Snippet Section -->
+             <section>
+                <h2 class="section-heading">Code Snippet</h2>
+                <p class="text-slate-400 mb-4">Here's a snippet of code I'm particularly proud of. It demonstrates a complex feature or a clean implementation of a specific algorithm.</p>
+                <pre class="language-javascript"><code>// Example Javascript component
+ document.addEventListener('DOMContentLoaded', function() {
+        // --- STATE MANAGEMENT ---
+        let loggedIn = false;
+        let adminLoggedIn = false;
+        
+        // --- ELEMENTS ---
+        const pages = document.querySelectorAll('.page');
+        const navLoggedIn = document.getElementById('nav-logged-in');
+        const navLoggedOut = document.getElementById('nav-logged-out');
+        const navAdmin = document.getElementById('nav-admin');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        
+        // Auth elements
+        const loginForm = document.getElementById('login-form');
+        const logoutButton = document.getElementById('logout-button');
+        const profileMenuButton = document.getElementById('profile-menu-button');
+        const profileDropdown = document.getElementById('profile-dropdown');
+        const adminLoginForm = document.getElementById('admin-login-form');
+        const adminLogoutButton = document.getElementById('admin-logout-button');
+        const adminProfileMenuButton = document.getElementById('admin-profile-menu-button');
+        const adminProfileDropdown = document.getElementById('admin-profile-dropdown');
+        
+</code></pre>
+            </section>
+
+
+            <div class="mb-12"></div>
+             <h1 class="text-5xl font-bold text-slate-100">Federal School-Board</h1>
+                <div class="flex items-center space-x-6 mt-6">
+                    <a href="https://s-portal.vercel.app/" class="inline-block border accent-border accent-color px-6 py-2 rounded-md font-medium hover:bg-cyan-300/10 transition-all duration-300">Live Site</a>
+                    <a href="https://github.com/onyedika-glitch/sPortal.git" class="inline-block border accent-border accent-color px-6 py-2 rounded-md font-medium hover:bg-cyan-300/10 transition-all duration-300">View on GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project Overview -->
+            <section class="mb-10">
+                <p class="text-slate-300 text-lg mb-6">The Federal School Board Portal is designed to be a one-stop hub for official announcements, academic updates, and crucial student information for federal schools. Its purpose is to streamline communication and provide easy access to essential data for the entire school community.</p>
+       <img src="img/sPortal.png" alt="Project Screenshot" class="rounded-lg shadow-xl w-full">
+            </section>
+
+            <!-- Technical Details -->
+            <section class="mb-10">
+                <h2 class="section-heading">Technologies Used</h2>
+                <div class="flex flex-wrap gap-3">
+                     <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">HTML5</span>
+                    <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">Vercel</span>
+                    <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">CSS3</span>
+                     <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">javascript</span>
+                  </div>
+            </section>
+
+             <!-- Code Snippet Section -->
+             <section>
+                <h2 class="section-heading">Code Snippet</h2>
+                <p class="text-slate-400 mb-4">Here's a snippet of code I'm particularly proud of. It demonstrates a complex feature or a clean implementation of a specific algorithm.</p>
+                <pre class="language-javascript"><code>// Example Javascript component
+// Check if admin is logged in
+function checkAdminAuth() {
+  const admin = localStorage.getItem("admin");
+  if (!admin) {
+    window.location.href = "login.html";
+  } else {
+    const nameEl = document.getElementById("admin-name");
+    if (nameEl) nameEl.textContent = `Welcome, ${admin}`;
+  }
+}
+
+// Logout admin
+function logout() {
+  if (confirm("Are you sure you want to logout?")) {
+    localStorage.removeItem("admin");
+    window.location.href = "login.html";
+  }
+}
+
+// Sidebar toggle for mobile
+function toggleSidebar() {
+  const sidebar = document.querySelector(".sidebar");
+  sidebar.classList.toggle("show");
+}
+
+// Auto-run check on pages that include this script
+document.addEventListener("DOMContentLoaded", () => {
+  const logoutBtn = document.querySelector(".logout-btn");
+  if (logoutBtn) logoutBtn.addEventListener("click", logout);
+
+  if (document.body.classList.contains("requires-auth")) {
+    checkAdminAuth();
+  }
+});</code></pre>
+            </section>
+
+
+
+        </div>
+    </main>
+    
+    <footer class="text-center py-6 text-slate-400 text-sm mt-12">
+        <p><a href="index.html" class="hover:text-cyan-300">Back to Portfolio</a></p>
+    </footer>
+
+</body>
+</html>
+>>>>>>> 75cd1842509b2f90e251d36ebab032cf320de46d
