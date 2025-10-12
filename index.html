@@ -1,175 +1,347 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OMOGO PETER ONYEDIKA | Full-Stack Developer</title>
-  <meta name="description" content="Portfolio of Omogo Peter Onyedika, a Full-Stack Developer specializing in React, Node.js, and scalable web apps.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#3b82f6',
-            secondary: '#10b981',
-            accent: '#8b5cf6',
-            dark: '#1e293b',
-          }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onyedika - Software Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a192f;
+            color: #ccd6f6;
         }
-      }
-    }
-  </script>
+        .glass-effect {
+            background: rgba(23, 42, 77, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .accent-color {
+            color: #64ffda;
+        }
+        .accent-bg {
+            background-color: #64ffda;
+        }
+        .accent-border {
+            border-color: #64ffda;
+        }
+        .section-heading::after {
+            content: '';
+            display: block;
+            width: 200px;
+            height: 1px;
+            background-color: #303c55;
+            margin-left: 1.5rem;
+            position: relative;
+            top: -12px;
+        }
+    </style>
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-gray-100 text-gray-800 font-sans">
+<body class="leading-relaxed antialiased">
 
-  <!-- Header -->
-  <header class="bg-gradient-to-r from-primary to-accent text-white shadow-lg py-6 px-4 md:px-12">
-    <div class="max-w-7xl mx-auto">
-      <h1 class="text-3xl font-bold">OMOGO PETER ONYEDIKA</h1>
-      <p class="text-lg text-gray-100">Full-Stack Developer | React | Node.js | Remote-First</p>
-      <nav class="mt-4 space-x-6">
-        <a href="#about" class="text-white hover:text-yellow-200 transition duration-300">About</a>
-        <a href="#projects" class="text-white hover:text-yellow-200 transition duration-300">Projects</a>
-        <a href="#skills" class="text-white hover:text-yellow-200 transition duration-300">Skills</a>
-        <a href="#contact" class="text-white hover:text-yellow-200 transition duration-300">Contact</a>
-      </nav>
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-effect">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold accent-color">O.</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#about" class="hover:text-cyan-300 transition-colors duration-300">About</a>
+                <a href="index.html#experience" class="hover:text-cyan-300 transition-colors duration-300">Experience</a>
+                <a href="projects.html" class="hover:text-cyan-300 transition-colors duration-300">Projects</a>
+                <a href="index.html#contact" class="hover:text-cyan-300 transition-colors duration-300">Contact</a>
+                <a href="resume.html" class="border accent-border text-cyan-300 px-4 py-2 rounded-md hover:bg-cyan-300/10 transition-colors duration-300">Resume</a>
+            </div>
+             <button id="mobile-menu-button" class="md:hidden text-2xl z-50">
+                <svg id="menu-open-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg id="menu-close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+             </button>
+        </nav>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-3/4 bg-[#112240] transform translate-x-full transition-transform duration-300 ease-in-out z-40 md:hidden flex flex-col items-center justify-center space-y-8 text-lg">
+        <a href="index.html#about" class="mobile-link hover:text-cyan-300 transition-colors duration-300">About</a>
+        <a href="index.html#experience" class="mobile-link hover:text-cyan-300 transition-colors duration-300">Experience</a>
+        <a href="projects.html" class="mobile-link hover:text-cyan-300 transition-colors duration-300">Projects</a>
+        <a href="index.html#contact" class="mobile-link hover:text-cyan-300 transition-colors duration-300">Contact</a>
+        <a href="resume.html" class="border accent-border text-cyan-300 px-6 py-3 rounded-md hover:bg-cyan-300/10 transition-colors duration-300">Resume</a>
     </div>
-  </header>
 
-  <!-- About -->
-  <section id="about" class="py-12 px-4 md:px-12 max-w-4xl mx-auto bg-gradient-to-b from-white to-blue-50 rounded-xl shadow-sm">
-    <h2 class="text-2xl font-semibold mb-4 text-primary border-b-2 border-secondary pb-2 inline-block">About Me</h2>
-    <p class="mb-4 text-gray-700">Hi, I'm a <span class="text-primary font-semibold">Full-Stack Developer</span> with 4+ years of experience crafting robust, user-centric web applications for startups, SMEs, and remote teams across the globe.</p>
-    <p class="text-gray-700">I specialize in <span class="text-accent font-semibold">React.js</span>, <span class="text-secondary font-semibold">Node.js</span>, <span class="text-primary font-semibold">MySQL</span>, and <span class="text-accent font-semibold">RESTful APIs</span>. From developing e-learning platforms to secure fintech apps, I build clean, scalable, and performant solutions.</p>
-  </section>
 
-  <!-- Projects -->
-  <section id="projects" class="bg-gradient-to-r from-gray-50 to-blue-50 py-12 px-4 md:px-12">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-2xl font-semibold mb-6 text-primary border-b-2 border-secondary pb-2 inline-block">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 border-t-4 border-indigo-600">
-          <h3 class="text-xl font-bold mb-2 text-indigo-600">ATOM Group (AI Company Landing Page)</h3>
-          <p>Designed and developed a modern, responsive landing page for an AI technology company. Created engaging UI with animated elements, service showcases, and product highlights.<a href="https://atom-landing-five.vercel.app/" target="_blank"><button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded mt-3 transition duration-300">View the Project</button></a>><img src="img/atom.png"></p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 border-t-4 border-teal-500">
-          <h3 class="text-xl font-bold mb-2 text-teal-600">Handyman NG (Service Marketplace)</h3>
-          <p>Developed the frontend for a service marketplace connecting skilled professionals with clients. Implemented responsive UI with service categories, provider profiles, and booking system.<a href="https://handymanng.com" target="_blank"><button class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded mt-3 transition duration-300">View the Project</button></a>><img src="img/Handymann.png"></p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 border-t-4 border-primary">
-          <h3 class="text-xl font-bold mb-2 text-primary">iLearnova (E-learning Platform)</h3>
-          <p>Led a dev team to build an e-learning platform serving 500+ users. Designed REST APIs and optimized frontend for 40% faster load times.<a href="https://ilearnovafrontend.vercel.app.com" target="_blank"><button class="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 transition duration-300">View the Project</button></a>><img src="img/ilearnova.png"></p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 border-t-4 border-secondary">
-          <h3 class="text-xl font-bold mb-2 text-secondary">Selfany (UI Development)</h3>
-          <p>Built dynamic React UIs that improved user engagement by 25%. Collaborated closely with backend teams and conducted performance audits.<a href="https://selfany.com" target="_blank"><button class="bg-secondary hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-3 transition duration-300">View the Project</button></a>><img src="img/selfany.png"></p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 border-t-4 border-accent">
-          <h3 class="text-xl font-bold mb-2 text-accent">Pension App (Fintech Platform)</h3>
-          <p>Developed secure pension management tools, implemented scalable architecture, and created real-time dashboards.<a href="https://Pensionapp.com" target="_blank"><button class="bg-accent hover:bg-purple-700 text-white font-bold py-2 px-4 rounded mt-3 transition duration-300">View the Project</button></a>><img src="img/pension.png"></p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 border-t-4 border-yellow-500">
-          <h3 class="text-xl font-bold mb-2 text-yellow-600">Placebet (Betting Platform)</h3>
-          <p>Developed a betting website just like bet9ja that contains all games like sports, casino etc.<a href="https://m.placebet247.com" target="_blank"><button class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-3 transition duration-300">View the Project</button></a>><img src="img/placement.png"></p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 border-t-4 border-red-500">
-          <h3 class="text-xl font-bold mb-2 text-red-600">Sub-Saharan Africa Brain Health Initiative (SSABHI) (NGO Platform)</h3>
-          <p>Managing a NGO website as their wordpress developer, mailchimp integrations, SMTP integrations and building the websites backend for user flow.<a href="https://ssabhi.org" target="_blank"><button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-3 transition duration-300">View the Project</button></a>><img src="img/ssabhi.png"></p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <main class="container mx-auto px-6 md:px-12 lg:px-24">
 
-  <!-- Skills -->
-  <section id="skills" class="py-12 px-4 md:px-12 max-w-4xl mx-auto bg-gradient-to-b from-white to-purple-50 rounded-xl shadow-sm">
-    <h2 class="text-2xl font-semibold mb-4 text-accent border-b-2 border-primary pb-2 inline-block">Skills</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div>
-        <h3 class="font-semibold text-primary mb-2">Frontend</h3>
-        <ul class="list-disc list-inside space-y-1 text-gray-700">
-          <li>JavaScript / TypeScript</li>
-          <li>React.js / Next.js</li>
-          <li>Angular.js / Vue.js</li>
-          <li>UI/UX Implementation</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold text-secondary mb-2">Backend</h3>
-        <ul class="list-disc list-inside space-y-1 text-gray-700">
-          <li>Node.js / Express</li>
-          <li>Django / Python</li>
-          <li>PHP / Laravel / Symfony</li>
-          <li>Java</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold text-accent mb-2">Database & APIs</h3>
-        <ul class="list-disc list-inside space-y-1 text-gray-700">
-          <li>MySQL / MongoDB</li>
-          <li>REST APIs / WebSockets</li>
-          <li>API Development & Integration</li>
-          <li>Mailchimp API Integration</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold text-yellow-600 mb-2">DevOps & Tools</h3>
-        <ul class="list-disc list-inside space-y-1 text-gray-700">
-          <li>Git / CI/CD / Agile</li>
-          <li>CLI / Linux / Postman</li>
-          <li>Database & Storage</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold text-red-600 mb-2">Soft Skills</h3>
-        <ul class="list-disc list-inside space-y-1 text-gray-700">
-          <li>Team Management and Leadership</li>
-          <li>Project Management</li>
-          <li>Critical Thinking</li>
-          <li>Time Management</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold text-green-600 mb-2">Other Skills</h3>
-        <ul class="list-disc list-inside space-y-1 text-gray-700">
-          <li>Blade / C++</li>
-          <li>Research and Analysis</li>
-          <li>Team Collaboration</li>
-          <li>Email Automation</li>
-        </ul>
-      </div>
-    </div>
-    <div class="mt-8 p-4 bg-white rounded-lg shadow-sm">
-      <iframe src="Document/Peter Omogo Resume.pdf" width="100%" height="500px" class="border-0"></iframe>
-    </div>
-  </section>
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex flex-col justify-center pt-24">
+            <div class="max-w-4xl">
+                <p class="text-lg accent-color mb-4 animate-fade-in-up" style="animation-delay: 100ms;">Hi, my name is</p>
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-200 animate-fade-in-up" style="animation-delay: 200ms;">Onyedika.</h1>
+                <h2 class="text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-400 mt-2 animate-fade-in-up" style="animation-delay: 300ms;">I build things for the web.</h2>
+                <p class="mt-6 max-w-xl text-lg text-slate-400 animate-fade-in-up" style="animation-delay: 400ms;">
+                    I’m a software developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products and web applications.
+                </p>
+                <div class="mt-8 flex items-center space-x-4 animate-fade-in-up" style="animation-delay: 500ms;">
+                    <a href="projects.html" class="border-2 accent-border accent-color px-8 py-4 rounded-md text-lg font-medium hover:bg-cyan-300/10 transition-all duration-300">
+                        View My Work
+                    </a>
+                </div>
+            </div>
+        </section>
 
-  <!-- Contact -->
-  <section id="contact" class="bg-gradient-to-r from-dark to-gray-800 text-white py-12 px-4 md:px-12">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-2xl font-semibold mb-4 border-b-2 border-primary pb-2 inline-block">Contact</h2>
-      <p class="mb-2">Interested in working together or want to chat tech?</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-        <div class="bg-gray-900 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-          <p class="font-semibold text-primary">Email</p>
-          <a href="mailto:omogopeter48@gmail.com" class="text-white hover:text-blue-300 transition duration-300">omogopeter48@gmail.com</a>
+        <!-- About Section -->
+        <section id="about" class="py-24">
+            <h2 class="section-heading text-3xl font-bold text-slate-200 mb-12 flex items-center">
+                <span class="accent-color mr-2">01.</span> About Me
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-12">
+                <div class="md:col-span-3 text-slate-400 text-lg space-y-4">
+                    <p>Hello! My name is Onyedika and I enjoy creating things that live on the internet. My interest in web development started back when I decided to build a custom blog theme — turns out hacking together a custom re-blog button taught me a lot about HTML & CSS!</p>
+                    <p>Fast-forward to today, and I’ve had the privilege of working on a variety of projects. My main focus these days is building accessible, inclusive products and digital experiences for a variety of clients.</p>
+                    <p>Here are a few technologies I’ve been working with recently:</p>
+                    <ul class="grid grid-cols-2 gap-2 mt-4">
+                        <li class="flex items-center"><span class="accent-color mr-2">▹</span>JavaScript (ES6+)</li>
+                        <li class="flex items-center"><span class="accent-color mr-2">▹</span>React</li>
+                        <li class="flex items-center"><span class="accent-color mr-2">▹</span>Node.js</li>
+                        <li class="flex items-center"><span class="accent-color mr-2">▹</span>TypeScript</li>
+                        <li class="flex items-center"><span class="accent-color mr-2">▹</span>Tailwind CSS</li>
+                        <li class="flex items-center"><span class="accent-color mr-2">▹</span>Firebase</li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2">
+                    <div class="relative w-full max-w-sm mx-auto group">
+                        <div class="absolute -inset-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                        <img src="https://placehold.co/500x500/0a192f/ffffff?text=Your+Photo" alt="Onyedika" class="relative rounded-lg w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-24">
+            <h2 class="section-heading text-3xl font-bold text-slate-200 mb-12 flex items-center">
+                <span class="accent-color mr-2">02.</span> Where I've Worked
+            </h2>
+            <div class="max-w-3xl">
+                <!-- Replace with your actual experience -->
+                <div class="relative border-l-2 border-slate-700 ml-4 pl-8 py-4">
+                     <div class="absolute w-4 h-4 accent-bg rounded-full -left-[9px] top-5 border-2 border-slate-700"></div>
+                     <h3 class="text-xl font-semibold text-slate-200">Software Engineer <span class="accent-color">@ Company</span></h3>
+                     <p class="text-sm text-slate-400 mb-2">Jan 2022 - Present</p>
+                     <ul class="list-disc list-inside text-slate-400 space-y-2">
+                         <li>Developed and maintained web applications using React, Node.js, and PostgreSQL.</li>
+                         <li>Collaborated with cross-functional teams to define, design, and ship new features.</li>
+                         <li>Implemented responsive designs and ensured cross-browser compatibility.</li>
+                     </ul>
+                </div>
+                 <div class="relative border-l-2 border-slate-700 ml-4 pl-8 py-4">
+                     <div class="absolute w-4 h-4 accent-bg rounded-full -left-[9px] top-5 border-2 border-slate-700"></div>
+                     <h3 class="text-xl font-semibold text-slate-200">Frontend Developer <span class="accent-color">@ Another Co.</span></h3>
+                     <p class="text-sm text-slate-400 mb-2">May 2020 - Dec 2021</p>
+                     <ul class="list-disc list-inside text-slate-400 space-y-2">
+                         <li>Translated UI/UX design wireframes to actual code.</li>
+                         <li>Built reusable components and front-end libraries for future use.</li>
+                         <li>Optimized applications for maximum speed and scalability.</li>
+                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24">
+            <h2 class="section-heading text-3xl font-bold text-slate-200 mb-12 flex items-center">
+                <span class="accent-color mr-2">03.</span> Some Things I’ve Built
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1: ATOM Group -->
+                <div class="project-card group glass-effect rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="accent-color"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                            <div class="space-x-2">
+                                <a href="https://github.com/onyedika-glitch/atom-landing.git" class="hover:text-cyan-300 transition-colors" title="GitHub Repo"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg></a>
+                                <a href="https://atom-landing-five.vercel.app/" target="_blank" class="hover:text-cyan-300 transition-colors" title="Live Site"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1 -2 2H5a2 2 0 0 1 -2 -2V8a2 2 0 0 1 2 -2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-200 "><a href="atom-group.html" class="hover:accent-color transition-colors">ATOM Group (AI Landing Page)</a></h3>
+                        <p class="text-slate-400 mt-2">A modern, responsive landing page for an AI technology company, featuring animated elements and service showcases.</p>
+                    </div>
+                    <div class="flex flex-wrap text-sm text-slate-400 mt-4 gap-x-4">
+                        <span>UI/UX Design</span><span>Animations</span><span>JavaScript</span>
+                    </div>
+                </div>
+                <!-- Project 2: Handyman NG -->
+                <div class="project-card group glass-effect rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="accent-color"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                            <div class="space-x-2">
+                               <a href="https://handymanng.com" target="_blank" class="hover:text-cyan-300 transition-colors" title="Live Site"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1 -2 2H5a2 2 0 0 1 -2 -2V8a2 2 0 0 1 2 -2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-200"><a href="handyman-ng.html" class="hover:accent-color transition-colors">Handyman NG (Marketplace)</a></h3>
+                        <p class="text-slate-400 mt-2">Frontend for a service marketplace connecting skilled professionals with clients, including profiles and a booking system.</p>
+                    </div>
+                    <div class="flex flex-wrap text-sm text-slate-400 mt-4 gap-x-4">
+                        <span>React</span><span>Marketplace</span><span>Booking System</span>
+                    </div>
+                </div>
+                 <!-- Project 3: iLearnova -->
+                <div class="project-card group glass-effect rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="accent-color"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                            <div class="space-x-2">
+                               <a href="https://ilearnovafrontend.vercel.app.com" target="_blank" class="hover:text-cyan-300 transition-colors" title="Live Site"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1 -2 2H5a2 2 0 0 1 -2 -2V8a2 2 0 0 1 2 -2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-200"><a href="ilearnova.html" class="hover:accent-color transition-colors">iLearnova (E-learning Platform)</a></h3>
+                        <p class="text-slate-400 mt-2">Led a dev team to build an e-learning platform serving 500+ users, designing REST APIs and optimizing the frontend.</p>
+                    </div>
+                    <div class="flex flex-wrap text-sm text-slate-400 mt-4 gap-x-4">
+                        <span>React</span><span>Node.js</span><span>REST API</span><span>Optimization</span>
+                    </div>
+                </div>
+                 <!-- Project 4: Selfany -->
+                <div class="project-card group glass-effect rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="accent-color"><path d="M5.5 8.5 9 12l-3.5 3.5L2 12l3.5-3.5Z"></path><path d="m12 2 3.5 3.5L12 9 8.5 5.5 12 2Z"></path><path d="M18.5 8.5 22 12l-3.5 3.5L15 12l3.5-3.5Z"></path><path d="m12 15 3.5 3.5L12 22l-3.5-3.5L12 15Z"></path></svg>
+                            <div class="space-x-2">
+                                <a href="https://github.com/thinkshiftsgroup/selfany-support-board.git" class="hover:text-cyan-300 transition-colors" title="GitHub Repo"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg></a>
+                                <a href="https://selfany.com" target="_blank" class="hover:text-cyan-300 transition-colors" title="Live Site"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1 -2 2H5a2 2 0 0 1 -2 -2V8a2 2 0 0 1 2 -2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-200"><a href="selfany.html" class="hover:accent-color transition-colors">Selfany (UI Development)</a></h3>
+                        <p class="text-slate-400 mt-2">Built dynamic React UIs that improved user engagement by 25% through close collaboration with backend teams.</p>
+                    </div>
+                    <div class="flex flex-wrap text-sm text-slate-400 mt-4 gap-x-4">
+                        <span>React</span><span>UI/UX</span><span>Performance</span>
+                    </div>
+                </div>
+                 <!-- Project 5: Pension App -->
+                <div class="project-card group glass-effect rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="accent-color"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            <div class="space-x-2">
+                            <a href="https://Pensionapp.com" target="_blank" class="hover:text-cyan-300 transition-colors" title="Live Site"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1 -2 2H5a2 2 0 0 1 -2 -2V8a2 2 0 0 1 2 -2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-200"><a href="pension-app.html" class="hover:accent-color transition-colors">Pension App (Fintech)</a></h3>
+                        <p class="text-slate-400 mt-2">Developed secure pension management tools, implemented a scalable architecture, and created real-time dashboards.</p>
+                    </div>
+                    <div class="flex flex-wrap text-sm text-slate-400 mt-4 gap-x-4">
+                        <span>Fintech</span><span>Security</span><span>Scalability</span><span>Dashboards</span>
+                    </div>
+                </div>
+                <!-- Project 6: Placebet -->
+                <div class="project-card group glass-effect rounded-lg p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="accent-color"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                            <div class="space-x-2">
+                                                                <a href="https://m.placebet247.com" target="_blank" class="hover:text-cyan-300 transition-colors" title="Live Site"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1 -2 2H5a2 2 0 0 1 -2 -2V8a2 2 0 0 1 2 -2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-200"><a href="placebet.html" class="hover:accent-color transition-colors">Placebet (Betting Platform)</a></h3>
+                        <p class="text-slate-400 mt-2">Developed a full-featured betting website with sports, casino games, and other activities, similar to Bet9ja.</p>
+                    </div>
+                    <div class="flex flex-wrap text-sm text-slate-400 mt-4 gap-x-4">
+                        <span>Betting</span><span>Sports</span><span>Casino</span><span>Games</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-16">
+                 <p class="text-slate-300 text-lg">...and many more. Check out my <a href="project.html" class="accent-color font-semibold hover:underline">Projects Gallery</a> for a full list.</p>
+            </div>
+            
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 text-center max-w-2xl mx-auto">
+            <h2 class="text-xl accent-color mb-4">04. What’s Next?</h2>
+            <h3 class="text-5xl font-bold text-slate-200 mb-4">Get In Touch</h3>
+            <p class="text-slate-400 mb-8">
+                I'm currently open to new opportunities and my inbox is always open. Whether you have a question or just want to say hi, I’ll get back to you!
+            </p>
+            <a href="mailto:your.email@example.com" class="inline-block border-2 accent-border accent-color px-8 py-4 rounded-md text-lg font-medium hover:bg-cyan-300/10 transition-all duration-300">
+                Say Hello
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-slate-400 text-sm">
+        <div class="flex items-center justify-center space-x-6 mb-4">
+             <a href="#" class="hover:text-cyan-300 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg></a>
+             <a href="#" class="hover:text-cyan-300 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+             <a href="#" class="hover:text-cyan-300 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
         </div>
-        <div class="bg-gray-900 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-          <p class="font-semibold text-secondary">Twitter</p>
-          <a href=" https://x.com/PeterOmogo2/" target="_blank" class="text-white hover:text-green-300 transition duration-300"> x.com/PeterOmogo2/</a>
-        </div>
+        <p>Designed & Built by Onyedika</p>
+        <p class="text-xs mt-1">Inspired by Brittany Chiang's Portfolio</p>
+    </footer>
 
-        <div class="bg-gray-900 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-          <p class="font-semibold text-accent">GitHub</p>
-          <a href="https://github.com/onyedika-glitch" target="_blank" class="text-white hover:text-purple-300 transition duration-300">github.com/onyedika-glitch</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    <script>
+        // ScrollReveal animations
+        const sr = ScrollReveal({
+            origin: 'bottom',
+            distance: '20px',
+            duration: 500,
+            delay: 200,
+            reset: false,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+        });
 
-  <footer class="text-center text-white py-6 bg-dark">
-    <p>&copy; 2025 Omogo Peter Onyedika. All rights reserved.</p>
-  </footer>
+        sr.reveal('#hero h1, #hero h2, #hero p, #hero div');
+        sr.reveal('#about h2, #about div, #experience h2, #experience div, #projects h2, #projects > div, #contact h2, #contact h3, #contact p, #contact a', {
+            interval: 100
+        });
 
+        // Header scroll effect
+        let lastScrollTop = 0;
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Scroll Down
+                header.style.top = '-100px';
+            } else {
+                // Scroll Up
+                header.style.top = '0';
+            }
+            if (scrollTop > 50) {
+                header.style.boxShadow = '0 10px 30px -10px rgba(2, 12, 27, 0.7)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+        
+        // Mobile Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOpenIcon = document.getElementById('menu-open-icon');
+        const menuCloseIcon = document.getElementById('menu-close-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        
+        const toggleMenu = () => {
+             mobileMenu.classList.toggle('translate-x-full');
+             menuOpenIcon.classList.toggle('hidden');
+             menuCloseIcon.classList.toggle('hidden');
+             document.body.classList.toggle('overflow-hidden');
+        }
+
+        mobileMenuButton.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+    </script>
 </body>
 </html>
+
+

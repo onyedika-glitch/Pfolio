@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title - Onyedika</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a192f;
+            color: #ccd6f6;
+        }
+        .glass-effect {
+            background: rgba(23, 42, 77, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .accent-color { color: #64ffda; }
+        .accent-bg { background-color: #64ffda; }
+        .accent-border { border-color: #64ffda; }
+        .section-heading {
+            margin-bottom: 1rem;
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: #e6f1ff;
+        }
+        /* Simple syntax highlighting colors */
+        pre[class*="language-"] {
+            background: #112240;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            overflow: auto;
+            font-size: 0.9em;
+        }
+        .token.comment, .token.prolog, .token.doctype, .token.cdata { color: #809393; }
+        .token.punctuation { color: #ccd6f6; }
+        .token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted { color: #ff8383; }
+        .token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted { color: #64ffda; }
+        .token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string { color: #d1dce5; }
+        .token.atrule, .token.attr-value, .token.keyword { color: #82aaff; }
+        .token.function, .token.class-name { color: #ffca86; }
+        .token.regex, .token.important, .token.variable { color: #ffca86; }
+    </style>
+</head>
+<body class="leading-relaxed antialiased">
+
+    <!-- Header -->
+    <header id="header" class="sticky top-0 left-0 right-0 z-50 transition-all duration-300 glass-effect shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold accent-color">O.</a>
+            <a href="index.html#projects" class="border accent-border text-cyan-300 px-4 py-2 rounded-md hover:bg-cyan-300/10 transition-colors duration-300">Back to Projects</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 md:px-12 lg:px-24 py-16 lg:py-24">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- Project Header -->
+            <div class="mb-12">
+                <p class="accent-color mb-2">Featured Project</p>
+                <h1 class="text-5xl font-bold text-slate-100">Project Title One</h1>
+                <div class="flex items-center space-x-6 mt-6">
+                    <a href="#" class="inline-block border accent-border accent-color px-6 py-2 rounded-md font-medium hover:bg-cyan-300/10 transition-all duration-300">Live Site</a>
+                    <a href="#" class="inline-block border accent-border accent-color px-6 py-2 rounded-md font-medium hover:bg-cyan-300/10 transition-all duration-300">View on GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project Overview -->
+            <section class="mb-10">
+                <p class="text-slate-300 text-lg mb-6">A more detailed and engaging description of the project goes here. Explain the purpose of the application, the problem it solves, and the features it includes. You can talk about your role in the project, the challenges you faced, and what you learned.</p>
+                <img src="https://placehold.co/900x500/112240/64ffda?text=Project+Screenshot" alt="Project Screenshot" class="rounded-lg shadow-xl w-full">
+            </section>
+
+            <!-- Technical Details -->
+            <section class="mb-10">
+                <h2 class="section-heading">Technologies Used</h2>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">React</span>
+                    <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">Next.js</span>
+                    <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">Tailwind CSS</span>
+                    <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">Firebase</span>
+                    <span class="bg-slate-700 text-cyan-300 text-sm font-medium px-3 py-1 rounded-full">Vercel</span>
+                </div>
+            </section>
+
+             <!-- Code Snippet Section -->
+             <section>
+                <h2 class="section-heading">Code Snippet</h2>
+                <p class="text-slate-400 mb-4">Here's a snippet of code I'm particularly proud of. It demonstrates a complex feature or a clean implementation of a specific algorithm.</p>
+                <pre class="language-javascript"><code>// Example React component
+import React, { useState, useEffect } from 'react';
+
+const DataFetcher = ({ userId }) => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch(`https://api.example.com/users/${userId}`);
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        console.error("Failed to fetch data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [userId]); // Re-run effect if userId changes
+
+  if (loading) return &lt;div&gt;Loading...&lt;/div&gt;;
+  if (!data) return &lt;div&gt;No data found.&lt;/div&gt;;
+
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;{data.name}&lt;/h1&gt;
+      &lt;p&gt;Email: {data.email}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default DataFetcher;
+</code></pre>
+            </section>
+
+        </div>
+    </main>
+    
+    <footer class="text-center py-6 text-slate-400 text-sm mt-12">
+        <p><a href="index.html" class="hover:text-cyan-300">Back to Portfolio</a></p>
+    </footer>
+
+</body>
+</html>
