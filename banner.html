@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Omogo Banner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Import html2canvas library for capturing the element -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .profile-image-container {
+            width: 120px; 
+            height: 120px; 
+            min-width: 120px; 
+            border-radius: 50%; 
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0; 
+        }
+        .profile-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            object-position: center top; 
+        }
+
+        @media (min-width: 768px) {
+            .profile-image-container {
+                width: 150px; 
+                height: 150px;
+                min-width: 150px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
+
+    <!-- This is the banner element that will be downloaded -->
+    <div id="banner-to-download" class="w-full max-w-4xl mx-auto">
+        <!-- 
+            Note: Replaced Tailwind gradient with inline CSS 'style' tag.
+            This ensures html2canvas can correctly render the gradient background.
+        -->
+        <div class="relative w-full p-8 md:p-10 lg:p-12 rounded-xl shadow-2xl overflow-hidden flex flex-col md:flex-row items-center gap-6 md:gap-8" 
+             style="background: linear-gradient(to right, #1f2937, #111827, #000);">
+            
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-500/10 rounded-full filter blur-3xl"></div>
+            <div class="absolute -bottom-16 -left-10 w-56 h-56 bg-purple-500/10 rounded-full filter blur-3xl"></div>
+            
+            <div class="relative z-10 flex-shrink-0 profile-image-container border-4 border-white shadow-lg">
+                <!-- 
+                    Added crossorigin="anonymous" to the image. 
+                    This is required for html2canvas to capture external images.
+                -->
+                <img src="img/peter.png" 
+                     alt="Dev Omogo Profile" 
+                     class="w-full h-full object-cover rounded-full"
+                     crossorigin="anonymous">
+            </div>
+            
+            <div class="relative z-10 text-center md:text-left flex-grow">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-2">
+                    Dev Omogo
+                </h1>
+                
+                <h2 class="text-xl sm:text-2xl font-medium text-blue-300 mb-4">
+                    Full-Stack Developer
+                </h2>
+                
+                <div class="flex flex-wrap justify-center md:justify-start gap-x-3 gap-y-1">
+                    <span class="text-base font-normal text-gray-300">React</span>
+                    <span class="text-base font-normal text-gray-500">|</span>
+                    <span class="text-base font-normal text-gray-300">TypeScript</span>
+                    <span class="text-base font-normal text-gray-500">|</span>
+                    <span class="text-base font-normal text-gray-300">PHP</span>
+                    <span class="text-base font-normal text-gray-500">|</span>
+                    <span class="text-base font-normal text-gray-300">JavaScript</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Download Button -->
+    <button id="download-btn" class="mt-8 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+        Download as PNG
+    </button>
+
+    <script>
+        const downloadButton = document.getElementById('download-btn');
+        const bannerElement = document.getElementById('banner-to-download');
+
+        downloadButton.addEventListener('click', () => {
+            // Show a loading state
+            downloadButton.textContent = 'Generating...';
+            downloadButton.disabled = true;
+
+            // Use html2canvas to capture the banner element
+            html2canvas(bannerElement, {
+                useCORS: true, // Allow capturing the cross-origin placeholder image
+                scale: 2, // Render at 2x resolution for better quality
+                backgroundColor: null, // Use the element's background
+                onclone: (clonedDoc) => {
+                    // This function runs on the cloned document before rendering
+                    // We can make adjustments here if needed, e.g., ensure visibility
+                    // For this simple banner, it's often not required
+                }
+            }).then(canvas => {
+                // Convert the canvas to a PNG image data URL
+                const imageDataUrl = canvas.toDataURL('image/png');
+                
+                // Create a temporary link element to trigger the download
+                const link = document.createElement('a');
+                link.href = imageDataUrl;
+                link.download = 'dev-omogo-banner.png'; // Set the file name
+                
+                // Append link to body, click it, and then remove it
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
+                // Reset button text
+                downloadButton.textContent = 'Download as PNG';
+                downloadButton.disabled = false;
+            }).catch(err => {
+                console.error("Error generating image:", err);
+                downloadButton.textContent = 'Error! Try again.';
+                downloadButton.disabled = false;
+            });
+        });
+    </script>
+
+</body>
+</html>
+
