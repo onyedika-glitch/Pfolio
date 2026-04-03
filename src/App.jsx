@@ -249,9 +249,11 @@ const ProjectsPage = () => (
                                     </div>
                                 </div>
                                 <h3 className="text-3xl font-bold text-white mb-2 group-hover:text-accent transition-colors"><a href={"/" + p.fileName}>{p.title}</a></h3>
-                                <p className="text-slate-400 text-sm leading-relaxed line-clamp-2">{p.description}</p>
+                                <p className="text-slate-400 text-[11px] leading-relaxed line-clamp-2 uppercase tracking-widest opacity-60">{p.tech.join(' • ')}</p>
                             </div>
-                            <a href={"/" + p.fileName} className="mt-8 text-accent font-mono text-xs tracking-widest uppercase hover:underline">View Case Study →</a>
+                            <a href={"/" + p.fileName} className="btn-secondary w-full text-center mt-8 cursor-pointer hover:bg-accent hover:text-background transition-all font-black text-xs">
+                                View Case Study
+                            </a>
                         </div>
                     </div>
                 </TitleTilt>
