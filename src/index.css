@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: #020c1b;
+    --accent: #64ffda;
+    --white: #ffffff;
+    --slate-high: #f1f5f9;
+    --slate-mid: #cbd5e1;
+    --navy-light: #112240;
+}
+
+@layer base {
+    body {
+        background-color: var(--background);
+        color: var(--slate-mid);
+        -webkit-font-smoothing: antialiased;
+        font-family: 'Inter', sans-serif;
+    }
+}
+
+.mesh-gradient {
+    background-color: var(--background);
+    background-image:
+        radial-gradient(at 0% 0%, rgba(100, 255, 218, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(100, 255, 218, 0.08) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(2, 12, 27, 1) 0px, transparent 100%);
+    background-attachment: fixed;
+}
+
+.hero-glow {
+    text-shadow: 0 0 30px rgba(100, 255, 218, 0.4);
+}
+
+.accent-color {
+    color: var(--accent) !important;
+}
+
+.glass-card {
+    background: rgba(17, 34, 64, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glass-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    background: var(--accent);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+}
+
+h1,
+.h1-style {
+    color: var(--white);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+}
+
+h2,
+.h2-style {
+    color: var(--slate-high);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+h3,
+.h3-style {
+    color: var(--slate-high);
+    font-weight: 600;
+}
+
+p,
+.p-style {
+    color: var(--slate-mid);
+    line-height: 1.7;
+}
+
+.section-divider {
+    @apply h-px w-full bg-white/10 my-24;
+}
+
+/* Scrollbar Style */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--navy-light);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+/* Buttons */
+.btn-primary {
+    @apply bg-white text-[#020c1b] px-10 py-5 rounded-md font-bold text-lg hover:bg-accent transition-all duration-300 shadow-xl;
+}
+
+.btn-secondary {
+    @apply border-2 border-accent text-accent px-10 py-5 rounded-md font-bold text-lg hover:bg-accent/10 transition-all duration-300;
+}
