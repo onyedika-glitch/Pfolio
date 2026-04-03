@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate, useParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Mail, ExternalLink, Menu, X, Layout, Zap, ArrowLeft, Download, Globe, Award, ChevronLeft, Briefcase, Code, User, GraduationCap, Phone } from 'lucide-react';
 import TitleTilt from 'react-parallax-tilt';
@@ -9,22 +9,23 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 // Data Hub
+// Data Hub
 const ALL_PROJECTS = [
-    { id: 'zentrix', title: 'Zentrix Equity', category: 'Fintech WebSocket', description: 'Real-time equity distribution and cap table platform with low-latency updates.', tech: ['Node.js', 'Socket.io', 'PostgreSQL', 'React'], live: 'https://equityapp.zentrixinnovationlab.com/', image: 'img/zentrix.png' },
-    { id: 'uhc', title: 'Unlimited Healthcare', category: 'Healthcare AI', description: 'AI-diagnostics and real-time medical platform with 20+ clinical testers.', tech: ['React', 'Capacitor', 'WebSockets', 'AI'], live: 'https://unlimitedhealthcares.com/', image: 'img/uhc.png' },
-    { id: 'caremandate', title: 'CareMandate', category: 'Monorepo Stack', description: 'Enterprise Monorepo for clinical management serving high-intensity hospital workflows.', tech: ['Vite', 'TurboRepo', 'Expo', 'TypeScript'], live: 'https://caremandate.com/', image: 'img/caremandate.png' },
-    { id: 'atom', title: 'ATOM Group', category: 'AI UX', description: 'AI technology landing page with engaging UI and service highlights.', tech: ['React', 'Framer'], live: 'https://atom-landing-five.vercel.app/', image: 'img/atom.png' },
-    { id: 'handyman', title: 'Handyman NG', category: 'Marketplace', description: 'Service marketplace connecting professionals with clients.', tech: ['UX/UI'], live: 'https://handymanng.com', image: 'img/Handymann.png' },
-    { id: 'ilearnova', title: 'iLearnova', category: 'E-Learning', description: 'E-learning platform for 500+ students and tutors.', tech: ['Node.js', 'React'], live: 'https://ilearnovafrontend.vercel.app.com', image: 'img/ilearnova.png' },
-    { id: 'pension', title: 'Pension App', category: 'Fintech', description: 'Secure pension management and real-time dashboards.', tech: ['Full-Stack'], live: 'https://Pensionapp.com', image: 'img/pension.png' },
-    { id: 'placebet', title: 'Placebet', category: 'Betting Engine', description: 'Full-featured sports and casino betting platform.', tech: ['Betting Engine'], live: 'https://m.placebet247.com', image: 'img/placement.png' },
-    { id: 'ssabhi', title: 'SSABHI NGO', category: 'NGO Hub', description: 'Custom NGO platform with various service integrations.', tech: ['WordPress'], live: 'https://ssabhi.org', image: 'img/ssabhi.png' },
-    { id: 'e-portal', title: 'Enugu School E-Portal', category: 'Education', description: 'Centralized school board hub for communication.', tech: ['Backend'], live: 'https://e-portal-seven.vercel.app/', image: 'img/ePortal.png' },
-    { id: 's-portal', title: 'Federal S-Portal', category: 'Education', description: 'Federal school board official update hub.', tech: ['Gov Portal'], live: 'https://s-portal.vercel.app/', image: 'img/sPortal.png' },
-    { id: 'student-board', title: 'Student Board', category: 'Bulletin Hub', description: 'Digital bulletin board for announcement sharing.', tech: ['React', 'Node'], live: 'https://student-board.onrender.com/', image: 'img/student-board.png' },
-    { id: 'floorhosting', title: 'Floorhosting', category: 'Web Hosting', description: 'Web hosting control panel frontend with persistence.', tech: ['Vanilla JS'], live: 'https://floorhostings.vercel.app/', image: 'img/floorhosting.png' },
-    { id: 'selfany', title: 'Selfany', category: 'UI Development', description: 'Dynamic React UIs that improved user engagement by 25%.', tech: ['React', 'Redux'], live: 'https://selfany.com', image: 'img/selfany.png' },
-    { id: 'restaurant-ui', title: 'Restaurant Design', category: 'Figma UI', description: 'Modern restaurant landing page UI with smooth interactive flows.', tech: ['Figma'], live: 'https://www.figma.com/design/TaBElLQPletCCX5ZQ5hv9O/Restaurant-UI', image: 'img/image.png' }
+    { id: 'zentrix', title: 'Zentrix Equity', category: 'Fintech WebSocket', description: 'Real-time equity distribution and cap table platform with low-latency updates.', tech: ['Node.js', 'Socket.io', 'PostgreSQL', 'React'], live: 'https://equityapp.zentrixinnovationlab.com/', image: 'img/zentrix.png', fileName: 'zentrix.html' },
+    { id: 'uhc', title: 'Unlimited Healthcare', category: 'Healthcare AI', description: 'AI-diagnostics and real-time medical platform with 20+ clinical testers.', tech: ['React', 'Capacitor', 'WebSockets', 'AI'], live: 'https://unlimitedhealthcares.com/', image: 'img/uhc.png', fileName: 'uhc.html' },
+    { id: 'caremandate', title: 'CareMandate', category: 'Monorepo Stack', description: 'Enterprise Monorepo for clinical management serving high-intensity hospital workflows.', tech: ['Vite', 'TurboRepo', 'Expo', 'TypeScript'], live: 'https://caremandate.com/', image: 'img/caremandate.png', fileName: 'caremandate.html' },
+    { id: 'atom', title: 'ATOM Group', category: 'AI UX', description: 'AI technology landing page with engaging UI and service highlights.', tech: ['React', 'Framer'], live: 'https://atom-landing-five.vercel.app/', image: 'img/atom.png', fileName: 'atom-group.html' },
+    { id: 'handyman', title: 'Handyman NG', category: 'Marketplace', description: 'Service marketplace connecting professionals with clients.', tech: ['UX/UI'], live: 'https://handymanng.com', image: 'img/Handymann.png', fileName: 'handyman-ng.html' },
+    { id: 'ilearnova', title: 'iLearnova', category: 'E-Learning', description: 'E-learning platform for 500+ students and tutors.', tech: ['Node.js', 'React'], live: 'https://ilearnovafrontend.vercel.app.com', image: 'img/ilearnova.png', fileName: 'ilearnova.html' },
+    { id: 'pension', title: 'Pension App', category: 'Fintech', description: 'Secure pension management and real-time dashboards.', tech: ['Full-Stack'], live: 'https://Pensionapp.com', image: 'img/pension.png', fileName: 'pension-app.html' },
+    { id: 'placebet', title: 'Placebet', category: 'Betting Engine', description: 'Full-featured sports and casino betting platform.', tech: ['Betting Engine'], live: 'https://m.placebet247.com', image: 'img/placement.png', fileName: 'placebet.html' },
+    { id: 'ssabhi', title: 'SSABHI NGO', category: 'NGO Hub', description: 'Custom NGO platform with various service integrations.', tech: ['WordPress'], live: 'https://ssabhi.org', image: 'img/ssabhi.png', fileName: 'ssabhi.html' },
+    { id: 'e-portal', title: 'Enugu School E-Portal', category: 'Education', description: 'Centralized school board hub for communication.', tech: ['Backend'], live: 'https://e-portal-seven.vercel.app/', image: 'img/ePortal.png', fileName: 'ePortal.html' },
+    { id: 's-portal', title: 'Federal S-Portal', category: 'Education', description: 'Federal school board official update hub.', tech: ['Gov Portal'], live: 'https://s-portal.vercel.app/', image: 'img/sPortal.png', fileName: 'sPortal.html' },
+    { id: 'student-board', title: 'Student Board', category: 'Bulletin Hub', description: 'Digital bulletin board for announcement sharing.', tech: ['React', 'Node'], live: 'https://student-board.onrender.com/', image: 'img/student-board.png', fileName: 'student-board.html' },
+    { id: 'floorhosting', title: 'Floorhosting', category: 'Web Hosting', description: 'Web hosting control panel frontend with persistence.', tech: ['Vanilla JS'], live: 'https://floorhostings.vercel.app/', image: 'img/floorhosting.png', fileName: 'floorhosting.html' },
+    { id: 'selfany', title: 'Selfany', category: 'UI Development', description: 'Dynamic React UIs that improved user engagement by 25%.', tech: ['React', 'Redux'], live: 'https://selfany.com', image: 'img/selfany.png', fileName: 'selfany.html' },
+    { id: 'restaurant-ui', title: 'Restaurant Design', category: 'Figma UI', description: 'Modern restaurant landing page UI with smooth interactive flows.', tech: ['Figma'], live: 'https://www.figma.com/design/TaBElLQPletCCX5ZQ5hv9O/Restaurant-UI', image: 'img/image.png', fileName: 'restaurant-ui.html' }
 ];
 
 const EXPERIENCE = [
@@ -233,20 +234,24 @@ const ProjectsPage = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {ALL_PROJECTS.map((p) => (
                 <TitleTilt key={p.id} tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1.03} className="h-full">
-                    <div className="glass-card rounded-3xl overflow-hidden h-[500px] flex flex-col group relative border-white/5">
+                    <div className="glass-card rounded-3xl overflow-hidden h-[550px] flex flex-col group relative border-white/5">
                         <div className="h-2/3 overflow-hidden relative">
-                            <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 pointer-events-none" />
+                            <img src={"/" + p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 pointer-events-none" />
                             <div className="absolute inset-0 bg-[#020c1b]/60 group-hover:bg-transparent transition-all pointer-events-none" />
                         </div>
                         <div className="p-10 flex-grow flex flex-col justify-between">
                             <div>
                                 <div className="flex justify-between items-center mb-6">
                                     <span className="bg-accent/10 text-accent font-mono text-[10px] px-3 py-1 rounded-full uppercase font-bold">{p.category}</span>
-                                    <a href={p.live} target="_blank" className="text-slate-300 hover:text-white transition-colors"><ExternalLink size={24} /></a>
+                                    <div className="flex space-x-4">
+                                        <a href={p.live} target="_blank" className="text-slate-300 hover:text-white transition-colors" title="Live Site"><Globe size={20} /></a>
+                                        <a href={"/" + p.fileName} className="text-accent hover:text-white transition-colors" title="View Details"><ExternalLink size={20} /></a>
+                                    </div>
                                 </div>
-                                <h3 className="text-3xl font-bold text-white mb-2 group-hover:text-accent transition-colors">{p.title}</h3>
+                                <h3 className="text-3xl font-bold text-white mb-2 group-hover:text-accent transition-colors"><a href={"/" + p.fileName}>{p.title}</a></h3>
                                 <p className="text-slate-400 text-sm leading-relaxed line-clamp-2">{p.description}</p>
                             </div>
+                            <a href={"/" + p.fileName} className="mt-8 text-accent font-mono text-xs tracking-widest uppercase hover:underline">View Case Study →</a>
                         </div>
                     </div>
                 </TitleTilt>
@@ -254,6 +259,82 @@ const ProjectsPage = () => (
         </div>
     </section>
 );
+
+const ProjectDetailPage = () => {
+    const { id } = useParams();
+    const project = ALL_PROJECTS.find(p => p.id === id);
+    const cursorRef = useRef(null);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [id]);
+
+    if (!project) return <Navigate to="/projects" replace />;
+
+    return (
+        <div className="min-h-screen bg-[#020c1b] py-24 px-6 md:px-12 lg:px-24">
+            <div className="max-w-4xl mx-auto">
+                <Link to="/projects" className="inline-flex items-center space-x-2 text-accent hover:text-white transition-colors mb-12 font-mono uppercase tracking-widest text-sm">
+                    <ChevronLeft size={20} /> <span>Back to Infinity Gallery</span>
+                </Link>
+
+                <div className="mb-20">
+                    <p className="text-accent font-mono tracking-[0.4em] uppercase mb-4">{project.category}</p>
+                    <h1 className="text-6xl md:text-8xl font-black text-white tracking-tighter mb-8 uppercase leading-tight">{project.title}</h1>
+                    <p className="text-2xl text-slate-400 leading-relaxed max-w-2xl">{project.description}</p>
+
+                    <div className="flex flex-wrap gap-6 mt-12">
+                        <a href={project.live} target="_blank" className="btn-primary px-12">Visit Live Node</a>
+                        <a href="https://wa.me/2349132175272" className="btn-secondary">Consult on Similar Stack</a>
+                    </div>
+                </div>
+
+                <div className="glass-card rounded-3xl overflow-hidden mb-20 aspect-video relative group">
+                    <img src={"/" + project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                    <div className="absolute inset-0 ring-1 ring-white/10 ring-inset rounded-3xl" />
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-20">
+                    <div className="lg:col-span-2 space-y-12">
+                        <section>
+                            <h2 className="text-4xl font-black text-white uppercase tracking-tighter mb-8">Executive Summary</h2>
+                            <p className="text-xl text-slate-300 leading-relaxed font-medium">
+                                {project.longDescription || project.description}
+                            </p>
+                        </section>
+
+                        {project.highlights && (
+                            <section>
+                                <h2 className="text-4xl font-black text-white uppercase tracking-tighter mb-8">Technical Milestones</h2>
+                                <div className="space-y-6">
+                                    {project.highlights.map((h, i) => (
+                                        <div key={i} className="flex items-start space-x-4 text-slate-300 text-lg">
+                                            <Zap size={24} className="text-accent shrink-0 mt-1" />
+                                            <span className="leading-relaxed">{h}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </section>
+                        )}
+                    </div>
+
+                    <div className="space-y-12">
+                        <section>
+                            <h3 className="text-accent font-mono tracking-widest uppercase text-sm mb-8">Engineered Stack</h3>
+                            <div className="flex flex-wrap gap-3">
+                                {project.tech.map((t, i) => (
+                                    <span key={i} className="bg-white/5 border border-white/10 px-4 py-2 rounded-md text-slate-300 text-xs font-mono">
+                                        {t}
+                                    </span>
+                                ))}
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 const ExperiencePage = () => (
     <section className="py-24 container mx-auto px-6 md:px-12 lg:px-24 min-h-screen">
@@ -317,6 +398,7 @@ export default function App() {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/index.html" element={<Navigate to="/" replace />} />
                     <Route path="/projects" element={<ProjectsPage />} />
+                    <Route path="/projects/:id" element={<ProjectDetailPage />} />
                     <Route path="/project.html" element={<ProjectsPage />} />
                     <Route path="/experience" element={<ExperiencePage />} />
                     <Route path="/experience.html" element={<ExperiencePage />} />
