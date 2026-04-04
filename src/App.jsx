@@ -91,7 +91,7 @@ const LayoutWrapper = ({ children }) => {
                 )}
             </AnimatePresence>
             <div className="relative z-10 min-h-screen pt-24">{children}</div>
-            <footer className="py-20 text-center text-xs font-mono text-slate-600 tracking-[1em] uppercase border-t border-white/5 mx-12">
+            <footer className="py-20 text-center text-[10px] md:text-xs font-mono text-slate-600 tracking-[0.5em] md:tracking-[1em] uppercase border-t border-white/5 mx-6 md:mx-12">
                 Omogo Peter Onyedika © 2026
             </footer>
         </div>
@@ -126,35 +126,35 @@ const HomePage = () => {
     return (
         <div className="container mx-auto px-6 md:px-12 lg:px-24">
             {/* HERO SECTION */}
-            <section className="min-h-[80vh] flex flex-col justify-center items-center text-center">
-                <p className="hero-reveal text-accent font-mono text-xl tracking-[0.4em] uppercase mb-8">Engineering Impact</p>
-                <h1 className="hero-reveal text-6xl md:text-[8rem] font-black text-white leading-tight mb-8 tracking-tighter hero-glow">Omogo Peter</h1>
-                <h2 className="hero-reveal text-3xl md:text-5xl font-medium text-slate-200">Lead Systems & <span className="text-white">Fintech Architect.</span></h2>
-                <p className="hero-reveal text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto mt-12 leading-relaxed">Designing high-performance clinical ecosystems and real-time financial architectures across Africa.</p>
-                <div className="hero-reveal mt-16 flex flex-col sm:flex-row justify-center items-center gap-6 w-full">
-                    <Link to="/projects" className="btn-primary w-full sm:w-auto text-center">Explore Deep Case Studies</Link>
-                    <a href="https://wa.me/2349132175272" className="btn-secondary w-full sm:w-auto text-center">Consult Enterprise</a>
+            <section className="min-h-[85vh] flex flex-col justify-center items-center text-center py-20">
+                <p className="hero-reveal text-accent font-mono text-base md:text-xl tracking-[0.4em] uppercase mb-6 md:mb-8">Engineering Impact</p>
+                <h1 className="hero-reveal text-5xl sm:text-7xl md:text-[8rem] font-black text-white leading-[1.1] mb-8 tracking-tighter hero-glow">Omogo Peter</h1>
+                <h2 className="hero-reveal text-2xl sm:text-3xl md:text-5xl font-medium text-slate-200">Lead Systems & <span className="text-white">Fintech Architect.</span></h2>
+                <p className="hero-reveal text-lg md:text-2xl text-slate-400 max-w-3xl mx-auto mt-10 md:mt-12 leading-relaxed">Designing high-performance clinical ecosystems and real-time financial architectures across Africa.</p>
+                <div className="hero-reveal mt-12 md:mt-16 flex flex-col sm:flex-row justify-center items-center gap-6 w-full max-w-lg sm:max-w-none">
+                    <Link to="/projects" className="btn-primary w-full sm:w-auto text-center px-6 py-4 md:px-10 md:py-5 text-base md:text-lg">Explore Deep Case Studies</Link>
+                    <a href="https://wa.me/2349132175272" className="btn-secondary w-full sm:w-auto text-center px-6 py-4 md:px-10 md:py-5 text-base md:text-lg">Consult Enterprise</a>
                 </div>
             </section>
 
             {/* ABOUT / SUMMARY SECTION */}
-            <section className="py-32 section-reveal">
-                <div className="flex flex-col lg:flex-row gap-20">
+            <section className="py-20 md:py-32 section-reveal">
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
                     <div className="lg:w-1/3">
-                        <h2 className="text-5xl font-black text-white mb-6 uppercase tracking-tighter">About Me</h2>
-                        <div className="h-2 w-20 bg-accent rounded-full mb-10"></div>
+                        <h2 className="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tighter">About Me</h2>
+                        <div className="h-2 w-20 bg-accent rounded-full mb-8 md:mb-10"></div>
                         <p className="text-accent font-mono tracking-widest uppercase text-sm mb-4">Omogo Peter Onyedika</p>
                         <p className="text-slate-400">Full Stack Developer | Systems Architect</p>
                     </div>
                     <div className="lg:w-2/3">
-                        <p className="text-2xl text-slate-200 font-medium leading-relaxed italic border-l-4 border-accent pl-10 mb-12">
+                        <p className="text-xl md:text-2xl text-slate-200 font-medium leading-relaxed italic border-l-4 border-accent pl-6 md:pl-10 mb-8 md:mb-12">
                             "I am a result-driven Full-Stack Developer with over three years of experience building scalable, secure, and user-focused web applications."
                         </p>
-                        <p className="text-xl text-slate-300 leading-relaxed mb-6">
+                        <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-6">
                             Proficient in both frontend and backend development, with strong expertise in JavaScript frameworks (React.js, Next.js), backend technologies (Laravel, Node.js), and API integrations. Demonstrates excellent problem-solving abilities, team leadership, and a passion for delivering impactful digital solutions.
                         </p>
-                        <div className="flex items-center space-x-6 text-slate-300 font-mono text-sm mt-12">
-                            <span className="flex items-center space-x-3"><Mail size={18} className="text-accent" /> <span>omogopeter48@gmail.com</span></span>
+                        <div className="flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-8 text-slate-300 font-mono text-xs md:text-sm mt-10 md:mt-12">
+                            <span className="flex items-center space-x-3"><Mail size={18} className="text-accent" /> <span className="break-all">omogopeter48@gmail.com</span></span>
                             <span className="flex items-center space-x-3"><Phone size={18} className="text-accent" /> <span>+2349132175272</span></span>
                         </div>
                     </div>
@@ -164,18 +164,18 @@ const HomePage = () => {
             <div className="section-divider"></div>
 
             {/* TECH SKILLS MATRIX */}
-            <section className="py-32 section-reveal">
-                <h2 className="text-5xl font-black text-white mb-20 text-center uppercase tracking-tighter">Technical Power Stack</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <section className="py-20 md:py-32 section-reveal">
+                <h2 className="text-4xl md:text-5xl font-black text-white mb-12 md:mb-20 text-center uppercase tracking-tighter">Technical Power Stack</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
                     {SKILLS.map((stack, i) => (
-                        <div key={i} className="glass-card p-12 rounded-2xl group">
-                            <div className="flex items-center space-x-4 mb-10">
+                        <div key={i} className="glass-card p-8 md:p-12 rounded-2xl group">
+                            <div className="flex items-center space-x-4 mb-6 md:mb-10">
                                 <Code className="text-accent" size={32} />
-                                <h3 className="text-2xl font-bold text-white group-hover:text-accent transition-colors">{stack.group}</h3>
+                                <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-accent transition-colors">{stack.group}</h3>
                             </div>
-                            <div className="flex flex-wrap gap-3">
+                            <div className="flex flex-wrap gap-2 md:gap-3">
                                 {stack.items.map((item, ii) => (
-                                    <span key={ii} className="bg-white/5 border border-white/10 px-4 py-2 rounded-md text-slate-300 text-sm font-mono hover:bg-accent/10 hover:border-accent transition-all cursor-default">
+                                    <span key={ii} className="bg-white/5 border border-white/10 px-3 py-1.5 md:px-4 md:py-2 rounded-md text-slate-300 text-xs md:text-sm font-mono hover:bg-accent/10 hover:border-accent transition-all cursor-default">
                                         {item}
                                     </span>
                                 ))}
@@ -188,16 +188,16 @@ const HomePage = () => {
             <div className="section-divider"></div>
 
             {/* EDUCATION SECTION */}
-            <section className="py-32 section-reveal">
-                <div className="max-w-4xl mx-auto glass-card p-16 rounded-3xl border-l-8 border-l-accent">
-                    <div className="flex items-center space-x-6 mb-10">
+            <section className="py-20 md:py-32 section-reveal">
+                <div className="max-w-4xl mx-auto glass-card p-8 md:p-16 rounded-3xl border-l-8 border-l-accent text-center sm:text-left">
+                    <div className="flex flex-col sm:flex-row items-center space-y-6 sm:space-y-0 sm:space-x-6 mb-8 md:mb-10">
                         <GraduationCap size={48} className="text-accent" />
-                        <h2 className="text-4xl font-black text-white uppercase tracking-tighter">Academic Foundation</h2>
+                        <h2 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter">Academic Foundation</h2>
                     </div>
                     <div className="space-y-4">
-                        <h3 className="text-3xl font-bold text-slate-200">Software Engineering</h3>
-                        <p className="text-xl text-accent font-mono uppercase tracking-[0.2em]">Federal University of Technology, Owerri (FUTO)</p>
-                        <p className="text-slate-400 font-bold text-lg">Class of 2022 - 2027</p>
+                        <h3 className="text-2xl md:text-3xl font-bold text-slate-200">Software Engineering</h3>
+                        <p className="text-lg md:text-xl text-accent font-mono uppercase tracking-[0.2em] leading-relaxed">Federal University of Technology, Owerri (FUTO)</p>
+                        <p className="text-slate-400 font-bold text-base md:text-lg">Class of 2022 - 2027</p>
                     </div>
                 </div>
             </section>
@@ -205,14 +205,14 @@ const HomePage = () => {
             <div className="section-divider"></div>
 
             {/* CALL TO ACTION */}
-            <section className="py-32 text-center section-reveal">
+            <section className="py-20 md:py-32 text-center section-reveal">
                 <div className="max-w-4xl mx-auto">
-                    <Award size={64} className="text-accent mx-auto mb-10" />
-                    <h2 className="text-6xl font-black text-white mb-8 tracking-tighter uppercase leading-tight">Elevate Your Next<br />Enterprise Infrastructure.</h2>
-                    <p className="text-2xl text-slate-400 mb-16 leading-relaxed">From AI diagnostics to fintech equity hubs, I engineer the systems that power modern Africa.</p>
-                    <div className="flex flex-col sm:flex-row justify-center gap-8">
-                        <a href="https://wa.me/2349132175272" className="btn-primary">Consult On Enterprise</a>
-                        <Link to="/resume" className="btn-secondary">Technical Resume Dossier</Link>
+                    <Award size={48} className="text-accent mx-auto mb-8 md:mb-10" />
+                    <h2 className="text-4xl md:text-6xl font-black text-white mb-6 md:mb-8 tracking-tighter uppercase leading-tight">Elevate Your Next<br className="hidden sm:block" />Enterprise Infrastructure.</h2>
+                    <p className="text-lg md:text-2xl text-slate-400 mb-10 md:mb-16 leading-relaxed px-4">From AI diagnostics to fintech equity hubs, I engineer the systems that power modern Africa.</p>
+                    <div className="flex flex-col sm:flex-row justify-center gap-6 md:gap-8 px-6">
+                        <a href="https://wa.me/2349132175272" className="btn-primary py-4 md:py-5">Consult On Enterprise</a>
+                        <Link to="/resume" className="btn-secondary py-4 md:py-5">Technical Resume Dossier</Link>
                     </div>
                 </div>
             </section>
@@ -222,36 +222,36 @@ const HomePage = () => {
 
 const ProjectsPage = () => (
     <section className="py-24 container mx-auto px-6 md:px-12 lg:px-24 min-h-screen">
-        <div className="flex items-center space-x-6 mb-24 section-reveal">
-            <Link to="/" className="text-accent hover:text-white transition-colors group">
-                <ChevronLeft size={48} className="group-hover:-translate-x-2 transition-transform" />
+        <div className="flex flex-col sm:flex-row sm:items-center space-y-6 sm:space-y-0 sm:space-x-6 mb-16 md:mb-24 section-reveal">
+            <Link to="/" className="text-accent hover:text-white transition-colors group self-start sm:self-auto">
+                <ChevronLeft size={32} className="md:size-12 group-hover:-translate-x-2 transition-transform" />
             </Link>
             <div>
-                <h2 className="text-7xl font-black text-white tracking-tighter uppercase">Global Gallery</h2>
-                <p className="text-slate-400 font-mono tracking-widest uppercase">Chronicle of 15+ Engineered Platforms</p>
+                <h2 className="text-4xl md:text-7xl font-black text-white tracking-tighter uppercase">Global Gallery</h2>
+                <p className="text-slate-400 font-mono text-xs md:text-base tracking-widest uppercase mt-2">Chronicle of 15+ Engineered Platforms</p>
             </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {ALL_PROJECTS.map((p) => (
                 <TitleTilt key={p.id} tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1.03} className="h-full">
-                    <div className="glass-card rounded-3xl overflow-hidden h-[550px] flex flex-col group relative border-white/5">
-                        <div className="h-2/3 overflow-hidden relative">
+                    <div className="glass-card rounded-3xl overflow-hidden min-h-[500px] md:h-[550px] flex flex-col group relative border-white/5">
+                        <div className="h-48 sm:h-64 md:h-2/3 overflow-hidden relative">
                             <img src={"/" + p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 pointer-events-none" />
                             <div className="absolute inset-0 bg-[#020c1b]/60 group-hover:bg-transparent transition-all pointer-events-none" />
                         </div>
-                        <div className="p-10 flex-grow flex flex-col justify-between">
+                        <div className="p-6 md:p-10 flex-grow flex flex-col justify-between">
                             <div>
-                                <div className="flex justify-between items-center mb-6">
-                                    <span className="bg-accent/10 text-accent font-mono text-[10px] px-3 py-1 rounded-full uppercase font-bold">{p.category}</span>
-                                    <div className="flex space-x-4">
-                                        <a href={p.live} target="_blank" className="text-slate-300 hover:text-white transition-colors" title="Live Site"><Globe size={20} /></a>
-                                        <a href={"/" + p.fileName} className="text-accent hover:text-white transition-colors" title="View Details"><ExternalLink size={20} /></a>
+                                <div className="flex justify-between items-center mb-4 md:mb-6">
+                                    <span className="bg-accent/10 text-accent font-mono text-[9px] md:text-[10px] px-2 py-0.5 md:px-3 md:py-1 rounded-full uppercase font-bold">{p.category}</span>
+                                    <div className="flex space-x-3 md:space-x-4">
+                                        <a href={p.live} target="_blank" className="text-slate-300 hover:text-white transition-colors" title="Live Site"><Globe size={18} md:size={20} /></a>
+                                        <a href={"/" + p.fileName} className="text-accent hover:text-white transition-colors" title="View Details"><ExternalLink size={18} md:size={20} /></a>
                                     </div>
                                 </div>
-                                <h3 className="text-3xl font-bold text-white mb-2 group-hover:text-accent transition-colors"><a href={"/" + p.fileName}>{p.title}</a></h3>
-                                <p className="text-slate-400 text-[11px] leading-relaxed line-clamp-2 uppercase tracking-widest opacity-60">{p.tech.join(' • ')}</p>
+                                <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 group-hover:text-accent transition-colors leading-tight"><a href={"/" + p.fileName}>{p.title}</a></h3>
+                                <p className="text-slate-400 text-[10px] leading-relaxed line-clamp-2 uppercase tracking-widest opacity-60">{p.tech.join(' • ')}</p>
                             </div>
-                            <a href={"/" + p.fileName} className="btn-secondary w-full text-center mt-8 cursor-pointer hover:bg-accent hover:text-background transition-all font-black text-xs">
+                            <a href={"/" + p.fileName} className="btn-secondary w-full text-center mt-6 md:mt-8 cursor-pointer hover:bg-accent hover:text-background transition-all font-black text-[10px] md:text-xs py-3 md:py-4">
                                 View Case Study
                             </a>
                         </div>
@@ -280,14 +280,14 @@ const ProjectDetailPage = () => {
                     <ChevronLeft size={20} /> <span>Back to Infinity Gallery</span>
                 </Link>
 
-                <div className="mb-20">
-                    <p className="text-accent font-mono tracking-[0.4em] uppercase mb-4">{project.category}</p>
-                    <h1 className="text-6xl md:text-8xl font-black text-white tracking-tighter mb-8 uppercase leading-tight">{project.title}</h1>
-                    <p className="text-2xl text-slate-400 leading-relaxed max-w-2xl">{project.description}</p>
+                <div className="mb-12 md:mb-20">
+                    <p className="text-accent font-mono text-xs md:text-sm tracking-[0.4em] uppercase mb-4">{project.category}</p>
+                    <h1 className="text-4xl sm:text-6xl md:text-8xl font-black text-white tracking-tighter mb-6 md:mb-8 uppercase leading-tight">{project.title}</h1>
+                    <p className="text-lg md:text-2xl text-slate-400 leading-relaxed max-w-2xl">{project.description}</p>
 
-                    <div className="flex flex-wrap gap-6 mt-12">
-                        <a href={project.live} target="_blank" className="btn-primary px-12">Visit Live Node</a>
-                        <a href="https://wa.me/2349132175272" className="btn-secondary">Consult on Similar Stack</a>
+                    <div className="flex flex-col sm:flex-row gap-4 md:gap-6 mt-10 md:mt-12">
+                        <a href={project.live} target="_blank" className="btn-primary w-full sm:w-auto px-12 py-4 md:py-5 text-center">Visit Live Node</a>
+                        <a href="https://wa.me/2349132175272" className="btn-secondary w-full sm:w-auto px-12 py-4 md:py-5 text-center">Consult on Similar Stack</a>
                     </div>
                 </div>
 
@@ -299,19 +299,19 @@ const ProjectDetailPage = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-20">
                     <div className="lg:col-span-2 space-y-12">
                         <section>
-                            <h2 className="text-4xl font-black text-white uppercase tracking-tighter mb-8">Executive Summary</h2>
-                            <p className="text-xl text-slate-300 leading-relaxed font-medium">
+                            <h2 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter mb-6 md:mb-8">Executive Summary</h2>
+                            <p className="text-lg md:text-xl text-slate-300 leading-relaxed font-medium">
                                 {project.longDescription || project.description}
                             </p>
                         </section>
 
                         {project.highlights && (
                             <section>
-                                <h2 className="text-4xl font-black text-white uppercase tracking-tighter mb-8">Technical Milestones</h2>
-                                <div className="space-y-6">
+                                <h2 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter mb-6 md:mb-8">Technical Milestones</h2>
+                                <div className="space-y-4 md:space-y-6">
                                     {project.highlights.map((h, i) => (
-                                        <div key={i} className="flex items-start space-x-4 text-slate-300 text-lg">
-                                            <Zap size={24} className="text-accent shrink-0 mt-1" />
+                                        <div key={i} className="flex items-start space-x-3 md:space-x-4 text-slate-300 text-base md:text-lg">
+                                            <Zap size={20} md:size={24} className="text-accent shrink-0 mt-1" />
                                             <span className="leading-relaxed">{h}</span>
                                         </div>
                                     ))}
@@ -340,28 +340,28 @@ const ProjectDetailPage = () => {
 
 const ExperiencePage = () => (
     <section className="py-24 container mx-auto px-6 md:px-12 lg:px-24 min-h-screen">
-        <div className="flex items-center space-x-6 mb-28 section-reveal">
-            <Link to="/" className="text-accent hover:text-white transition-colors group">
-                <ChevronLeft size={48} className="group-hover:-translate-x-2 transition-transform" />
+        <div className="flex flex-col sm:flex-row sm:items-center space-y-6 sm:space-y-0 sm:space-x-6 mb-16 md:mb-28 section-reveal">
+            <Link to="/" className="text-accent hover:text-white transition-colors group self-start sm:self-auto">
+                <ChevronLeft size={32} className="md:size-12 group-hover:-translate-x-2 transition-transform" />
             </Link>
             <div>
-                <h2 className="text-7xl font-black text-white tracking-tighter uppercase">Professional Odyssey</h2>
-                <p className="text-slate-400 font-mono tracking-widest uppercase">Experience Narrative (2021-2026)</p>
+                <h2 className="text-4xl md:text-7xl font-black text-white tracking-tighter uppercase leading-tight">Professional Odyssey</h2>
+                <p className="text-slate-400 font-mono text-xs md:text-base tracking-widest uppercase mt-2">Experience Narrative (2021-2026)</p>
             </div>
         </div>
         <div className="max-w-4xl mx-auto relative pl-8 border-l-2 border-white/10 space-y-32">
             {EXPERIENCE.map((exp, i) => (
                 <div key={i} className="relative">
-                    <div className="absolute -left-[41px] w-6 h-6 rounded-full bg-[#020c1b] border-4 border-accent shadow-[0_0_20px_rgba(100,255,218,0.5)] mt-4" />
-                    <div className="flex flex-col mb-8">
-                        <h3 className="text-5xl font-black text-white leading-tight uppercase tracking-tighter">{exp.role}</h3>
-                        <p className="text-2xl font-mono text-accent mt-2 tracking-widest">@ {exp.company}</p>
-                        <p className="text-slate-500 font-mono text-sm mt-4 tracking-[0.3em] uppercase">{exp.date}</p>
+                    <div className="absolute -left-[41px] w-6 h-6 rounded-full bg-[#020c1b] border-4 border-accent shadow-[0_0_20px_rgba(100,255,218,0.5)] mt-3 md:mt-4" />
+                    <div className="flex flex-col mb-6 md:mb-8">
+                        <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight uppercase tracking-tighter">{exp.role}</h3>
+                        <p className="text-xl sm:text-2xl font-mono text-accent mt-2 tracking-widest">@ {exp.company}</p>
+                        <p className="text-slate-500 font-mono text-xs md:text-sm mt-3 md:mt-4 tracking-[0.3em] uppercase">{exp.date}</p>
                     </div>
-                    <div className="flex flex-col space-y-6">
+                    <div className="flex flex-col space-y-4 md:space-y-6">
                         {exp.highlights.map((h, hi) => (
-                            <div key={hi} className="flex items-start space-x-4 text-slate-300 text-xl leading-relaxed">
-                                <Zap size={24} className="text-accent shrink-0 mt-1" />
+                            <div key={hi} className="flex items-start space-x-3 md:space-x-4 text-slate-300 text-lg md:text-xl leading-relaxed">
+                                <Zap size={20} md:size={24} className="text-accent shrink-0 mt-1" />
                                 <span>{h}</span>
                             </div>
                         ))}
@@ -373,19 +373,19 @@ const ExperiencePage = () => (
 );
 
 const ResumePage = () => (
-    <section className="py-20 container mx-auto px-6 md:px-12 min-h-screen text-center flex flex-col justify-center items-center">
-        <div className="max-w-4xl mx-auto glass-card p-24 rounded-3xl w-full border-white/5">
-            <Award size={80} className="text-accent mx-auto mb-10" />
-            <h2 className="text-6xl font-black text-white mb-8 tracking-tighter uppercase">Leadership Dossier</h2>
-            <p className="text-2xl text-slate-400 mb-16 leading-relaxed max-w-2xl mx-auto font-medium">
+    <section className="py-20 md:py-24 container mx-auto px-6 md:px-12 min-h-[80vh] flex flex-col justify-center items-center text-center">
+        <div className="max-w-4xl mx-auto glass-card p-10 md:p-24 rounded-3xl w-full border-white/5">
+            <Award size={64} md:size={80} className="text-accent mx-auto mb-8 md:mb-10" />
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-white mb-6 md:mb-8 tracking-tighter uppercase leading-tight">Leadership Dossier</h2>
+            <p className="text-lg md:text-2xl text-slate-400 mb-12 md:mb-16 leading-relaxed max-w-2xl mx-auto font-medium px-4">
                 Chronicling 5+ years of engineering large-scale clinical, fintech, and governmental architectures across Nigeria and Africa.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-10">
-                <a href="resume.html" className="btn-primary flex items-center justify-center space-x-4">
-                    <Download size={24} /><span>Secure PDF Hub</span>
+            <div className="flex flex-col sm:flex-row justify-center gap-6 md:gap-10 px-6">
+                <a href="resume.html" className="btn-primary flex items-center justify-center space-x-4 py-4 md:py-5">
+                    <Download size={20} md:size={24} /><span>Secure PDF Hub</span>
                 </a>
-                <Link to="/" className="btn-secondary flex items-center justify-center space-x-4 font-black">
-                    <ArrowLeft size={24} /><span>Return Home</span>
+                <Link to="/" className="btn-secondary flex items-center justify-center space-x-4 font-black py-4 md:py-5">
+                    <ArrowLeft size={20} md:size={24} /><span>Return Home</span>
                 </Link>
             </div>
         </div>
