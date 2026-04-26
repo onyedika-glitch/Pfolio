@@ -42,18 +42,60 @@
             font-weight: bold;
             color: #e6f1ff;
         }
+
+        @media print {
+            @page {
+                margin: 1cm;
+            }
+
+            body {
+                background-color: white !important;
+                color: black !important;
+            }
+
+            .section-heading {
+                color: #1a202c !important;
+                border-bottom: 2px solid #e2e8f0 !important;
+            }
+
+            .text-slate-400,
+            .text-slate-300 {
+                color: #2d3748 !important;
+            }
+
+            .accent-color {
+                color: #059669 !important;
+            }
+
+            header,
+            footer,
+            .no-print {
+                display: none !important;
+            }
+
+            main {
+                padding-top: 0 !important;
+                margin: 0 !important;
+                width: 100% !important;
+            }
+
+            .max-w-4xl {
+                max-width: 100% !important;
+            }
+        }
     </style>
 </head>
 
 <body class="leading-relaxed antialiased">
 
     <!-- Header -->
-    <header id="header" class="sticky top-0 left-0 right-0 z-50 transition-all duration-300 glass-effect shadow-lg">
+    <header id="header"
+        class="sticky top-0 left-0 right-0 z-50 transition-all duration-300 glass-effect shadow-lg no-print">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-bold accent-color">O.</a>
-            <a href="Omogo Peter Resume.pdf" download="Omogo Peter Resume.pdf"
-                class="border accent-border text-cyan-300 px-4 py-2 rounded-md hover:bg-cyan-300/10 transition-colors duration-300">Download
-                PDF</a>
+            <button onclick="window.print()"
+                class="border accent-border text-cyan-300 px-4 py-2 rounded-md hover:bg-cyan-300/10 transition-colors duration-300">Generate
+                PDF (Print)</button>
         </nav>
     </header>
 
@@ -77,13 +119,13 @@
             <!-- Professional Summary -->
             <section class="mb-10">
                 <h2 class="section-heading">Professional Summary</h2>
-                <p class="text-slate-400">I am a result-driven Full-Stack Developer with over three years of experience
-                    building scalable, secure, and user-focused web applications. Proficient in both frontend and
-                    backend development, with strong expertise in JavaScript frameworks (React.js, Next.js), backend
-                    technologies (Laravel, Node.js, PHP), and API integrations. Demonstrates excellent problem-solving
-                    abilities, team leadership, and a passion for delivering impactful digital solutions in fast-paced
-                    environments. I am committed to delivering measurable results. Passionate about digital innovation,
-                    I bring a strategic mindset and adaptability that make me a valuable asset to any organization.</p>
+                <p class="text-slate-400">Result-driven Full-Stack Systems Architect with 3+ years of experience in
+                    bridging the gap between high-level technical engineering and client-facing strategic communication.
+                    Proven track record in leading development for international-scale healthcare and fintech platforms,
+                    managing cross-functional teams, and translating complex technical architectures into actionable
+                    insights for non-technical stakeholders. Expert in React, Next.js, and Node.js, with a strong focus
+                    on delivering user-centric, global solutions and managing technical roadmaps for diverse
+                    international partners.</p>
             </section>
 
             <!-- Skills -->
@@ -103,15 +145,15 @@
                     <div>
                         <h3 class="font-semibold text-slate-200 mb-2 text-lg">Professional Abilities</h3>
                         <ul class="space-y-1 list-disc list-inside">
-                            <li>Team Collaboration & Leadership</li>
-                            <li>UI/UX Implementation</li>
-                            <li>Research and Analysis</li>
-                            <li>Software Development Lifecycle</li>
-                            <li>API Development & Integration</li>
-                            <li>Critical Thinking</li>
-                            <li>Email Automation</li>
-                            <li>Project Management</li>
-                            <li>Time Management</li>
+                            <li>Team Collaboration & Stakeholder Leadership</li>
+                            <li>Technical Translation (Dev-to-Client)</li>
+                            <li>Project Scope & Timeline Management</li>
+                            <li>UI/UX Strategy & Implementation</li>
+                            <li>API Architecture & Documentation</li>
+                            <li>Critical Thinking & Problem Solving</li>
+                            <li>Fluent Technical English & Presentation</li>
+                            <li>Research and Market Analysis</li>
+                            <li>Software Development Lifecycle (SDLC)</li>
                         </ul>
                     </div>
                 </div>
@@ -129,11 +171,12 @@
                         <p class="text-md text-slate-300 italic">Zentrix Equity & Valuation Platform</p>
                         <ul class="list-disc list-inside text-slate-400 space-y-2 mt-2">
                             <li>Orchestrating the development of a real-time fintech platform for cap table management
-                                and equity distribution.</li>
-                            <li>Implemented a high-performance WebSocket architecture (Socket.io) to provide live
-                                updates for valuation and funding rounds.</li>
-                            <li>Engineered secure, type-safe API architectures using TypeScript and PostgreSQL to handle
-                                sensitive financial data.</li>
+                                and equity distribution, while advising stakeholders on technical feasibility and
+                                scaling.</li>
+                            <li>Communicating high-level architectural decisions (Socket.io, Secure APIs) to
+                                non-technical partners to align with business goals.</li>
+                            <li>Collaborating with international teams to refine product requirements and technical
+                                roadmaps.</li>
                         </ul>
                     </div>
                     <div>
@@ -143,14 +186,12 @@
                         </div>
                         <p class="text-md text-slate-300 italic">Unlimited Healthcare (UHC)</p>
                         <ul class="list-disc list-inside text-slate-400 space-y-2 mt-2">
-                            <li>Leading the end-to-end development of a high-scale healthcare platform with 10k+
-                                potential users.</li>
-                            <li>Integrated AI-driven health diagnostics and real-time medical consultation systems using
-                                WebSockets.</li>
-                            <li>Directed the full release cycle to Google Play Store, managing production configuration
-                                and certification.</li>
-                            <li>Engineered secure, type-safe API architectures using TypeScript and Node.js to handle
-                                sensitive clinical data.</li>
+                            <li>Leading end-to-end development of a high-scale healthcare platform, serving as the
+                                primary technical point of contact for project scope and delivery updates.</li>
+                            <li>Translating complex AI-driven health diagnostic requirements into clear development
+                                sprints and client-facing progress reports.</li>
+                            <li>Managing production configurations and Google Play Store certification cycles in
+                                synchronization with client release timelines.</li>
                         </ul>
                     </div>
                     <div>
