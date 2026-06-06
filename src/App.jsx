@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 // Data Hub
 // Data Hub
 const ALL_PROJECTS = [
+    { id: 'youextractor', title: 'YouExtractor', category: 'AI DevOps & Code Extraction', description: 'SaaS platform extracting syntax-highlighted codebases from YouTube programming tutorials using chained LLM pipelines.', tech: ['Laravel', 'PostgreSQL', 'Tailwind CSS', 'Claude API', 'Gemini API'], live: 'https://youextractor.me/', image: 'img/youextractor.png', fileName: 'youextractor.html' },
     { id: 'zentrix', title: 'Zentrix Equity', category: 'Fintech WebSocket', description: 'Real-time equity distribution and cap table platform with low-latency updates.', tech: ['Node.js', 'Socket.io', 'PostgreSQL', 'React'], live: 'https://equityapp.zentrixinnovationlab.com/', image: 'img/zentrix.png', fileName: 'zentrix.html' },
     { id: 'uhc', title: 'Unlimited Healthcare', category: 'Healthcare AI', description: 'AI-diagnostics and real-time medical platform with 20+ clinical testers.', tech: ['React', 'Capacitor', 'WebSockets', 'AI'], live: 'https://unlimitedhealthcares.com/', image: 'img/uhc.png', fileName: 'uhc.html' },
     { id: 'caremandate', title: 'CareMandate', category: 'Monorepo Stack', description: 'Enterprise Monorepo for clinical management serving high-intensity hospital workflows.', tech: ['Vite', 'TurboRepo', 'Expo', 'TypeScript'], live: 'https://caremandate.com/', image: 'img/caremandate.png', fileName: 'caremandate.html' },
@@ -27,6 +28,7 @@ const ALL_PROJECTS = [
     { id: 'selfany', title: 'Selfany', category: 'UI Development', description: 'Dynamic React UIs that improved user engagement by 25%.', tech: ['React', 'Redux'], live: 'https://selfany.com', image: 'img/selfany.png', fileName: 'selfany.html' },
     { id: 'restaurant-ui', title: 'Restaurant Design', category: 'Figma UI', description: 'Modern restaurant landing page UI with smooth interactive flows.', tech: ['Figma'], live: 'https://www.figma.com/design/TaBElLQPletCCX5ZQ5hv9O/Restaurant-UI', image: 'img/image.png', fileName: 'restaurant-ui.html' }
 ];
+
 
 const EXPERIENCE = [
     ...Array(1).fill({ role: 'Lead Software Engineer (Project Based)', company: 'Zentrix Equity', date: 'Feb 2026 - Present', highlights: ['Orchestrating the development of a real-time fintech platform for cap table management.', 'Implemented a high-performance WebSocket architecture (Socket.io) for live updates.', 'Engineered secure, type-safe API architectures using TypeScript and PostgreSQL.'] }),
