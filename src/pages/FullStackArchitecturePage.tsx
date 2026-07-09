@@ -10,16 +10,16 @@ export default function FullStackArchitecturePage() {
       <Navbar />
 
       {/* HERO */}
-      <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden', padding: '160px 0 100px' }}>
+      <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>
         <div className="absolute pointer-events-none" style={{ top: '-120px', right: '-80px', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(59,130,246,0.14) 0%, transparent 65%)' }} />
-        <div className="max-w-[1600px] mx-auto px-14 relative z-10">
+        <div className="site-container relative z-10">
           <div className="inline-flex items-center gap-2 mb-6 fade-in" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#3B82F6' }}>
             <Link to="/services" className="no-underline transition-all duration-200"
               style={{ color: '#fff', background: 'rgba(255,255,255,0.1)', padding: '6px 14px', borderRadius: '6px', fontSize: '11px', fontWeight: 600 }}>Services</Link>
             <span style={{ color: 'rgba(255,255,255,0.3)' }}>/</span>
             <span style={{ color: 'rgba(255,255,255,0.5)' }}>Full-Stack Architecture</span>
           </div>
-          <h1 className="fade-in-2" style={{ fontSize: 'clamp(48px, 5vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#fff', marginBottom: '24px', maxWidth: '900px' }}>
+          <h1 className="fade-in-2" style={{ fontSize: 'clamp(32px, 8vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#fff', marginBottom: '24px', maxWidth: '900px' }}>
             Full-Stack<br />Architecture
           </h1>
           <p className="fade-in-3" style={{ fontSize: '18px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, maxWidth: '640px', marginBottom: '48px' }}>
@@ -34,9 +34,9 @@ export default function FullStackArchitecturePage() {
       </section>
 
       {/* OVERVIEW */}
-      <section style={{ background: '#fff', padding: '100px 0' }}>
-        <div className="max-w-[1600px] mx-auto px-14">
-          <div className="grid gap-16" style={{ gridTemplateColumns: '1fr 1fr' }}>
+      <section style={{ background: '#fff', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
+        <div className="site-container">
+          <div className="grid gap-8 md:gap-16 grid-cols-1 md:grid-cols-2">
             <div>
               <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '20px' }}>What we build</h2>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '28px' }}>
@@ -69,14 +69,14 @@ export default function FullStackArchitecturePage() {
       </section>
 
       {/* APPROACH */}
-      <section style={{ background: '#F1F5F9', padding: '100px 0' }}>
-        <div className="max-w-[1600px] mx-auto px-14">
+      <section style={{ background: '#F1F5F9', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
+        <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#3B82F6' }}>
             <span style={{ display: 'block', width: '20px', height: '2px', background: '#3B82F6' }}></span>
             Our Approach
           </div>
           <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '56px' }}>How we architect systems.</h2>
-          <div className="grid gap-6" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+          <div className="grid gap-5 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { num: '01', icon: 'fa-sitemap', title: 'System Design First', desc: 'We start with a system design document — data models, API contracts, infrastructure topology — before writing code. Every tradeoff is documented and discussed.' },
               { num: '02', icon: 'fa-code', title: 'Typed & Tested', desc: 'TypeScript end-to-end. Full test suites (unit, integration, E2E). Every PR is reviewed. We ship code that other engineers can read and own.' },
@@ -96,14 +96,14 @@ export default function FullStackArchitecturePage() {
       </section>
 
       {/* TECH STACK */}
-      <section style={{ background: '#fff', padding: '100px 0' }}>
-        <div className="max-w-[1600px] mx-auto px-14">
+      <section style={{ background: '#fff', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
+        <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#3B82F6' }}>
             <span style={{ display: 'block', width: '20px', height: '2px', background: '#3B82F6' }}></span>
             Technologies
           </div>
           <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '48px' }}>Tools we reach for.</h2>
-          <div className="grid gap-4" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { cat: 'Frontend', items: ['React', 'Next.js', 'Vue', 'Tailwind CSS', 'TypeScript', 'Redux/Zustand'] },
               { cat: 'Backend', items: ['Node.js', 'Express', 'Fastify', 'Python', 'Go', 'REST & GraphQL'] },

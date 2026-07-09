@@ -53,20 +53,20 @@ export default function WorkPage() {
       <Navbar />
 
       {/* PAGE HERO */}
-      <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden', padding: '160px 0 80px' }}>
+      <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden' }} className="pt-28 md:pt-40 pb-12 md:pb-20">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
-        <div className="absolute pointer-events-none" style={{ top: '-120px', right: '-80px', width: '700px', height: '700px', background: 'radial-gradient(circle, rgba(59,130,246,0.14) 0%, transparent 65%)' }} />
-        <div className="max-w-[1600px] mx-auto px-14 relative z-10">
+        <div className="absolute pointer-events-none hidden sm:block" style={{ top: '-120px', right: '-80px', width: '700px', height: '700px', background: 'radial-gradient(circle, rgba(59,130,246,0.14) 0%, transparent 65%)' }} />
+        <div className="site-container relative z-10">
           <div className="inline-flex items-center gap-2 mb-6 fade-in" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#3B82F6' }}>
             <span style={{ display: 'block', width: '24px', height: '2px', background: '#3B82F6' }}></span>
             Selected Work
           </div>
-          <h1 className="fade-in-2" style={{ fontSize: 'clamp(52px, 5.5vw, 80px)', fontWeight: 900, lineHeight: 1.0, letterSpacing: '-0.04em', color: '#fff', marginBottom: '24px' }}>All Work</h1>
-          <p className="fade-in-3" style={{ fontSize: '17px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.65, maxWidth: '680px', marginBottom: '64px' }}>Production systems across AI, fintech, healthcare, edtech, and web platforms. Every project built with senior engineering judgment.</p>
-          <div className="flex items-stretch gap-0.5 rounded-xl overflow-hidden fade-in-4" style={{ background: 'rgba(255,255,255,0.08)', maxWidth: '680px' }}>
+          <h1 className="fade-in-2" style={{ fontSize: 'clamp(36px, 9vw, 80px)', fontWeight: 900, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#fff', marginBottom: '20px' }}>All Work</h1>
+          <p className="fade-in-3" style={{ fontSize: 'clamp(15px, 2.5vw, 17px)', color: 'rgba(255,255,255,0.65)', lineHeight: 1.65, maxWidth: '680px', marginBottom: '40px' }}>Production systems across AI, fintech, healthcare, edtech, and web platforms. Every project built with senior engineering judgment.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-0.5 rounded-xl overflow-hidden fade-in-4" style={{ background: 'rgba(255,255,255,0.08)', maxWidth: '680px' }}>
             {[['10', 'Projects', 'Shipped to Production'], ['5+', 'Years', 'Engineering Experience'], ['4', 'Domains', 'Healthcare · Fintech · AI · Web']].map(([val, main, sub]) => (
-              <div key={main} style={{ background: 'rgba(255,255,255,0.04)', padding: '28px 36px', flex: 1 }}>
-                <div style={{ fontSize: '32px', fontWeight: 900, letterSpacing: '-0.04em', color: '#fff', lineHeight: 1, marginBottom: '8px' }}>{val}</div>
+              <div key={main} className="p-5 md:p-7" style={{ background: 'rgba(255,255,255,0.04)' }}>
+                <div style={{ fontSize: 'clamp(24px, 5vw, 32px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#fff', lineHeight: 1, marginBottom: '8px' }}>{val}</div>
                 <div style={{ fontSize: '13px', fontWeight: 600, color: 'rgba(255,255,255,0.75)', marginBottom: '2px' }}>{main}</div>
                 <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.02em' }}>{sub}</div>
               </div>
@@ -76,9 +76,9 @@ export default function WorkPage() {
       </section>
 
       {/* FILTER BAR */}
-      <div ref={filterRef} style={{ position: 'sticky', top: '120px', zIndex: 100, background: '#fff', borderBottom: '1px solid #E2E8F0', boxShadow: scrolled ? '0 4px 16px rgba(0,0,0,0.06)' : 'none' }}>
-        <div className="max-w-[1600px] mx-auto px-14 h-[60px] flex items-center gap-2.5 overflow-x-auto">
-          <span style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#64748B', marginRight: '6px', whiteSpace: 'nowrap' }}>Filter:</span>
+      <div ref={filterRef} className="sticky top-[72px] md:top-[96px] lg:top-[120px] z-[100]" style={{ background: '#fff', borderBottom: '1px solid #E2E8F0', boxShadow: scrolled ? '0 4px 16px rgba(0,0,0,0.06)' : 'none' }}>
+        <div className="site-container min-h-[56px] py-2 flex items-center gap-2 overflow-x-auto no-scrollbar">
+          <span style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#64748B', marginRight: '4px', whiteSpace: 'nowrap', flexShrink: 0 }}>Filter:</span>
           {filters.map(f => (
             <button key={f.key}
               onClick={() => setActiveFilter(f.key)}
@@ -102,11 +102,11 @@ export default function WorkPage() {
 
       {/* PROJECTS */}
       <section style={{ background: '#F8FAFC', padding: '56px 0 100px' }}>
-        <div className="max-w-[1600px] mx-auto px-14">
+        <div className="site-container">
           <div style={{ fontSize: '12px', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#64748B', marginBottom: '32px' }}>
             Showing {visible.length} project{visible.length !== 1 ? 's' : ''}{activeFilter !== 'all' ? ` in ${filters.find(f => f.key === activeFilter)?.label}` : ''}
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-6">
             {visible.map(p => (
               <div key={p.id} className="rounded-xl overflow-hidden flex flex-col cursor-pointer transition-all duration-200 hover:-translate-y-1" style={{ background: '#fff', border: '1px solid #E2E8F0' }}>
                 <div style={{ height: '4px', background: p.topBar }}></div>

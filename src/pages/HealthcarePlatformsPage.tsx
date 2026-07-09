@@ -10,16 +10,16 @@ export default function HealthcarePlatformsPage() {
       <Navbar />
 
       {/* HERO */}
-      <section style={{ background: '#0F172A', position: 'relative', overflow: 'hidden', padding: '160px 0 100px' }}>
+      <section style={{ background: '#0F172A', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>
         <div className="absolute pointer-events-none" style={{ top: '-120px', right: '-80px', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(99,102,241,0.14) 0%, transparent 65%)' }} />
-        <div className="max-w-[1600px] mx-auto px-14 relative z-10">
+        <div className="site-container relative z-10">
           <div className="inline-flex items-center gap-2 mb-6 fade-in" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#818CF8' }}>
             <Link to="/services" className="no-underline transition-all duration-200"
               style={{ color: '#fff', background: 'rgba(255,255,255,0.1)', padding: '6px 14px', borderRadius: '6px', fontSize: '11px', fontWeight: 600 }}>Services</Link>
             <span style={{ color: 'rgba(255,255,255,0.3)' }}>/</span>
             <span style={{ color: 'rgba(255,255,255,0.5)' }}>Healthcare Platforms</span>
           </div>
-          <h1 className="fade-in-2" style={{ fontSize: 'clamp(48px, 5vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#fff', marginBottom: '24px', maxWidth: '900px' }}>
+          <h1 className="fade-in-2" style={{ fontSize: 'clamp(32px, 8vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#fff', marginBottom: '24px', maxWidth: '900px' }}>
             Healthcare<br />Platforms
           </h1>
           <p className="fade-in-3" style={{ fontSize: '18px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, maxWidth: '640px', marginBottom: '48px' }}>
@@ -34,9 +34,9 @@ export default function HealthcarePlatformsPage() {
       </section>
 
       {/* OVERVIEW */}
-      <section style={{ background: '#fff', padding: '100px 0' }}>
-        <div className="max-w-[1600px] mx-auto px-14">
-          <div className="grid gap-16" style={{ gridTemplateColumns: '1fr 1fr' }}>
+      <section style={{ background: '#fff', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
+        <div className="site-container">
+          <div className="grid gap-8 md:gap-16 grid-cols-1 md:grid-cols-2">
             <div>
               <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '20px' }}>What we build</h2>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '28px' }}>
@@ -69,14 +69,14 @@ export default function HealthcarePlatformsPage() {
       </section>
 
       {/* APPROACH */}
-      <section style={{ background: '#F1F5F9', padding: '100px 0' }}>
-        <div className="max-w-[1600px] mx-auto px-14">
+      <section style={{ background: '#F1F5F9', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
+        <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#818CF8' }}>
             <span style={{ display: 'block', width: '20px', height: '2px', background: '#818CF8' }}></span>
             Our Approach
           </div>
           <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '56px' }}>How we build healthcare systems.</h2>
-          <div className="grid gap-6" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+          <div className="grid gap-5 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { num: '01', icon: 'fa-shield-halved', title: 'Privacy by Design', desc: 'Data privacy is the foundational constraint. We design systems where patient data is encrypted, segregated, and accessible only through granular, audited permissions.' },
               { num: '02', icon: 'fa-arrows-left-right', title: 'Interoperability First', desc: 'HL7 FHIR-compliant APIs ensure your system can communicate with existing healthcare infrastructure — labs, pharmacies, insurance, and national health systems.' },
@@ -96,8 +96,8 @@ export default function HealthcarePlatformsPage() {
       </section>
 
       {/* CASE STUDY SNIPPET */}
-      <section style={{ background: '#fff', padding: '100px 0' }}>
-        <div className="max-w-[1600px] mx-auto px-14">
+      <section style={{ background: '#fff', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
+        <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#818CF8' }}>
             <span style={{ display: 'block', width: '20px', height: '2px', background: '#818CF8' }}></span>
             Related Work

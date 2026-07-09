@@ -9,14 +9,14 @@ export default function ContactPage() {
       <Navbar />
 
       {/* HERO */}
-      <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden', padding: '160px 0 100px' }}>
+      <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>
         <div className="absolute pointer-events-none" style={{ top: '-120px', right: '-80px', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(59,130,246,0.14) 0%, transparent 65%)' }} />
-        <div className="max-w-[1600px] mx-auto px-14 relative z-10">
+        <div className="site-container relative z-10">
           <div className="inline-flex items-center gap-2 mb-6 fade-in" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#3B82F6' }}>
             <span style={{ display: 'block', width: '24px', height: '2px', background: '#3B82F6' }}></span>
             Start a Conversation
           </div>
-          <h1 className="fade-in-2" style={{ fontSize: 'clamp(48px, 5vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#fff', marginBottom: '24px', maxWidth: '900px' }}>
+          <h1 className="fade-in-2" style={{ fontSize: 'clamp(32px, 8vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#fff', marginBottom: '24px', maxWidth: '900px' }}>
             Let's build something<br />exceptional.
           </h1>
           <p className="fade-in-3" style={{ fontSize: '18px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, maxWidth: '640px', marginBottom: '48px' }}>
@@ -26,9 +26,9 @@ export default function ContactPage() {
       </section>
 
       {/* CONTACT OPTIONS */}
-      <section style={{ background: '#fff', padding: '100px 0' }}>
-        <div className="max-w-[1600px] mx-auto px-14">
-          <div className="grid gap-12" style={{ gridTemplateColumns: '1fr 1fr' }}>
+      <section style={{ background: '#fff', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
+        <div className="site-container">
+          <div className="grid gap-8 md:gap-12 grid-cols-1 md:grid-cols-2">
             <div>
               <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 36px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '20px' }}>Get in touch</h2>
               <p style={{ fontSize: '16px', lineHeight: 1.75, color: '#64748B', marginBottom: '40px', maxWidth: '480px' }}>
@@ -42,8 +42,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div style={{ fontSize: '14px', fontWeight: 700, color: '#0F172A', marginBottom: '4px' }}>Email</div>
-                    <a href="mailto:webdevelopment@discountclubcayman.com" className="no-underline inline-flex items-center gap-1.5 transition-all duration-200"
-                      style={{ fontSize: '14px', fontWeight: 600, color: '#fff', background: '#3B82F6', padding: '8px 18px', borderRadius: '8px' }}>
+                    <a href="mailto:webdevelopment@discountclubcayman.com" className="no-underline inline-flex items-center gap-1.5 transition-all duration-200 max-w-full"
+                      style={{ fontSize: '12px', fontWeight: 600, color: '#fff', background: '#3B82F6', padding: '8px 12px', borderRadius: '8px', wordBreak: 'break-all' }}>
                       webdevelopment@discountclubcayman.com
                     </a>
                     <p style={{ fontSize: '13px', color: '#64748B', marginTop: '4px' }}>We aim to respond within 24 hours.</p>
@@ -76,7 +76,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div style={{ background: '#F1F5F9', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '48px' }}>
+            <div className="p-6 md:p-10" style={{ background: '#F1F5F9', border: '1px solid #E2E8F0', borderRadius: '12px' }}>
               <h3 style={{ fontSize: '13px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#64748B', marginBottom: '24px' }}>Send us a message</h3>
               <form className="flex flex-col gap-6" onSubmit={e => e.preventDefault()}>
                 <div>
@@ -107,7 +107,7 @@ export default function ContactPage() {
 
       {/* SOCIAL */}
       <section style={{ background: '#F1F5F9', padding: '80px 0' }}>
-        <div className="max-w-[1600px] mx-auto px-14 flex items-center justify-between flex-wrap gap-8">
+        <div className="site-container flex flex-col sm:flex-row sm:items-center sm:justify-between flex-wrap gap-6">
           <div>
             <h2 style={{ fontSize: '28px', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '8px' }}>Follow our work</h2>
             <p style={{ fontSize: '15px', color: '#64748B' }}>See what we are building and sharing.</p>
