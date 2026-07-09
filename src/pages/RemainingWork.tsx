@@ -20,7 +20,7 @@ export default function RemainingWork() {
 
       <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden', padding: '136px 0 64px' }}>
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
-        <div className="max-w-[1600px] mx-auto px-14 relative z-10">
+        <div className="site-container relative z-10">
           <div className="flex items-center gap-2 mb-7 fade-in">
             <Link to="/work" className="inline-flex items-center gap-1.5 no-underline transition-colors" style={{ fontSize: '13px', fontWeight: 500, color: 'rgba(255,255,255,0.45)' }}>
               <i className="fas fa-arrow-left" style={{ fontSize: '11px' }}></i>
@@ -39,7 +39,7 @@ export default function RemainingWork() {
       </section>
 
       <section style={{ background: '#fff', padding: '72px 0 100px' }}>
-        <div className="max-w-[1600px] mx-auto px-14">
+        <div className="site-container">
           <div className="flex items-center justify-between mb-10">
             <div style={{ fontSize: '12px', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#64748B' }}>6 Projects</div>
             <Link to="/work" className="inline-flex items-center gap-1.5 no-underline transition-all" style={{ fontSize: '13px', fontWeight: 600, color: '#1E3A8A' }}>
@@ -47,7 +47,7 @@ export default function RemainingWork() {
               Back to all work
             </Link>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '28px' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7">
             {projects.map((p, i) => (
               <div key={i} className="rounded-2xl overflow-hidden flex flex-col cursor-pointer transition-all duration-300 hover:-translate-y-1" style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', minHeight: '380px' }}>
                 <div style={{ height: '4px', background: p.topBar }}></div>

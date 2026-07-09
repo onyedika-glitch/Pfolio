@@ -14,18 +14,20 @@ const btnStyle: React.CSSProperties = {
   textDecoration: 'none',
   transition: 'all 0.2s ease',
   cursor: 'pointer',
+  wordBreak: 'break-word',
+  maxWidth: '100%',
 }
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#0F172A', padding: '72px 0 40px' }}>
-      <div className="max-w-[1600px] mx-auto px-14">
-        <div className="grid gap-16 mb-16" style={{ gridTemplateColumns: '2fr 1fr 1fr 1fr' }}>
-          <div>
+    <footer style={{ background: '#0F172A', padding: '56px 0 32px' }}>
+      <div className="site-container">
+        <div className="grid gap-10 md:gap-12 mb-12 md:mb-16 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="sm:col-span-2 lg:col-span-1">
             <Link to="/" className="inline-flex no-underline mb-0">
-              <Logo size={96} variant="blue" textColor="rgba(255,255,255,0.9)" subColor="rgba(59,130,246,0.8)" />
+              <Logo size={72} variant="blue" textColor="rgba(255,255,255,0.9)" subColor="rgba(59,130,246,0.8)" />
             </Link>
-            <p style={{ fontSize: '13.5px', lineHeight: 1.7, color: 'rgba(255,255,255,0.4)', maxWidth: '280px', marginTop: '20px', marginBottom: '28px' }}>
+            <p style={{ fontSize: '13.5px', lineHeight: 1.7, color: 'rgba(255,255,255,0.4)', maxWidth: '320px', marginTop: '20px', marginBottom: '28px' }}>
               A senior engineering firm specialising in enterprise software, fintech, and healthcare systems. London-informed. Africa-built.
             </p>
             <div className="flex gap-3">
@@ -69,7 +71,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div style={{ paddingTop: '32px', borderTop: '1px solid rgba(255,255,255,0.07)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between" style={{ paddingTop: '28px', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
           <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.25)', letterSpacing: '0.01em' }}>© 2026 DevOmogo · devomogo.tech. All rights reserved.</div>
           <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.25)', letterSpacing: '0.01em' }}>Enterprise Software · Built to Last</div>
         </div>

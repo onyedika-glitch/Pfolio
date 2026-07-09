@@ -48,14 +48,14 @@ export default function TechStackPage() {
       <Navbar />
 
       {/* HERO */}
-      <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden', padding: '160px 0 100px' }}>
+      <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>
         <div className="absolute pointer-events-none" style={{ top: '-120px', right: '-80px', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(59,130,246,0.14) 0%, transparent 65%)' }} />
-        <div className="max-w-[1600px] mx-auto px-14 relative z-10">
+        <div className="site-container relative z-10">
           <div className="inline-flex items-center gap-2 mb-6 fade-in" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#3B82F6' }}>
             <span style={{ display: 'block', width: '24px', height: '2px', background: '#3B82F6' }}></span>
             Full Technical Stack
           </div>
-          <h1 className="fade-in-2" style={{ fontSize: 'clamp(48px, 5vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#fff', marginBottom: '24px', maxWidth: '900px' }}>
+          <h1 className="fade-in-2" style={{ fontSize: 'clamp(32px, 8vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#fff', marginBottom: '24px', maxWidth: '900px' }}>
             The tools we<br />reach for.
           </h1>
           <p className="fade-in-3" style={{ fontSize: '18px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, maxWidth: '640px', marginBottom: '48px' }}>
@@ -75,9 +75,9 @@ export default function TechStackPage() {
 
       {/* CATEGORIES */}
       {techCategories.map((cat, idx) => (
-        <section key={cat.title} id={cat.title.toLowerCase().replace(/[\s&]+/g, '-')} style={{ background: idx % 2 === 0 ? '#fff' : '#F1F5F9', padding: '100px 0', scrollMarginTop: '120px' }}>
-          <div className="max-w-[1600px] mx-auto px-14">
-            <div className="grid gap-16 items-start" style={{ gridTemplateColumns: '1fr 1fr' }}>
+        <section key={cat.title} id={cat.title.toLowerCase().replace(/[\s&]+/g, '-')} style={{ background: idx % 2 === 0 ? '#fff' : '#F1F5F9', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0', scrollMarginTop: '120px' }}>
+          <div className="site-container">
+            <div className="grid gap-8 md:gap-16 items-start grid-cols-1 lg:grid-cols-2">
               <div>
                 <div style={{ width: '56px', height: '56px', background: `${cat.color}14`, borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '24px' }}>
                   <i className={`fas ${cat.icon}`} style={{ fontSize: '24px', color: cat.color }}></i>
@@ -110,9 +110,9 @@ export default function TechStackPage() {
       ))}
 
       {/* OPEN SOURCE */}
-      <section style={{ background: '#1E3A8A', padding: '100px 0', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ background: '#1E3A8A', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0', position: 'relative', overflow: 'hidden' }}>
         <div className="absolute pointer-events-none" style={{ top: '-100px', right: '-100px', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(59,130,246,0.2) 0%, transparent 70%)' }} />
-        <div className="max-w-[1600px] mx-auto px-14 relative z-10">
+        <div className="site-container relative z-10">
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '40px', flexWrap: 'wrap' }}>
             <div>
               <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#fff', marginBottom: '12px' }}>Open source &amp; public work</h2>

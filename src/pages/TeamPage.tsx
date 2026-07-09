@@ -10,14 +10,14 @@ export default function TeamPage() {
       <Navbar />
 
       {/* HERO */}
-      <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden', padding: '160px 0 100px' }}>
+      <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>
         <div className="absolute pointer-events-none" style={{ top: '-120px', right: '-80px', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(59,130,246,0.14) 0%, transparent 65%)' }} />
-        <div className="max-w-[1600px] mx-auto px-14 relative z-10">
+        <div className="site-container relative z-10">
           <div className="inline-flex items-center gap-2 mb-6 fade-in" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#3B82F6' }}>
             <span style={{ display: 'block', width: '24px', height: '2px', background: '#3B82F6' }}></span>
             About the Firm
           </div>
-          <h1 className="fade-in-2" style={{ fontSize: 'clamp(48px, 5vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#fff', marginBottom: '24px', maxWidth: '900px' }}>
+          <h1 className="fade-in-2" style={{ fontSize: 'clamp(32px, 8vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#fff', marginBottom: '24px', maxWidth: '900px' }}>
             Founded by an engineer,<br />for engineers.
           </h1>
           <p className="fade-in-3" style={{ fontSize: '18px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, maxWidth: '640px', marginBottom: '48px' }}>
@@ -36,9 +36,9 @@ export default function TeamPage() {
       </section>
 
       {/* FOUNDER */}
-      <section style={{ background: '#fff', padding: '100px 0' }}>
-        <div className="max-w-[1600px] mx-auto px-14">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '100px', alignItems: 'center' }}>
+      <section style={{ background: '#fff', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
+        <div className="site-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div>
               <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1.05, color: '#0F172A', marginBottom: '24px' }}>
                 Peter Onyedika<br />
@@ -83,13 +83,13 @@ export default function TeamPage() {
       </section>
 
       {/* PHILOSOPHY */}
-      <section style={{ background: '#F1F5F9', padding: '100px 0' }}>
-        <div className="max-w-[1600px] mx-auto px-14">
+      <section style={{ background: '#F1F5F9', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
+        <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#3B82F6' }}>
             <span style={{ display: 'block', width: '20px', height: '2px', background: '#3B82F6' }}></span>
             Our Philosophy
           </div>
-          <div className="grid gap-6 mt-16" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+          <div className="grid gap-5 md:gap-6 mt-10 md:mt-16 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { icon: 'fa-gem', title: 'Depth over breadth', desc: 'We specialise in complex, high-stakes systems. We do not take every project — only the ones where our expertise makes a measurable difference.' },
               { icon: 'fa-eye', title: 'Full transparency', desc: 'Every commit, every decision, every tradeoff is visible to you. No black boxes, no surprises, no vendor lock-in.' },
