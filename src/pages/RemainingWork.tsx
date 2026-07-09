@@ -52,7 +52,7 @@ export default function RemainingWork() {
               <div key={i} className="rounded-2xl overflow-hidden flex flex-col cursor-pointer transition-all duration-300 hover:-translate-y-1" style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', minHeight: '380px' }}>
                 <div style={{ height: '4px', background: p.topBar }}></div>
                 <div style={{ height: '180px', background: p.bg, position: 'relative', overflow: 'hidden' }}>
-                  <img src={`/src/assets/${p.img}`} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }} />
+                  <img src={`/assets/${p.img}`} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }} />
                   <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
                   <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)' }} />
                   <div className="absolute flex items-end justify-between" style={{ bottom: '16px', left: '24px', right: '24px' }}>

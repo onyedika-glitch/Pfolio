@@ -176,7 +176,7 @@ export default function HomePage() {
             ].map((w) => (
               <div key={w.title} className="rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1" style={{ border: '1px solid #E2E8F0', background: '#F8FAFC' }}>
                 <div style={{ height: '240px', overflow: 'hidden' }}>
-                  <img src={`/src/assets/${w.img}`} alt={w.alt} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src={`/assets/${w.img}`} alt={w.alt} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <div style={{ padding: '28px 32px' }}>
                   <div style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#3B82F6', marginBottom: '10px' }}>{w.cat}</div>
@@ -298,7 +298,7 @@ export default function HomePage() {
             </div>
             <div className="relative">
               <div className="rounded-2xl overflow-hidden relative">
-                <img src="/src/assets/professional_portrait_senior_software_engineer.jpg" alt="Peter Onyedika" style={{ width: '100%', height: '540px', objectFit: 'cover', display: 'block' }} />
+                <img src="/assets/professional_portrait_senior_software_engineer.jpg" alt="Peter Onyedika" style={{ width: '100%', height: '540px', objectFit: 'cover', display: 'block' }} />
                 <div className="absolute rounded-xl" style={{ bottom: '28px', left: '28px', background: '#fff', padding: '16px 20px', boxShadow: '0 8px 32px rgba(0,0,0,0.12)', border: '1px solid #E2E8F0' }}>
                   <div style={{ fontSize: '15px', fontWeight: 800, letterSpacing: '-0.03em', color: '#0F172A' }}>Peter Onyedika</div>
                   <div style={{ fontSize: '12px', color: '#64748B', marginTop: '2px' }}>Founder · Senior Full-Stack Architect</div>

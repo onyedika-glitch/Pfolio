@@ -11,7 +11,7 @@ export default function Logo({ size = 44, variant = 'navy', textColor, subColor 
   return (
     <div className="flex items-center gap-4 no-underline flex-shrink-0">
       <img
-        src="/src/assets/logo.png"
+        src="/assets/logo.png"
         alt="DevOmogo"
         width={size}
         height={size}
