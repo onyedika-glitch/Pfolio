@@ -111,7 +111,7 @@ export default function WorkPage() {
               <div key={p.id} className="rounded-xl overflow-hidden flex flex-col cursor-pointer transition-all duration-200 hover:-translate-y-1" style={{ background: '#fff', border: '1px solid #E2E8F0' }}>
                 <div style={{ height: '4px', background: p.topBar }}></div>
                 <div style={{ height: '200px', background: p.bg, position: 'relative', overflow: 'hidden' }}>
-                  <img src={`/src/assets/${p.img}`} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.55 }} />
+                  <img src={`/assets/${p.img}`} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.55 }} />
                   <div className="absolute flex items-center justify-center" style={{ inset: 0 }}>
                     <div style={{ width: '52px', height: '52px', borderRadius: '14px', background: 'rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <i className={`fas ${p.icon}`} style={{ fontSize: '22px', color: 'rgba(255,255,255,0.85)' }}></i>
