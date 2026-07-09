@@ -1,53 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Primary Meta Tags -->
+    <title>DevOmogo — Enterprise Software Engineering Studio</title>
+    <meta name="title" content="DevOmogo — Enterprise Software Engineering Studio" />
+    <meta name="description" content="Senior full-stack engineering firm specialising in fintech, healthcare, and AI systems. London-informed. Africa-built. We design and engineer complex, scalable systems for ambitious companies." />
+    <meta name="keywords" content="software engineering, full-stack architecture, fintech, healthcare platforms, AI integration, enterprise software, web development, Nigeria, UK" />
+    <meta name="author" content="DevOmogo" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://devomogo.tech/" />
 
-  <!-- SEO & Identity -->
-  <title>Omogo Peter | Systems & Fintech Architect</title>
-  <meta name="description"
-    content="Engineering high-performance clinical ecosystems and real-time financial architectures across Africa." />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://devomogo.tech/" />
+    <meta property="og:title" content="DevOmogo — Enterprise Software Engineering Studio" />
+    <meta property="og:description" content="Senior full-stack engineering firm specialising in fintech, healthcare, and AI systems. London-informed. Africa-built." />
+    <meta property="og:image" content="https://devomogo.tech/src/assets/logo.png" />
+    <meta property="og:image:width" content="1254" />
+    <meta property="og:image:height" content="1254" />
 
-  <!-- Open Graph / WhatsApp / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://devomogo.tech/" />
-  <meta property="og:title" content="Omogo Peter | Systems & Fintech Architect" />
-  <meta property="og:description"
-    content="Engineering high-performance clinical ecosystems and real-time financial architectures across Africa." />
-  <meta property="og:image" content="https://devomogo.tech/img/brand_banner.png" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://devomogo.tech/" />
+    <meta property="twitter:title" content="DevOmogo — Enterprise Software Engineering Studio" />
+    <meta property="twitter:description" content="Senior full-stack engineering firm specialising in fintech, healthcare, and AI systems. London-informed. Africa-built." />
+    <meta property="twitter:image" content="https://devomogo.tech/src/assets/logo.png" />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://devomogo.tech/" />
-  <meta property="twitter:title" content="Omogo Peter | Systems & Fintech Architect" />
-  <meta property="twitter:description"
-    content="Engineering high-performance clinical ecosystems and real-time financial architectures across Africa." />
-  <meta property="twitter:image" content="https://devomogo.tech/img/brand_banner.png" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/src/assets/logo.png" />
+    <link rel="apple-touch-icon" href="/src/assets/logo.png" />
 
-</head>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-  <script>
-    (function(w,d,s,c,r,a,m){
-      w['KiwiObject']=r;
-      w[r]=w[r] || function () {
-        (w[r].q=w[r].q||[]).push(arguments)};
-      w[r].l=1*new Date();
-        a=d.createElement(s);
-        m=d.getElementsByTagName(s)[0];
-      a.async=1;
-      a.src=c;
-      m.parentNode.insertBefore(a,m)
-    })(window,document,'script',"https://app.interakt.ai/kiwi-sdk/kiwi-sdk-17-prod-min.js?v="+ new Date().getTime(),'kiwi');
-    window.addEventListener("load",function () {
-      kiwi.init('', 'nl5xWhD19I3CGPSoFdboCwJrLpBuJ6oy', {});
-    });
-  </script>
-</body>
-
+    <!-- Structured Data (Organization) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "DevOmogo",
+      "description": "Senior full-stack engineering firm specialising in enterprise software, fintech, and healthcare systems.",
+      "url": "https://devomogo.tech/",
+      "logo": "https://devomogo.tech/src/assets/logo.png",
+      "email": "webdevelopment@discountclubcayman.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Peter Onyedika"
+      },
+      "sameAs": [
+        "https://x.com/peteromogo2",
+        "https://github.com/onyedika-glitch"
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (function(w,d,s,c,r,a,m){
+        w['KiwiObject']=r;
+        w[r]=w[r] || function () {
+          (w[r].q=w[r].q||[]).push(arguments)};
+        w[r].l=1*new Date();
+          a=d.createElement(s);
+          m=d.getElementsByTagName(s)[0];
+        a.async=1;
+        a.src=c;
+        m.parentNode.insertBefore(a,m)
+      })(window,document,'script',"https://app.interakt.ai/kiwi-sdk/kiwi-sdk-17-prod-min.js?v="+ new Date().getTime(),'kiwi');
+      window.addEventListener("load",function () {
+        kiwi.init('', 'nl5xWhD19I3CGPSoFdboCwJrLpBuJ6oy', {});
+      });
+    </script>
+  </body>
 </html>
