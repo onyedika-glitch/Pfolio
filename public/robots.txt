@@ -1,0 +1,22 @@
+# https://devomogo.tech/robots.txt
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://devomogo.tech/sitemap.xml
+
+# Common social / search crawlers
+User-agent: WhatsApp
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
