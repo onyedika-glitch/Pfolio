@@ -267,7 +267,7 @@ export default function CaseStudyLayout({
           <div>
             <div style={{ background: '#1E3A8A', borderRadius: '16px', padding: '28px', color: '#fff' }}>
               <div style={{ width: '72px', height: '72px', borderRadius: '50%', overflow: 'hidden', marginBottom: '20px', border: '3px solid rgba(255,255,255,0.15)' }}>
-                <img src="/assets/peter_onyedika_founder_portrait.jpg" alt="Peter Onyedika" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/assets/peter_onyedika_founder_portrait.jpeg" alt="Peter Onyedika" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div style={{ fontSize: '20px', fontWeight: 800, letterSpacing: '-0.03em', color: '#fff', marginBottom: '4px' }}>Peter Onyedika</div>
               <div style={{ fontSize: '12px', fontWeight: 500, color: 'rgba(255,255,255,0.5)', marginBottom: '20px' }}>Founder &amp; Lead Architect</div>
