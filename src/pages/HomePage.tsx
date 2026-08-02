@@ -35,7 +35,7 @@ export default function HomePage() {
               ))}
             </div>
             <p className="fade-in-3" style={{ fontSize: '15px', fontWeight: 400, color: '#64748B', lineHeight: 1.65, marginBottom: '32px', letterSpacing: '0.01em', maxWidth: '560px' }}>
-              We design and engineer <span style={{ color: '#0F172A', fontWeight: 600 }}>complex, scalable systems</span> for ambitious companies. From backend architecture to production deployment — end-to-end, no shortcuts.
+              We design and engineer <span style={{ color: '#0F172A', fontWeight: 600 }}>complex, scalable systems</span> for ambitious companies. From backend architecture to production deployment: end-to-end, no shortcuts.
             </p>
             <div className="fade-in-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <Link to="/work" className="inline-flex items-center justify-center gap-2 no-underline transition-all duration-200" style={{ background: '#1E3A8A', color: '#fff', padding: '15px 28px', borderRadius: '6px', fontSize: '14px', fontWeight: 600, letterSpacing: '-0.01em' }}>
@@ -92,7 +92,7 @@ export default function HomePage() {
               </span>
             </div>
           </div>
-          {/* Stat bubbles — hide on small screens to avoid overflow */}
+          {/* Stat bubbles: hide on small screens to avoid overflow */}
           <div className="hidden md:block absolute rounded-xl" style={{ background: '#fff', padding: '16px 22px', boxShadow: '0 8px 32px rgba(0,0,0,0.12)', border: '1px solid #E2E8F0', bottom: '-20px', left: '-24px' }}>
             <div style={{ fontSize: '24px', fontWeight: 900, letterSpacing: '-0.04em', color: '#1E3A8A' }}>5+</div>
             <div style={{ fontSize: '10px', fontWeight: 500, color: '#64748B', letterSpacing: '0.04em', textTransform: 'uppercase', marginTop: '2px' }}>Years Building</div>
@@ -137,12 +137,12 @@ export default function HomePage() {
           What We Do
         </div>
         <h2 style={{ fontSize: 'clamp(28px, 5vw, 52px)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1.08, color: '#0F172A', marginBottom: '16px' }}>Precision engineering<br className="hidden sm:block" /> across every layer.</h2>
-        <p style={{ fontSize: '15px', color: '#64748B', lineHeight: 1.6, maxWidth: '520px', marginBottom: '40px' }}>We don't dabble. We go deep — building systems that handle millions of users and billions in transactions.</p>
+        <p style={{ fontSize: '15px', color: '#64748B', lineHeight: 1.6, maxWidth: '520px', marginBottom: '40px' }}>We don't dabble. We go deep, building systems that handle millions of users and billions in transactions.</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 rounded-xl overflow-hidden" style={{ background: '#E2E8F0' }}>
           {[
-            { num: '01 —', icon: 'fa-layer-group', title: 'Full-Stack Architecture', desc: 'End-to-end system design from data models and API contracts to frontend interfaces. We build scalable, maintainable codebases with clean separation of concerns.', tags: ['Node.js', 'React', 'PostgreSQL', 'GraphQL'] },
-            { num: '02 —', icon: 'fa-landmark', title: 'Fintech Systems', desc: 'Payment infrastructure, ledger systems, transaction processing, and compliance-grade reporting. Built for auditability, security, and regulatory requirements.', tags: ['PCI-DSS', 'Real-time Ledger', 'Stripe', 'Paystack'] },
-            { num: '03 —', icon: 'fa-heart-pulse', title: 'Healthcare Platforms', desc: 'Clinical workflow tools, patient data systems, and interoperability solutions. HIPAA-aligned architecture with strict data governance and audit trails.', tags: ['HIPAA', 'HL7 FHIR', 'EHR', 'DICOM'] },
+            { num: '01', icon: 'fa-layer-group', title: 'Full-Stack Architecture', desc: 'End-to-end system design from data models and API contracts to frontend interfaces. We build scalable, maintainable codebases with clean separation of concerns.', tags: ['Node.js', 'React', 'PostgreSQL', 'GraphQL'] },
+            { num: '02', icon: 'fa-landmark', title: 'Fintech Systems', desc: 'Payment infrastructure, ledger systems, transaction processing, and compliance-grade reporting. Built for auditability, security, and regulatory requirements.', tags: ['PCI-DSS', 'Real-time Ledger', 'Stripe', 'Paystack'] },
+            { num: '03', icon: 'fa-heart-pulse', title: 'Healthcare Platforms', desc: 'Clinical workflow tools, patient data systems, and interoperability solutions. HIPAA-aligned architecture with strict data governance and audit trails.', tags: ['HIPAA', 'HL7 FHIR', 'EHR', 'DICOM'] },
           ].map((s) => (
             <div key={s.title} className="p-6 md:p-10" style={{ background: '#fff' }}>
               <div style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.1em', color: '#3B82F6', marginBottom: '20px', fontFamily: 'Courier New, monospace' }}>{s.num}</div>
@@ -172,8 +172,8 @@ export default function HomePage() {
         <div className="site-container pb-16 md:pb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7">
             {[
-              { img: 'fintech_dashboard_dark_ui.jpg', alt: 'Fintech dashboard dark UI', cat: 'Fintech · Payments Infrastructure', title: 'YouExtractor — Disbursement Engine', desc: 'Architected a high-throughput payout system processing $2M+ in daily transactions across 14 African markets.', link: '/work/youextractor' },
-              { img: 'healthcare_platform_clinical_workflow.jpg', alt: 'Healthcare platform clinical workflow', cat: 'Healthcare · Clinical Systems', title: 'CareMandate — Patient Operations Platform', desc: 'End-to-end clinical workflow platform serving 50,000+ patients. HIPAA-aligned data architecture.', link: '/work/caremandate' },
+              { img: 'fintech_dashboard_dark_ui.jpg', alt: 'Fintech dashboard dark UI', cat: 'Fintech · Payments Infrastructure', title: 'YouExtractor: Disbursement Engine', desc: 'Architected a high-throughput payout system processing $2M+ in daily transactions across 14 African markets.', link: '/work/youextractor' },
+              { img: 'healthcare_platform_clinical_workflow.jpg', alt: 'Healthcare platform clinical workflow', cat: 'Healthcare · Clinical Systems', title: 'CareMandate: Patient Operations Platform', desc: 'End-to-end clinical workflow platform serving 50,000+ patients. HIPAA-aligned data architecture.', link: '/work/caremandate' },
             ].map((w) => (
               <div key={w.title} className="rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1" style={{ border: '1px solid #E2E8F0', background: '#F8FAFC' }}>
                 <div className="h-44 sm:h-56 md:h-60 overflow-hidden">
@@ -206,10 +206,10 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5 rounded-xl overflow-hidden" style={{ background: 'rgba(255,255,255,0.08)' }}>
             {[
-              { num: '01 —', title: 'Discovery', desc: 'A 60-minute technical deep-dive. We map your system requirements, constraints, and commercial goals before writing a single line of code.' },
-              { num: '02 —', title: 'Architecture', desc: 'We produce a system design document: data models, API contracts, infrastructure topology, and a phased build roadmap.' },
-              { num: '03 —', title: 'Engineering', desc: 'Iterative delivery in fortnightly sprints. You have visibility into every commit, every decision. No black boxes.' },
-              { num: '04 —', title: 'Handover', desc: 'Full documentation, runbooks, and a knowledge transfer session. Your team should own the system from day one after launch.' },
+              { num: '01', title: 'Discovery', desc: 'A 60-minute technical deep-dive. We map your system requirements, constraints, and commercial goals before writing a single line of code.' },
+              { num: '02', title: 'Architecture', desc: 'We produce a system design document: data models, API contracts, infrastructure topology, and a phased build roadmap.' },
+              { num: '03', title: 'Engineering', desc: 'Iterative delivery in fortnightly sprints. You have visibility into every commit, every decision. No black boxes.' },
+              { num: '04', title: 'Handover', desc: 'Full documentation, runbooks, and a knowledge transfer session. Your team should own the system from day one after launch.' },
             ].map((step) => (
               <div key={step.title} className="p-6 md:p-8" style={{ background: 'rgba(255,255,255,0.03)' }}>
                 <div style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.1em', color: '#3B82F6', marginBottom: '16px', fontFamily: 'Courier New, monospace' }}>{step.num}</div>
@@ -229,7 +229,7 @@ export default function HomePage() {
             What We Work With
           </div>
           <h2 style={{ fontSize: 'clamp(28px, 5vw, 52px)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1.08, color: '#0F172A', marginBottom: '16px' }}>The full technical stack.</h2>
-          <p style={{ fontSize: '15px', color: '#64748B', lineHeight: 1.6, maxWidth: '520px', marginBottom: '40px' }}>From frontend pixels to infrastructure topology — every layer, every tool, production-tested.</p>
+          <p style={{ fontSize: '15px', color: '#64748B', lineHeight: 1.6, maxWidth: '520px', marginBottom: '40px' }}>From frontend pixels to infrastructure topology: every layer, every tool, production-tested.</p>
           <div className="grid gap-4 mb-7 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {[
               { icon: 'fa-display', title: 'Frontend & UI', tags: ['React.js', 'Next.js', 'React Native', 'Angular', 'Tailwind CSS', 'JavaScript', 'HTML5', 'CSS3', 'Figma', 'Framer Motion'] },
@@ -284,7 +284,7 @@ export default function HomePage() {
                 DevOmogo was founded by <strong>Peter Onyedika</strong>, a Senior Full-Stack Architect with over 5 years building complex, production-grade systems for healthcare providers, fintech companies, and data platforms across Africa and beyond.
               </p>
               <p style={{ fontSize: '15px', lineHeight: 1.75, color: '#64748B', marginBottom: 0 }}>
-                This is a specialist firm — not an agency that takes any project that walks through the door. We work with a small number of clients at any time.
+                This is a specialist firm, not an agency that takes any project that walks through the door. We work with a small number of clients at any time.
               </p>
               <div className="flex flex-wrap gap-8 pt-8 mt-8" style={{ borderTop: '1px solid #E2E8F0' }}>
                 {[['5+', 'Years in practice'], ['12', 'Systems shipped'], ['4', 'Active clients']].map(([num, label]) => (

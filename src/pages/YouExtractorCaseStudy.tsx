@@ -9,7 +9,7 @@ export default function YouExtractorCaseStudy() {
   return (
     <CaseStudyLayout
       eyebrow="Case Study · AI DevOps"
-      headline={<>YouExtractor —<br />LLM Extraction Engine</>}
+      headline={<>YouExtractor<br />LLM Extraction Engine</>}
       subhead="Architecting a multi-model chained extraction pipeline capable of processing 10M+ records monthly with sub-200ms p99 latency."
       metrics={[
         { value: '10M+', label: 'Records / Month' },
@@ -30,16 +30,16 @@ export default function YouExtractorCaseStudy() {
         { label: 'Duration', value: '4 months' },
         { label: 'Status', value: 'live' },
       ]}
-      breadcrumbLabel="YouExtractor — LLM Extraction Engine"
-      overviewProblem="YouExtractor needed to process massive volumes of unstructured data — product listings, job descriptions, financial filings, and web content — and return clean, structured JSON at scale. The existing approach relied on brittle regex pipelines and single-model calls that hallucinated under load, had no fallback strategy, and cost 4x more per extraction than necessary."
-      overviewRole="I joined as Founder and Lead Architect. I owned the full system from infrastructure topology to model orchestration logic. This was not a feature build — it was a ground-up re-architecture of how the platform ingested and processed data."
+      breadcrumbLabel="YouExtractor: LLM Extraction Engine"
+      overviewProblem="YouExtractor needed to process massive volumes of unstructured data (product listings, job descriptions, financial filings, and web content) and return clean, structured JSON at scale. The existing approach relied on brittle regex pipelines and single-model calls that hallucinated under load, had no fallback strategy, and cost 4x more per extraction than necessary."
+      overviewRole="I joined as Founder and Lead Architect. I owned the full system from infrastructure topology to model orchestration logic. This was not a feature build; it was a ground-up re-architecture of how the platform ingested and processed data."
       archTitle="Architecture Overview"
       archSubhead="A four-layer pipeline built for fault tolerance, cost efficiency, and model interoperability."
       archCards={[
-        { num: 'Layer 01 —', icon: 'fa-layer-group', title: 'Ingestion Queue', desc: 'Redis-backed distributed queue with priority lanes. Incoming extraction jobs are fingerprinted, deduplicated, and routed by content type before model selection.' },
-        { num: 'Layer 02 —', icon: 'fa-diagram-project', title: 'Model Orchestration', desc: 'A TypeScript orchestrator selects the optimal model per content type — Claude 3.5 Sonnet for reasoning-heavy extractions, Gemini Flash for speed-critical bulk runs.' },
-        { num: 'Layer 03 —', icon: 'fa-shield-halved', title: 'Validation & Retry', desc: 'JSON Schema validation on every extraction output. Failed validations trigger a retry with an enriched prompt containing the failure reason. Maximum 3 retry hops.' },
-        { num: 'Layer 04 —', icon: 'fa-database', title: 'Storage & Delivery', desc: 'PostgreSQL for structured results with full extraction audit trail. Redis for hot cache of recently extracted entities. Webhook delivery to downstream consumers.' },
+        { num: 'Layer 01', icon: 'fa-layer-group', title: 'Ingestion Queue', desc: 'Redis-backed distributed queue with priority lanes. Incoming extraction jobs are fingerprinted, deduplicated, and routed by content type before model selection.' },
+        { num: 'Layer 02', icon: 'fa-diagram-project', title: 'Model Orchestration', desc: 'A TypeScript orchestrator selects the optimal model per content type: Claude 3.5 Sonnet for reasoning-heavy extractions, Gemini Flash for speed-critical bulk runs.' },
+        { num: 'Layer 03', icon: 'fa-shield-halved', title: 'Validation & Retry', desc: 'JSON Schema validation on every extraction output. Failed validations trigger a retry with an enriched prompt containing the failure reason. Maximum 3 retry hops.' },
+        { num: 'Layer 04', icon: 'fa-database', title: 'Storage & Delivery', desc: 'PostgreSQL for structured results with full extraction audit trail. Redis for hot cache of recently extracted entities. Webhook delivery to downstream consumers.' },
       ]}
       codeFilename="orchestrator.ts"
       codeLines={[
@@ -69,11 +69,11 @@ export default function YouExtractorCaseStudy() {
         [<>&nbsp;&nbsp;<span className="c-keyword">return</span> <span className="c-func">persist</span>(<span className="c-param">result</span>, <span className="c-param">job</span>.<span className="c-param">id</span>);</>, '24'],
         [<>{'}'}</>, '25'],
       ]}
-      pullQuote={"\"The retry architecture alone reduced hallucination-related failures by 94%. Chaining models with context wasn't just a performance win — it fundamentally changed what the system could extract.\""}
+      pullQuote={"\"The retry architecture alone reduced hallucination-related failures by 94%. Chaining models with context wasn't just a performance win; it fundamentally changed what the system could extract.\""}
       decisionCards={[
-        { num: '01 —', title: 'Model Selection Strategy', desc: 'Choosing between Claude and Gemini per extraction type was not arbitrary. Claude handles multi-step reasoning extractions. Gemini Flash handles high-volume, speed-sensitive bulk runs.' },
-        { num: '02 —', title: 'Prompt Context Chaining', desc: 'Each model in the chain receives the output of the previous model plus a delta context explaining what changed and why. This dramatically reduced hallucination on complex nested extractions.' },
-        { num: '03 —', title: 'Failure Escalation Protocol', desc: 'Rather than silently dropping failed extractions, I built a human review queue with Slack webhook alerts for records that exhausted retry budget.' },
+        { num: '01', title: 'Model Selection Strategy', desc: 'Choosing between Claude and Gemini per extraction type was not arbitrary. Claude handles multi-step reasoning extractions. Gemini Flash handles high-volume, speed-sensitive bulk runs.' },
+        { num: '02', title: 'Prompt Context Chaining', desc: 'Each model in the chain receives the output of the previous model plus a delta context explaining what changed and why. This dramatically reduced hallucination on complex nested extractions.' },
+        { num: '03', title: 'Failure Escalation Protocol', desc: 'Rather than silently dropping failed extractions, I built a human review queue with Slack webhook alerts for records that exhausted retry budget.' },
       ]}
       resultCards={[
         { value: '10M+', label: 'Records processed monthly at launch' },
@@ -82,9 +82,9 @@ export default function YouExtractorCaseStudy() {
         { value: '4 mo.', label: 'Architecture doc to production' },
       ]}
       resultBody="The YouExtractor pipeline is now the backbone of the platform's data layer. The system runs on AWS ECS with horizontal auto-scaling, zero-downtime deployments, and a full observability stack."
-      founderNote1="I built YouExtractor's extraction engine because I understood the problem from first principles — not just as an engineer, but as someone who has worked with unstructured data at scale."
+      founderNote1="I built YouExtractor's extraction engine because I understood the problem from first principles: not just as an engineer, but as someone who has worked with unstructured data at scale."
       founderNote2="When something breaks in production at 2am, I'm the one who gets paged. That's what it means to be a founding engineer, not a contractor."
-      nextCaseTitle="CareMandate — Patient Operations Platform"
+      nextCaseTitle="CareMandate: Patient Operations Platform"
       nextCaseDesc="Enterprise monorepo for end-to-end clinical management. 50,000+ patients. HIPAA-aligned."
       nextCaseLink="/work/caremandate"
       accentColor="#3B82F6"

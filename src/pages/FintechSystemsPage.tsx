@@ -51,7 +51,7 @@ export default function FintechSystemsPage() {
               <ul className="list-none flex flex-col gap-5" style={{ padding: 0, margin: 0 }}>
                 {[
                   'Double-entry ledger systems with full audit trails',
-                  'Idempotent transaction processing — no duplicates, no lost payments',
+                  'Idempotent transaction processing: no duplicates, no lost payments',
                   'Multi-rail payment integration (card, bank transfer, mobile money)',
                   'Real-time reconciliation and settlement reporting',
                   'Compliance-grade security architecture',
@@ -79,7 +79,7 @@ export default function FintechSystemsPage() {
           <div className="grid gap-5 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { num: '01', icon: 'fa-book', title: 'Ledger-First Design', desc: 'Every financial system starts with the ledger. We design for double-entry accounting principles from day one, ensuring every transaction is traceable and reconcilable.' },
-              { num: '02', icon: 'fa-shield', title: 'Security & Compliance', desc: 'PCI-DSS alignment, encryption at rest and in transit, granular access controls, and immutable audit logs. Security is not a feature — it is the foundation.' },
+              { num: '02', icon: 'fa-shield', title: 'Security & Compliance', desc: 'PCI-DSS alignment, encryption at rest and in transit, granular access controls, and immutable audit logs. Security is not a feature. It is the foundation.' },
               { num: '03', icon: 'fa-chart-line', title: 'Real-Time Operations', desc: 'Real-time balance checks, transaction status webhooks, instant reconciliation, and monitoring dashboards. Your team sees what is happening as it happens.' },
             ].map((item) => (
               <div key={item.title} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '44px 36px' }}>
@@ -102,7 +102,7 @@ export default function FintechSystemsPage() {
             <span style={{ display: 'block', width: '20px', height: '2px', background: '#14B8A6' }}></span>
             Related Work
           </div>
-          <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '12px' }}>YouExtractor — Disbursement Engine</h2>
+          <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '12px' }}>YouExtractor: Disbursement Engine</h2>
           <p style={{ fontSize: '16px', color: '#64748B', lineHeight: 1.65, maxWidth: '600px', marginBottom: '32px' }}>
             High-throughput payout system processing $2M+ in daily transactions across 14 African markets. Real-time ledger, automated reconciliation, and multi-rail payment integration.
           </p>

@@ -59,7 +59,7 @@ export default function TechStackPage() {
             The tools we<br />reach for.
           </h1>
           <p className="fade-in-3" style={{ fontSize: '18px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, maxWidth: '640px', marginBottom: '48px' }}>
-            From frontend pixels to infrastructure topology — every layer, every tool, production-tested. Here is the full technical stack we use to ship enterprise-grade systems.
+            From frontend pixels to infrastructure topology: every layer, every tool, production-tested. Here is the full technical stack we use to ship enterprise-grade systems.
           </p>
           <div className="fade-in-4 flex flex-wrap gap-3">
             {techCategories.map(c => (

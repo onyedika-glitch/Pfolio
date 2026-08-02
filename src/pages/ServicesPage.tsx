@@ -10,7 +10,7 @@ const services = [
     icon: 'fa-layer-group',
     title: 'Full-Stack Architecture',
     desc: 'End-to-end system design from data models and API contracts to frontend interfaces. We build scalable, maintainable codebases with clean separation of concerns.',
-    details: 'Every layer of the stack is engineered with production in mind — from database schema design and API gateway configuration through to responsive, accessible frontend components. We use modern tooling, typed languages, and rigorous code review to ship systems that teams can own and evolve.',
+    details: 'Every layer of the stack is engineered with production in mind, from database schema design and API gateway configuration through to responsive, accessible frontend components. We use modern tooling, typed languages, and rigorous code review to ship systems that teams can own and evolve.',
     tags: ['Node.js', 'React', 'PostgreSQL', 'GraphQL', 'TypeScript', 'AWS'],
   },
   {
@@ -56,7 +56,7 @@ export default function ServicesPage() {
             Precision engineering<br />across every layer.
           </h1>
           <p className="fade-in-3" style={{ fontSize: '18px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, maxWidth: '640px', marginBottom: '56px' }}>
-            We don't dabble. We go deep — building systems that handle millions of users and billions in transactions. Here is how we do it.
+            We don't dabble. We go deep, building systems that handle millions of users and billions in transactions. Here is how we do it.
           </p>
           <div className="fade-in-4 flex flex-wrap gap-3">
             {[
@@ -100,7 +100,7 @@ export default function ServicesPage() {
                 <h3 style={{ fontSize: '13px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#64748B', marginBottom: '24px' }}>What this means for you</h3>
                 <ul className="list-none flex flex-col gap-5" style={{ padding: 0, margin: 0 }}>
                   {[
-                    'Production-grade code from day one — no prototypes, no throwaway work.',
+                    'Production-grade code from day one: no prototypes, no throwaway work.',
                     'Systems designed for scale, security, and maintainability.',
                     'Transparent delivery with fortnightly sprint reviews.',
                     'Full documentation, runbooks, and knowledge transfer included.',

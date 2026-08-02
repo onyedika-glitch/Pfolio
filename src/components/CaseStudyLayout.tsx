@@ -211,7 +211,7 @@ export default function CaseStudyLayout({
             <path d="M0 48V28C0 12.536 10.536 2 26 0L29 6C19.5 8 13.5 15.5 12 24H24V48H0ZM40 48V28C40 12.536 50.536 2 66 0L69 6C59.5 8 53.5 15.5 52 24H64V48H40Z" fill="#1E3A8A" opacity="0.12" />
           </svg>
           <p style={{ fontSize: 'clamp(22px, 5vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1.2, color: '#1E3A8A', marginBottom: '28px' }}>{pullQuote}</p>
-          <p style={{ fontSize: '14px', fontWeight: 500, color: '#64748B' }}>— <strong style={{ color: '#0F172A' }}>Peter Onyedika</strong>, Founder &amp; Lead Architect, DevOmogo</p>
+          <p style={{ fontSize: '14px', fontWeight: 500, color: '#64748B' }}><strong style={{ color: '#0F172A' }}>Peter Onyedika</strong>, Founder &amp; Lead Architect, DevOmogo</p>
         </div>
       </section>
 

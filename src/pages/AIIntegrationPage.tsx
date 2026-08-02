@@ -43,7 +43,7 @@ export default function AIIntegrationPage() {
                 We bridge the gap between AI research and production deployment. Multi-model orchestration, prompt engineering, embeddings pipelines, and cost-optimised inference. Every AI integration is built with observability, fallback strategies, and human-in-the-loop safeguards.
               </p>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '28px' }}>
-                Whether you need to extract structured data from unstructured documents, build a RAG-powered knowledge base, or automate complex workflows with LLM agents — we design practical AI systems that work reliably in production.
+                Whether you need to extract structured data from unstructured documents, build a RAG-powered knowledge base, or automate complex workflows with LLM agents, we design practical AI systems that work reliably in production.
               </p>
             </div>
             <div style={{ background: '#F1F5F9', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '40px' }}>
@@ -53,7 +53,7 @@ export default function AIIntegrationPage() {
                   'Multi-model LLM pipelines with fallback strategies',
                   'Retrieval-augmented generation (RAG) with vector databases',
                   'Structured data extraction from unstructured documents',
-                  'Cost-optimised inference — monitor and control spend',
+                  'Cost-optimised inference: monitor and control spend',
                   'Observability, logging, and performance monitoring',
                   'Human-in-the-loop safeguards for critical workflows',
                 ].map((item, i) => (
@@ -80,7 +80,7 @@ export default function AIIntegrationPage() {
             {[
               { num: '01', icon: 'fa-puzzle-piece', title: 'Practical Pipelines', desc: 'We build chained LLM pipelines that combine multiple models for extraction, reasoning, and generation. Each stage is observable and fallback-safe.' },
               { num: '02', icon: 'fa-database', title: 'RAG & Embeddings', desc: 'Retrieval-augmented generation grounded in your data. Vector embeddings, hybrid search, and context window optimisation for accurate, relevant outputs.' },
-              { num: '03', icon: 'fa-chart-simple', title: 'Measure & Optimise', desc: 'Token usage, latency, cost per query — every metric is tracked. We optimise model selection and prompt structure to deliver maximum value per dollar.' },
+              { num: '03', icon: 'fa-chart-simple', title: 'Measure & Optimise', desc: 'Token usage, latency, cost per query: every metric is tracked. We optimise model selection and prompt structure to deliver maximum value per dollar.' },
             ].map((item) => (
               <div key={item.title} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '44px 36px' }}>
                 <div style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.1em', color: '#A78BFA', marginBottom: '20px', fontFamily: 'Courier New, monospace' }}>{item.num}</div>
@@ -102,7 +102,7 @@ export default function AIIntegrationPage() {
             <span style={{ display: 'block', width: '20px', height: '2px', background: '#A78BFA' }}></span>
             Related Work
           </div>
-          <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '12px' }}>YouExtractor — LLM Extraction Engine</h2>
+          <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '12px' }}>YouExtractor: LLM Extraction Engine</h2>
           <p style={{ fontSize: '16px', color: '#64748B', lineHeight: 1.65, maxWidth: '600px', marginBottom: '32px' }}>
             Multi-model chained extraction pipeline processing 10M+ records per month at sub-200ms p99 latency. 3x cost reduction through intelligent model routing.
           </p>
