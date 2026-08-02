@@ -6,7 +6,6 @@ import CTABanner from '../components/CTABanner'
 
 const projects = [
   { name: 'YouExtractor', link: '/work/youextractor' },
-  { name: 'CareMandate', link: '/work/caremandate' },
   { name: 'iLearnova', link: '/work/ilearnova' },
   { name: 'Placebet247', link: '/work/placebet247' },
   { name: 'Selfany', link: '/work/selfany' },
@@ -198,7 +197,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7">
             {[
               { img: 'fintech_dashboard_dark_ui.jpg', alt: 'Fintech dashboard dark UI', cat: 'Fintech · Payments Infrastructure', title: 'YouExtractor: Disbursement Engine', desc: 'Architected a high-throughput payout system processing $2M+ in daily transactions across 14 African markets.', link: '/work/youextractor' },
-              { img: 'healthcare_platform_clinical_workflow.jpg', alt: 'Healthcare platform clinical workflow', cat: 'Healthcare · Clinical Systems', title: 'CareMandate: Patient Operations Platform', desc: 'End-to-end clinical workflow platform serving 50,000+ patients. HIPAA-aligned data architecture.', link: '/work/caremandate' },
+              { img: 'discount_club_cayman_membership_savings_platform_dashboard_amber.jpg', alt: 'Discount Club Cayman membership savings dashboard', cat: 'Fintech · Membership Platform', title: 'Discount Club Cayman: Savings Platform', desc: 'Premium membership platform delivering up to 70% hotel savings and US$3,900+ annual value. Full-stack auth, savings engine, digital redemption.', link: '/work/discount-club-cayman' },
             ].map((w) => (
               <div key={w.title} className="rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1" style={{ border: '1px solid #E2E8F0', background: '#F8FAFC' }}>
                 <div className="h-44 sm:h-56 md:h-60 overflow-hidden">
