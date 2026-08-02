@@ -4,44 +4,69 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
 
+const projects = [
+  { name: 'YouExtractor', link: '/work/youextractor' },
+  { name: 'CareMandate', link: '/work/caremandate' },
+  { name: 'iLearnova', link: '/work/ilearnova' },
+  { name: 'Placebet247', link: '/work/placebet247' },
+  { name: 'Selfany', link: '/work/selfany' },
+  { name: 'Floorhosting', link: '/work/floorhosting' },
+  { name: 'Handyman NG', link: '/work/handyman-ng' },
+  { name: 'ATOM Group', link: '/work/atom-group' },
+  { name: 'ePortal', link: '/work/eportal' },
+  { name: 'Pension App', link: '/work/pension-app' },
+  { name: 'Sparks Ventures', link: '/work/sparks-ventures' },
+  { name: 'ANING', link: '/work/aning' },
+  { name: 'Sadar Properties', link: '/work/sadar-properties' },
+  { name: 'Unlimited Healthcare', link: '/work/unlimited-healthcare' },
+  { name: 'Zentrix Equity', link: '/work/zentrix-equity' },
+  { name: 'Discount Club Cayman', link: '/work/discount-club-cayman' },
+  { name: 'Chef Academy of London', link: '/work/chef-academy' },
+]
+
 export default function HomePage() {
   return (
     <div style={{ fontFamily: 'Inter, sans-serif', background: '#F8FAFC', color: '#0F172A' }}>
       <Navbar />
 
       {/* HERO */}
-      <section className="site-container pt-24 md:pt-28 lg:pt-32 pb-12 md:pb-20 flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-16 xl:gap-20 min-h-0 lg:min-h-[calc(100vh-2rem)]">
+      <section className="relative site-container pt-24 md:pt-28 lg:pt-32 pb-12 md:pb-20 flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-16 xl:gap-20 min-h-0 lg:min-h-[calc(100vh-2rem)]" style={{ isolation: 'isolate' }}>
+        {/* Portrait background + overlay */}
+        <div className="absolute inset-0 -z-10" style={{ overflow: 'hidden' }}>
+          <img src="/assets/peter_onyedika_founder_portrait.jpeg" alt="" aria-hidden="true" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%' }} />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(105deg, rgba(15,23,42,0.94) 0%, rgba(15,23,42,0.86) 45%, rgba(15,23,42,0.62) 100%)' }} />
+        </div>
         <div className="fade-in flex-1 max-w-[700px] relative min-w-0 w-full">
-          <div className="absolute pointer-events-none hidden md:block" style={{ top: '50%', left: '-60px', transform: 'translateY(-55%)', opacity: 0.04, zIndex: 0 }}>
+          <div className="absolute pointer-events-none hidden md:block" style={{ top: '50%', left: '-60px', transform: 'translateY(-55%)', opacity: 0.06, zIndex: 0 }}>
             <svg width="280" height="280" viewBox="0 0 56 56" fill="none">
-              <rect x="0" y="0" width="56" height="56" rx="10" fill="#1E3A8A" />
+              <rect x="0" y="0" width="56" height="56" rx="10" fill="#3B82F6" />
               <polygon points="17,16 26,28 17,40 22,40 31,28 22,16" fill="white" />
               <polygon points="25,16 34,28 25,40 30,40 39,28 30,16" fill="white" opacity="0.55" />
               <circle cx="40" cy="14" r="5" fill="#3B82F6" />
             </svg>
           </div>
           <div style={{ position: 'relative', zIndex: 1 }}>
-            <div className="fade-in inline-flex items-center gap-2 mb-5 md:mb-7" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#3B82F6' }}>
+            <div className="fade-in inline-flex items-center gap-2 mb-5 md:mb-7" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#93C5FD' }}>
               <span style={{ display: 'block', width: '24px', height: '2px', background: '#3B82F6' }}></span>
               Senior Engineering Studio
             </div>
-            <h1 className="fade-in-2" style={{ fontSize: 'clamp(36px, 9vw, 82px)', fontWeight: 900, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '24px' }}>
+            <h1 className="fade-in-2" style={{ fontSize: 'clamp(36px, 9vw, 82px)', fontWeight: 900, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#fff', marginBottom: '24px' }}>
               Enterprise Software.<br />
-              <span className="headline-accent">Built to Last.</span>
+              <span className="headline-accent" style={{ color: '#fff' }}>Built to Last.</span>
             </h1>
             <div className="fade-in-3 flex flex-wrap gap-2 mb-6 md:mb-7">
               {['Full-Stack Architecture', 'Fintech', 'Healthcare Systems', 'AI Integration'].map(tag => (
-                <span key={tag} style={{ fontSize: '11px', fontWeight: 500, color: '#1E3A8A', background: 'rgba(30,58,138,0.07)', padding: '6px 12px', borderRadius: '100px', letterSpacing: '0.02em' }}>{tag}</span>
+                <span key={tag} style={{ fontSize: '11px', fontWeight: 500, color: '#DBEAFE', background: 'rgba(59,130,246,0.18)', padding: '6px 12px', borderRadius: '100px', letterSpacing: '0.02em', border: '1px solid rgba(147,197,253,0.2)' }}>{tag}</span>
               ))}
             </div>
-            <p className="fade-in-3" style={{ fontSize: '15px', fontWeight: 400, color: '#64748B', lineHeight: 1.65, marginBottom: '32px', letterSpacing: '0.01em', maxWidth: '560px' }}>
-              We design and engineer <span style={{ color: '#0F172A', fontWeight: 600 }}>complex, scalable systems</span> for ambitious companies. From backend architecture to production deployment: end-to-end, no shortcuts.
+            <p className="fade-in-3" style={{ fontSize: '15px', fontWeight: 400, color: 'rgba(255,255,255,0.72)', lineHeight: 1.65, marginBottom: '32px', letterSpacing: '0.01em', maxWidth: '560px' }}>
+              We design and engineer <span style={{ color: '#fff', fontWeight: 600 }}>complex, scalable systems</span> for ambitious companies. From backend architecture to production deployment: end-to-end, no shortcuts.
             </p>
             <div className="fade-in-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
-              <Link to="/work" className="inline-flex items-center justify-center gap-2 no-underline transition-all duration-200" style={{ background: '#1E3A8A', color: '#fff', padding: '15px 28px', borderRadius: '6px', fontSize: '14px', fontWeight: 600, letterSpacing: '-0.01em' }}>
+              <Link to="/work" className="inline-flex items-center justify-center gap-2 no-underline transition-all duration-200" style={{ background: '#3B82F6', color: '#fff', padding: '15px 28px', borderRadius: '6px', fontSize: '14px', fontWeight: 600, letterSpacing: '-0.01em' }}>
                 Our Case Studies <i className="fas fa-arrow-right" style={{ fontSize: '12px' }}></i>
               </Link>
-              <a href="mailto:webdevelopment@discountclubcayman.com" className="inline-flex items-center justify-center gap-2 no-underline transition-all duration-200" style={{ background: 'transparent', color: '#1E3A8A', padding: '14px 28px', borderRadius: '6px', fontSize: '14px', fontWeight: 600, border: '1.5px solid #1E3A8A', letterSpacing: '-0.01em' }}>
+              <a href="mailto:webdevelopment@discountclubcayman.com" className="inline-flex items-center justify-center gap-2 no-underline transition-all duration-200" style={{ background: 'transparent', color: '#fff', padding: '14px 28px', borderRadius: '6px', fontSize: '14px', fontWeight: 600, border: '1.5px solid rgba(255,255,255,0.4)', letterSpacing: '-0.01em' }}>
                 Book a Discovery Call
               </a>
             </div>
@@ -115,16 +140,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CLIENT STRIP */}
-      <div style={{ borderTop: '1px solid #E2E8F0', borderBottom: '1px solid #E2E8F0', background: '#fff', padding: '28px 0' }}>
-        <div className="site-container flex flex-col md:flex-row md:items-center gap-4 md:gap-10">
-          <span style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#64748B' }}>Trusted on platforms across Africa &amp; beyond</span>
-          <div className="hidden md:block" style={{ width: '1px', height: '32px', background: '#E2E8F0', flexShrink: 0 }}></div>
-          <div className="flex items-center gap-x-6 gap-y-3 flex-wrap">
-            {['YouExtractor', 'Zentrix', 'CareMandate', 'UHC', 'iLearnova', 'Placebet247'].map(name => (
-              <span key={name} style={{ fontSize: '13px', fontWeight: 700, letterSpacing: '-0.02em', color: '#64748B', opacity: 0.7 }}>
-                <span style={{ color: '#3B82F6', opacity: 0.7, fontWeight: 400 }}>[</span>&nbsp;{name}&nbsp;<span style={{ color: '#3B82F6', opacity: 0.7, fontWeight: 400 }}>]</span>
-              </span>
+      {/* PROJECT MARQUEE */}
+      <div style={{ borderTop: '1px solid rgba(226,232,240,0.7)', borderBottom: '1px solid rgba(226,232,240,0.7)', background: '#fff', padding: '24px 0', overflow: 'hidden' }}>
+        <div className="marquee">
+          <div className="marquee-track">
+            {[...projects, ...projects].map((p, i) => (
+              <Link key={i} to={p.link} className="marquee-item no-underline" style={{ display: 'inline-flex', alignItems: 'center', whiteSpace: 'nowrap', flexShrink: 0, margin: '0 26px' }}>
+                <span style={{ color: '#3B82F6', opacity: 0.55, fontWeight: 400, fontSize: '14px', marginRight: '8px' }}>[</span>
+                <span style={{ fontSize: '15px', fontWeight: 800, letterSpacing: '-0.02em', color: '#334155', opacity: 0.8 }}>{p.name}</span>
+                <span style={{ color: '#3B82F6', opacity: 0.55, fontWeight: 400, fontSize: '14px', marginLeft: '8px' }}>]</span>
+              </Link>
             ))}
           </div>
         </div>
@@ -297,7 +322,7 @@ export default function HomePage() {
             </div>
             <div className="relative order-1 lg:order-2">
               <div className="rounded-2xl overflow-hidden relative">
-                <img src="/assets/professional_portrait_senior_software_engineer.jpg" alt="Peter Onyedika" className="w-full object-cover block h-72 sm:h-96 lg:h-[540px]" />
+                <img src="/assets/professional_portrait_senior_software_engineer.jpeg" alt="Peter Onyedika" className="w-full object-cover block h-72 sm:h-96 lg:h-[540px]" />
                 <div className="absolute rounded-xl left-4 right-4 sm:right-auto bottom-4 sm:bottom-7 sm:left-7" style={{ background: '#fff', padding: '14px 18px', boxShadow: '0 8px 32px rgba(0,0,0,0.12)', border: '1px solid #E2E8F0' }}>
                   <div style={{ fontSize: '15px', fontWeight: 800, letterSpacing: '-0.03em', color: '#0F172A' }}>Peter Onyedika</div>
                   <div style={{ fontSize: '12px', color: '#64748B', marginTop: '2px' }}>Founder · Senior Full-Stack Architect</div>
