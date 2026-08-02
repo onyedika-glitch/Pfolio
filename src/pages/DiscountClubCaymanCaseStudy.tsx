@@ -5,7 +5,7 @@ export default function DiscountClubCaymanCaseStudy() {
   return (
     <CaseStudyLayout
       eyebrow="Case Study · Membership Platform · Fintech"
-      headline={<>Discount Club Cayman —<br />Membership Savings Platform</>}
+      headline={<>Discount Club Cayman<br />Membership Savings Platform</>}
       subhead="A full-stack membership platform delivering up to 70% travel savings, 10–25% local merchant discounts, and redeemable certificates to Cayman Island residents."
       metrics={[
         { value: 'US$119.99', label: 'Membership that pays for itself' },
@@ -26,16 +26,16 @@ export default function DiscountClubCaymanCaseStudy() {
         { label: 'Stack', value: 'React · Node.js · TypeScript' },
         { label: 'Status', value: 'live' },
       ]}
-      breadcrumbLabel="Discount Club Cayman — Membership Savings Platform"
-      overviewProblem="Discount Club Cayman needed a premium, conversion-focused membership platform that could handle three distinct savings verticals — global hotel rates, local Cayman merchant discounts, and redeemable certificates — all within a single authenticated member experience."
-      overviewRole="I engineered the full platform — from the marketing site through to the authenticated member dashboard. I designed the information architecture to support three distinct savings categories with clear value communication at every stage of the funnel."
+      breadcrumbLabel="Discount Club Cayman: Membership Savings Platform"
+      overviewProblem="Discount Club Cayman needed a premium, conversion-focused membership platform that could handle three distinct savings verticals (global hotel rates, local Cayman merchant discounts, and redeemable certificates) all within a single authenticated member experience."
+      overviewRole="I engineered the full platform, from the marketing site through to the authenticated member dashboard. I designed the information architecture to support three distinct savings categories with clear value communication at every stage of the funnel."
       archTitle="Architecture Overview"
       archSubhead="A secure, conversion-optimised membership platform with three savings verticals and a fully authenticated member area."
       archCards={[
-        { num: 'Layer 01 —', icon: 'fa-palette', title: 'Marketing Funnel', desc: 'Dark premium marketing site built with React and Tailwind. Playfair Display serif headings, DM Sans body, gold accent. Animated entrance effects and savings calculators built to convert.' },
-        { num: 'Layer 02 —', icon: 'fa-lock', title: 'Authentication System', desc: 'Secure login and signup flow with protected member routes. JWT-based session management. Members access exclusive hotel rates and local deals only after authenticated entry.' },
-        { num: 'Layer 03 —', icon: 'fa-tags', title: 'Savings Engine', desc: 'Three savings verticals: global hotel rates API integration, local merchant discount catalogue, and redeemable certificate management.' },
-        { num: 'Layer 04 —', icon: 'fa-mobile-screen-button', title: 'Digital Redemption', desc: 'Swipe-to-redeem digital flow for local merchants. No physical card required. Certificate management with $25/$50/$100 tiers and merchant partner tracking.' },
+        { num: 'Layer 01', icon: 'fa-palette', title: 'Marketing Funnel', desc: 'Dark premium marketing site built with React and Tailwind. Playfair Display serif headings, DM Sans body, gold accent. Animated entrance effects and savings calculators built to convert.' },
+        { num: 'Layer 02', icon: 'fa-lock', title: 'Authentication System', desc: 'Secure login and signup flow with protected member routes. JWT-based session management. Members access exclusive hotel rates and local deals only after authenticated entry.' },
+        { num: 'Layer 03', icon: 'fa-tags', title: 'Savings Engine', desc: 'Three savings verticals: global hotel rates API integration, local merchant discount catalogue, and redeemable certificate management.' },
+        { num: 'Layer 04', icon: 'fa-mobile-screen-button', title: 'Digital Redemption', desc: 'Swipe-to-redeem digital flow for local merchants. No physical card required. Certificate management with $25/$50/$100 tiers and merchant partner tracking.' },
       ]}
       codeFilename="savings-engine.ts"
       codeLines={[
@@ -59,9 +59,9 @@ export default function DiscountClubCaymanCaseStudy() {
       ]}
       pullQuote='"The design had to work as hard as the engineering. A membership that saves you $3,900 a year has to feel premium before you hand over your credit card."'
       decisionCards={[
-        { num: '01 —', title: 'Premium Dark Aesthetic', desc: 'Playfair Display serif headings, a deep navy background, and gold accents was a conversion decision. Members paying ~$120/year need to feel they are buying something premium.' },
-        { num: '02 —', title: 'Three-Vertical Data Architecture', desc: 'Travel, local discounts, and certificates are modelled as separate services with a unified member API layer — letting each vertical scale independently.' },
-        { num: '03 —', title: 'Digital-First Redemption', desc: 'Eliminating physical cards and building a swipe-to-redeem digital flow reduced onboarding friction and made the product work globally for travel savings.' },
+        { num: '01', title: 'Premium Dark Aesthetic', desc: 'Playfair Display serif headings, a deep navy background, and gold accents was a conversion decision. Members paying ~$120/year need to feel they are buying something premium.' },
+        { num: '02', title: 'Three-Vertical Data Architecture', desc: 'Travel, local discounts, and certificates are modelled as separate services with a unified member API layer, letting each vertical scale independently.' },
+        { num: '03', title: 'Digital-First Redemption', desc: 'Eliminating physical cards and building a swipe-to-redeem digital flow reduced onboarding friction and made the product work globally for travel savings.' },
       ]}
       resultCards={[
         { value: 'Live', label: 'Full platform in production' },
@@ -69,10 +69,10 @@ export default function DiscountClubCaymanCaseStudy() {
         { value: 'US$3,900+', label: 'Annual savings per member' },
         { value: 'Secure Auth', label: 'Full member area + protected routes' },
       ]}
-      resultBody="Discount Club Cayman is live at discountclubcayman.com. The platform serves Cayman Island residents with a complete savings ecosystem — global hotel rates up to 70% off, local merchant discounts, and $1,000 in annual redeemable certificates."
-      founderNote1="Discount Club Cayman is not a simple discount site — it is a financial product with a value proposition that has to be communicated clearly and trusted immediately."
-      founderNote2="The gold premium aesthetic, the savings number front and centre, the certificate tiers — every decision was engineered for conversion and retention."
-      nextCaseTitle="Chef Academy of London — Culinary Platform"
+      resultBody="Discount Club Cayman is live at discountclubcayman.com. The platform serves Cayman Island residents with a complete savings ecosystem: global hotel rates up to 70% off, local merchant discounts, and $1,000 in annual redeemable certificates."
+      founderNote1="Discount Club Cayman is not a simple discount site; it is a financial product with a value proposition that has to be communicated clearly and trusted immediately."
+      founderNote2="The gold premium aesthetic, the savings number front and centre, the certificate tiers: every decision was engineered for conversion and retention."
+      nextCaseTitle="Chef Academy of London: Culinary Platform"
       nextCaseDesc="A full-stack culinary education platform for professional chef training and course management."
       nextCaseLink="/work/chef-academy"
       accentColor="#3B82F6"

@@ -43,7 +43,7 @@ export default function HealthcarePlatformsPage() {
                 Healthcare software has zero margin for error. We design systems with granular access controls, immutable audit logs, and strict data segregation. From FHIR-compliant APIs to offline-capable clinical interfaces, we build for reliability and regulatory confidence.
               </p>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '28px' }}>
-                Our healthcare work spans patient management platforms, clinical workflow tools, and interoperability solutions — each built with data privacy as the foundational design constraint.
+                Our healthcare work spans patient management platforms, clinical workflow tools, and interoperability solutions, each built with data privacy as the foundational design constraint.
               </p>
             </div>
             <div style={{ background: '#F1F5F9', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '40px' }}>
@@ -79,7 +79,7 @@ export default function HealthcarePlatformsPage() {
           <div className="grid gap-5 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { num: '01', icon: 'fa-shield-halved', title: 'Privacy by Design', desc: 'Data privacy is the foundational constraint. We design systems where patient data is encrypted, segregated, and accessible only through granular, audited permissions.' },
-              { num: '02', icon: 'fa-arrows-left-right', title: 'Interoperability First', desc: 'HL7 FHIR-compliant APIs ensure your system can communicate with existing healthcare infrastructure — labs, pharmacies, insurance, and national health systems.' },
+              { num: '02', icon: 'fa-arrows-left-right', title: 'Interoperability First', desc: 'HL7 FHIR-compliant APIs ensure your system can communicate with existing healthcare infrastructure: labs, pharmacies, insurance, and national health systems.' },
               { num: '03', icon: 'fa-wifi', title: 'Offline-First Capability', desc: 'Clinical workflows cannot wait for internet connectivity. We build offline-capable interfaces that sync seamlessly when connectivity is restored.' },
             ].map((item) => (
               <div key={item.title} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '44px 36px' }}>
@@ -102,7 +102,7 @@ export default function HealthcarePlatformsPage() {
             <span style={{ display: 'block', width: '20px', height: '2px', background: '#818CF8' }}></span>
             Related Work
           </div>
-          <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '12px' }}>CareMandate — Patient Operations Platform</h2>
+          <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '12px' }}>CareMandate: Patient Operations Platform</h2>
           <p style={{ fontSize: '16px', color: '#64748B', lineHeight: 1.65, maxWidth: '600px', marginBottom: '32px' }}>
             Enterprise clinical management system serving 50,000+ patients. Web and mobile. HIPAA-aligned architecture with full audit trails and offline-capable clinical interfaces.
           </p>

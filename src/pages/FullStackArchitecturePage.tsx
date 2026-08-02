@@ -40,10 +40,10 @@ export default function FullStackArchitecturePage() {
             <div>
               <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '20px' }}>What we build</h2>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '28px' }}>
-                Every layer of the stack is engineered with production in mind — from database schema design and API gateway configuration through to responsive, accessible frontend components. We use modern tooling, typed languages, and rigorous code review to ship systems that teams can own and evolve.
+                Every layer of the stack is engineered with production in mind, from database schema design and API gateway configuration through to responsive, accessible frontend components. We use modern tooling, typed languages, and rigorous code review to ship systems that teams can own and evolve.
               </p>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '28px' }}>
-                Whether you are building a new platform from scratch or scaling an existing system, we bring senior engineering judgment to every decision — from choosing the right database to structuring the frontend state management.
+                Whether you are building a new platform from scratch or scaling an existing system, we bring senior engineering judgment to every decision, from choosing the right database to structuring the frontend state management.
               </p>
             </div>
             <div style={{ background: '#F1F5F9', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '40px' }}>
@@ -78,7 +78,7 @@ export default function FullStackArchitecturePage() {
           <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '56px' }}>How we architect systems.</h2>
           <div className="grid gap-5 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { num: '01', icon: 'fa-sitemap', title: 'System Design First', desc: 'We start with a system design document — data models, API contracts, infrastructure topology — before writing code. Every tradeoff is documented and discussed.' },
+              { num: '01', icon: 'fa-sitemap', title: 'System Design First', desc: 'We start with a system design document: data models, API contracts, infrastructure topology, before writing code. Every tradeoff is documented and discussed.' },
               { num: '02', icon: 'fa-code', title: 'Typed & Tested', desc: 'TypeScript end-to-end. Full test suites (unit, integration, E2E). Every PR is reviewed. We ship code that other engineers can read and own.' },
               { num: '03', icon: 'fa-cloud', title: 'Production-Ready Infrastructure', desc: 'Docker containers, infrastructure as code, automated deployments, monitoring, and alerting. Your system runs like a real product from day one.' },
             ].map((item) => (
