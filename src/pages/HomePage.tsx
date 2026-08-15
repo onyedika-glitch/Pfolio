@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import Seo from '../components/Seo'
 import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
 
@@ -20,6 +21,12 @@ export default function HomePage() {
   return (
     <div style={{ fontFamily: 'Inter, sans-serif', background: '#F8FAFC', color: '#0F172A' }}>
       <Navbar />
+      <Seo
+        title="DevOmogo — Senior Software Infrastructure Engineer | Fintech, Healthcare & AI Systems"
+        description="DevOmogo is a senior engineering studio founded by Omogo Peter Onyedika, a Senior Software Infrastructure Engineer. Production systems across fintech, healthcare, AI, marketplaces, and web platforms — including YouExtractor, Gigora Network, and Sadar Properties."
+        keywords="software engineering, full-stack developer, fintech development, healthcare platform development, AI integration, Laravel developer, React developer, Nigeria software engineer, DevOmogo"
+        jsonLd={{ "@context": "https://schema.org", "@type": "WebSite", name: 'DevOmogo', url: 'https://devomogo.tech/', description: 'Senior engineering studio building fintech, healthcare, AI, and web platforms.' }}
+      />
 
       {/* HERO */}
       <section className="relative site-container pt-24 md:pt-28 lg:pt-32 pb-12 md:pb-20 flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-16 xl:gap-20 min-h-0 lg:min-h-[calc(100vh-2rem)]" style={{ isolation: 'isolate' }}>

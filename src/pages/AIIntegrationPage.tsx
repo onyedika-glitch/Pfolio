@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import Seo from '../components/Seo'
 import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
 
@@ -8,6 +9,11 @@ export default function AIIntegrationPage() {
   return (
     <div style={{ fontFamily: 'Inter, sans-serif', background: '#F8FAFC', color: '#0F172A' }}>
       <Navbar />
+      <Seo
+        title="AI Integration & LLM Pipelines — Laravel, DeepSeek, Claude, Gemini, GPT-4 | DevOmogo"
+        description="AI-powered product development: pluggable LLM pipelines, tutorial-to-code generation, AI talent matching, and practical AI features in production (Laravel, DeepSeek, Claude, Gemini, GPT-4)."
+        keywords="AI development, LLM integration, Laravel AI, DeepSeek, Claude, Gemini, GPT-4, AI matching"
+      />
 
       {/* HERO */}
       <section style={{ background: '#1E1B4B', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>

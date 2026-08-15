@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import Seo from '../components/Seo'
 import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
 
@@ -43,6 +44,12 @@ export default function WorkPage() {
   return (
     <div style={{ fontFamily: 'Inter, sans-serif', background: '#F8FAFC', color: '#0F172A' }}>
       <Navbar />
+      <Seo
+        title="Work & Case Studies — DevOmogo | Fintech, Healthcare, AI, Marketplace, Real Estate"
+        description="Production systems built by DevOmogo: AI developer tools, freelance marketplaces, fintech platforms, healthcare systems, accelerator operations, and real estate tools — each with a live site and full case study."
+        keywords="portfolio, case studies, fintech platform development, healthcare system development, AI tool development, marketplace development, Laravel, React, NestJS"
+        jsonLd={{ "@context": "https://schema.org", "@type": "ItemList", itemListElement: projects.map((p, i) => ({ "@type": 'ListItem', position: i + 1, name: p.title, url: 'https://devomogo.tech' + p.link })) }}
+      />
 
       {/* PAGE HERO */}
       <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden' }} className="pt-28 md:pt-40 pb-12 md:pb-20">

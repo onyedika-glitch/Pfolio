@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import Seo from '../components/Seo'
 import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
 
@@ -43,6 +44,12 @@ export default function ServicesPage() {
   return (
     <div style={{ fontFamily: 'Inter, sans-serif', background: '#F8FAFC', color: '#0F172A' }}>
       <Navbar />
+      <Seo
+        title="Services — Full-Stack, Fintech, Healthcare & AI Development | DevOmogo"
+        description="DevOmogo services: full-stack architecture (Laravel, React, NestJS), fintech systems (Stripe, Paystack, ledgers), healthcare platforms (appointments, HIPAA-aligned), and AI integration (LLM pipelines)."
+        keywords="full-stack development services, fintech development, healthcare software development, AI integration, Laravel, React, NestJS, Node.js"
+        jsonLd={{ "@context": "https://schema.org", "@type": "ItemList", itemListElement: services.map((s, i) => ({ "@type": 'ListItem', position: i + 1, name: s.title, description: s.desc })) }}
+      />
 
       {/* HERO */}
       <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>

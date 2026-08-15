@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import Seo from '../components/Seo'
 import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
 
@@ -8,6 +9,12 @@ export default function TeamPage() {
   return (
     <div style={{ fontFamily: 'Inter, sans-serif', background: '#F8FAFC', color: '#0F172A' }}>
       <Navbar />
+      <Seo
+        title="The Team — Omogo Peter Onyedika, Founder & Senior Software Infrastructure Engineer | DevOmogo"
+        description="DevOmogo was founded by Omogo Peter Onyedika, a Senior Software Infrastructure Engineer and founder of YouExtractor, Gigora Network, and Sadar Properties."
+        keywords="Omogo Peter Onyedika, software engineer, founder, DevOmogo, senior software infrastructure engineer"
+        jsonLd={{ "@context": "https://schema.org", "@type": "Person", name: 'Omogo Peter Onyedika', jobTitle: 'Senior Software Infrastructure Engineer', url: 'https://devomogo.tech/team', sameAs: ['https://github.com/onyedika-glitch', 'https://x.com/peteromogo2'] }}
+      />
 
       {/* HERO */}
       <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>
