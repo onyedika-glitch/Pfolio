@@ -42,9 +42,9 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div style={{ fontSize: '14px', fontWeight: 700, color: '#0F172A', marginBottom: '4px' }}>Email</div>
-                    <a href="mailto:webdevelopment@discountclubcayman.com" className="no-underline inline-flex items-center gap-1.5 transition-all duration-200 max-w-full"
+                    <a href="mailto:omogopeter@devomogo.tech" className="no-underline inline-flex items-center gap-1.5 transition-all duration-200 max-w-full"
                       style={{ fontSize: '12px', fontWeight: 600, color: '#fff', background: '#3B82F6', padding: '8px 12px', borderRadius: '8px', wordBreak: 'break-all' }}>
-                      webdevelopment@discountclubcayman.com
+                      omogopeter@devomogo.tech
                     </a>
                     <p style={{ fontSize: '13px', color: '#64748B', marginTop: '4px' }}>We aim to respond within 24 hours.</p>
                   </div>
@@ -94,7 +94,7 @@ export default function ContactPage() {
                   <textarea rows={5} placeholder="Tell us about your project..."
                     style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #E2E8F0', fontSize: '14px', background: '#fff', outline: 'none', resize: 'vertical', boxSizing: 'border-box', fontFamily: 'inherit' }} />
                 </div>
-                <a href="mailto:webdevelopment@discountclubcayman.com"
+                <a href="mailto:omogopeter@devomogo.tech"
                   className="inline-flex items-center justify-center gap-2 no-underline transition-all duration-200"
                   style={{ background: '#1E3A8A', color: '#fff', padding: '14px 32px', borderRadius: '8px', fontSize: '15px', fontWeight: 700, letterSpacing: '-0.01em' }}>
                   Send Message <i className="fas fa-arrow-right" style={{ fontSize: '12px' }}></i>

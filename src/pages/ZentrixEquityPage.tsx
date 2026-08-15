@@ -4,27 +4,24 @@ export default function ZentrixEquityPage() {
   return (
     <CaseStudyLayout
       eyebrow="Case Study · Fintech"
-      headline={<>Zentrix Equity:<br />Cap Table Platform</>}
-      subhead="Real-time equity distribution and cap table management for startups and VCs via WebSocket sync."
-      metrics={[{ value:'Real-Time', label:'Collaborative Ledger' },{ value:'Socket.io', label:'WebSocket Powered' },{ value:'Multi-User', label:'Startups & VCs' },{ value:'Live', label:'equityapp.zentrixinnovationlab.com' }]}
-      metaItems={[{ label:'Category', value:'Fintech · Cap Table' },{ label:'Stack', value:'Node.js · Socket.io · PostgreSQL · React · TypeScript' }]}
-      projectDetails={[{ label:'Client', value:'Zentrix' },{ label:'Type', value:'Cap Table Management' },{ label:'Status', value:'live' }]}
-      breadcrumbLabel="Zentrix Equity: Cap Table Platform"
-      overviewProblem="Startups and investors needed a real-time platform for collaborative equity and cap table management."
-      overviewRole="I built the full-stack platform with Socket.io WebSocket sync and PostgreSQL-backed equity ledger."
-      archTitle="Platform Architecture" archSubhead="Real-time collaborative architecture for equity management."
-      archCards={[{ num:'Layer 01', icon:'fa-bolt', title:'Real-Time Sync', desc:'Socket.io WebSocket layer for instant updates across all clients.' },{ num:'Layer 02', icon:'fa-database', title:'Equity Ledger', desc:'PostgreSQL schema for cap table events and ownership tracking.' },{ num:'Layer 03', icon:'fa-chart-pie', title:'Visualization', desc:'React frontend with interactive cap table charts.' },{ num:'Layer 04', icon:'fa-users', title:'Access Control', desc:'Role-based access for founders, investors, and admins.' }]}
-      codeFilename="server/services/sync-service.js"
-      codeLines={[['class SyncService {', '01'],['  constructor(io) { this.io = io; this.rooms = new Map(); }', '02'],['  broadcastUpdate(capTableId, data) {', '03'],['    this.io.to(capTableId).emit("equity:updated", data);', '04'],['  }', '05'],['}', '06']]}
-      pullQuote="Cap table management is about precision and trust. Every stakeholder needs to see the same numbers at the same time."
-      decisionCards={[{ num:'01', title:'WebSocket-First', desc:'Socket.io for real-time bidirectional cap table updates.' },{ num:'02', title:'PostgreSQL Accuracy', desc:'Serializable transactions for equity data integrity.' }]}
-      resultCards={[{ value:'Real-Time', label:'Collaborative Updates' },{ value:'Socket.io', label:'WebSocket' },{ value:'PostgreSQL', label:'Data Integrity' },{ value:'Live', label:'Production Deployed' }]}
-      resultBody="Zentrix Equity is live at equityapp.zentrixinnovationlab.com."
-      founderNote1="Real-time financial systems require both speed and accuracy. The sync layer has to feel instant and be trustworthy."
-      founderNote2="The real engineering was in the database schema: designing for concurrent access without conflicts."
-      nextCaseTitle="Unlimited Healthcare: Clinical AI"
-      nextCaseDesc="High-scale clinical app with AI-driven diagnostics."
-      nextCaseLink="/work/unlimited-healthcare"
+      headline={<>Zentrix Equity<br />Equity &amp; Valuation Platform</>}
+      subhead="A real-time equity management and valuation platform built on a WebSocket server with a React 18 + TypeScript frontend and MySQL."
+      metrics={[{ value:'Real-Time', label:'WebSocket Updates' },{ value:'10-50ms', label:'Socket Latency' },{ value:'Google', label:'OAuth Login' },{ value:'Live', label:'equityapp.zentrixinnovationlab.com' }]}
+      metaItems={[{ label:'Category', value:'Fintech · Equity Management' },{ label:'Role', value:'Full-Stack Engineer' },{ label:'Stack', value:'Node.js · Express · Socket.io · MySQL · React 18 · TypeScript' }]}
+      projectDetails={[{ label:'Company', value:'Zentrix Lab' },{ label:'Type', value:'Equity & Valuation Platform' },{ label:'Status', value:'live' }]}
+      breadcrumbLabel="Zentrix Equity: Equity & Valuation Platform"
+      overviewProblem="The original app used a REST API, which meant the frontend had to poll for changes and data could be stale. Equity data changes constantly, so the platform needed live updates without page refreshes."
+      overviewRole="I built the platform: a Socket.io WebSocket server replacing the REST API for real-time bidirectional updates, a MySQL data layer with connection pooling, Google OAuth plus JWT and session auth, Resend-based emails, and the React frontend with a useWebSocket hook."
+      archTitle="Architecture" archSubhead="Frontend and database connected through a real-time WebSocket server."
+      archCards={[{ num:'Layer 01', icon:'fa-bolt', title:'WebSocket Server', desc:'Socket.io server handling real-time bidirectional updates between the React frontend and the database, replacing the older REST polling.' },{ num:'Layer 02', icon:'fa-database', title:'Data Layer', desc:'MySQL connection pool with keep-alive and a connection limit tuned for stability in production.' },{ num:'Layer 03', icon:'fa-shield-halved', title:'Auth', desc:'Google OAuth via Passport, JWT + session handling, bcrypt password hashing, and Resend for transactional emails.' },{ num:'Layer 04', icon:'fa-chart-line', title:'React Frontend', desc:'React 18 + TypeScript with an AuthContext and a useWebSocket hook keeping the UI in sync with server events.' }]}
+      codeFilename="websocket-server.js" codeLines={[['// websocket-server.js - Real-time WebSocket Server', '01'],['const http = require(\'http\');', '02'],['const socketIo = require(\'socket.io\');', '03'],['const jwt = require(\'jsonwebtoken\');', '04'],['const bcrypt = require(\'bcryptjs\');', '05'],['const { v4: uuidv4 } = require(\'uuid\');', '06'],['const passport = require(\'passport\');', '07'],['const GoogleStrategy = require(\'passport-google-oauth20\').Strategy;', '08'],['', '09'],['const { pool, getRow, getRows, query } = require(\'./src/config/database\');', '10'],['const { Resend } = require(\'resend\');', '11']]}
+      pullQuote="Equity data shouldn't be stale. A WebSocket server means every screen updates the moment something changes."
+      decisionCards={[{ num:'01', title:'WebSocket over REST', desc:'Switched from polling a REST API to a persistent Socket.io connection for real-time updates.' },{ num:'02', title:'Keep-Alive Data Layer', desc:'MySQL pool with keep-alive and tuned connection limits so the server survives long sessions.' }]}
+      resultCards={[{ value:'10-50ms', label:'Socket latency' },{ value:'Real-Time', label:'Bidirectional updates' },{ value:'Google OAuth', label:'Plus JWT + sessions' },{ value:'Live', label:'equityapp.zentrixinnovationlab.com' }]}
+      resultBody="Zentrix Equity is live at equityapp.zentrixinnovationlab.com, serving real-time equity data through a WebSocket-backed full-stack platform."
+      founderNote1="The WebSocket architecture wasn't for show: equity and valuation data changes constantly, and stale dashboards are worse than no dashboard."
+      founderNote2="Tuning the MySQL pool for keep-alive and connection limits is the kind of detail that keeps a real-time app from falling over under load."
+      nextCaseTitle="Unlimited Healthcare: Management System" nextCaseDesc="Healthcare management system with appointments, clinical modules, and mobile apps." nextCaseLink="/work/unlimited-healthcare"
       accentColor="#4F46E5" codeBg="#0D0B2E"
     />
   )

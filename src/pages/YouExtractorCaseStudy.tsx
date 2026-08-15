@@ -1,93 +1,83 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import CTABanner from '../components/CTABanner'
 import CaseStudyLayout from '../components/CaseStudyLayout'
 
 export default function YouExtractorCaseStudy() {
   return (
     <CaseStudyLayout
-      eyebrow="Case Study · AI DevOps"
-      headline={<>YouExtractor<br />LLM Extraction Engine</>}
-      subhead="Architecting a multi-model chained extraction pipeline capable of processing 10M+ records monthly with sub-200ms p99 latency."
+      eyebrow="Case Study · AI Developer Tools"
+      headline={<>YouExtractor<br />Tutorial → Course &amp; Code Generator</>}
+      subhead="A Laravel platform that turns YouTube coding tutorials into structured written guides and complete, runnable code projects using AI."
       metrics={[
-        { value: '10M+', label: 'Records / Month' },
-        { value: '<200ms', label: 'P99 Latency' },
-        { value: '99.97%', label: 'Uptime' },
-        { value: 'Live', label: 'youextractor.me' },
+        { value: 'V2.0', label: 'Current Version' },
+        { value: '4', label: 'AI Providers' },
+        { value: '1-Click', label: 'Chrome Extension' },
+        { value: 'ZIP', label: 'Runnable Projects' },
       ]}
       metaItems={[
-        { label: 'Category', value: 'AI DevOps · LLM Integration' },
-        { label: 'Role', value: 'Founder & Lead Architect' },
-        { label: 'Stack', value: 'Node.js · TypeScript · Claude API · Gemini · PostgreSQL · Redis · Docker · AWS' },
-        { label: 'Year', value: '2024' },
+        { label: 'Category', value: 'AI · Developer Tools' },
+        { label: 'Role', value: 'Founder & Senior Software Infrastructure Engineer' },
+        { label: 'Stack', value: 'Laravel 11 · PHP 8.2+ · Blade · TailwindCSS · Alpine.js · PostgreSQL/MySQL · Docker' },
+        { label: 'AI', value: 'DeepSeek · Claude · Gemini · GPT-4' },
       ]}
       projectDetails={[
-        { label: 'Client', value: 'YouExtractor' },
-        { label: 'Type', value: 'AI Infrastructure' },
-        { label: 'Engagement', value: 'Full Architect' },
-        { label: 'Duration', value: '4 months' },
+        { label: 'Company', value: 'YouExtractor' },
+        { label: 'Type', value: 'AI Developer Tool' },
+        { label: 'Role', value: 'Founder & Senior Software Infrastructure Engineer' },
         { label: 'Status', value: 'live' },
       ]}
-      breadcrumbLabel="YouExtractor: LLM Extraction Engine"
-      overviewProblem="YouExtractor needed to process massive volumes of unstructured data (product listings, job descriptions, financial filings, and web content) and return clean, structured JSON at scale. The existing approach relied on brittle regex pipelines and single-model calls that hallucinated under load, had no fallback strategy, and cost 4x more per extraction than necessary."
-      overviewRole="I joined as Founder and Lead Architect. I owned the full system from infrastructure topology to model orchestration logic. This was not a feature build; it was a ground-up re-architecture of how the platform ingested and processed data."
-      archTitle="Architecture Overview"
-      archSubhead="A four-layer pipeline built for fault tolerance, cost efficiency, and model interoperability."
+      breadcrumbLabel="YouExtractor: Tutorial to Course & Code Generator"
+      overviewProblem="Watching coding tutorials on YouTube is passive: you scrub through videos for the code that never ships as a working project. YouExtractor exists to change that."
+      overviewRole="As Founder and Senior Software Infrastructure Engineer, I built the whole application: an AI service layer with pluggable LLM drivers, a transcript pipeline, a prompt factory, a project packager that generates ZIPs of runnable code, a Chrome extension, and the Laravel dashboard that ties it together."
+      archTitle="Architecture"
+      archSubhead="A Laravel app coordinated around pluggable AI providers."
       archCards={[
-        { num: 'Layer 01', icon: 'fa-layer-group', title: 'Ingestion Queue', desc: 'Redis-backed distributed queue with priority lanes. Incoming extraction jobs are fingerprinted, deduplicated, and routed by content type before model selection.' },
-        { num: 'Layer 02', icon: 'fa-diagram-project', title: 'Model Orchestration', desc: 'A TypeScript orchestrator selects the optimal model per content type: Claude 3.5 Sonnet for reasoning-heavy extractions, Gemini Flash for speed-critical bulk runs.' },
-        { num: 'Layer 03', icon: 'fa-shield-halved', title: 'Validation & Retry', desc: 'JSON Schema validation on every extraction output. Failed validations trigger a retry with an enriched prompt containing the failure reason. Maximum 3 retry hops.' },
-        { num: 'Layer 04', icon: 'fa-database', title: 'Storage & Delivery', desc: 'PostgreSQL for structured results with full extraction audit trail. Redis for hot cache of recently extracted entities. Webhook delivery to downstream consumers.' },
+        { num: 'Layer 01', icon: 'fa-film', title: 'Video Intake', desc: 'Fetches YouTube metadata and transcripts for any tutorial video, storing extractions in PostgreSQL/MySQL.' },
+        { num: 'Layer 02', icon: 'fa-brain', title: 'AI Extraction', desc: 'Pluggable LLM drivers with provider priority — DeepSeek default, then Claude, Gemini, and OpenAI — coordinated by a PromptFactory and CodeExtractorService.' },
+        { num: 'Layer 03', icon: 'fa-file-zipper', title: 'Project Packaging', desc: 'ProjectPackager turns generated code into complete, downloadable ZIP projects instead of loose snippets.' },
+        { num: 'Layer 04', icon: 'fa-magnifying-glass', title: 'Library & Search', desc: 'Dark-mode dashboard with search and filters over your previously extracted videos and guides.' },
       ]}
-      codeFilename="orchestrator.ts"
+      codeFilename="app/Services/CodeExtractorService.php"
       codeLines={[
-        [<><span className="c-keyword">async function</span> <span className="c-func">orchestrateExtraction</span>(</>, '01'],
-        [<>&nbsp;&nbsp;<span className="c-param">job</span>: <span className="c-type">ExtractionJob</span></>, '02'],
-        [<>): <span className="c-type">Promise</span>&lt;<span className="c-type">ExtractionResult</span>&gt; {'{'}</>, '03'],
-        [<>&nbsp;&nbsp;<span className="c-comment">// Route to optimal model based on content type + queue depth</span></>, '04'],
-        [<>&nbsp;&nbsp;<span className="c-keyword">const</span> <span className="c-param">model</span> = <span className="c-func">selectModel</span>({'{'}</>, '05'],
-        [<>&nbsp;&nbsp;&nbsp;&nbsp;<span className="c-param">contentType</span>: job.<span className="c-param">type</span>,</>, '06'],
-        [<>&nbsp;&nbsp;&nbsp;&nbsp;<span className="c-param">queueDepth</span>: <span className="c-keyword">await</span> <span className="c-func">getQueueDepth</span>(),</>, '07'],
-        [<>&nbsp;&nbsp;{'}'});</>, '08'],
-        [<>&nbsp;</>, '09'],
-        [<>&nbsp;&nbsp;<span className="c-keyword">let</span> <span className="c-param">result</span> = <span className="c-keyword">await</span> <span className="c-func">callModel</span>(<span className="c-param">model</span>, <span className="c-param">job</span>.<span className="c-param">payload</span>);</>, '10'],
-        [<>&nbsp;&nbsp;<span className="c-keyword">let</span> <span className="c-param">retries</span> = <span className="c-num">0</span>;</>, '11'],
-        [<>&nbsp;</>, '12'],
-        [<>&nbsp;&nbsp;<span className="c-keyword">while</span> (<span className="c-param">retries</span> &lt; <span className="c-num">3</span>) {'{'}</>, '13'],
-        [<>&nbsp;&nbsp;&nbsp;&nbsp;<span className="c-keyword">const</span> <span className="c-param">valid</span> = <span className="c-func">validateSchema</span>(<span className="c-param">result</span>);</>, '14'],
-        [<>&nbsp;&nbsp;&nbsp;&nbsp;<span className="c-keyword">if</span> (<span className="c-param">valid</span>.<span className="c-param">ok</span>) <span className="c-keyword">break</span>;</>, '15'],
-        [<>&nbsp;&nbsp;&nbsp;&nbsp;<span className="c-comment">// Stateful retry: pass failure reason as context</span></>, '16'],
-        [<>&nbsp;&nbsp;&nbsp;&nbsp;<span className="c-param">result</span> = <span className="c-keyword">await</span> <span className="c-func">retryWithContext</span>({'{'}</>, '17'],
-        [<>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="c-param">model</span>, <span className="c-param">prev</span>: <span className="c-param">result</span>,</>, '18'],
-        [<>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="c-param">reason</span>: <span className="c-param">valid</span>.<span className="c-param">error</span>,</>, '19'],
-        [<>&nbsp;&nbsp;&nbsp;&nbsp;{'}'});</>, '20'],
-        [<>&nbsp;&nbsp;&nbsp;&nbsp;<span className="c-param">retries</span>++;</>, '21'],
-        [<>&nbsp;&nbsp;{'}'}</>, '22'],
-        [<>&nbsp;&nbsp;<span className="c-keyword">if</span> (<span className="c-param">retries</span> === <span className="c-num">3</span>) <span className="c-keyword">await</span> <span className="c-func">escalateToReview</span>(<span className="c-param">job</span>);</>, '23'],
-        [<>&nbsp;&nbsp;<span className="c-keyword">return</span> <span className="c-func">persist</span>(<span className="c-param">result</span>, <span className="c-param">job</span>.<span className="c-param">id</span>);</>, '24'],
-        [<>{'}'}</>, '25'],
+        ['<?php', '01'],
+        ['', '02'],
+        ['namespace App\\Services;', '03'],
+        ['', '04'],
+        ['use App\\Services\\AI\\LLMService;', '05'],
+        ['use App\\Services\\AI\\DeepSeekDriver;', '06'],
+        ['use App\\Services\\AI\\GeminiDriver;', '07'],
+        ['', '08'],
+        ['class CodeExtractorService', '09'],
+        ['{', '10'],
+        ['    private PromptFactory $prompts;', '11'],
+        ['    private ProjectPackager $packager;', '12'],
+        ['', '13'],
+        ['    public function __construct()', '14'],
+        ['    {', '15'],
+        ['        $this->prompts  = new PromptFactory();', '16'],
+        ['        $this->packager = new ProjectPackager();', '17'],
+        ['    }', '18'],
+        ['}', '19'],
       ]}
-      pullQuote={"\"The retry architecture alone reduced hallucination-related failures by 94%. Chaining models with context wasn't just a performance win; it fundamentally changed what the system could extract.\""}
+      pullQuote="Watching a tutorial isn't learning. YouExtractor turns a passive video into something you can actually run."
       decisionCards={[
-        { num: '01', title: 'Model Selection Strategy', desc: 'Choosing between Claude and Gemini per extraction type was not arbitrary. Claude handles multi-step reasoning extractions. Gemini Flash handles high-volume, speed-sensitive bulk runs.' },
-        { num: '02', title: 'Prompt Context Chaining', desc: 'Each model in the chain receives the output of the previous model plus a delta context explaining what changed and why. This dramatically reduced hallucination on complex nested extractions.' },
-        { num: '03', title: 'Failure Escalation Protocol', desc: 'Rather than silently dropping failed extractions, I built a human review queue with Slack webhook alerts for records that exhausted retry budget.' },
+        { num: '01', title: 'Pluggable AI Drivers', desc: 'DeepSeek, Claude, Gemini, and OpenAI behind one interface, with ordered fallback so extraction keeps working when a provider fails.' },
+        { num: '02', title: 'Prompt Factory', desc: 'Prompts are built in one place instead of scattered through controllers, so the extraction logic stays consistent and testable.' },
+        { num: '03', title: 'One-Click Extension', desc: 'A Chrome extension lets you start an extraction directly from the YouTube page you are watching.' },
       ]}
       resultCards={[
-        { value: '10M+', label: 'Records processed monthly at launch' },
-        { value: '94%', label: 'Reduction in hallucination failures' },
-        { value: '3x', label: 'Cost reduction per extraction unit' },
-        { value: '4 mo.', label: 'Architecture doc to production' },
+        { value: 'V2.0', label: 'Platform version' },
+        { value: '4', label: 'AI providers supported' },
+        { value: '1-Click', label: 'Extraction via Chrome extension' },
+        { value: 'ZIP', label: 'Downloadable runnable projects' },
       ]}
-      resultBody="The YouExtractor pipeline is now the backbone of the platform's data layer. The system runs on AWS ECS with horizontal auto-scaling, zero-downtime deployments, and a full observability stack."
-      founderNote1="I built YouExtractor's extraction engine because I understood the problem from first principles: not just as an engineer, but as someone who has worked with unstructured data at scale."
-      founderNote2="When something breaks in production at 2am, I'm the one who gets paged. That's what it means to be a founding engineer, not a contractor."
-      nextCaseTitle="CareMandate: Patient Operations Platform"
-      nextCaseDesc="Enterprise monorepo for end-to-end clinical management. 50,000+ patients. HIPAA-aligned."
-      nextCaseLink="/work/caremandate"
+      resultBody="YouExtractor is live at youextractor.me: extract video metadata, generate structured tutorials, and download complete runnable project files from any YouTube coding tutorial."
+      founderNote1="I built YouExtractor because I wanted to learn faster: instead of scrubbing videos for code, the AI turns the tutorial into a course and a working project."
+      founderNote2="Making the AI layer pluggable mattered — no single provider owns the product, and a provider outage shouldn't stop extractions."
+      nextCaseTitle="Gigora Network: Web3 Freelance Marketplace"
+      nextCaseDesc="Community-driven freelance marketplace with vetted talent and secure escrow."
+      nextCaseLink="/work/gigora-network"
       accentColor="#3B82F6"
+      codeBg="#0F172A"
     />
   )
 }

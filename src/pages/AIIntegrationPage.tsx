@@ -102,9 +102,9 @@ export default function AIIntegrationPage() {
             <span style={{ display: 'block', width: '20px', height: '2px', background: '#A78BFA' }}></span>
             Related Work
           </div>
-          <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '12px' }}>YouExtractor: LLM Extraction Engine</h2>
+          <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '12px' }}>YouExtractor: Tutorial → Course & Code Generator</h2>
           <p style={{ fontSize: '16px', color: '#64748B', lineHeight: 1.65, maxWidth: '600px', marginBottom: '32px' }}>
-            Multi-model chained extraction pipeline processing 10M+ records per month at sub-200ms p99 latency. 3x cost reduction through intelligent model routing.
+            A Laravel app that turns YouTube coding tutorials into structured written guides and complete, runnable code projects using pluggable AI providers — DeepSeek, Claude, Gemini, and GPT-4.
           </p>
           <Link to="/work/youextractor" className="inline-flex items-center gap-2 no-underline transition-all duration-200"
             style={{ fontSize: '14px', fontWeight: 700, color: '#fff', background: '#7C3AED', padding: '14px 28px', borderRadius: '8px' }}>

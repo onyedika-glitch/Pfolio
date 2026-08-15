@@ -11,18 +11,18 @@ export default function CTABanner() {
           <h2 style={{ fontSize: 'clamp(28px, 6vw, 56px)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1.1, color: '#fff', maxWidth: '600px' }}>Ready to build something exceptional?</h2>
         </div>
         <div className="flex flex-col items-stretch sm:items-start lg:items-end gap-3 w-full lg:w-auto shrink-0">
-          <a href="mailto:webdevelopment@discountclubcayman.com"
+          <a href="mailto:omogopeter@devomogo.tech"
             className="inline-flex items-center justify-center gap-2 no-underline transition-all duration-200 w-full sm:w-auto"
             style={{ background: '#fff', color: '#1E3A8A', padding: '16px 28px', borderRadius: '6px', fontSize: '15px', fontWeight: 700, letterSpacing: '-0.02em' }}
           >
             Book a Discovery Call
             <i className="fas fa-arrow-right" style={{ fontSize: '12px' }}></i>
           </a>
-          <a href="mailto:webdevelopment@discountclubcayman.com"
+          <a href="mailto:omogopeter@devomogo.tech"
             className="inline-flex items-center justify-center gap-2 no-underline transition-all duration-200 w-full sm:w-auto text-center"
             style={{ background: 'transparent', color: 'rgba(255,255,255,0.7)', padding: '14px 20px', borderRadius: '6px', fontSize: '13px', fontWeight: 500, border: '1px solid rgba(255,255,255,0.2)', wordBreak: 'break-all' }}
           >
-            webdevelopment@discountclubcayman.com
+            omogopeter@devomogo.tech
           </a>
         </div>
       </div>
