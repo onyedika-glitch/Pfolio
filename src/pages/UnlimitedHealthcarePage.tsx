@@ -3,28 +3,25 @@ import CaseStudyLayout from '../components/CaseStudyLayout'
 export default function UnlimitedHealthcarePage() {
   return (
     <CaseStudyLayout
-      eyebrow="Case Study · Healthcare AI"
-      headline={<>Unlimited Healthcare<br />Clinical AI App</>}
-      subhead="High-scale clinical app with real-time consultations via WebSockets and AI-driven diagnostics on Google Play."
-      metrics={[{ value:'AI-Powered', label:'Diagnostics' },{ value:'Real-Time', label:'Consultations' },{ value:'Google Play', label:'Mobile App' },{ value:'Live', label:'unlimitedhealthcares.com' }]}
-      metaItems={[{ label:'Category', value:'Healthcare · Mobile + Web' },{ label:'Stack', value:'React · Capacitor · WebSockets · Node.js · Python AI' }]}
-      projectDetails={[{ label:'Type', value:'Clinical Healthcare AI' },{ label:'Status', value:'live' }]}
-      breadcrumbLabel="Unlimited Healthcare: Clinical AI App"
-      overviewProblem="Patients needed accessible healthcare with AI triage, real-time consultations, and mobile access."
-      overviewRole="I built the full-stack clinical app with WebSocket consultations, Python AI diagnostics, and Google Play mobile app."
-      archTitle="Platform Architecture" archSubhead="Multi-layered clinical architecture combining AI and real-time comms."
-      archCards={[{ num:'Layer 01', icon:'fa-stethoscope', title:'AI Diagnostics', desc:'Python-based symptom analysis for preliminary assessments.' },{ num:'Layer 02', icon:'fa-video', title:'Real-Time Consults', desc:'WebSocket live communication between patients and providers.' },{ num:'Layer 03', icon:'fa-calendar', title:'Scheduling', desc:'Appointment scheduling with provider availability management.' },{ num:'Layer 04', icon:'fa-google-play', title:'Mobile App', desc:'Capacitor React app published on Google Play Store.' }]}
-      codeFilename="services/ai-diagnostics/main.py"
-      codeLines={[['def analyze_symptoms(symptoms):', '01'],['  processed = preprocess_symptoms(symptoms)', '02'],['  matches = model.predict(processed)', '03'],['  severity = assess_urgency(matches)', '04'],['  return {', '05'],['    "diagnoses": matches,', '06'],['    "severity": severity,', '07'],['    "recommendation": get_recommendation(severity)', '08'],['  }', '09']]}
-      pullQuote="Healthcare is the one domain where 'move fast and break things' doesn't apply. People's health depends on it."
-      decisionCards={[{ num:'01', title:'Python AI Engine', desc:'Built symptom analysis using Python ML libraries for preliminary diagnostics.' },{ num:'02', title:'WebSocket Comms', desc:'WebSockets for instant bidirectional patient-provider communication.' }]}
-      resultCards={[{ value:'AI-Powered', label:'Diagnostics' },{ value:'Real-Time', label:'Consultations' },{ value:'Google Play', label:'Mobile' },{ value:'Full-Stack', label:'Web + Mobile + AI' }]}
-      resultBody="Unlimited Healthcare is live at unlimitedhealthcares.com and on Google Play."
-      founderNote1="Building healthcare AI is the most technically and ethically challenging work. Every diagnostic suggestion must be responsible."
-      founderNote2="The WebSocket consultation layer required designing for reliable, low-latency connections patients can depend on."
-      nextCaseTitle="Sparks Ventures Hub"
-      nextCaseDesc="Unified platform for accelerators and founders."
-      nextCaseLink="/work/sparks-ventures"
+      eyebrow="Case Study · Healthcare"
+      headline={<>Unlimited Healthcare<br />Management System</>}
+      subhead="A healthcare management system with a React + TypeScript web app, an Expo React Native mobile app, and a NestJS backend."
+      metrics={[{ value:'3', label:'Apps: Web + Mobile' },{ value:'NestJS', label:'Backend' },{ value:'Appointments', label:'Booking API' },{ value:'Live', label:'unlimitedhealthcares.com' }]}
+      metaItems={[{ label:'Category', value:'Healthcare · Management System' },{ label:'Role', value:'Full-Stack Engineer' },{ label:'Stack', value:'React (Vite) · TypeScript · Capacitor · Expo React Native · NestJS · TypeORM' }]}
+      projectDetails={[{ label:'Type', value:'Healthcare Management System' },{ label:'Status', value:'live' }]}
+      breadcrumbLabel="Unlimited Healthcare: Management System"
+      overviewProblem="Healthcare teams needed a management system spanning web and mobile: appointments, providers, care tasks, and patient communication in one place."
+      overviewRole="I built the full stack: a NestJS + TypeORM backend with appointments, recurring appointments, provider availability, reminders, audit logs, and notifications; a React + Vite + TypeScript frontend wrapped with Capacitor; and an Expo React Native mobile app."
+      archTitle="Architecture" archSubhead="NestJS backend with React web and Expo mobile clients."
+      archCards={[{ num:'Layer 01', icon:'fa-calendar-check', title:'Appointments', desc:'Appointment booking API with types, provider availability, recurring appointments, and a reminders cron.' },{ num:'Layer 02', icon:'fa-heart-pulse', title:'Clinical Modules', desc:'Care tasks, clinical records, centers, imaging, emergency, and blood-donation dashboards.' },{ num:'Layer 03', icon:'fa-comments', title:'Chat & Community', desc:'Chat module, community features, audit logging, and notifications across the system.' },{ num:'Layer 04', icon:'fa-mobile-screen-button', title:'Mobile Clients', desc:'React web app packaged with Capacitor plus a separate Expo React Native mobile app.' }]}
+      codeFilename="src/appointments/appointments.service.ts" codeLines={[['import { Injectable, NotFoundException } from \'@nestjs/common\';', '01'],['import { InjectRepository } from \'@nestjs/typeorm\';', '02'],['import { Repository, Between } from \'typeorm\';', '03'],['import { Appointment } from \'./entities/appointment.entity\';', '04'],['import { CreateAppointmentDto } from \'./dto/create-appointment.dto\';', '05'],['import { RecurringAppointmentsService } from \'./recurring-appointments.service\';', '06'],['import { AuditLogService } from \'../audit/audit-log.service\';', '07'],['', '08'],['export interface PaginatedAppointments {', '09'],['  data: Appointment[];', '10'],['  pagination: {', '11'],['    total: number;', '12'],['    page: number;', '13'],['    limit: number;', '14'],['    totalPages: number;', '15'],['  };', '16'],['}', '17']]}
+      pullQuote="Healthcare software only earns trust when records, appointments, and communications are auditable and never lost."
+      decisionCards={[{ num:'01', title:'Recurring + Reminders', desc:'Recurring appointments and a reminders cron keep schedules and follow-ups on track automatically.' },{ num:'02', title:'One Codebase, Two Clients', desc:'Capacitor web wrapper and an Expo app let the same React/TypeScript logic reach both platforms.' }]}
+      resultCards={[{ value:'NestJS', label:'Typed backend' },{ value:'3', label:'Web + mobile clients' },{ value:'Audit', label:'Logged changes' },{ value:'Live', label:'unlimitedhealthcares.com' }]}
+      resultBody="Unlimited Healthcare is live at unlimitedhealthcares.com as a healthcare management system serving appointment booking, clinical modules, chat, and mobile access."
+      founderNote1="Appointments and reminders were the system's backbone — the recurring-appointments and reminders-cron services run quietly in the background keeping everything scheduled."
+      founderNote2="Audit logging everywhere was non-negotiable for a healthcare system: every change needs a trail."
+      nextCaseTitle="Sparks Ventures Hub: Accelerator Platform" nextCaseDesc="Accelerator operations platform for leads, approvals, followups, and vouchers." nextCaseLink="/work/sparks-ventures"
       accentColor="#0D9488" codeBg="#031917"
     />
   )

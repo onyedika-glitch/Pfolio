@@ -65,7 +65,7 @@ export default function Footer() {
           <div>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: '20px' }}>Contact</div>
             <ul className="list-none flex flex-col gap-2.5" style={{ padding: 0, margin: 0 }}>
-              <li><a href="mailto:webdevelopment@discountclubcayman.com" style={btnStyle}>webdevelopment@discountclubcayman.com</a></li>
+              <li><a href="mailto:omogopeter@devomogo.tech" style={btnStyle}>omogopeter@devomogo.tech</a></li>
               <li><Link to="/contact" style={btnStyle}>Book a Call</Link></li>
               <li><Link to="/contact" style={btnStyle}>Start a Project</Link></li>
             </ul>

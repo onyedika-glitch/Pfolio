@@ -5,77 +5,77 @@ export default function DiscountClubCaymanCaseStudy() {
   return (
     <CaseStudyLayout
       eyebrow="Case Study · Membership Platform · Fintech"
-      headline={<>Discount Club Cayman<br />Membership Savings Platform</>}
-      subhead="A full-stack membership platform delivering up to 70% travel savings, 10–25% local merchant discounts, and redeemable certificates to Cayman Island residents."
+      headline={<>Discount Club Cayman<br />Membership Discounts Platform</>}
+      subhead="A membership-based discount and benefits platform for the Cayman Islands: role-based dashboards, Stripe and PayPal billing, digital QR membership, certificates, and travel deals."
       metrics={[
-        { value: 'US$119.99', label: 'Membership that pays for itself' },
-        { value: '$2,600–$3,900+', label: 'Annual member savings' },
-        { value: '70%', label: 'Hotel savings vs public rates' },
-        { value: '$1,000', label: 'Annual certificate value' },
+        { value: '5', label: 'User roles' },
+        { value: '$119.99/yr', label: 'Individual plan' },
+        { value: 'Stripe', label: 'Card payments' },
+        { value: 'QR', label: 'Digital membership' },
       ]}
       metaItems={[
         { label: 'Category', value: 'Membership Platform · Fintech' },
-        { label: 'Role', value: 'Lead Full-Stack Engineer' },
-        { label: 'Stack', value: 'React · Node.js · TypeScript · Tailwind CSS' },
-        { label: 'Status', value: 'Live · discountclubcayman.com' },
+        { label: 'Role', value: 'Full-Stack Engineer' },
+        { label: 'Stack', value: 'React 19 · Vite · Express 5 · MongoDB · Stripe · PayPal' },
+        { label: 'Mobile', value: 'Flutter member & business apps' },
       ]}
       projectDetails={[
         { label: 'Client', value: 'Discount Club Cayman' },
-        { label: 'Type', value: 'Membership · Fintech' },
-        { label: 'Engagement', value: 'Full-Stack Engineer' },
-        { label: 'Stack', value: 'React · Node.js · TypeScript' },
+        { label: 'Type', value: 'Membership Platform' },
+        { label: 'Role', value: 'Full-Stack Engineer' },
         { label: 'Status', value: 'live' },
       ]}
-      breadcrumbLabel="Discount Club Cayman: Membership Savings Platform"
-      overviewProblem="Discount Club Cayman needed a premium, conversion-focused membership platform that could handle three distinct savings verticals (global hotel rates, local Cayman merchant discounts, and redeemable certificates) all within a single authenticated member experience."
-      overviewRole="I engineered the full platform, from the marketing site through to the authenticated member dashboard. I designed the information architecture to support three distinct savings categories with clear value communication at every stage of the funnel."
+      breadcrumbLabel="Discount Club Cayman: Membership Discounts Platform"
+      overviewProblem="Businesses in the Cayman Islands had no single way to reach paying members with discount offers, and members had no easy, trusted way to redeem them in-store."
+      overviewRole="I built the platform end-to-end: role-based sign-up and login, a Stripe membership sign-up flow plus PayPal subscriptions, a rotating digital QR membership card, certificate issuance with QR-scan redemption, a travel deals marketplace, a business directory, and an admin dashboard with stats."
       archTitle="Architecture Overview"
-      archSubhead="A secure, conversion-optimised membership platform with three savings verticals and a fully authenticated member area."
+      archSubhead="An Express + MongoDB API with a React frontend and companion Flutter apps."
       archCards={[
-        { num: 'Layer 01', icon: 'fa-palette', title: 'Marketing Funnel', desc: 'Dark premium marketing site built with React and Tailwind. Playfair Display serif headings, DM Sans body, gold accent. Animated entrance effects and savings calculators built to convert.' },
-        { num: 'Layer 02', icon: 'fa-lock', title: 'Authentication System', desc: 'Secure login and signup flow with protected member routes. JWT-based session management. Members access exclusive hotel rates and local deals only after authenticated entry.' },
-        { num: 'Layer 03', icon: 'fa-tags', title: 'Savings Engine', desc: 'Three savings verticals: global hotel rates API integration, local merchant discount catalogue, and redeemable certificate management.' },
-        { num: 'Layer 04', icon: 'fa-mobile-screen-button', title: 'Digital Redemption', desc: 'Swipe-to-redeem digital flow for local merchants. No physical card required. Certificate management with $25/$50/$100 tiers and merchant partner tracking.' },
+        { num: 'Layer 01', icon: 'fa-user-shield', title: 'Role System', desc: 'Member, employer, business, association, B2B, and admin roles — each with its own sign-up path and dashboard.' },
+        { num: 'Layer 02', icon: 'fa-credit-card', title: 'Membership & Payments', desc: 'Stripe PaymentIntent flow for individual/family plans ($119.99/yr and $300/yr) plus PayPal orders for post-signup subscriptions.' },
+        { num: 'Layer 03', icon: 'fa-qrcode', title: 'Certificates & QR', desc: 'Auto-generated certificate codes and QR data; members present a rotating QR card in-store and businesses scan to verify and redeem.' },
+        { num: 'Layer 04', icon: 'fa-plane', title: 'Travel & Directory', desc: 'Travel deals across hotels, flights, car rentals, activities, and packages, plus a searchable business directory and category pages.' },
       ]}
-      codeFilename="savings-engine.ts"
+      codeFilename="Backend/models/Certificate.js"
       codeLines={[
-        [<><span className="c-keyword">interface</span> <span className="c-type">MemberSavingsProfile</span> {'{'}</>, '01'],
-        [<>&nbsp;&nbsp;<span className="c-param">memberId</span>: <span className="c-type">string</span>;</>, '02'],
-        [<>&nbsp;&nbsp;<span className="c-param">tier</span>: <span className="c-string">'standard'</span> | <span className="c-string">'premium'</span>;</>, '03'],
-        [<>&nbsp;&nbsp;<span className="c-param">certificateBalance</span>: <span className="c-type">number</span>;</>, '04'],
-        [<>{'}'}</>, '05'],
-        [<>&nbsp;</>, '06'],
-        [<><span className="c-keyword">async function</span> <span className="c-func">calculateMemberSavings</span>(</>, '07'],
-        [<>&nbsp;&nbsp;<span className="c-param">member</span>: <span className="c-type">MemberSavingsProfile</span>,</>, '08'],
-        [<>&nbsp;&nbsp;<span className="c-param">vertical</span>: <span className="c-string">'hotel'</span> | <span className="c-string">'local'</span> | <span className="c-string">'certificate'</span></>, '09'],
-        [<>): <span className="c-type">Promise</span>&lt;<span className="c-type">SavingsResult</span>&gt; {'{'}</>, '10'],
-        [<>&nbsp;&nbsp;<span className="c-keyword">const</span> <span className="c-param">discountMap</span> = {'{'}</>, '11'],
-        [<>&nbsp;&nbsp;&nbsp;&nbsp;<span className="c-param">hotel</span>: {'{ '}<span className="c-param">standard</span>: <span className="c-num">0.50</span>, <span className="c-param">premium</span>: <span className="c-num">0.70</span> {'}'},</>, '12'],
-        [<>&nbsp;&nbsp;&nbsp;&nbsp;<span className="c-param">local</span>: {'{ '}<span className="c-param">standard</span>: <span className="c-num">0.10</span>, <span className="c-param">premium</span>: <span className="c-num">0.25</span> {'}'},</>, '13'],
-        [<>&nbsp;&nbsp;{'}'};</>, '14'],
-        [<>&nbsp;&nbsp;<span className="c-keyword">const</span> <span className="c-param">rate</span> = <span className="c-param">discountMap</span>[<span className="c-param">vertical</span>][<span className="c-param">member</span>.<span className="c-param">tier</span>];</>, '15'],
-        [<>&nbsp;&nbsp;<span className="c-keyword">return</span> {'{ '}<span className="c-param">rate</span>, <span className="c-gold">computeAnnualSavings</span>(<span className="c-param">rate</span>) {'}'};</>, '16'],
-        [<>{'}'}</>, '17'],
+        ['const certificateSchema = new mongoose.Schema({', '01'],
+        ['  code: {', '02'],
+        ['    type: String,', '03'],
+        ['    unique: true,', '04'],
+        ['    default: () => crypto.randomBytes(6).toString(\'hex\').toUpperCase(),', '05'],
+        ['  },', '06'],
+        ['  user: { type: mongoose.Schema.Types.ObjectId, ref: \'User\', required: true },', '07'],
+        ['  business: { type: mongoose.Schema.Types.ObjectId, ref: \'Business\', required: true },', '08'],
+        ['  discount: { type: mongoose.Schema.Types.ObjectId, ref: \'Discount\', required: true },', '09'],
+        ['  qrData: { type: String },', '10'],
+        ['  status: {', '11'],
+        ['    type: String,', '12'],
+        ['    enum: [\'active\', \'redeemed\', \'expired\'],', '13'],
+        ['    default: \'active\',', '14'],
+        ['  },', '15'],
+        ['  expiresAt: { type: Date },', '16'],
+        ['  redeemedAt: { type: Date },', '17'],
+        ['});', '18'],
       ]}
-      pullQuote='"The design had to work as hard as the engineering. A membership that saves you $3,900 a year has to feel premium before you hand over your credit card."'
+      pullQuote="A membership card that lives on your phone and verifies in-store with a QR scan is what makes the discount actually usable."
       decisionCards={[
-        { num: '01', title: 'Premium Dark Aesthetic', desc: 'Playfair Display serif headings, a deep navy background, and gold accents was a conversion decision. Members paying ~$120/year need to feel they are buying something premium.' },
-        { num: '02', title: 'Three-Vertical Data Architecture', desc: 'Travel, local discounts, and certificates are modelled as separate services with a unified member API layer, letting each vertical scale independently.' },
-        { num: '03', title: 'Digital-First Redemption', desc: 'Eliminating physical cards and building a swipe-to-redeem digital flow reduced onboarding friction and made the product work globally for travel savings.' },
+        { num: '01', title: 'Stripe at Sign-Up', desc: 'Membership payment happens during registration: create a PaymentIntent, confirm the card, verify it, then create the user and activate membership.' },
+        { num: '02', title: 'QR-First Redemption', desc: 'Certificates carry unique codes and QR data; businesses verify and redeem by scanning, with expiry handled server-side.' },
       ]}
       resultCards={[
-        { value: 'Live', label: 'Full platform in production' },
-        { value: '3 Verticals', label: 'Travel + Local + Certificates' },
-        { value: 'US$3,900+', label: 'Annual savings per member' },
-        { value: 'Secure Auth', label: 'Full member area + protected routes' },
+        { value: '5+', label: 'User roles & dashboards' },
+        { value: 'QR', label: 'In-store redemption' },
+        { value: 'Stripe+PayPal', label: 'Payment rails' },
+        { value: 'Flutter', label: 'Member + business apps' },
       ]}
-      resultBody="Discount Club Cayman is live at discountclubcayman.com. The platform serves Cayman Island residents with a complete savings ecosystem: global hotel rates up to 70% off, local merchant discounts, and $1,000 in annual redeemable certificates."
-      founderNote1="Discount Club Cayman is not a simple discount site; it is a financial product with a value proposition that has to be communicated clearly and trusted immediately."
-      founderNote2="The gold premium aesthetic, the savings number front and centre, the certificate tiers: every decision was engineered for conversion and retention."
-      nextCaseTitle="Chef Academy of London: Culinary Platform"
-      nextCaseDesc="A full-stack culinary education platform for professional chef training and course management."
-      nextCaseLink="/work/chef-academy"
-      accentColor="#3B82F6"
+      resultBody="Discount Club Cayman is live at discountclubcayman.com — memberships, discount offers, certificates, travel deals, and a full admin dashboard."
+      founderNote1="The platform had to work for five different audiences without becoming five different products — the role system kept it to one codebase."
+      founderNote2="Certificate redemption was the feature that mattered most: an offline-friendly, scan-to-verify flow businesses actually use."
+      nextCaseTitle="Zentrix Equity: Cap Table Platform"
+      nextCaseDesc="Real-time equity and valuation platform on a WebSocket server."
+      nextCaseLink="/work/zentrix-equity"
+      accentColor="#B45309"
+      codeBg="#1A0800"
     />
   )
 }

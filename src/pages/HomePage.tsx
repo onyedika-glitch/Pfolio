@@ -6,21 +6,14 @@ import CTABanner from '../components/CTABanner'
 
 const projects = [
   { name: 'YouExtractor', link: '/work/youextractor' },
-  { name: 'iLearnova', link: '/work/ilearnova' },
-  { name: 'Placebet247', link: '/work/placebet247' },
-  { name: 'Selfany', link: '/work/selfany' },
-  { name: 'Floorhosting', link: '/work/floorhosting' },
-  { name: 'Handyman NG', link: '/work/handyman-ng' },
-  { name: 'ATOM Group', link: '/work/atom-group' },
-  { name: 'ePortal', link: '/work/eportal' },
-  { name: 'Pension App', link: '/work/pension-app' },
+  { name: 'Gigora Network', link: '/work/gigora-network' },
   { name: 'Sparks Ventures', link: '/work/sparks-ventures' },
-  { name: 'ANING', link: '/work/aning' },
+  { name: 'Sparks EFP', link: '/work/sparks-efp' },
+  { name: 'Sparks Funnel', link: '/work/sparks-funnel' },
   { name: 'Sadar Properties', link: '/work/sadar-properties' },
   { name: 'Unlimited Healthcare', link: '/work/unlimited-healthcare' },
   { name: 'Zentrix Equity', link: '/work/zentrix-equity' },
   { name: 'Discount Club Cayman', link: '/work/discount-club-cayman' },
-  { name: 'Chef Academy of London', link: '/work/chef-academy' },
 ]
 
 export default function HomePage() {
@@ -65,7 +58,7 @@ export default function HomePage() {
               <Link to="/work" className="inline-flex items-center justify-center gap-2 no-underline transition-all duration-200" style={{ background: '#3B82F6', color: '#fff', padding: '15px 28px', borderRadius: '6px', fontSize: '14px', fontWeight: 600, letterSpacing: '-0.01em' }}>
                 Our Case Studies <i className="fas fa-arrow-right" style={{ fontSize: '12px' }}></i>
               </Link>
-              <a href="mailto:webdevelopment@discountclubcayman.com" className="inline-flex items-center justify-center gap-2 no-underline transition-all duration-200" style={{ background: 'transparent', color: '#fff', padding: '14px 28px', borderRadius: '6px', fontSize: '14px', fontWeight: 600, border: '1.5px solid rgba(255,255,255,0.4)', letterSpacing: '-0.01em' }}>
+              <a href="mailto:omogopeter@devomogo.tech" className="inline-flex items-center justify-center gap-2 no-underline transition-all duration-200" style={{ background: 'transparent', color: '#fff', padding: '14px 28px', borderRadius: '6px', fontSize: '14px', fontWeight: 600, border: '1.5px solid rgba(255,255,255,0.4)', letterSpacing: '-0.01em' }}>
                 Book a Discovery Call
               </a>
             </div>
@@ -130,10 +123,10 @@ export default function HomePage() {
         <div className="site-container pb-16 md:pb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7">
             {[
-              { img: 'fintech_dashboard_dark_ui.jpg', alt: 'Fintech dashboard dark UI', cat: 'Fintech · Payments Infrastructure', title: 'YouExtractor: Disbursement Engine', desc: 'Architected a high-throughput payout system processing $2M+ in daily transactions across 14 African markets.', link: '/work/youextractor' },
-              { img: 'discount_club_cayman_membership_savings_platform_dashboard_amber.jpg', alt: 'Discount Club Cayman membership savings dashboard', cat: 'Fintech · Membership Platform', title: 'Discount Club Cayman: Savings Platform', desc: 'Premium membership platform delivering up to 70% hotel savings and US$3,900+ annual value. Full-stack auth, savings engine, digital redemption.', link: '/work/discount-club-cayman' },
+              { img: 'youextractor_llm_ai_pipeline_dark_dashboard.jpg', alt: 'YouExtractor AI developer tool dashboard', cat: 'AI · Developer Tool', title: 'YouExtractor: Tutorial → Course & Code Generator', desc: 'Turns YouTube coding tutorials into structured guides and runnable code projects using AI (DeepSeek, Claude, Gemini, GPT-4).', link: '/work/youextractor', live: 'https://youextractor.me' },
+              { img: 'discount_club_cayman_membership_savings_platform_dashboard_amber.jpg', alt: 'Discount Club Cayman membership dashboard', cat: 'Fintech · Membership Platform', title: 'Discount Club Cayman: Membership Platform', desc: 'Membership discounts platform for the Cayman Islands with QR membership, certificates, and travel deals.', link: '/work/discount-club-cayman', live: 'https://discountclubcayman.com' },
             ].map((w) => (
-              <div key={w.title} className="rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1" style={{ border: '1px solid #E2E8F0', background: '#F8FAFC' }}>
+              <div key={w.title} onClick={() => (w.live ? window.open(w.live, '_blank', 'noopener,noreferrer') : null)} className="rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1" style={{ border: '1px solid #E2E8F0', background: '#F8FAFC', cursor: w.live ? 'pointer' : 'default' }}>
                 <div className="h-44 sm:h-56 md:h-60 overflow-hidden">
                   <img src={`/assets/${w.img}`} alt={w.alt} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
@@ -141,7 +134,7 @@ export default function HomePage() {
                   <div style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#3B82F6', marginBottom: '10px' }}>{w.cat}</div>
                   <h3 style={{ fontSize: 'clamp(18px, 3vw, 22px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#0F172A', marginBottom: '10px' }}>{w.title}</h3>
                   <p style={{ fontSize: '14px', color: '#64748B', lineHeight: 1.65, marginBottom: '20px' }}>{w.desc}</p>
-                  <Link to={w.link} className="inline-flex items-center gap-1.5 no-underline transition-all duration-200"
+                  <Link to={w.link} onClick={(e) => e.stopPropagation()} className="inline-flex items-center gap-1.5 no-underline transition-all duration-200"
                     style={{ fontSize: '13px', fontWeight: 600, color: '#fff', background: '#1E3A8A', padding: '10px 20px', borderRadius: '8px', letterSpacing: '-0.01em' }}>
                     View case study <i className="fas fa-arrow-right" style={{ fontSize: '11px' }}></i>
                   </Link>
@@ -239,13 +232,13 @@ export default function HomePage() {
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 5vw, 52px)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1.08, color: '#0F172A', marginBottom: '20px' }}>Founded by an engineer, for engineers.</h2>
               <p style={{ fontSize: '15px', lineHeight: 1.75, color: '#64748B', marginBottom: '20px' }}>
-                DevOmogo was founded by <strong>Peter Onyedika</strong>, a Senior Full-Stack Architect with over 5 years building complex, production-grade systems for healthcare providers, fintech companies, and data platforms across Africa and beyond.
+                DevOmogo was founded by <strong>Omogo Peter Onyedika</strong>, a Senior Software Infrastructure Engineer with over 5 years building complex, production-grade systems for healthcare providers, fintech companies, and data platforms across Africa and beyond.
               </p>
               <p style={{ fontSize: '15px', lineHeight: 1.75, color: '#64748B', marginBottom: 0 }}>
                 This is a specialist firm, not an agency that takes any project that walks through the door. We work with a small number of clients at any time.
               </p>
               <div className="flex flex-wrap gap-8 pt-8 mt-8" style={{ borderTop: '1px solid #E2E8F0' }}>
-                {[['5+', 'Years in practice'], ['12', 'Systems shipped'], ['4', 'Active clients']].map(([num, label]) => (
+                {[['5+', 'Years in practice'], ['9', 'Systems shipped'], ['4', 'Active clients']].map(([num, label]) => (
                   <div key={label}>
                     <div style={{ fontSize: '28px', fontWeight: 900, letterSpacing: '-0.05em', color: '#1E3A8A' }}>{num}</div>
                     <div style={{ fontSize: '12px', fontWeight: 500, color: '#64748B', marginTop: '2px' }}>{label}</div>
@@ -255,10 +248,10 @@ export default function HomePage() {
             </div>
             <div className="relative order-1 lg:order-2">
               <div className="rounded-2xl overflow-hidden relative">
-                <img src="/assets/professional_portrait_senior_software_engineer.jpeg" alt="Peter Onyedika" className="w-full object-cover block h-72 sm:h-96 lg:h-[540px]" />
+                <img src="/assets/professional_portrait_senior_software_engineer.jpeg" alt="Omogo Peter Onyedika" className="w-full object-cover block h-72 sm:h-96 lg:h-[540px]" />
                 <div className="absolute rounded-xl left-4 right-4 sm:right-auto bottom-4 sm:bottom-7 sm:left-7" style={{ background: '#fff', padding: '14px 18px', boxShadow: '0 8px 32px rgba(0,0,0,0.12)', border: '1px solid #E2E8F0' }}>
-                  <div style={{ fontSize: '15px', fontWeight: 800, letterSpacing: '-0.03em', color: '#0F172A' }}>Peter Onyedika</div>
-                  <div style={{ fontSize: '12px', color: '#64748B', marginTop: '2px' }}>Founder · Senior Full-Stack Architect</div>
+                  <div style={{ fontSize: '15px', fontWeight: 800, letterSpacing: '-0.03em', color: '#0F172A' }}>Omogo Peter Onyedika</div>
+                  <div style={{ fontSize: '12px', color: '#64748B', marginTop: '2px' }}>Founder · Senior Software Infrastructure Engineer</div>
                 </div>
               </div>
             </div>

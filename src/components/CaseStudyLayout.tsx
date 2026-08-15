@@ -106,13 +106,13 @@ export default function CaseStudyLayout({
               <div key={i} className="p-5 md:p-7" style={{ background: 'rgba(255,255,255,0.05)' }}>
                 {'Live' === String(m.value) ? (
                   <a href={`https://${m.label}`} target="_blank" rel="noopener noreferrer"
-                    style={{ fontSize: 'clamp(24px, 5vw, 36px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#6EE7B7', lineHeight: 1, marginBottom: '8px', textDecoration: 'underline', textUnderlineOffset: '3px', display: 'inline-block', wordBreak: 'break-word' }}>
-                    {m.value}
+                    style={{ fontSize: 'clamp(15px, 2.5vw, 22px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#6EE7B7', lineHeight: 1.15, textDecoration: 'none', wordBreak: 'break-all', marginBottom: '8px', display: 'inline-block' }}>
+                    {m.label}
                   </a>
                 ) : (
                   <div style={{ fontSize: 'clamp(24px, 5vw, 36px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#fff', lineHeight: 1, marginBottom: '8px' }}>{m.value}</div>
                 )}
-                <div style={{ fontSize: '11px', fontWeight: 500, color: 'rgba(255,255,255,0.5)', letterSpacing: '0.04em', textTransform: 'uppercase' }}>{m.label}</div>
+                <div style={{ fontSize: '11px', fontWeight: 500, color: 'rgba(255,255,255,0.5)', letterSpacing: '0.04em', textTransform: 'uppercase' }}>{'Live' === String(m.value) ? 'Live' : m.label}</div>
               </div>
             ))}
           </div>
@@ -211,7 +211,7 @@ export default function CaseStudyLayout({
             <path d="M0 48V28C0 12.536 10.536 2 26 0L29 6C19.5 8 13.5 15.5 12 24H24V48H0ZM40 48V28C40 12.536 50.536 2 66 0L69 6C59.5 8 53.5 15.5 52 24H64V48H40Z" fill="#1E3A8A" opacity="0.12" />
           </svg>
           <p style={{ fontSize: 'clamp(22px, 5vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1.2, color: '#1E3A8A', marginBottom: '28px' }}>{pullQuote}</p>
-          <p style={{ fontSize: '14px', fontWeight: 500, color: '#64748B' }}><strong style={{ color: '#0F172A' }}>Peter Onyedika</strong>, Founder &amp; Lead Architect, DevOmogo</p>
+          <p style={{ fontSize: '14px', fontWeight: 500, color: '#64748B' }}><strong style={{ color: '#0F172A' }}>Omogo Peter Onyedika</strong>, Founder &amp; Senior Software Infrastructure Engineer, DevOmogo</p>
         </div>
       </section>
 
@@ -242,8 +242,15 @@ export default function CaseStudyLayout({
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-0.5 rounded-xl overflow-hidden mb-10" style={{ background: 'rgba(255,255,255,0.08)' }}>
             {resultCards.map((r, i) => (
               <div key={i} className="p-5 md:p-9" style={{ background: 'rgba(255,255,255,0.04)' }}>
-                <div style={{ fontSize: 'clamp(28px, 6vw, 48px)', fontWeight: 900, letterSpacing: '-0.05em', color: '#fff', lineHeight: 1, marginBottom: '10px' }}>{r.value}</div>
-                <div style={{ fontSize: '13px', fontWeight: 500, color: 'rgba(255,255,255,0.5)', lineHeight: 1.4 }}>{r.label}</div>
+                {'Live' === String(r.value) ? (
+                  <a href={`https://${r.label}`} target="_blank" rel="noopener noreferrer"
+                    style={{ fontSize: 'clamp(16px, 2.5vw, 24px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#6EE7B7', lineHeight: 1.2, textDecoration: 'none', wordBreak: 'break-all', marginBottom: '10px', display: 'inline-block' }}>
+                    {r.label}
+                  </a>
+                ) : (
+                  <div style={{ fontSize: 'clamp(28px, 6vw, 48px)', fontWeight: 900, letterSpacing: '-0.05em', color: '#fff', lineHeight: 1, marginBottom: '10px' }}>{r.value}</div>
+                )}
+                <div style={{ fontSize: '13px', fontWeight: 500, color: 'rgba(255,255,255,0.5)', lineHeight: 1.4 }}>{'Live' === String(r.value) ? 'Live' : r.label}</div>
               </div>
             ))}
           </div>
@@ -267,10 +274,10 @@ export default function CaseStudyLayout({
           <div>
             <div style={{ background: '#1E3A8A', borderRadius: '16px', padding: '28px', color: '#fff' }}>
               <div style={{ width: '72px', height: '72px', borderRadius: '50%', overflow: 'hidden', marginBottom: '20px', border: '3px solid rgba(255,255,255,0.15)' }}>
-                <img src="/assets/peter_onyedika_founder_portrait.jpeg" alt="Peter Onyedika" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/assets/peter_onyedika_founder_portrait.jpeg" alt="Omogo Peter Onyedika" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
-              <div style={{ fontSize: '20px', fontWeight: 800, letterSpacing: '-0.03em', color: '#fff', marginBottom: '4px' }}>Peter Onyedika</div>
-              <div style={{ fontSize: '12px', fontWeight: 500, color: 'rgba(255,255,255,0.5)', marginBottom: '20px' }}>Founder &amp; Lead Architect</div>
+              <div style={{ fontSize: '20px', fontWeight: 800, letterSpacing: '-0.03em', color: '#fff', marginBottom: '4px' }}>Omogo Peter Onyedika</div>
+              <div style={{ fontSize: '12px', fontWeight: 500, color: 'rgba(255,255,255,0.5)', marginBottom: '20px' }}>Founder &amp; Senior Software Infrastructure Engineer</div>
               <p style={{ fontSize: '13px', lineHeight: 1.65, color: 'rgba(255,255,255,0.6)', marginBottom: '24px', paddingBottom: '24px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>FUTO Software Engineering · 5+ years building production systems across fintech, healthcare, and AI infrastructure · Available for select engagements.</p>
               <a href="https://x.com/peteromogo2" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 no-underline transition-all duration-200"
                 style={{ fontSize: '12px', fontWeight: 600, color: 'rgba(255,255,255,0.85)', background: 'rgba(255,255,255,0.1)', padding: '8px 18px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.15)' }}>

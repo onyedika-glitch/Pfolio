@@ -102,11 +102,11 @@ export default function HealthcarePlatformsPage() {
             <span style={{ display: 'block', width: '20px', height: '2px', background: '#818CF8' }}></span>
             Related Work
           </div>
-          <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '12px' }}>CareMandate: Patient Operations Platform</h2>
+          <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '12px' }}>Unlimited Healthcare: Management System</h2>
           <p style={{ fontSize: '16px', color: '#64748B', lineHeight: 1.65, maxWidth: '600px', marginBottom: '32px' }}>
-            Enterprise clinical management system serving 50,000+ patients. Web and mobile. HIPAA-aligned architecture with full audit trails and offline-capable clinical interfaces.
+            Healthcare management system with a React + TypeScript web app, an Expo React Native mobile app, and a NestJS backend — appointments, recurring bookings, reminders, clinical modules, and chat.
           </p>
-          <Link to="/work/caremandate" className="inline-flex items-center gap-2 no-underline transition-all duration-200"
+          <Link to="/work/unlimited-healthcare" className="inline-flex items-center gap-2 no-underline transition-all duration-200"
             style={{ fontSize: '14px', fontWeight: 700, color: '#fff', background: '#6366F1', padding: '14px 28px', borderRadius: '8px' }}>
             View Case Study <i className="fas fa-arrow-right" style={{ fontSize: '12px' }}></i>
           </Link>

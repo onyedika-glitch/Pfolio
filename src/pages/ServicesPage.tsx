@@ -65,10 +65,11 @@ export default function ServicesPage() {
               { icon: 'fa-heart-pulse', title: 'Healthcare Platforms', path: '/services/healthcareplatforms' },
               { icon: 'fa-brain', title: 'AI Integration', path: '/services/aiintegration' },
             ].map(s => (
-              <Link key={s.title} to={s.path} className="no-underline transition-all duration-200"
-                style={{ fontSize: '13px', fontWeight: 500, color: 'rgba(255,255,255,0.7)', background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.1)', padding: '10px 22px', borderRadius: '100px' }}>
-                <i className={`fas ${s.icon}`} style={{ marginRight: '8px', fontSize: '12px' }}></i>
+              <Link key={s.title} to={s.path} className="no-underline inline-flex items-center gap-2 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                style={{ fontSize: '13.5px', fontWeight: 700, letterSpacing: '0.01em', color: '#1E3A8A', background: '#fff', border: '1px solid #fff', padding: '12px 22px', borderRadius: '10px', boxShadow: '0 4px 14px rgba(0,0,0,0.18)' }}>
+                <i className={`fas ${s.icon}`} style={{ fontSize: '13px', color: '#3B82F6' }}></i>
                 {s.title}
+                <i className="fas fa-arrow-right" style={{ fontSize: '11px', opacity: 0.65 }}></i>
               </Link>
             ))}
           </div>

@@ -4,24 +4,24 @@ export default function SparksVenturesPage() {
   return (
     <CaseStudyLayout
       eyebrow="Case Study · Startup Accelerator"
-      headline={<>Sparks Ventures Hub<br />Accelerator Platform</>}
-      subhead="Unified platform for accelerators and founders with KPI tracking and funding round management."
-      metrics={[{ value:'Accelerator', label:'Founder Platform' },{ value:'KPI', label:'Real-Time Tracking' },{ value:'Secure', label:'Pitch Decks' },{ value:'Live', label:'sparksventureshub.com' }]}
-      metaItems={[{ label:'Category', value:'Startup Accelerator' },{ label:'Stack', value:'WordPress · Custom Theme · PHP · JavaScript' }]}
-      projectDetails={[{ label:'Type', value:'Accelerator Platform' },{ label:'Status', value:'live' }]}
-      breadcrumbLabel="Sparks Ventures Hub: Accelerator"
-      overviewProblem="Accelerators and founders needed a unified platform for managing the startup lifecycle."
-      overviewRole="I built the full platform on WordPress with a custom theme, KPI dashboards, pitch deck management, and funding round analytics."
-      archTitle="Architecture" archSubhead="Custom WordPress platform for accelerator management."
-      archCards={[{ num:'Layer 01', icon:'fa-rocket', title:'Founder Portal', desc:'Milestone tracking and communication for startups.' },{ num:'Layer 02', icon:'fa-chart-simple', title:'KPI Dashboard', desc:'Real-time performance indicators for portfolio companies.' },{ num:'Layer 03', icon:'fa-file-shield', title:'Data Room', desc:'Encrypted pitch deck and document management.' },{ num:'Layer 04', icon:'fa-chart-pie', title:'Funding Analytics', desc:'Investment tracking and funding round analytics.' }]}
-      codeFilename="wp-content/themes/sparks-ventures/functions.php" codeLines={[['// Register custom post types for accelerator portfolio', '01'],["add_action('init', function() {", '02'],["  register_post_type('portfolio_company', [", '03'],["    'labels' => ['name' => 'Portfolio Companies'],", '04'],["    'public' => true,", '05'],["    'supports' => ['title', 'editor', 'thumbnail']", '06'],["  ]);", '07'],['});', '08']]}
-      pullQuote="An accelerator platform has to serve both founders who need guidance and managers who need visibility."
-      decisionCards={[{ num:'01', title:'WordPress + Custom Post Types', desc:'Leveraged WordPress custom post types and Advanced Custom Fields for flexible portfolio management.' },{ num:'02', title:'KPI-First Design', desc:'Data model designed around key metrics first for real-time dashboards.' }]}
-      resultCards={[{ value:'WordPress', label:'Custom Platform' },{ value:'KPI', label:'Real-Time' },{ value:'Secure', label:'Data Rooms' },{ value:'Live', label:'sparksventureshub.com' }]}
-      resultBody="Sparks Ventures Hub is live at sparksventureshub.com, powered by a custom WordPress theme."
-      founderNote1="Building a platform for both accelerator managers and founders taught me to design with empathy for both perspectives."
-      founderNote2="The KPI tracking system using WordPress custom fields made it easy for non-technical staff to update metrics."
-      nextCaseTitle="ANING: Community Marketplace" nextCaseDesc="Multi-vendor marketplace for services and products." nextCaseLink="/work/aning"
+      headline={<>Sparks Ventures Hub<br />Accelerator Ops Platform</>}
+      subhead="A Laravel operations platform for an accelerator: leads, public applications, approvals, followups, onboarding programs, and vouchers."
+      metrics={[{ value:'Leads', label:'Pipeline' },{ value:'QR', label:'Apply Form' },{ value:'Followups', label:'Queue' },{ value:'Live', label:'sparksventureshub.com' }]}
+      metaItems={[{ label:'Category', value:'Startup Accelerator · Operations' },{ label:'Role', value:'Full-Stack Engineer' },{ label:'Stack', value:'Laravel 13 · PHP 8.3 · Blade · PostgreSQL/Supabase' }]}
+      projectDetails={[{ label:'Type', value:'Accelerator Ops Platform' },{ label:'Status', value:'live' }]}
+      breadcrumbLabel="Sparks Ventures Hub: Accelerator Ops Platform"
+      overviewProblem="An accelerator runs on process: applications come in, need approvals, followups, onboarding steps, and vouchers — all tracked across the team. Spreadsheets couldn't keep up."
+      overviewRole="I built the platform in Laravel: a lead pipeline with assignment, a public QR landing page for applications, an approval flow, a followup processing queue, multi-step onboarding programs, voucher management, team, settings, and stats."
+      archTitle="Architecture" archSubhead="Laravel controllers and routes organizing the full accelerator workflow."
+      archCards={[{ num:'Layer 01', icon:'fa-users', title:'Leads & Applications', desc:'Lead capture and assignment, plus a public QR-code landing page that turns printed flyers into applications.' },{ num:'Layer 02', icon:'fa-list-check', title:'Approvals & Onboarding', desc:'Approval requests with decide actions and multi-step onboarding programs tracked per lead.' },{ num:'Layer 03', icon:'fa-bell', title:'Followup Queue', desc:'A processable followup queue so no applicant falls through the cracks.' },{ num:'Layer 04', icon:'fa-ticket', title:'Vouchers & Team', desc:'Voucher creation, assignment, and lifecycle plus team management, settings, and stats.' }]}
+      codeFilename="routes/web.php" codeLines={[['Route::get(\'/\', [PageController::class, \'dashboard\'])->name(\'dashboard\');', '01'],['Route::get(\'/leads\', [PageController::class, \'leads\'])->name(\'leads\');', '02'],['Route::get(\'/onboarding\', [PageController::class, \'onboarding\'])->name(\'onboarding\');', '03'],['Route::get(\'/approvals\', [PageController::class, \'approvals\'])->name(\'approvals\');', '04'],['Route::get(\'/followups\', [PageController::class, \'followups\'])->name(\'followups\');', '05'],['Route::get(\'/vouchers\', [PageController::class, \'vouchers\'])->name(\'vouchers\');', '06'],['Route::post(\'/leads\', [PageController::class, \'leadsStore\'])->name(\'leads.store\');', '07'],['Route::post(\'/leads/{id}/assign\', [PageController::class, \'leadsAssign\'])->name(\'leads.assign\');', '08'],['Route::post(\'/approvals/{id}/decide\', [PageController::class, \'approvalsDecide\'])->name(\'approvals.decide\');', '09'],['Route::post(\'/followups/process\', [PageController::class, \'followupsProcess\'])->name(\'followups.process\');', '10'],['Route::get(\'/apply\', [PageController::class, \'showForm\'])->name(\'form\');', '11']]}
+      pullQuote="An accelerator's edge is its process: every lead tracked, every followup queued, every onboarding step counted."
+      decisionCards={[{ num:'01', title:'QR-to-Application', desc:'A public apply page reachable by QR code turns offline outreach into a tracked lead pipeline.' },{ num:'02', title:'Followup Queue', desc:'A queue with a processing route means followups happen on schedule, not from memory.' }]}
+      resultCards={[{ value:'Leads', label:'Assignable pipeline' },{ value:'QR', label:'Public apply page' },{ value:'Onboarding', label:'Multi-step programs' },{ value:'Live', label:'sparksventureshub.com' }]}
+      resultBody="Sparks Ventures Hub is live at sparksventureshub.com, running the accelerator's applications, approvals, followups, onboarding, and vouchers in one Laravel app."
+      founderNote1="The QR apply page was the smallest feature with the biggest impact — it turned physical flyers into a lead pipeline."
+      founderNote2="Followups and approvals are the heart of an accelerator: if those queues are empty, the process is working."
+      nextCaseTitle="Sparks EFP: 3-Day Foundation Program" nextCaseDesc="Program landing page with seat reservations for a three-day foundation program." nextCaseLink="/work/sparks-efp"
       accentColor="#D97706" codeBg="#1C1000"
     />
   )
