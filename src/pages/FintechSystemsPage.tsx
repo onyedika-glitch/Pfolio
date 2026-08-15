@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import Seo from '../components/Seo'
 import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
 
@@ -8,6 +9,11 @@ export default function FintechSystemsPage() {
   return (
     <div style={{ fontFamily: 'Inter, sans-serif', background: '#F8FAFC', color: '#0F172A' }}>
       <Navbar />
+      <Seo
+        title="Fintech Systems Development — Payments, Ledgers, Stripe, Paystack | DevOmogo"
+        description="Fintech platform development by DevOmogo: payment integration (Stripe, PayPal, Paystack), membership and billing platforms, real-time equity systems, and secure transaction flows."
+        keywords="fintech development, payment integration, Stripe developer, Paystack, membership platform, real-time WebSocket, MongoDB, MySQL"
+      />
 
       {/* HERO */}
       <section style={{ background: '#0F2E2A', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>

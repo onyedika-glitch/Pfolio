@@ -1,12 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import Seo from '../components/Seo'
 import Footer from '../components/Footer'
 
 export default function ContactPage() {
   return (
     <div style={{ fontFamily: 'Inter, sans-serif', background: '#F8FAFC', color: '#0F172A' }}>
       <Navbar />
+      <Seo
+        title="Contact DevOmogo — Start a Project | omogopeter@devomogo.tech"
+        description="Contact DevOmogo to start a project: email omogopeter@devomogo.tech. Full-stack, fintech, healthcare, and AI development from a senior engineering studio."
+        keywords="contact DevOmogo, start a project, hire software engineer, omogopeter@devomogo.tech"
+      />
 
       {/* HERO */}
       <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
+import Seo from './Seo'
 import Footer from './Footer'
 import CTABanner from './CTABanner'
 
@@ -72,8 +73,15 @@ export default function CaseStudyLayout({
   pullQuote, decisionCards, resultCards, resultBody, founderNote1, founderNote2,
   nextCaseTitle, nextCaseDesc, nextCaseLink, accentColor = '#3B82F6', heroBg = '#1E3A8A', codeBg = '#1E3A8A'
 }: Props) {
+  const pageUrl = typeof window !== 'undefined' ? window.location.origin + window.location.pathname : ''
   return (
     <div style={{ fontFamily: 'Inter, sans-serif', background: '#F8FAFC', color: '#0F172A' }}>
+      <Seo
+        title={`${breadcrumbLabel} — Case Study | DevOmogo`}
+        description={subhead}
+        keywords={`${breadcrumbLabel}, case study, DevOmogo, full-stack development`}
+        jsonLd={{ "@context": 'https://schema.org', "@type": 'WebApplication', name: breadcrumbLabel, description: subhead, url: pageUrl, applicationCategory: 'BusinessApplication', provider: { "@type": 'Organization', name: 'DevOmogo', url: 'https://devomogo.tech' } }}
+      />
       <Navbar />
 
       {/* BREADCRUMB */}

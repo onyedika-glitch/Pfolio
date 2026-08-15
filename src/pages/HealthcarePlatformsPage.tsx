@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import Seo from '../components/Seo'
 import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
 
@@ -8,6 +9,11 @@ export default function HealthcarePlatformsPage() {
   return (
     <div style={{ fontFamily: 'Inter, sans-serif', background: '#F8FAFC', color: '#0F172A' }}>
       <Navbar />
+      <Seo
+        title="Healthcare Platform Development — Appointment Systems, NestJS, Mobile | DevOmogo"
+        description="Healthcare management system development: appointment booking, recurring appointments and reminders, clinical modules, chat, and React web + Expo mobile apps on a NestJS backend."
+        keywords="healthcare software development, appointment booking system, NestJS, TypeORM, React, Expo, mobile healthcare app"
+      />
 
       {/* HERO */}
       <section style={{ background: '#0F172A', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>

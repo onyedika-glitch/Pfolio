@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import Seo from '../components/Seo'
 import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
 
@@ -46,6 +47,11 @@ export default function TechStackPage() {
   return (
     <div style={{ fontFamily: 'Inter, sans-serif', background: '#F8FAFC', color: '#0F172A' }}>
       <Navbar />
+      <Seo
+        title="Tech Stack — Laravel, React, NestJS, Node.js, PostgreSQL, MySQL, MongoDB | DevOmogo"
+        description="The technology stack DevOmogo ships with: Laravel, PHP, NestJS, Node.js/Express, React + Vite + TypeScript, Flutter, Expo, PostgreSQL, MySQL, MongoDB, Stripe, Paystack, Docker, Vercel, and Render."
+        keywords="tech stack, Laravel, React, NestJS, Node.js, TypeScript, Flutter, PostgreSQL, MySQL, MongoDB, Stripe, Paystack"
+      />
 
       {/* HERO */}
       <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>

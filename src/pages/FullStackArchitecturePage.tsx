@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import Seo from '../components/Seo'
 import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
 
@@ -20,6 +21,11 @@ export default function FullStackArchitecturePage() {
   return (
     <div style={{ fontFamily: 'Inter, sans-serif', background: '#F8FAFC', color: '#0F172A' }}>
       <Navbar />
+      <Seo
+        title="Full-Stack Architecture — Laravel, React, NestJS, Node.js Development | DevOmogo"
+        description="End-to-end full-stack development with the stack DevOmogo actually ships: Laravel, NestJS, Node.js, React + TypeScript, Flutter, Expo, PostgreSQL, MySQL, MongoDB, Stripe, and Paystack."
+        keywords="full-stack developer, Laravel development, React development, NestJS, Node.js developer, PostgreSQL, web application development"
+      />
 
       {/* HERO */}
       <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>
