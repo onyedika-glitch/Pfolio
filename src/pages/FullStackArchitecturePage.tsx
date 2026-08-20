@@ -9,7 +9,6 @@ const shipped = [
   { title: 'YouExtractor', stack: 'Laravel 11 · PHP 8.2+ · Blade · TailwindCSS · Alpine.js · PostgreSQL/MySQL · DeepSeek / Claude / Gemini / GPT-4', link: '/work/youextractor', color: '#3B82F6', icon: 'fa-brain' },
   { title: 'Gigora Network', stack: 'Laravel 13 · PostgreSQL · Cloudinary · Resend · Sanctum · Alpine.js · AI matching · Escrow + disputes', link: '/work/gigora-network', color: '#7C3AED', icon: 'fa-globe' },
   { title: 'Discount Club Cayman', stack: 'React 19 · Vite · Express 5 · MongoDB · Stripe · PayPal · Flutter (member + business apps)', link: '/work/discount-club-cayman', color: '#B45309', icon: 'fa-tag' },
-  { title: 'Zentrix Equity', stack: 'Node.js · Express · Socket.io · MySQL · React 18 · TypeScript · Google OAuth · JWT + sessions', link: '/work/zentrix-equity', color: '#4F46E5', icon: 'fa-chart-pie' },
   { title: 'Unlimited Healthcare', stack: 'NestJS · TypeORM · PostgreSQL · React (Vite) · TypeScript · Capacitor · Expo React Native', link: '/work/unlimited-healthcare', color: '#0D9488', icon: 'fa-stethoscope' },
   { title: 'Sparks Ventures Hub', stack: 'Laravel 13 · PHP 8.3 · Blade · PostgreSQL / Supabase', link: '/work/sparks-ventures', color: '#D97706', icon: 'fa-rocket' },
   { title: 'Sparks EFP', stack: 'Laravel · Blade · MySQL/PostgreSQL · Seat reservations (register + cancel)', link: '/work/sparks-efp', color: '#D97706', icon: 'fa-graduation-cap' },
@@ -98,7 +97,7 @@ export default function FullStackArchitecturePage() {
             {[
               { num: '01', icon: 'fa-database', title: 'Schema & Contracts First', desc: 'Migrations, data models, and API contracts are defined before the UI. From Mongoose schemas and TypeORM entities to Laravel migrations — the data layer drives the app.' },
               { num: '02', icon: 'fa-lock', title: 'Auth & Payments Wired In', desc: 'JWT and Sanctum for sessions, OAuth 2.0 for social login, Stripe PaymentIntents and PayPal orders for money — security decisions made at the start, not bolted on.' },
-              { num: '03', icon: 'fa-bolt', title: 'Real-Time Where It Matters', desc: 'Socket.io WebSocket servers power live updates (Zentrix Equity) and messaging (Gigora), replacing REST polling for the parts of the product that change constantly.' },
+              { num: '03', icon: 'fa-bolt', title: 'Real-Time Where It Matters', desc: 'Socket.io WebSocket servers power live messaging (Gigora), replacing REST polling for the parts of the product that change constantly.' },
             ].map((item) => (
               <div key={item.title} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '44px 36px' }}>
                 <div style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.1em', color: '#3B82F6', marginBottom: '20px', fontFamily: 'Courier New, monospace' }}>{item.num}</div>

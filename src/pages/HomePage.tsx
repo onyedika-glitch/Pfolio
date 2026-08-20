@@ -13,7 +13,6 @@ const projects = [
   { name: 'Sparks Funnel', link: '/work/sparks-funnel' },
   { name: 'Sadar Properties', link: '/work/sadar-properties' },
   { name: 'Unlimited Healthcare', link: '/work/unlimited-healthcare' },
-  { name: 'Zentrix Equity', link: '/work/zentrix-equity' },
   { name: 'Discount Club Cayman', link: '/work/discount-club-cayman' },
 ]
 

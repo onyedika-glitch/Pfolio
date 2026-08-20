@@ -71,9 +71,9 @@ export default function DiscountClubCaymanCaseStudy() {
       resultBody="Discount Club Cayman is live at discountclubcayman.com — memberships, discount offers, certificates, travel deals, and a full admin dashboard."
       founderNote1="The platform had to work for five different audiences without becoming five different products — the role system kept it to one codebase."
       founderNote2="Certificate redemption was the feature that mattered most: an offline-friendly, scan-to-verify flow businesses actually use."
-      nextCaseTitle="Zentrix Equity: Cap Table Platform"
-      nextCaseDesc="Real-time equity and valuation platform on a WebSocket server."
-      nextCaseLink="/work/zentrix-equity"
+      nextCaseTitle="Unlimited Healthcare: Management System"
+      nextCaseDesc="Healthcare management system with appointments, clinical modules, and mobile apps."
+      nextCaseLink="/work/unlimited-healthcare"
       accentColor="#B45309"
       codeBg="#1A0800"
     />

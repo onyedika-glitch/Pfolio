@@ -108,11 +108,11 @@ export default function FintechSystemsPage() {
             <span style={{ display: 'block', width: '20px', height: '2px', background: '#14B8A6' }}></span>
             Related Work
           </div>
-          <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '12px' }}>Zentrix Equity: Equity & Valuation Platform</h2>
+          <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '12px' }}>Discount Club Cayman: Membership Platform</h2>
           <p style={{ fontSize: '16px', color: '#64748B', lineHeight: 1.65, maxWidth: '600px', marginBottom: '32px' }}>
-            Real-time equity management and valuation platform built on a Socket.io WebSocket server with a React 18 + TypeScript frontend and MySQL.
+            Membership discounts and benefits platform for the Cayman Islands featuring role-based dashboards, Stripe and PayPal billing, digital QR memberships, and travel deal catalogs.
           </p>
-          <Link to="/work/zentrix-equity" className="inline-flex items-center gap-2 no-underline transition-all duration-200"
+          <Link to="/work/discount-club-cayman" className="inline-flex items-center gap-2 no-underline transition-all duration-200"
             style={{ fontSize: '14px', fontWeight: 700, color: '#fff', background: '#0D9488', padding: '14px 28px', borderRadius: '8px' }}>
             View Case Study <i className="fas fa-arrow-right" style={{ fontSize: '12px' }}></i>
           </Link>
