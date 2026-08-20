@@ -19,7 +19,6 @@ const projectItems = [
   ['YouExtractor: Tutorial to Course & Code Generator', '/work/youextractor'],
   ['Gigora Network: Freelance Marketplace', '/work/gigora-network'],
   ['Discount Club Cayman: Membership Platform', '/work/discount-club-cayman'],
-  ['Zentrix Equity: Equity & Valuation Platform', '/work/zentrix-equity'],
   ['Unlimited Healthcare: Management System', '/work/unlimited-healthcare'],
   ['Sparks Ventures Hub: Accelerator Ops Platform', '/work/sparks-ventures'],
   ['Sparks EFP: 3-Day Foundation Program', '/work/sparks-efp'],
@@ -129,13 +128,6 @@ const routes = [
     description: 'Membership-based discount and benefits platform for the Cayman Islands: role-based dashboards, Stripe and PayPal billing, digital QR membership, certificates, and travel deals.',
     keywords: 'membership platform development, discount platform, Stripe developer, QR membership card, Flutter app',
     image: img('discount_club_cayman_membership_savings_platform_dashboard_amber.jpg'),
-  },
-  {
-    path: '/work/zentrix-equity',
-    title: 'Zentrix Equity: Equity & Valuation Platform — Case Study | DevOmogo',
-    description: 'Real-time equity management and valuation platform on a Socket.io WebSocket server with a React 18 + TypeScript frontend and MySQL.',
-    keywords: 'equity management platform, cap table, real-time WebSocket, Node.js developer, React TypeScript',
-    image: img('zentrix_equity_cap_table_platform_realtime_fintech_indigo.jpg'),
   },
   {
     path: '/work/unlimited-healthcare',

@@ -13,14 +13,13 @@ const projects = [
   { id: 20, cat: 'web', catLabel: 'Marketing Funnel · SaaS', catColor: '#D97706', bg: '#1C1000', img: 'sparksfunnel.jpg', icon: 'fa-filter', topBar: 'linear-gradient(90deg, #F59E0B, #FBBF24)', title: 'Sparks Ventures Hub: Lead Funnel', desc: 'Laravel marketing funnel: service pages, lead capture, consultation bookings, Paystack payments, and an admin dashboard.', tags: ['Laravel', 'Blade', 'Paystack', 'PHP'], link: '/work/sparks-funnel', live: 'https://funnel.sparksventureshub.com' },
   { id: 13, cat: 'realestate', catLabel: 'Real Estate CRM · Founded', catColor: '#B45309', bg: '#1A0E00', img: 'sadar_properties_real_estate_wholesaling_crm_dashboard_warm_brown.jpg', icon: 'fa-house-chimney', topBar: 'linear-gradient(90deg, #B45309, #D97706)', title: 'Sadar Properties: Wholesaling Toolkit', desc: 'Real estate wholesaling toolkit: deal math (MAO, assignment fee), buyer matching, and CSV/Excel import-export. Founded.', tags: ['React', 'Vite', 'Tailwind', 'Express', 'PostgreSQL', 'OAuth 2.0'], link: '/work/sadar-properties' },
   { id: 14, cat: 'healthcare', catLabel: 'Healthcare · Management System', catColor: '#0D9488', bg: '#031917', img: 'unlimited_healthcare_uhc_clinical_ai_mobile_app_teal.jpg', icon: 'fa-stethoscope', topBar: 'linear-gradient(90deg, #0D9488, #2DD4BF)', title: 'Unlimited Healthcare: Management System', desc: 'Healthcare management system: appointments, recurring bookings and reminders, clinical modules, chat, and mobile apps.', tags: ['React', 'TypeScript', 'NestJS', 'Capacitor', 'Expo', 'TypeORM'], link: '/work/unlimited-healthcare', live: 'https://unlimitedhealthcares.com' },
-  { id: 15, cat: 'fintech', catLabel: 'Fintech · Equity Management', catColor: '#4F46E5', bg: '#0D0B2E', img: 'zentrix_equity_cap_table_platform_realtime_fintech_indigo.jpg', icon: 'fa-chart-pie', topBar: 'linear-gradient(90deg, #4F46E5, #6366F1)', title: 'Zentrix Equity: Equity & Valuation Platform', desc: 'Real-time equity and valuation platform on a Socket.io WebSocket server with React 18 + TypeScript and MySQL.', tags: ['Node.js', 'Socket.io', 'Express', 'MySQL', 'React', 'TypeScript'], link: '/work/zentrix-equity', live: 'https://equityapp.zentrixinnovationlab.com' },
   { id: 16, cat: 'fintech', catLabel: 'Fintech · Membership Platform', catColor: '#B45309', bg: '#1A0800', img: 'discount_club_cayman_membership_savings_platform_dashboard_amber.jpg', icon: 'fa-tag', topBar: 'linear-gradient(90deg, #B45309, #D97706)', title: 'Discount Club Cayman: Membership Platform', desc: 'Membership discounts platform for the Cayman Islands: role-based dashboards, Stripe/PayPal billing, QR membership, certificates, and travel deals.', tags: ['React', 'Vite', 'Express', 'MongoDB', 'Stripe', 'PayPal', 'Flutter'], link: '/work/discount-club-cayman', live: 'https://discountclubcayman.com' },
 ]
 
 const filters = [
-  { key: 'all', label: 'All', count: 9 },
+  { key: 'all', label: 'All', count: 8 },
   { key: 'healthcare', label: 'Healthcare', count: 1 },
-  { key: 'fintech', label: 'Fintech', count: 2 },
+  { key: 'fintech', label: 'Fintech', count: 1 },
   { key: 'ai', label: 'AI / LLM', count: 1 },
   { key: 'web', label: 'Web Platforms', count: 3 },
   { key: 'marketplace', label: 'Marketplace', count: 1 },
