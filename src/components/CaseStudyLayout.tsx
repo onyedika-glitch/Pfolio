@@ -110,19 +110,24 @@ export default function CaseStudyLayout({
 
           {/* Metrics */}
           <div className="fade-in-3 grid grid-cols-2 md:grid-cols-4 gap-0.5 rounded-xl overflow-hidden mb-10 md:mb-14" style={{ background: 'rgba(255,255,255,0.1)', maxWidth: '900px' }}>
-            {metrics.map((m, i) => (
-              <div key={i} className="p-5 md:p-7" style={{ background: 'rgba(255,255,255,0.05)' }}>
-                {'Live' === String(m.value) ? (
+            {metrics.map((m, i) => {
+              const value = String(m.value)
+              const isLive = value === 'Live'
+              const longLabel = value.replace(/\s/g, '').length > 8
+              return (
+              <div key={i} className="p-4 sm:p-5 md:p-7 min-w-0 overflow-hidden" style={{ background: 'rgba(255,255,255,0.05)' }}>
+                {isLive ? (
                   <a href={`https://${m.label}`} target="_blank" rel="noopener noreferrer"
-                    style={{ fontSize: 'clamp(15px, 2.5vw, 22px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#6EE7B7', lineHeight: 1.15, textDecoration: 'none', wordBreak: 'break-all', marginBottom: '8px', display: 'inline-block' }}>
+                    style={{ fontSize: 'clamp(13px, 2vw, 18px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#6EE7B7', lineHeight: 1.15, textDecoration: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', marginBottom: '8px', display: 'block' }}>
                     {m.label}
                   </a>
                 ) : (
-                  <div style={{ fontSize: 'clamp(24px, 5vw, 36px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#fff', lineHeight: 1, marginBottom: '8px' }}>{m.value}</div>
+                  <div style={{ fontSize: longLabel ? 'clamp(15px, 2.2vw, 22px)' : 'clamp(24px, 5vw, 36px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#fff', lineHeight: 1.15, marginBottom: '8px', overflowWrap: 'break-word' }}>{m.value}</div>
                 )}
-                <div style={{ fontSize: '11px', fontWeight: 500, color: 'rgba(255,255,255,0.5)', letterSpacing: '0.04em', textTransform: 'uppercase' }}>{'Live' === String(m.value) ? 'Live' : m.label}</div>
+                <div style={{ fontSize: '11px', fontWeight: 500, color: 'rgba(255,255,255,0.5)', letterSpacing: '0.04em', textTransform: 'uppercase' }}>{isLive ? 'Live' : m.label}</div>
               </div>
-            ))}
+              )
+            })}
           </div>
 
           {/* Meta strip */}
@@ -248,19 +253,24 @@ export default function CaseStudyLayout({
         <div className="site-container relative z-10">
           <h2 style={{ fontSize: 'clamp(28px, 5vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#fff', marginBottom: '32px' }}>What We Shipped</h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-0.5 rounded-xl overflow-hidden mb-10" style={{ background: 'rgba(255,255,255,0.08)' }}>
-            {resultCards.map((r, i) => (
-              <div key={i} className="p-5 md:p-9" style={{ background: 'rgba(255,255,255,0.04)' }}>
-                {'Live' === String(r.value) ? (
+            {resultCards.map((r, i) => {
+              const value = String(r.value)
+              const isLive = value === 'Live'
+              const longLabel = value.replace(/\s/g, '').length > 8
+              return (
+              <div key={i} className="p-5 md:p-9 min-w-0 overflow-hidden" style={{ background: 'rgba(255,255,255,0.04)' }}>
+                {isLive ? (
                   <a href={`https://${r.label}`} target="_blank" rel="noopener noreferrer"
-                    style={{ fontSize: 'clamp(16px, 2.5vw, 24px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#6EE7B7', lineHeight: 1.2, textDecoration: 'none', wordBreak: 'break-all', marginBottom: '10px', display: 'inline-block' }}>
+                    style={{ fontSize: 'clamp(14px, 2vw, 20px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#6EE7B7', lineHeight: 1.2, textDecoration: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', marginBottom: '10px', display: 'block' }}>
                     {r.label}
                   </a>
                 ) : (
-                  <div style={{ fontSize: 'clamp(28px, 6vw, 48px)', fontWeight: 900, letterSpacing: '-0.05em', color: '#fff', lineHeight: 1, marginBottom: '10px' }}>{r.value}</div>
+                  <div style={{ fontSize: longLabel ? 'clamp(18px, 3vw, 28px)' : 'clamp(28px, 6vw, 48px)', fontWeight: 900, letterSpacing: '-0.05em', color: '#fff', lineHeight: 1.15, marginBottom: '10px', overflowWrap: 'break-word' }}>{r.value}</div>
                 )}
-                <div style={{ fontSize: '13px', fontWeight: 500, color: 'rgba(255,255,255,0.5)', lineHeight: 1.4 }}>{'Live' === String(r.value) ? 'Live' : r.label}</div>
+                <div style={{ fontSize: '13px', fontWeight: 500, color: 'rgba(255,255,255,0.5)', lineHeight: 1.4 }}>{isLive ? 'Live' : r.label}</div>
               </div>
-            ))}
+              )
+            })}
           </div>
           <p style={{ fontSize: '16px', lineHeight: 1.75, color: 'rgba(255,255,255,0.65)', maxWidth: '820px' }}>{resultBody}</p>
         </div>
