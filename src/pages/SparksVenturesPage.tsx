@@ -21,7 +21,7 @@ export default function SparksVenturesPage() {
       resultBody="Sparks Ventures Hub is live at sparksventureshub.com as a WordPress business incubation hub: academy, store, events, and program pages. I didn't build the original site — I updated features on it."
       founderNote1="The original site was designed and launched by others. My job was to extend what was already live without pretending I owned the whole product."
       founderNote2="Incubation work on WordPress is page, LMS, and store work: academy enrollment, program pages, events, and the student dashboard."
-      nextCaseTitle="Sparks EFP: 3-Day Foundation Program" nextCaseDesc="Program landing page with seat reservations for a three-day foundation program." nextCaseLink="/work/sparks-efp"
+      nextCaseTitle="Sparks EFP: 4-Week Foundation Programme" nextCaseDesc="Four-week virtual entrepreneurship programme landing page with Paystack checkout." nextCaseLink="/work/sparks-efp"
       accentColor="#D97706" codeBg="#1C1000"
     />
   )

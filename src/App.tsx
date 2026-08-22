@@ -16,6 +16,7 @@ import UnlimitedHealthcarePage from './pages/UnlimitedHealthcarePage'
 import SparksVenturesPage from './pages/SparksVenturesPage'
 import SparksEFPPage from './pages/SparksEFPPage'
 import SparksFunnelPage from './pages/SparksFunnelPage'
+import SsabhiPage from './pages/SsabhiPage'
 import SadarPropertiesPage from './pages/SadarPropertiesPage'
 
 export default function App() {
@@ -38,6 +39,7 @@ export default function App() {
       <Route path="/work/sparks-ventures" element={<SparksVenturesPage />} />
       <Route path="/work/sparks-efp" element={<SparksEFPPage />} />
       <Route path="/work/sparks-funnel" element={<SparksFunnelPage />} />
+      <Route path="/work/ssabhi" element={<SsabhiPage />} />
       <Route path="/work/sadar-properties" element={<SadarPropertiesPage />} />
     </Routes>
   )

@@ -20,8 +20,9 @@ const projectItems = [
   ['Gigora Network: Freelance Marketplace', '/work/gigora-network'],
   ['Discount Club Cayman: Membership Platform', '/work/discount-club-cayman'],
   ['Unlimited Healthcare: Management System', '/work/unlimited-healthcare'],
+  ['SSABHI: Brain Health Initiative', '/work/ssabhi'],
   ['Sparks Ventures Hub: Business Incubation Hub', '/work/sparks-ventures'],
-  ['Sparks EFP: 3-Day Foundation Program', '/work/sparks-efp'],
+  ['Sparks EFP: 4-Week Foundation Programme', '/work/sparks-efp'],
   ['Sparks Ventures Hub: Lead Funnel', '/work/sparks-funnel'],
   ['Sadar Properties: Wholesaling Toolkit', '/work/sadar-properties'],
 ]
@@ -137,6 +138,13 @@ const routes = [
     image: img('unlimited_healthcare_uhc_clinical_ai_mobile_app_teal.jpg'),
   },
   {
+    path: '/work/ssabhi',
+    title: 'SSABHI: Brain Health Initiative — Case Study | DevOmogo',
+    description: 'WordPress feature work on a live nonprofit: membership, programs, jobs, and Elementor pages for the Sub-Saharan Africa Brain Health Initiative.',
+    keywords: 'WordPress nonprofit, SSABHI, brain health, Elementor, Fluent Forms, fullstack WordPress developer',
+    image: img('ssabhi_brain_health_initiative_wordpress_teal.jpg'),
+  },
+  {
     path: '/work/sparks-ventures',
     title: 'Sparks Ventures Hub: Business Incubation Hub — Case Study | DevOmogo',
     description: 'WordPress feature work on a live business incubation hub: Tutor LMS academy, WooCommerce courses, Elementor program pages, and events.',
@@ -145,9 +153,9 @@ const routes = [
   },
   {
     path: '/work/sparks-efp',
-    title: 'Sparks EFP: 3-Day Foundation Program — Case Study | DevOmogo',
-    description: 'A Laravel landing page for a three-day, hands-on foundation program that turns business ideas into validated, budgeted, pitched startups — with seat reservations.',
-    keywords: 'program landing page, event registration, Laravel landing page, seat reservation, startup program',
+    title: 'Sparks EFP: 4-Week Foundation Programme — Case Study | DevOmogo',
+    description: 'A Laravel landing page for Sparks Entrepreneurship Foundation Programme: four-week virtual curriculum (Discover, Build, Launch), graduation package, and Paystack checkout.',
+    keywords: 'Sparks EFP, four-week entrepreneurship programme, Laravel landing page, Paystack, virtual foundation programme',
     image: img('sparksefp.jpg'),
   },
   {

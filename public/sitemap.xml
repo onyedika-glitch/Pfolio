@@ -89,6 +89,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://devomogo.tech/work/ssabhi</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://devomogo.tech/work/sparks-ventures</loc>
     <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -96,7 +102,7 @@
   </url>
   <url>
     <loc>https://devomogo.tech/work/sparks-efp</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

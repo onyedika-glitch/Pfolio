@@ -21,7 +21,7 @@ export default function UnlimitedHealthcarePage() {
       resultBody="Unlimited Healthcare is live at unlimitedhealthcares.com as a healthcare management system serving appointment booking, clinical modules, chat, and mobile access."
       founderNote1="Appointments and reminders were the system's backbone — the recurring-appointments and reminders-cron services run quietly in the background keeping everything scheduled."
       founderNote2="Audit logging everywhere was non-negotiable for a healthcare system: every change needs a trail."
-      nextCaseTitle="Sparks Ventures Hub: Incubation Hub" nextCaseDesc="WordPress feature work on a live business incubation hub: academy, courses, events, and store." nextCaseLink="/work/sparks-ventures"
+      nextCaseTitle="SSABHI: Brain Health Initiative" nextCaseDesc="WordPress feature work on a live nonprofit: membership, programs, jobs, and Elementor pages." nextCaseLink="/work/ssabhi"
       accentColor="#0D9488" codeBg="#031917"
     />
   )
