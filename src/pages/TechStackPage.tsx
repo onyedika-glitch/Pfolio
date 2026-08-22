@@ -18,7 +18,7 @@ const techCategories = [
     title: 'Backend & APIs',
     color: '#0D9488',
     bg: '#0F2E2A',
-    tags: ['Node.js', 'Express', 'Nest.js', 'Laravel', 'PHP', 'Python', 'REST APIs', 'GraphQL', 'WebSockets', 'Socket.io', 'Postman'],
+    tags: ['Node.js', 'Express', 'Nest.js', 'Laravel', 'PHP', 'WordPress', 'Python', 'REST APIs', 'GraphQL', 'WebSockets', 'Socket.io', 'Postman'],
   },
   {
     icon: 'fa-database',

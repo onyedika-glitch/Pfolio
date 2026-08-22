@@ -20,7 +20,7 @@ const projectItems = [
   ['Gigora Network: Freelance Marketplace', '/work/gigora-network'],
   ['Discount Club Cayman: Membership Platform', '/work/discount-club-cayman'],
   ['Unlimited Healthcare: Management System', '/work/unlimited-healthcare'],
-  ['Sparks Ventures Hub: Accelerator Ops Platform', '/work/sparks-ventures'],
+  ['Sparks Ventures Hub: Business Incubation Hub', '/work/sparks-ventures'],
   ['Sparks EFP: 3-Day Foundation Program', '/work/sparks-efp'],
   ['Sparks Ventures Hub: Lead Funnel', '/work/sparks-funnel'],
   ['Sadar Properties: Wholesaling Toolkit', '/work/sadar-properties'],
@@ -45,7 +45,7 @@ const routes = [
   {
     path: '/work',
     title: 'Work & Case Studies — DevOmogo | Fintech, Healthcare, AI, Marketplace, Real Estate',
-    description: 'Production systems built by DevOmogo: AI developer tools, freelance marketplaces, fintech platforms, healthcare systems, accelerator operations, and real estate tools — each with a live site and full case study.',
+    description: 'Production systems built by DevOmogo: AI developer tools, freelance marketplaces, fintech platforms, healthcare systems, incubation hubs, and real estate tools — each with a live site and full case study.',
     keywords: 'portfolio, case studies, fintech platform development, healthcare system development, AI tool development, marketplace development, Laravel, React, NestJS',
     image: `${BASE}/og-image.jpg`,
     jsonLd: { '@context': 'https://schema.org', '@type': 'ItemList', itemListElement: projectItems.map(([name, p], i) => ({ '@type': 'ListItem', position: i + 1, name, url: BASE + p })) },
@@ -138,9 +138,9 @@ const routes = [
   },
   {
     path: '/work/sparks-ventures',
-    title: 'Sparks Ventures Hub: Accelerator Ops Platform — Case Study | DevOmogo',
-    description: 'A Laravel operations platform for an accelerator: leads, public applications, approvals, followups, onboarding programs, and vouchers.',
-    keywords: 'accelerator platform, startup operations software, Laravel developer, lead management, application pipeline',
+    title: 'Sparks Ventures Hub: Business Incubation Hub — Case Study | DevOmogo',
+    description: 'WordPress feature work on a live business incubation hub: Tutor LMS academy, WooCommerce courses, Elementor program pages, and events.',
+    keywords: 'WordPress incubation hub, Tutor LMS, WooCommerce, Elementor, business incubation, Sparks Ventures Hub',
     image: img('sparks_ventures_hub_startup_accelerator_saas_dashboard_amber.jpg'),
   },
   {

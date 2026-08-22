@@ -10,7 +10,7 @@ const shipped = [
   { title: 'Gigora Network', stack: 'Laravel 13 · PostgreSQL · Cloudinary · Resend · Sanctum · Alpine.js · AI matching · Escrow + disputes', link: '/work/gigora-network', color: '#7C3AED', icon: 'fa-globe' },
   { title: 'Discount Club Cayman', stack: 'React 19 · Vite · Express 5 · MongoDB · Stripe · PayPal · Flutter (member + business apps)', link: '/work/discount-club-cayman', color: '#B45309', icon: 'fa-tag' },
   { title: 'Unlimited Healthcare', stack: 'NestJS · TypeORM · PostgreSQL · React (Vite) · TypeScript · Capacitor · Expo React Native', link: '/work/unlimited-healthcare', color: '#0D9488', icon: 'fa-stethoscope' },
-  { title: 'Sparks Ventures Hub', stack: 'Laravel 13 · PHP 8.3 · Blade · PostgreSQL / Supabase', link: '/work/sparks-ventures', color: '#D97706', icon: 'fa-rocket' },
+  { title: 'Sparks Ventures Hub', stack: 'WordPress · Elementor · Tutor LMS · WooCommerce · The Events Calendar', link: '/work/sparks-ventures', color: '#D97706', icon: 'fa-building' },
   { title: 'Sparks EFP', stack: 'Laravel · Blade · MySQL/PostgreSQL · Seat reservations (register + cancel)', link: '/work/sparks-efp', color: '#D97706', icon: 'fa-graduation-cap' },
   { title: 'Sparks Funnel', stack: 'Laravel · Blade · Paystack · Lead capture · Bookings · Admin panel', link: '/work/sparks-funnel', color: '#D97706', icon: 'fa-filter' },
   { title: 'Sadar Properties', stack: 'React · Vite · Tailwind · Express · PostgreSQL · OAuth 2.0 (Google + Facebook) · CSV/Excel', link: '/work/sadar-properties', color: '#B45309', icon: 'fa-house-chimney' },
@@ -123,7 +123,7 @@ export default function FullStackArchitecturePage() {
           <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {[
               { cat: 'Frontend & Mobile', items: ['React', 'Vite', 'TypeScript', 'Tailwind CSS', 'Blade + Alpine.js', 'Flutter', 'Expo React Native', 'Capacitor'] },
-              { cat: 'Backend', items: ['Laravel (PHP 8)', 'NestJS', 'Node.js (Express)', 'REST APIs', 'Socket.io (WebSockets)'] },
+              { cat: 'Backend', items: ['Laravel (PHP 8)', 'WordPress', 'NestJS', 'Node.js (Express)', 'REST APIs', 'Socket.io (WebSockets)'] },
               { cat: 'Databases', items: ['PostgreSQL', 'MySQL', 'MongoDB (Mongoose)', 'TypeORM', 'Eloquent', 'Supabase'] },
               { cat: 'Auth & Payments', items: ['JWT', 'Laravel Sanctum', 'OAuth 2.0', 'Google + Facebook Login', 'Stripe', 'PayPal'] },
               { cat: 'Deployment', items: ['Docker', 'Docker Compose', 'Vercel', 'Render', 'Hostinger VPS', 'Cloudinary', 'Resend'] },
