@@ -16,6 +16,7 @@ const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, 
 const img = (name) => `${BASE}/assets/${name}`
 
 const projectItems = [
+  ['Japa Coach: AI IELTS Practice', '/work/japa-coach'],
   ['YouExtractor: Tutorial to Course & Code Generator', '/work/youextractor'],
   ['Gigora Network: Freelance Marketplace', '/work/gigora-network'],
   ['Discount Club Cayman: Membership Platform', '/work/discount-club-cayman'],
@@ -171,6 +172,13 @@ const routes = [
     description: 'Real estate wholesaling toolkit with a React dashboard, Express + PostgreSQL backend, deal math, buyer matching, and CSV/Excel import-export. Founded.',
     keywords: 'real estate CRM, wholesaling software, React dashboard, Express PostgreSQL, deal calculator, buyer matching',
     image: img('sadar_properties_real_estate_wholesaling_crm_dashboard_warm_brown.jpg'),
+  },
+  {
+    path: '/work/japa-coach',
+    title: 'Japa Coach: AI IELTS Practice — Case Study | DevOmogo',
+    description: 'AI IELTS practice platform for Nigerians: spoken speaking tests marked by AI, writing feedback, full reading and listening tests. Laravel, Vue, Flutter Android app, self-hosted Whisper speech service. Founded.',
+    keywords: 'AI IELTS app, speech recognition, Whisper, Laravel, Vue, Flutter, EdTech, Nigeria, Google Play Billing',
+    image: img('japa_coach_ai_ielts_practice_app_teal.jpg'),
   },
 ]
 

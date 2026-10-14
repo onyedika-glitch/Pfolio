@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
 
 const projects = [
+  { id: 22, cat: 'ai', catLabel: 'AI · EdTech · Founded', catColor: '#01B8C6', bg: '#032A2E', img: 'japa_coach_ai_ielts_practice_app_teal.jpg', icon: 'fa-microphone-lines', topBar: 'linear-gradient(90deg, #01B8C6, #F5A524)', title: 'Japa Coach: AI IELTS Practice', desc: 'AI IELTS coach for Nigerians: speak answers out loud, get an estimated band and sentence-level fixes in minutes. Web app plus a native Flutter Android app. Founded.', tags: ['Laravel', 'Vue 3', 'Flutter', 'FastAPI', 'Whisper', 'PostgreSQL'], link: '/work/japa-coach', live: 'https://japacoach.com' },
   { id: 1, cat: 'ai', catLabel: 'AI · Developer Tool', catColor: '#3B82F6', bg: '#0F172A', img: 'youextractor_llm_ai_pipeline_dark_dashboard.jpg', icon: 'fa-brain', topBar: 'linear-gradient(90deg, #3B82F6, #6366F1)', title: 'YouExtractor: Tutorial → Course & Code Generator', desc: 'Turns YouTube coding tutorials into structured guides and runnable code projects using AI (DeepSeek, Claude, Gemini, GPT-4).', tags: ['Laravel', 'PHP', 'Blade', 'TailwindCSS', 'Gemini', 'GPT-4'], link: '/work/youextractor', live: 'https://youextractor.me' },
   { id: 18, cat: 'marketplace', catLabel: 'Web3 · Marketplace', catColor: '#7C3AED', bg: '#1E1B4B', img: 'fintech_dashboard_dark_ui.jpg', icon: 'fa-globe', topBar: 'linear-gradient(90deg, #7C3AED, #A855F7)', title: 'Gigora Network: Web3 Freelance Marketplace', desc: 'Community-driven Web3 freelance marketplace. Vetted talent, secure on-chain escrow, and a global remote job board.', tags: ['React', 'Node.js', 'Web3', 'Blockchain', 'Escrow', 'Marketplace'], link: '/work/gigora-network', live: 'https://gigoranetwork.com' },
   { id: 11, cat: 'web', catLabel: 'WordPress · Incubation Hub', catColor: '#D97706', bg: '#1C1000', img: 'sparks_ventures_hub_startup_accelerator_saas_dashboard_amber.jpg', icon: 'fa-building', topBar: 'linear-gradient(90deg, #F59E0B, #FBBF24)', title: 'Sparks Ventures Hub: Business Incubation Hub', desc: 'WordPress feature work on a live incubation hub: Tutor LMS academy, WooCommerce courses, Elementor program pages, and events.', tags: ['WordPress', 'Elementor', 'Tutor LMS', 'WooCommerce'], link: '/work/sparks-ventures', live: 'https://sparksventureshub.com' },
@@ -18,10 +19,10 @@ const projects = [
 ]
 
 const filters = [
-  { key: 'all', label: 'All', count: 9 },
+  { key: 'all', label: 'All', count: 10 },
   { key: 'healthcare', label: 'Healthcare', count: 2 },
   { key: 'fintech', label: 'Fintech', count: 1 },
-  { key: 'ai', label: 'AI / LLM', count: 1 },
+  { key: 'ai', label: 'AI / LLM', count: 2 },
   { key: 'web', label: 'Web Platforms', count: 3 },
   { key: 'marketplace', label: 'Marketplace', count: 1 },
   { key: 'realestate', label: 'Real Estate', count: 1 },
@@ -63,7 +64,7 @@ export default function WorkPage() {
           <h1 className="fade-in-2" style={{ fontSize: 'clamp(36px, 9vw, 80px)', fontWeight: 900, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#fff', marginBottom: '20px' }}>All Work</h1>
           <p className="fade-in-3" style={{ fontSize: 'clamp(15px, 2.5vw, 17px)', color: 'rgba(255,255,255,0.65)', lineHeight: 1.65, maxWidth: '680px', marginBottom: '40px' }}>Production systems across AI, fintech, healthcare, edtech, and web platforms. Every project built with senior engineering judgment.</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-0.5 rounded-xl overflow-hidden fade-in-4" style={{ background: 'rgba(255,255,255,0.08)', maxWidth: '680px' }}>
-            {[['9', 'Projects', 'Shipped to Production'], ['5+', 'Years', 'Engineering Experience'], ['6', 'Domains', 'Healthcare · Fintech · AI · Web · Marketplace · Real Estate']].map(([val, main, sub]) => (
+            {[['10', 'Projects', 'Shipped to Production'], ['5+', 'Years', 'Engineering Experience'], ['6', 'Domains', 'Healthcare · Fintech · AI · Web · Marketplace · Real Estate']].map(([val, main, sub]) => (
               <div key={main} className="p-5 md:p-7" style={{ background: 'rgba(255,255,255,0.04)' }}>
                 <div style={{ fontSize: 'clamp(24px, 5vw, 32px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#fff', lineHeight: 1, marginBottom: '8px' }}>{val}</div>
                 <div style={{ fontSize: '13px', fontWeight: 600, color: 'rgba(255,255,255,0.75)', marginBottom: '2px' }}>{main}</div>

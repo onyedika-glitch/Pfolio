@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
 
 const projects = [
+  { name: 'Japa Coach', link: '/work/japa-coach' },
   { name: 'YouExtractor', link: '/work/youextractor' },
   { name: 'Gigora Network', link: '/work/gigora-network' },
   { name: 'Sparks Ventures', link: '/work/sparks-ventures' },
@@ -245,7 +246,7 @@ export default function HomePage() {
                 This is a specialist firm, not an agency that takes any project that walks through the door. We work with a small number of clients at any time.
               </p>
               <div className="flex flex-wrap gap-8 pt-8 mt-8" style={{ borderTop: '1px solid #E2E8F0' }}>
-                {[['5+', 'Years in practice'], ['9', 'Systems shipped'], ['4', 'Active clients']].map(([num, label]) => (
+                {[['5+', 'Years in practice'], ['10', 'Systems shipped'], ['4', 'Active clients']].map(([num, label]) => (
                   <div key={label}>
                     <div style={{ fontSize: '28px', fontWeight: 900, letterSpacing: '-0.05em', color: '#1E3A8A' }}>{num}</div>
                     <div style={{ fontSize: '12px', fontWeight: 500, color: '#64748B', marginTop: '2px' }}>{label}</div>

@@ -11,7 +11,7 @@ export default function TeamPage() {
       <Navbar />
       <Seo
         title="The Team — Omogo Peter Onyedika, Founder & Senior Software Infrastructure Engineer | DevOmogo"
-        description="DevOmogo was founded by Omogo Peter Onyedika, a Senior Software Infrastructure Engineer and founder of YouExtractor, Gigora Network, and Sadar Properties."
+        description="DevOmogo was founded by Omogo Peter Onyedika, a Senior Software Infrastructure Engineer and founder of Japa Coach, YouExtractor, Gigora Network, and Sadar Properties."
         keywords="Omogo Peter Onyedika, software engineer, founder, DevOmogo, senior software infrastructure engineer"
         jsonLd={{ "@context": "https://schema.org", "@type": "Person", name: 'Omogo Peter Onyedika', jobTitle: 'Senior Software Infrastructure Engineer', url: 'https://devomogo.tech/team', sameAs: ['https://github.com/onyedika-glitch', 'https://x.com/peteromogo2'] }}
       />
@@ -31,7 +31,7 @@ export default function TeamPage() {
             DevOmogo is a specialist firm, not an agency that takes any project that walks through the door. We work with a small number of clients at any time, and every engagement is led by the founder.
           </p>
           <div className="fade-in-4 flex items-stretch gap-0.5 rounded-xl overflow-hidden" style={{ background: 'rgba(255,255,255,0.08)', maxWidth: '600px' }}>
-            {[['5+', 'Years', 'in practice'], ['9', 'Systems', 'shipped to production'], ['6', 'Domains', 'Healthcare · Fintech · AI · Web · Marketplace · Real Estate']].map(([val, main, sub]) => (
+            {[['5+', 'Years', 'in practice'], ['10', 'Systems', 'shipped to production'], ['6', 'Domains', 'Healthcare · Fintech · AI · Web · Marketplace · Real Estate']].map(([val, main, sub]) => (
               <div key={main} style={{ background: 'rgba(255,255,255,0.04)', padding: '28px 36px', flex: 1 }}>
                 <div style={{ fontSize: '32px', fontWeight: 900, letterSpacing: '-0.04em', color: '#fff', lineHeight: 1, marginBottom: '8px' }}>{val}</div>
                 <div style={{ fontSize: '13px', fontWeight: 600, color: 'rgba(255,255,255,0.75)', marginBottom: '2px' }}>{main}</div>
@@ -55,7 +55,7 @@ export default function TeamPage() {
                 DevOmogo was founded by <strong>Omogo Peter Onyedika</strong>, a Senior Software Infrastructure Engineer with over 5 years building complex, production-grade systems for healthcare providers, fintech companies, and data platforms across Africa and beyond.
               </p>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '24px' }}>
-                He holds a degree in Software Engineering from FUTO and is the founder of YouExtractor, Gigora Network, and Sadar Properties. He has built production systems across fintech, healthcare, and developer tools.
+                He holds a degree in Software Engineering from FUTO and is the founder of Japa Coach, YouExtractor, Gigora Network, and Sadar Properties. He has built production systems across fintech, healthcare, and developer tools.
               </p>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '32px' }}>
                 He believes that great software comes from deep understanding of the problem, the user, and the tradeoffs. Every project at DevOmogo gets his direct attention.

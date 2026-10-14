@@ -18,6 +18,7 @@ import SparksEFPPage from './pages/SparksEFPPage'
 import SparksFunnelPage from './pages/SparksFunnelPage'
 import SsabhiPage from './pages/SsabhiPage'
 import SadarPropertiesPage from './pages/SadarPropertiesPage'
+import JapaCoachPage from './pages/JapaCoachPage'
 
 export default function App() {
   return (
@@ -41,6 +42,7 @@ export default function App() {
       <Route path="/work/sparks-funnel" element={<SparksFunnelPage />} />
       <Route path="/work/ssabhi" element={<SsabhiPage />} />
       <Route path="/work/sadar-properties" element={<SadarPropertiesPage />} />
+      <Route path="/work/japa-coach" element={<JapaCoachPage />} />
     </Routes>
   )
 }
