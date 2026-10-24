@@ -5,7 +5,7 @@ import Seo from './Seo'
 import Footer from './Footer'
 import CTABanner from './CTABanner'
 import ProjectCard, { projectByLink } from './ProjectCard'
-import { PINK, INK, MUTED, card, glass, Eyebrow, Heading } from './ui'
+import { PINK, INK, MUTED, card, glass, Heading } from './ui'
 
 interface Props {
   seo: { title: string; description: string; keywords: string }
@@ -38,10 +38,6 @@ export default function ServiceLayout({ seo, name, icon, headline, intro, whatYo
         </Link>
         <div className="grid items-center gap-10 lg:gap-14 grid-cols-1 lg:grid-cols-2">
           <div className="min-w-0">
-            <div className="fade-in inline-flex items-center gap-2 mb-6" style={{ fontSize: '12.5px', fontWeight: 600, color: '#334155', background: '#fff', border: '1px solid rgba(15,23,42,0.1)', padding: '6px 13px', borderRadius: '100px' }}>
-              <i className={`fas ${icon}`} style={{ fontSize: '11px', color: PINK }}></i>
-              {name}
-            </div>
             <h1 className="fade-in-2" style={{ fontSize: 'clamp(34px, 5.5vw, 60px)', fontWeight: 900, lineHeight: 1.06, letterSpacing: '-0.04em', color: INK, marginBottom: '22px' }}>{headline}</h1>
             <p className="fade-in-3" style={{ fontSize: 'clamp(15px, 1.5vw, 18px)', fontWeight: 500, color: '#1E293B', lineHeight: 1.7, marginBottom: '30px', maxWidth: '580px' }}>{intro}</p>
             <div className="fade-in-4 flex flex-col sm:flex-row gap-3">
@@ -84,7 +80,6 @@ export default function ServiceLayout({ seo, name, icon, headline, intro, whatYo
 
       {/* APPROACH */}
       <section className="site-container section-pad">
-        <Eyebrow>My approach</Eyebrow>
         <Heading>{approachHeading}</Heading>
         <div className="flex flex-col gap-4 mb-10" style={{ maxWidth: '760px' }}>
           {story.map((p) => (
@@ -112,7 +107,6 @@ export default function ServiceLayout({ seo, name, icon, headline, intro, whatYo
       {relatedProjects.length > 0 && (
         <section id="related" style={{ ...glass, scrollMarginTop: '100px' }}>
           <div className="site-container section-pad">
-            <Eyebrow>Related work</Eyebrow>
             <Heading>Where I’ve done this before.</Heading>
             <div data-reveal-group className={`grid grid-cols-1 sm:grid-cols-2 ${relatedProjects.length >= 3 ? 'lg:grid-cols-3' : ''} gap-5 md:gap-6 mt-10`}>
               {relatedProjects.map((p) => <div key={p.link} data-reveal><ProjectCard project={p} /></div>)}

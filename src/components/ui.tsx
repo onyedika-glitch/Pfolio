@@ -21,15 +21,6 @@ export const glass: React.CSSProperties = {
   borderBottom: '1px solid rgba(15,23,42,0.06)',
 }
 
-export function Eyebrow({ children }: { children: React.ReactNode }) {
-  return (
-    <div data-reveal className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '12px', fontWeight: 600, color: PINK, background: '#fff', border: '1px solid rgba(190,24,93,0.18)', padding: '6px 12px', borderRadius: '100px' }}>
-      <span style={{ display: 'block', width: '6px', height: '6px', borderRadius: '50%', background: PINK }}></span>
-      {children}
-    </div>
-  )
-}
-
 export function Heading({ children }: { children: React.ReactNode }) {
   return (
     <h2 data-reveal style={{ fontSize: 'clamp(28px, 5vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1.08, color: INK, marginBottom: '14px' }}>{children}</h2>

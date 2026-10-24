@@ -58,10 +58,6 @@ export default function ContactPage() {
       <section className="site-container pt-28 md:pt-36 lg:pt-44 pb-16 md:pb-24">
         <div className="grid gap-10 lg:gap-14 grid-cols-1 lg:grid-cols-2 items-start">
           <div className="min-w-0">
-            <div className="fade-in inline-flex items-center gap-2 mb-6" style={{ fontSize: '12.5px', fontWeight: 600, color: '#334155', background: '#fff', border: '1px solid rgba(15,23,42,0.1)', padding: '6px 13px', borderRadius: '100px' }}>
-              <span style={{ display: 'block', width: '7px', height: '7px', borderRadius: '50%', background: PINK }}></span>
-              Say hello
-            </div>
             <h1 className="fade-in-2" style={{ fontSize: 'clamp(34px, 6vw, 64px)', fontWeight: 900, lineHeight: 1.06, letterSpacing: '-0.04em', color: INK, marginBottom: '22px' }}>
               Got an idea? <span style={{ color: PINK }}>Let's talk it through.</span>
             </h1>

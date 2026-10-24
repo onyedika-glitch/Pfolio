@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import Seo from '../components/Seo'
 import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
-import { PINK, INK, MUTED, card, glass, Eyebrow, Heading, Lead } from '../components/ui'
+import { PINK, INK, MUTED, card, glass, Heading, Lead } from '../components/ui'
 
 const techCategories = [
   {
@@ -50,10 +50,6 @@ export default function TechStackPage() {
 
       {/* HERO */}
       <section className="site-container pt-28 md:pt-36 lg:pt-44 pb-12 md:pb-16">
-        <div className="fade-in inline-flex items-center gap-2 mb-6" style={{ fontSize: '12.5px', fontWeight: 600, color: '#334155', background: '#fff', border: '1px solid rgba(15,23,42,0.1)', padding: '6px 13px', borderRadius: '100px' }}>
-          <span style={{ display: 'block', width: '7px', height: '7px', borderRadius: '50%', background: PINK }}></span>
-          What I build with
-        </div>
         <h1 className="fade-in-2" style={{ fontSize: 'clamp(34px, 6vw, 64px)', fontWeight: 900, lineHeight: 1.06, letterSpacing: '-0.04em', color: INK, marginBottom: '22px', maxWidth: '820px' }}>
           The tools I <span style={{ color: PINK }}>reach for.</span>
         </h1>
@@ -87,7 +83,6 @@ export default function TechStackPage() {
       {/* GITHUB */}
       <section style={glass}>
         <div className="site-container section-pad">
-          <Eyebrow>Open source</Eyebrow>
           <Heading>Want to see the code?</Heading>
           <Lead>My public repos and side projects are on GitHub. It's a good way to see how I write code.</Lead>
           <div data-reveal className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 p-6 md:p-8 relative overflow-hidden" style={{ background: INK, borderRadius: '16px' }}>

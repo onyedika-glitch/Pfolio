@@ -5,7 +5,7 @@ import Seo from '../components/Seo'
 import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
 import { projectByLink } from '../components/ProjectCard'
-import { PINK, INK, MUTED, card, glass, Eyebrow, Heading } from '../components/ui'
+import { PINK, INK, MUTED, card, glass, Heading } from '../components/ui'
 
 const socials = [
   { href: 'https://www.linkedin.com/in/webdev-omogo-5a6980345', icon: 'fab fa-linkedin-in', label: 'LinkedIn' },
@@ -42,10 +42,6 @@ export default function TeamPage() {
       <section className="site-container pt-28 md:pt-36 lg:pt-44 pb-12 md:pb-16">
         <div className="grid items-center gap-10 lg:gap-16 grid-cols-1 lg:grid-cols-[1.2fr_1fr]">
           <div className="min-w-0">
-            <div className="fade-in inline-flex items-center gap-2 mb-6" style={{ fontSize: '12.5px', fontWeight: 600, color: '#334155', background: '#fff', border: '1px solid rgba(15,23,42,0.1)', padding: '6px 13px', borderRadius: '100px' }}>
-              <span className="status-dot-green"></span>
-              About me
-            </div>
             <h1 className="fade-in-2" style={{ fontSize: 'clamp(34px, 6vw, 64px)', fontWeight: 900, lineHeight: 1.06, letterSpacing: '-0.04em', color: INK, marginBottom: '22px' }}>
               Hi, I'm <span style={{ color: PINK }}>Omogo Peter Onyedika.</span>
             </h1>
@@ -89,7 +85,6 @@ export default function TeamPage() {
       <section style={glass}>
         <div className="site-container section-pad grid gap-10 lg:gap-16 grid-cols-1 lg:grid-cols-[1.1fr_1fr] items-start">
           <div className="min-w-0">
-            <Eyebrow>My story</Eyebrow>
             <Heading>Building the hard parts since day one.</Heading>
             <div className="flex flex-col gap-4 mt-6" style={{ maxWidth: '640px' }}>
               {[
@@ -119,7 +114,6 @@ export default function TeamPage() {
 
       {/* BELIEFS */}
       <section className="site-container section-pad">
-        <Eyebrow>What I believe</Eyebrow>
         <Heading>How I like to work.</Heading>
         <div data-reveal-group className="grid gap-4 md:gap-5 grid-cols-1 md:grid-cols-3 mt-10">
           {beliefs.map((item) => (

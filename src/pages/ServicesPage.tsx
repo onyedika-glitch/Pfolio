@@ -5,7 +5,7 @@ import Seo from '../components/Seo'
 import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
 import { projectByLink } from '../components/ProjectCard'
-import { PINK, INK, MUTED, card, glass, Eyebrow, Heading, Lead } from '../components/ui'
+import { PINK, INK, MUTED, card, glass, Heading, Lead } from '../components/ui'
 
 const services = [
   {
@@ -62,10 +62,6 @@ export default function ServicesPage() {
 
       {/* HERO */}
       <section className="site-container pt-28 md:pt-36 lg:pt-44 pb-12 md:pb-16">
-        <div className="fade-in inline-flex items-center gap-2 mb-6" style={{ fontSize: '12.5px', fontWeight: 600, color: '#334155', background: '#fff', border: '1px solid rgba(15,23,42,0.1)', padding: '6px 13px', borderRadius: '100px' }}>
-          <span style={{ display: 'block', width: '7px', height: '7px', borderRadius: '50%', background: PINK }}></span>
-          What I do
-        </div>
         <h1 className="fade-in-2" style={{ fontSize: 'clamp(34px, 6vw, 64px)', fontWeight: 900, lineHeight: 1.06, letterSpacing: '-0.04em', color: INK, marginBottom: '22px', maxWidth: '820px' }}>
           The hard parts, <span style={{ color: PINK }}>handled.</span>
         </h1>
@@ -110,7 +106,6 @@ export default function ServicesPage() {
       {/* INCLUDED */}
       <section style={glass}>
         <div className="site-container section-pad">
-          <Eyebrow>Every project</Eyebrow>
           <Heading>What comes with it, whichever you pick.</Heading>
           <Lead>Same standards on every project, big or small.</Lead>
           <div data-reveal-group className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

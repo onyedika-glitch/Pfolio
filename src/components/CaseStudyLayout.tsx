@@ -7,7 +7,7 @@ import CTABanner from './CTABanner'
 import AppShowcase from './AppShowcase'
 import { MobileApp } from '../data/mobileApps'
 import { projects } from '../data/projects'
-import { PINK, INK, MUTED, card, glass, Eyebrow, Heading, Lead } from './ui'
+import { PINK, INK, MUTED, card, glass, Heading, Lead } from './ui'
 
 interface MetricCard {
   value: string | React.ReactNode
@@ -201,7 +201,6 @@ export default function CaseStudyLayout({
 
       {/* THE STORY */}
       <section className="site-container section-pad">
-        <Eyebrow>The story</Eyebrow>
         <Heading>From problem to product.</Heading>
         <div data-reveal-group className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-5 mt-10">
           {[
@@ -221,7 +220,6 @@ export default function CaseStudyLayout({
       {mobileApps.length > 0 && (
         <section style={glass}>
           <div className="site-container section-pad">
-            <Eyebrow>{mobileApps.length > 1 ? 'The mobile apps' : 'The mobile app'}</Eyebrow>
             <Heading>On the phone, too.</Heading>
             <Lead>Swipe through the screens.</Lead>
             <div className="flex flex-col gap-6">
@@ -242,7 +240,6 @@ export default function CaseStudyLayout({
       {/* UNDER THE HOOD */}
       <section style={glass}>
         <div className="site-container section-pad">
-          <Eyebrow>Under the hood</Eyebrow>
           <Heading>{archTitle === 'Architecture' ? 'How it’s built.' : archTitle}</Heading>
           <Lead>{archSubhead}</Lead>
           <div data-reveal-group className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
@@ -284,7 +281,6 @@ export default function CaseStudyLayout({
 
       {/* DECISIONS */}
       <section className="site-container section-pad">
-        <Eyebrow>Decisions</Eyebrow>
         <Heading>Choices that made the difference.</Heading>
         <div data-reveal-group className={`grid grid-cols-1 md:grid-cols-2 ${decisionCards.length % 3 === 0 ? 'lg:grid-cols-3' : ''} gap-4 md:gap-5 mt-10`}>
           {decisionCards.map((d, i) => (
@@ -300,7 +296,6 @@ export default function CaseStudyLayout({
       {extraResults.length > 0 && (
         <section style={glass}>
           <div className="site-container section-pad">
-            <Eyebrow>Results</Eyebrow>
             <Heading>What came out of it.</Heading>
             <div data-reveal-group className={`grid grid-cols-2 ${extraResults.length >= 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} gap-3 md:gap-4 mt-10`}>
               {extraResults.map((r, i) => <div key={i} data-reveal><Stat value={r.value} label={r.label} /></div>)}
@@ -334,7 +329,6 @@ export default function CaseStudyLayout({
       {/* NEXT PROJECT */}
       <section style={glass}>
         <div className="site-container py-14 md:py-20">
-          <Eyebrow>Next project</Eyebrow>
           <Link to={nextCaseLink} data-reveal className="grid grid-cols-1 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] overflow-hidden no-underline transition-all duration-300 hover:-translate-y-1" style={card}>
             {next && <img src={`/assets/${next.img}`} alt={nextCaseTitle} className="block w-full h-48 md:h-full" style={{ objectFit: 'cover', objectPosition: 'top' }} />}
             <div className="p-6 md:p-10 flex flex-col justify-center">

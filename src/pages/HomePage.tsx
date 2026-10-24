@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
 import AppShowcase from '../components/AppShowcase'
 import { mobileApps } from '../data/mobileApps'
-import { PINK, INK, MUTED, card, glass, Eyebrow, Heading, Lead } from '../components/ui'
+import { PINK, INK, MUTED, card, glass, Heading, Lead } from '../components/ui'
 
 
 const projects = [
@@ -43,10 +43,6 @@ export default function HomePage() {
       <section className="site-container pt-28 md:pt-36 lg:pt-44 pb-16 md:pb-20">
         <div className="grid items-center gap-10 lg:gap-14 grid-cols-1 lg:grid-cols-2">
           <div className="min-w-0">
-            <div className="fade-in inline-flex items-center gap-2 mb-6" style={{ fontSize: '12.5px', fontWeight: 600, color: '#334155', background: '#fff', border: '1px solid rgba(15,23,42,0.1)', padding: '6px 13px', borderRadius: '100px' }}>
-              <span className="status-dot-green"></span>
-              Hi, I'm Omogo Peter Onyedika, a software engineer
-            </div>
             <h1 className="fade-in-2" style={{ fontSize: 'clamp(34px, 6vw, 64px)', fontWeight: 900, lineHeight: 1.06, letterSpacing: '-0.04em', color: INK, marginBottom: '22px' }}>
               You bring the idea.<br />
               I build the software <span style={{ color: PINK }}>that holds it up.</span>
@@ -109,7 +105,6 @@ export default function HomePage() {
 
       {/* SERVICES */}
       <section id="services" className="site-container section-pad">
-        <Eyebrow>What I do</Eyebrow>
         <Heading>The hard parts, handled.</Heading>
         <Lead>Most products don't stall at the idea stage. They stall when the system underneath can't keep up. That's where I come in.</Lead>
         <div data-reveal-group className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
@@ -138,7 +133,6 @@ export default function HomePage() {
       {/* WORK */}
       <section id="work" style={glass}>
         <div className="site-container section-pad">
-          <Eyebrow>Selected work</Eyebrow>
           <Heading>Things I've shipped.</Heading>
           <Lead>A couple of recent favourites. There's plenty more on the work page.</Lead>
           <div data-reveal-group className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7">
@@ -172,7 +166,6 @@ export default function HomePage() {
 
       {/* MOBILE APPS */}
       <section id="apps" className="site-container section-pad">
-        <Eyebrow>Mobile apps</Eyebrow>
         <Heading>Apps people carry in their pocket.</Heading>
         <Lead>I build for phones too, mostly in Flutter. Swipe through a few of the screens.</Lead>
         <div data-reveal-group className="flex flex-col gap-6">
@@ -186,7 +179,6 @@ export default function HomePage() {
 
       {/* PROCESS */}
       <section className="site-container section-pad">
-        <Eyebrow>How it works</Eyebrow>
         <Heading>Working with me, step by step.</Heading>
         <Lead>No mystery, no disappearing for three months. Here's what to expect.</Lead>
         <ol data-reveal-group className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 list-none m-0 p-0">
@@ -208,7 +200,6 @@ export default function HomePage() {
       {/* TECH STACK */}
       <section id="tech" style={glass}>
         <div className="site-container section-pad">
-          <Eyebrow>What I work with</Eyebrow>
           <Heading>Tools I reach for.</Heading>
           <Lead>I pick what fits the job, not what's trending. These are the ones I use most, all of them tested in production.</Lead>
           <div data-reveal-group className="grid gap-4 mb-7 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
@@ -256,7 +247,6 @@ export default function HomePage() {
       <section id="team" className="site-container section-pad">
         <div data-reveal className="grid grid-cols-1 lg:grid-cols-2 overflow-hidden" style={card}>
           <div className="min-w-0 order-2 lg:order-1 p-6 sm:p-10 lg:p-14 flex flex-col justify-center">
-            <Eyebrow>About me</Eyebrow>
             <h2 style={{ fontSize: 'clamp(28px, 5vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1.08, color: INK, marginBottom: '20px' }}>Hi, I'm Peter.</h2>
             <p style={{ fontSize: '15px', lineHeight: 1.75, color: MUTED, marginBottom: '18px' }}>
               I'm <strong style={{ color: INK }}>Omogo Peter Onyedika</strong>. I've spent 5+ years building software for fintech companies, startups, nonprofits and data platforms across Africa and beyond, and I'm the founder of Japa Coach, YouExtractor, Gigora Network and Sadar Properties.

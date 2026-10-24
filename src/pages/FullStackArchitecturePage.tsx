@@ -1,6 +1,6 @@
 import React from 'react'
 import ServiceLayout from '../components/ServiceLayout'
-import { INK, PINK, card, glass, Eyebrow, Heading } from '../components/ui'
+import { INK, PINK, card, glass, Heading } from '../components/ui'
 
 const stack = [
   { cat: 'Frontend & mobile', icon: 'fa-display', items: ['React', 'Vite', 'TypeScript', 'Tailwind CSS', 'Blade + Alpine.js', 'Flutter', 'Expo React Native', 'Capacitor'] },
@@ -44,7 +44,6 @@ export default function FullStackArchitecturePage() {
       extra={
         <section style={glass}>
           <div className="site-container section-pad">
-            <Eyebrow>Technologies</Eyebrow>
             <Heading>The stack the projects actually run on.</Heading>
             <div data-reveal-group className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 mt-10">
               {stack.map((g) => (
