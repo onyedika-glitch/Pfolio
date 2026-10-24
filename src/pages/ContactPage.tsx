@@ -1,135 +1,118 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Seo from '../components/Seo'
 import Footer from '../components/Footer'
+import { PINK, INK, MUTED, card, glass } from '../components/ui'
+
+const EMAIL = 'omogopeter@devomogo.tech'
+
+const ways = [
+  { icon: 'fa-envelope', title: 'Email', body: 'I usually reply within 24 hours.', action: { label: EMAIL, href: `mailto:${EMAIL}` } },
+  { icon: 'fa-video', title: 'Intro call', body: "An hour together. You walk me through what you're building, and I ask about your goals, your users and what's getting in the way." },
+  { icon: 'fa-globe', title: 'Where I work', body: 'London-informed. Africa-built. Working with clients across the UK, Europe, and Africa.' },
+]
+
+const socials = [
+  { href: 'https://www.linkedin.com/in/webdev-omogo-5a6980345', icon: 'fab fa-linkedin-in', label: 'LinkedIn' },
+  { href: 'https://github.com/onyedika-glitch', icon: 'fab fa-github', label: 'GitHub' },
+  { href: 'https://x.com/peteromogo2', icon: 'fab fa-x-twitter', label: 'X' },
+]
+
+const field: React.CSSProperties = { width: '100%', padding: '13px 16px', borderRadius: '12px', border: '1px solid #E2E8F0', fontSize: '14px', background: '#F8FAFC', outline: 'none', boxSizing: 'border-box', fontFamily: 'inherit', color: INK }
+const label: React.CSSProperties = { fontSize: '12.5px', fontWeight: 600, color: '#334155', marginBottom: '6px', display: 'block' }
 
 export default function ContactPage() {
+  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setForm({ ...form, [k]: e.target.value })
+
+  // No backend: hand the message to the visitor's email app, already filled in.
+  const send = (e: React.FormEvent) => {
+    e.preventDefault()
+    const subject = `Project enquiry from ${form.name || 'your website'}`
+    const body = `${form.message}\n\n${form.name}${form.email ? ` (${form.email})` : ''}`
+    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  }
+
   return (
-    <div style={{ fontFamily: 'Inter, sans-serif', color: '#0F172A' }}>
+    <div style={{ fontFamily: 'Inter, sans-serif', color: INK }}>
       <Navbar />
       <Seo
         title="Contact Omogo Peter Onyedika | Start a Project | DevOmogo"
-        description="Get in touch with Omogo Peter Onyedika to start a project: email omogopeter@devomogo.tech. Full-stack, fintech, healthcare and AI development."
+        description="Get in touch with Omogo Peter Onyedika to start a project: email omogopeter@devomogo.tech. Full-stack, fintech and AI development."
         keywords="contact DevOmogo, start a project, hire software engineer, omogopeter@devomogo.tech"
       />
 
-      {/* HERO */}
-      <section style={{ background: 'transparent', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>
-        <div className="site-container relative z-10">
-          <div className="inline-flex items-center gap-2 mb-6 fade-in" style={{ background: '#fff', border: '1px solid rgba(190,24,93,0.18)', padding: '6px 12px', borderRadius: '100px', fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#BE185D' }}>
-            <span style={{ display: 'block', width: '6px', height: '6px', borderRadius: '50%', background: '#BE185D' }}></span>
-            Say hello
+      {/* HERO + FORM */}
+      <section className="site-container pt-28 md:pt-36 lg:pt-44 pb-16 md:pb-24">
+        <div className="grid gap-10 lg:gap-14 grid-cols-1 lg:grid-cols-2 items-start">
+          <div className="min-w-0">
+            <div className="fade-in inline-flex items-center gap-2 mb-6" style={{ fontSize: '12.5px', fontWeight: 600, color: '#334155', background: '#fff', border: '1px solid rgba(15,23,42,0.1)', padding: '6px 13px', borderRadius: '100px' }}>
+              <span style={{ display: 'block', width: '7px', height: '7px', borderRadius: '50%', background: PINK }}></span>
+              Say hello
+            </div>
+            <h1 className="fade-in-2" style={{ fontSize: 'clamp(34px, 6vw, 64px)', fontWeight: 900, lineHeight: 1.06, letterSpacing: '-0.04em', color: INK, marginBottom: '22px' }}>
+              Got an idea? <span style={{ color: PINK }}>Let's talk it through.</span>
+            </h1>
+            <p className="fade-in-3" style={{ fontSize: 'clamp(15px, 1.5vw, 18px)', fontWeight: 500, color: '#1E293B', lineHeight: 1.7, marginBottom: '32px', maxWidth: '560px' }}>
+              It all starts with an hour-long call. No pitch decks, no sales pressure, just an honest conversation with someone who has shipped real products to real users.
+            </p>
+            <div className="fade-in-4 flex flex-col gap-3">
+              {ways.map((w) => (
+                <div key={w.title} className="flex items-start gap-4 p-5" style={card}>
+                  <div className="shrink-0" style={{ width: '42px', height: '42px', background: '#FDF2F8', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <i className={`fas ${w.icon}`} style={{ fontSize: '16px', color: PINK }}></i>
+                  </div>
+                  <div className="min-w-0">
+                    <div style={{ fontSize: '15px', fontWeight: 800, color: INK, marginBottom: '3px' }}>{w.title}</div>
+                    {w.action && (
+                      <a href={w.action.href} className="no-underline" style={{ fontSize: '14px', fontWeight: 700, color: PINK, wordBreak: 'break-all' }}>{w.action.label}</a>
+                    )}
+                    <p style={{ fontSize: '14px', lineHeight: 1.6, color: MUTED, marginTop: w.action ? '2px' : 0 }}>{w.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          <h1 className="fade-in-2" style={{ fontSize: 'clamp(32px, 8vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '24px', maxWidth: '900px' }}>
-            Got an idea?<br />Let's talk it through.
-          </h1>
-          <p className="fade-in-3" style={{ fontSize: '18px', color: '#1E293B', lineHeight: 1.6, maxWidth: '640px', marginBottom: '48px' }}>
-            It all starts with an hour-long call. No pitch decks, no sales pressure, just an honest conversation with someone who has shipped real products to real users.
-          </p>
-        </div>
-      </section>
 
-      {/* CONTACT OPTIONS */}
-      <section style={{ background: 'rgba(255,255,255,0.82)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
-        <div className="site-container">
-          <div className="grid gap-8 md:gap-12 grid-cols-1 md:grid-cols-2">
+          <form onSubmit={send} className="fade-in-3 p-6 sm:p-8 lg:p-10 flex flex-col gap-5" style={card}>
             <div>
-              <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 36px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '20px' }}>Get in touch</h2>
-              <p style={{ fontSize: '16px', lineHeight: 1.75, color: '#64748B', marginBottom: '40px', maxWidth: '480px' }}>
-                Tell me about your project. I'll get back to you within 24 hours to set up a call.
-              </p>
-
-              <div className="flex flex-col gap-8">
-                <div className="flex items-start gap-4">
-                  <div style={{ width: '48px', height: '48px', background: 'rgba(190,24,93,0.07)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                    <i className="fas fa-envelope" style={{ fontSize: '18px', color: '#0F172A' }}></i>
-                  </div>
-                  <div>
-                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#0F172A', marginBottom: '4px' }}>Email</div>
-                    <a href="mailto:omogopeter@devomogo.tech" className="no-underline inline-flex items-center gap-1.5 transition-all duration-200 max-w-full"
-                      style={{ fontSize: '12px', fontWeight: 600, color: '#fff', background: '#BE185D', padding: '8px 12px', borderRadius: '8px', wordBreak: 'break-all' }}>
-                      omogopeter@devomogo.tech
-                    </a>
-                    <p style={{ fontSize: '13px', color: '#64748B', marginTop: '4px' }}>I usually reply within 24 hours.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div style={{ width: '48px', height: '48px', background: 'rgba(190,24,93,0.07)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                    <i className="fas fa-calendar" style={{ fontSize: '18px', color: '#0F172A' }}></i>
-                  </div>
-                  <div>
-                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#0F172A', marginBottom: '4px' }}>Intro call</div>
-                    <p style={{ fontSize: '15px', color: '#64748B', margin: 0 }}>
-                      An hour together. You walk me through what you're building, and I ask about your goals, your users and what's getting in the way.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div style={{ width: '48px', height: '48px', background: 'rgba(190,24,93,0.07)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                    <i className="fas fa-globe" style={{ fontSize: '18px', color: '#0F172A' }}></i>
-                  </div>
-                  <div>
-                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#0F172A', marginBottom: '4px' }}>Based in</div>
-                    <p style={{ fontSize: '15px', color: '#64748B', margin: 0 }}>
-                      London-informed. Africa-built. Working with clients across the UK, Europe, and Africa.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <h2 style={{ fontSize: '22px', fontWeight: 900, letterSpacing: '-0.03em', color: INK, marginBottom: '6px' }}>Send me a message</h2>
+              <p style={{ fontSize: '14px', color: MUTED }}>This opens your email app with everything filled in.</p>
             </div>
-
-            <div className="p-6 md:p-10" style={{ background: '#F1F5F9', border: '1px solid #E2E8F0', borderRadius: '12px' }}>
-              <h3 style={{ fontSize: '13px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#64748B', marginBottom: '24px' }}>Send me a message</h3>
-              <form className="flex flex-col gap-6" onSubmit={e => e.preventDefault()}>
-                <div>
-                  <label style={{ fontSize: '12px', fontWeight: 600, color: '#334155', marginBottom: '6px', display: 'block' }}>Name</label>
-                  <input type="text" placeholder="Your name"
-                    style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #E2E8F0', fontSize: '14px', background: '#fff', outline: 'none', boxSizing: 'border-box' }} />
-                </div>
-                <div>
-                  <label style={{ fontSize: '12px', fontWeight: 600, color: '#334155', marginBottom: '6px', display: 'block' }}>Email</label>
-                  <input type="email" placeholder="you@example.com"
-                    style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #E2E8F0', fontSize: '14px', background: '#fff', outline: 'none', boxSizing: 'border-box' }} />
-                </div>
-                <div>
-                  <label style={{ fontSize: '12px', fontWeight: 600, color: '#334155', marginBottom: '6px', display: 'block' }}>Message</label>
-                  <textarea rows={5} placeholder="Tell me about your project..."
-                    style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #E2E8F0', fontSize: '14px', background: '#fff', outline: 'none', resize: 'vertical', boxSizing: 'border-box', fontFamily: 'inherit' }} />
-                </div>
-                <a href="mailto:omogopeter@devomogo.tech"
-                  className="inline-flex items-center justify-center gap-2 no-underline transition-all duration-200"
-                  style={{ background: '#0F172A', color: '#fff', padding: '14px 32px', borderRadius: '8px', fontSize: '15px', fontWeight: 700, letterSpacing: '-0.01em' }}>
-                  Send Message <i className="fas fa-arrow-right" style={{ fontSize: '12px' }}></i>
-                </a>
-              </form>
+            <div>
+              <label htmlFor="c-name" style={label}>Your name</label>
+              <input id="c-name" type="text" required placeholder="Ada Obi" value={form.name} onChange={set('name')} style={field} />
             </div>
-          </div>
+            <div>
+              <label htmlFor="c-email" style={label}>Your email</label>
+              <input id="c-email" type="email" placeholder="you@example.com" value={form.email} onChange={set('email')} style={field} />
+            </div>
+            <div>
+              <label htmlFor="c-msg" style={label}>What are you building?</label>
+              <textarea id="c-msg" rows={6} required placeholder="A few lines about the project, your timeline and anything that's worrying you." value={form.message} onChange={set('message')} style={{ ...field, resize: 'vertical' }} />
+            </div>
+            <button type="submit" className="inline-flex items-center justify-center gap-2 border-0 cursor-pointer"
+              style={{ background: INK, color: '#fff', padding: '15px 28px', borderRadius: '100px', fontSize: '15px', fontWeight: 700, fontFamily: 'inherit' }}>
+              Send message <i className="fas fa-arrow-right" style={{ fontSize: '12px' }}></i>
+            </button>
+          </form>
         </div>
       </section>
 
       {/* SOCIAL */}
-      <section style={{ background: 'rgba(255,255,255,0.6)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', padding: '80px 0' }}>
-        <div className="site-container flex flex-col sm:flex-row sm:items-center sm:justify-between flex-wrap gap-6">
+      <section style={glass}>
+        <div className="site-container py-12 md:py-16 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
           <div>
-            <h2 style={{ fontSize: '28px', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '8px' }}>Follow along</h2>
-            <p style={{ fontSize: '15px', color: '#64748B' }}>See what I'm building and sharing.</p>
+            <h2 style={{ fontSize: 'clamp(22px, 3vw, 28px)', fontWeight: 900, letterSpacing: '-0.04em', color: INK, marginBottom: '6px' }}>Follow along</h2>
+            <p style={{ fontSize: '15px', color: MUTED }}>See what I'm building and sharing.</p>
           </div>
-          <div className="flex gap-4">
-            <a href="https://x.com/peteromogo2" target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 no-underline transition-all duration-200"
-              style={{ fontSize: '14px', fontWeight: 600, color: '#fff', background: '#0F172A', padding: '12px 24px', borderRadius: '8px' }}>
-              <i className="fab fa-x-twitter"></i>
-              X (Twitter)
-            </a>
-            <a href="https://github.com/onyedika-glitch" target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 no-underline transition-all duration-200"
-              style={{ fontSize: '14px', fontWeight: 600, color: '#fff', background: '#0F172A', padding: '12px 24px', borderRadius: '8px' }}>
-              <i className="fab fa-github"></i>
-              GitHub
-            </a>
+          <div className="flex flex-wrap gap-3">
+            {socials.map((s) => (
+              <a key={s.href} href={s.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 no-underline"
+                style={{ fontSize: '14px', fontWeight: 600, color: INK, background: '#fff', border: '1px solid rgba(15,23,42,0.12)', padding: '12px 22px', borderRadius: '100px' }}>
+                <i className={s.icon}></i> {s.label}
+              </a>
+            ))}
           </div>
         </div>
       </section>

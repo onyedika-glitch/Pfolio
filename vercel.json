@@ -2,7 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/work/(aning|atom-group|caremandate|chef-academy|eportal|floorhosting|handyman-ng|ilearnova|more|pension-app|placebet247|restaurant-ui|selfany|sportal|student-board)", "destination": "/work", "permanent": true }
+    { "source": "/work/(aning|atom-group|caremandate|chef-academy|eportal|floorhosting|handyman-ng|ilearnova|more|pension-app|placebet247|restaurant-ui|selfany|sportal|student-board|unlimited-healthcare)", "destination": "/work", "permanent": true }
   ],
   "rewrites": [
     {

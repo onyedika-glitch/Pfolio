@@ -73,9 +73,9 @@ export default function DiscountClubCaymanCaseStudy() {
       resultBody="Discount Club Cayman is live at discountclubcayman.com with memberships, discount offers, certificates, travel deals, and a full admin dashboard."
       founderNote1="The platform had to work for five different audiences without becoming five different products. The role system kept it to one codebase."
       founderNote2="Certificate redemption was the feature that mattered most: an offline-friendly, scan-to-verify flow businesses actually use."
-      nextCaseTitle="Unlimited Healthcare: Management System"
-      nextCaseDesc="Healthcare management system with appointments, clinical modules, and mobile apps."
-      nextCaseLink="/work/unlimited-healthcare"
+      nextCaseTitle="SSABHI: Brain Health Initiative"
+      nextCaseDesc="WordPress feature work on a live nonprofit: membership, programs, jobs, and Elementor pages."
+      nextCaseLink="/work/ssabhi"
       accentColor="#B45309"
       codeBg="#1A0800"
     />

@@ -20,7 +20,6 @@ const projectItems = [
   ['YouExtractor: Tutorial to Course & Code Generator', '/work/youextractor'],
   ['Gigora Network: Freelance Marketplace', '/work/gigora-network'],
   ['Discount Club Cayman: Membership Platform', '/work/discount-club-cayman'],
-  ['Unlimited Healthcare: Management System', '/work/unlimited-healthcare'],
   ['SSABHI: Brain Health Initiative', '/work/ssabhi'],
   ['Sparks Ventures Hub: Business Incubation Hub', '/work/sparks-ventures'],
   ['Sparks EFP: 4-Week Foundation Programme', '/work/sparks-efp'],
@@ -31,7 +30,7 @@ const projectItems = [
 const serviceItems = [
   ['Full-Stack Architecture', '/services/fullstackarchitecture'],
   ['Fintech Systems', '/services/fintechsystems'],
-  ['Healthcare Platforms', '/services/healthcareplatforms'],
+  ['Healthcare & Nonprofits', '/services/healthcareplatforms'],
   ['AI Integration', '/services/aiintegration'],
 ]
 
@@ -55,7 +54,7 @@ const routes = [
   {
     path: '/services',
     title: 'Services | Full-Stack, Fintech, Healthcare & AI Development | DevOmogo',
-    description: 'What Omogo Peter Onyedika builds: full-stack architecture (Laravel, React, NestJS), fintech systems (Stripe, Paystack, ledgers), healthcare platforms (appointments, HIPAA-aligned), and AI integration (LLM pipelines).',
+    description: 'What Omogo Peter Onyedika builds: full-stack architecture (Laravel, React, NestJS), fintech systems (Stripe, Paystack, ledgers), healthcare and nonprofit websites, and AI integration (LLM pipelines).',
     keywords: 'full-stack development services, fintech development, healthcare software development, AI integration, Laravel, React, NestJS, Node.js',
     image: `${BASE}/og-image.jpg`,
     jsonLd: { '@context': 'https://schema.org', '@type': 'ItemList', itemListElement: serviceItems.map(([name, p], i) => ({ '@type': 'ListItem', position: i + 1, name, url: BASE + p })) },
@@ -98,9 +97,9 @@ const routes = [
   },
   {
     path: '/services/healthcareplatforms',
-    title: 'Healthcare Platform Development | Appointment Systems, NestJS, Mobile | DevOmogo',
-    description: 'Healthcare management system development: appointment booking, recurring appointments and reminders, clinical modules, chat, and React web + Expo mobile apps on a NestJS backend.',
-    keywords: 'healthcare software development, appointment booking system, NestJS, TypeORM, React, Expo, mobile healthcare app',
+    title: 'Healthcare & Nonprofit Websites | WordPress, Membership, Programmes | DevOmogo',
+    description: 'Websites for health organisations and nonprofits by Omogo Peter Onyedika: membership and registration, programme and webinar pages, forms, jobs and content your team can edit.',
+    keywords: 'healthcare website development, nonprofit website, WordPress developer, Elementor, membership website, Fluent Forms',
     image: `${BASE}/og-image.jpg`,
   },
   {
@@ -130,13 +129,6 @@ const routes = [
     description: 'Membership-based discount and benefits platform for the Cayman Islands: role-based dashboards, Stripe and PayPal billing, digital QR membership, certificates, and travel deals.',
     keywords: 'membership platform development, discount platform, Stripe developer, QR membership card, Flutter app',
     image: img('discount_club_cayman_membership_savings_platform_dashboard_amber.jpg'),
-  },
-  {
-    path: '/work/unlimited-healthcare',
-    title: 'Unlimited Healthcare: Management System | Case Study | DevOmogo',
-    description: 'Healthcare management system with a React + TypeScript web app, an Expo React Native mobile app, and a NestJS backend: appointments, recurring bookings, reminders, clinical modules, and chat.',
-    keywords: 'healthcare management system, appointment booking system, NestJS developer, TypeORM, Expo mobile app',
-    image: img('unlimited_healthcare_uhc_clinical_ai_mobile_app_teal.jpg'),
   },
   {
     path: '/work/ssabhi',

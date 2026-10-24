@@ -14,7 +14,6 @@ import ContactPage from './pages/ContactPage'
 import YouExtractorCaseStudy from './pages/YouExtractorCaseStudy'
 import GigoraNetworkPage from './pages/GigoraNetworkPage'
 import DiscountClubCayman from './pages/DiscountClubCaymanCaseStudy'
-import UnlimitedHealthcarePage from './pages/UnlimitedHealthcarePage'
 import SparksVenturesPage from './pages/SparksVenturesPage'
 import SparksEFPPage from './pages/SparksEFPPage'
 import SparksFunnelPage from './pages/SparksFunnelPage'
@@ -43,7 +42,6 @@ export default function App() {
       <Route path="/work/youextractor" element={<YouExtractorCaseStudy />} />
       <Route path="/work/gigora-network" element={<GigoraNetworkPage />} />
       <Route path="/work/discount-club-cayman" element={<DiscountClubCayman />} />
-      <Route path="/work/unlimited-healthcare" element={<UnlimitedHealthcarePage />} />
       <Route path="/work/sparks-ventures" element={<SparksVenturesPage />} />
       <Route path="/work/sparks-efp" element={<SparksEFPPage />} />
       <Route path="/work/sparks-funnel" element={<SparksFunnelPage />} />

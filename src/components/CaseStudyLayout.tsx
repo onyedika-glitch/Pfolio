@@ -128,7 +128,6 @@ export default function CaseStudyLayout({
   const shownValues = new Set(stats.map((m) => String(m.value)))
   const extraResults = resultCards.filter((r) => !isLive(r.value) && !shownValues.has(String(r.value)))
 
-  const category = eyebrow.replace(/^Case Study\s*·\s*/i, '')
   const stack = metaItems.find((m) => m.label.toLowerCase() === 'stack')
   const facts = metaItems.filter((m) => m !== stack)
 
@@ -154,10 +153,6 @@ export default function CaseStudyLayout({
         </Link>
         <div className="grid items-center gap-10 lg:gap-14 grid-cols-1 lg:grid-cols-2">
           <div className="min-w-0">
-            <div className="fade-in inline-flex items-center gap-2 mb-6" style={{ fontSize: '12.5px', fontWeight: 600, color: '#334155', background: '#fff', border: '1px solid rgba(15,23,42,0.1)', padding: '6px 13px', borderRadius: '100px' }}>
-              <span style={{ display: 'block', width: '7px', height: '7px', borderRadius: '50%', background: accentColor }}></span>
-              {category}
-            </div>
             <h1 className="fade-in-2" style={{ fontSize: 'clamp(34px, 5.5vw, 60px)', fontWeight: 900, lineHeight: 1.06, letterSpacing: '-0.04em', color: INK, marginBottom: '22px' }}>{headline}</h1>
             <p className="fade-in-3" style={{ fontSize: 'clamp(15px, 1.5vw, 18px)', fontWeight: 500, color: '#1E293B', lineHeight: 1.7, marginBottom: '30px', maxWidth: '600px' }}>{subhead}</p>
             {heroLinks.length > 0 && (
@@ -343,7 +338,6 @@ export default function CaseStudyLayout({
           <Link to={nextCaseLink} data-reveal className="grid grid-cols-1 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] overflow-hidden no-underline transition-all duration-300 hover:-translate-y-1" style={card}>
             {next && <img src={`/assets/${next.img}`} alt={nextCaseTitle} className="block w-full h-48 md:h-full" style={{ objectFit: 'cover', objectPosition: 'top' }} />}
             <div className="p-6 md:p-10 flex flex-col justify-center">
-              {next && <div style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: next.catColor, marginBottom: '10px' }}>{next.catLabel}</div>}
               <h3 style={{ fontSize: 'clamp(20px, 3vw, 28px)', fontWeight: 900, letterSpacing: '-0.035em', color: INK, marginBottom: '10px' }}>{nextCaseTitle}</h3>
               <p style={{ fontSize: '15px', color: MUTED, lineHeight: 1.6, marginBottom: '22px' }}>{nextCaseDesc}</p>
               <span className="inline-flex items-center gap-2 self-start" style={{ fontSize: '14px', fontWeight: 600, color: '#fff', background: INK, padding: '12px 22px', borderRadius: '100px' }}>

@@ -28,7 +28,7 @@ export default function Footer() {
               <Logo size={72} variant="blue" textColor="rgba(255,255,255,0.9)" subColor="rgba(236,72,153,0.8)" />
             </Link>
             <p style={{ fontSize: '13.5px', lineHeight: 1.7, color: 'rgba(255,255,255,0.4)', maxWidth: '320px', marginTop: '20px', marginBottom: '28px' }}>
-              Senior software engineer building fintech, healthcare and AI systems. London-informed. Africa-built.
+              Senior software engineer building fintech, AI and full-stack products. London-informed. Africa-built.
             </p>
             <div className="flex gap-3">
               {['linkedin-in', 'github', 'x-twitter'].map((icon) => (
@@ -55,7 +55,7 @@ export default function Footer() {
               {[
                 { label: 'Full-Stack Architecture', path: '/services/fullstackarchitecture' },
                 { label: 'Fintech Systems', path: '/services/fintechsystems' },
-                { label: 'Healthcare Platforms', path: '/services/healthcareplatforms' },
+                { label: 'Healthcare & Nonprofits', path: '/services/healthcareplatforms' },
                 { label: 'AI Integration', path: '/services/aiintegration' },
               ].map(item => (
                 <li key={item.label}><Link to={item.path} style={btnStyle}>{item.label}</Link></li>

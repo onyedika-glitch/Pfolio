@@ -17,7 +17,6 @@ const projects = [
   { name: 'Sparks EFP', link: '/work/sparks-efp' },
   { name: 'Sparks Funnel', link: '/work/sparks-funnel' },
   { name: 'Sadar Properties', link: '/work/sadar-properties' },
-  { name: 'Unlimited Healthcare', link: '/work/unlimited-healthcare' },
   { name: 'SSABHI', link: '/work/ssabhi' },
   { name: 'Discount Club Cayman', link: '/work/discount-club-cayman' },
 ]
@@ -26,7 +25,7 @@ const recent = [
   { name: 'Japa Coach', what: 'AI speaking & writing practice for IELTS', link: '/work/japa-coach' },
   { name: 'YouExtractor', what: 'Turns coding tutorials into courses and code', link: '/work/youextractor' },
   { name: 'Discount Club Cayman', what: 'Membership and savings platform', link: '/work/discount-club-cayman' },
-  { name: 'Unlimited Healthcare', what: 'Clinical app for a care provider', link: '/work/unlimited-healthcare' },
+  { name: 'Gigora Network', what: 'Freelance marketplace with escrow payments', link: '/work/gigora-network' },
 ]
 
 export default function HomePage() {
@@ -53,7 +52,7 @@ export default function HomePage() {
               I build the software <span style={{ color: PINK }}>that holds it up.</span>
             </h1>
             <p className="fade-in-3" style={{ fontSize: 'clamp(15px, 1.5vw, 18px)', fontWeight: 500, color: '#1E293B', lineHeight: 1.7, marginBottom: '30px', maxWidth: '560px' }}>
-              Payments that need to add up. Patient records that can't go missing. AI features people actually use. That's the kind of work I love. I only take on a few projects at a time, so you get my full attention from the first call to launch day, and after.
+              Payments that need to add up. Marketplaces where everyone gets paid. AI features people actually use. That's the kind of work I love. I only take on a few projects at a time, so you get my full attention from the first call to launch day, and after.
             </p>
             <div className="fade-in-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <Link to="/work" className="inline-flex items-center justify-center gap-2 no-underline transition-all duration-200" style={{ background: INK, color: '#fff', padding: '15px 28px', borderRadius: '100px', fontSize: '14px', fontWeight: 600 }}>
@@ -117,7 +116,7 @@ export default function HomePage() {
           {[
             { num: '01', icon: 'fa-layer-group', title: 'Full-Stack Architecture', desc: 'From the database to the buttons your users tap. I plan the whole thing so it’s easy to grow, easy to change, and easy for your next developer to pick up.', tags: ['Node.js', 'React', 'PostgreSQL', 'GraphQL'] },
             { num: '02', icon: 'fa-landmark', title: 'Fintech Systems', desc: 'Wallets, payments, ledgers and reports that reconcile down to the last cent. Built so your users trust it and your auditors don’t lose sleep.', tags: ['PCI-DSS', 'Real-time Ledger', 'Stripe', 'Paystack'] },
-            { num: '03', icon: 'fa-heart-pulse', title: 'Healthcare Platforms', desc: 'Tools clinicians actually want to open. Patient records and clinical workflows that keep data private by default, with a clear trail of who touched what.', tags: ['HIPAA', 'HL7 FHIR', 'EHR', 'DICOM'] },
+            { num: '03', icon: 'fa-heart-pulse', title: 'Healthcare & Nonprofits', desc: 'Websites health organisations can run themselves: membership, programmes, forms and content your staff can update without calling a developer.', tags: ['WordPress', 'Elementor', 'Fluent Forms', 'Membership'] },
           ].map((s) => (
             <div key={s.title} data-reveal className="p-6 md:p-8" style={card}>
               <div className="flex items-center justify-between mb-5">
@@ -152,7 +151,6 @@ export default function HomePage() {
                   <img src={`/assets/${w.img}`} alt={w.alt} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <div className="p-5 md:p-8">
-                  <div style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: PINK, marginBottom: '10px' }}>{w.cat}</div>
                   <h3 style={{ fontSize: 'clamp(18px, 3vw, 22px)', fontWeight: 800, letterSpacing: '-0.03em', color: INK, marginBottom: '10px' }}>{w.title}</h3>
                   <p style={{ fontSize: '14px', color: MUTED, lineHeight: 1.65, marginBottom: '20px' }}>{w.desc}</p>
                   <Link to={w.link} onClick={(e) => e.stopPropagation()} className="inline-flex items-center gap-1.5 no-underline transition-all duration-200"
@@ -261,13 +259,13 @@ export default function HomePage() {
             <Eyebrow>About me</Eyebrow>
             <h2 style={{ fontSize: 'clamp(28px, 5vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1.08, color: INK, marginBottom: '20px' }}>Hi, I'm Peter.</h2>
             <p style={{ fontSize: '15px', lineHeight: 1.75, color: MUTED, marginBottom: '18px' }}>
-              I'm <strong style={{ color: INK }}>Omogo Peter Onyedika</strong>. I've spent 5+ years building software for healthcare providers, fintech companies and data platforms across Africa and beyond, and I'm the founder of Japa Coach, YouExtractor, Gigora Network and Sadar Properties.
+              I'm <strong style={{ color: INK }}>Omogo Peter Onyedika</strong>. I've spent 5+ years building software for fintech companies, startups, nonprofits and data platforms across Africa and beyond, and I'm the founder of Japa Coach, YouExtractor, Gigora Network and Sadar Properties.
             </p>
             <p style={{ fontSize: '15px', lineHeight: 1.75, color: MUTED, marginBottom: 0 }}>
               I don't say yes to everything. I take on a few projects at a time, so each one gets the focus it deserves, and I write the code myself.
             </p>
             <div className="flex flex-wrap gap-8 pt-8 mt-8" style={{ borderTop: '1px solid #F1F5F9' }}>
-              {[['5+', 'Years building'], ['10', 'Products shipped'], ['4', 'Clients right now']].map(([num, label]) => (
+              {[['5+', 'Years building'], ['9', 'Products shipped'], ['4', 'Clients right now']].map(([num, label]) => (
                 <div key={label}>
                   <div style={{ fontSize: '28px', fontWeight: 900, letterSpacing: '-0.05em', color: PINK }}>{num}</div>
                   <div style={{ fontSize: '12px', fontWeight: 500, color: '#64748B', marginTop: '2px' }}>{label}</div>
