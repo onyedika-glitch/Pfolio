@@ -48,7 +48,7 @@ export default function TechStackPage() {
     <div style={{ fontFamily: 'Inter, sans-serif', color: '#0F172A' }}>
       <Navbar />
       <Seo
-        title="Tech Stack — Laravel, React, NestJS, Node.js, PostgreSQL, MySQL, MongoDB | DevOmogo"
+        title="Tech Stack | Laravel, React, NestJS, Node.js, PostgreSQL, MySQL, MongoDB | DevOmogo"
         description="The tools Omogo Peter Onyedika builds with: Laravel, PHP, NestJS, Node.js/Express, React + Vite + TypeScript, Flutter, Expo, PostgreSQL, MySQL, MongoDB, Stripe, Paystack, Docker, Vercel, and Render."
         keywords="tech stack, Laravel, React, NestJS, Node.js, TypeScript, Flutter, PostgreSQL, MySQL, MongoDB, Stripe, Paystack"
       />

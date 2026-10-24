@@ -22,7 +22,7 @@ export default function FullStackArchitecturePage() {
     <div style={{ fontFamily: 'Inter, sans-serif', color: '#0F172A' }}>
       <Navbar />
       <Seo
-        title="Full-Stack Architecture — Laravel, React, NestJS, Node.js Development | DevOmogo"
+        title="Full-Stack Architecture | Laravel, React, NestJS, Node.js Development | DevOmogo"
         description="End-to-end full-stack development with the stack Omogo Peter Onyedika actually ships: Laravel, NestJS, Node.js, React + TypeScript, Flutter, Expo, PostgreSQL, MySQL, MongoDB, Stripe, and Paystack."
         keywords="full-stack developer, Laravel development, React development, NestJS, Node.js developer, PostgreSQL, web application development"
       />
@@ -57,7 +57,7 @@ export default function FullStackArchitecturePage() {
             <div>
               <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '20px' }}>What I build</h2>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '28px' }}>
-                The stack below isn't aspirational — it's the stack the shipped projects in this portfolio actually run on. Laravel for structured, long-lived PHP applications. NestJS with TypeORM for typed, modular TypeScript backends. Express and Node.js for real-time WebSocket systems. React + Vite + TypeScript for the frontends, with Flutter and Expo for mobile.
+                The stack below isn't aspirational. It's the stack the shipped projects in this portfolio actually run on. Laravel for structured, long-lived PHP applications. NestJS with TypeORM for typed, modular TypeScript backends. Express and Node.js for real-time WebSocket systems. React + Vite + TypeScript for the frontends, with Flutter and Expo for mobile.
               </p>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '28px' }}>
                 Data lives in PostgreSQL, MySQL, and MongoDB with real migrations, seeders, and connection pools tuned for production. Payments run through Stripe and PayPal, auth through JWT, Laravel Sanctum, and OAuth 2.0, and real-time features through Socket.io.
@@ -89,14 +89,14 @@ export default function FullStackArchitecturePage() {
       <section style={{ background: 'rgba(255,255,255,0.6)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
         <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#BE185D' }}>
-            <span style={{ display: 'block', width: '20px', height: '2px', background: '#BE185D' }}></span>
+            <span style={{ display: 'block', width: '6px', height: '6px', borderRadius: '50%', background: '#BE185D' }}></span>
             How I work
           </div>
           <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '56px' }}>How the shipped systems were built.</h2>
           <div className="grid gap-5 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { num: '01', icon: 'fa-database', title: 'Schema & Contracts First', desc: 'Migrations, data models, and API contracts are defined before the UI. From Mongoose schemas and TypeORM entities to Laravel migrations — the data layer drives the app.' },
-              { num: '02', icon: 'fa-lock', title: 'Auth & Payments Wired In', desc: 'JWT and Sanctum for sessions, OAuth 2.0 for social login, Stripe PaymentIntents and PayPal orders for money — security decisions made at the start, not bolted on.' },
+              { num: '01', icon: 'fa-database', title: 'Schema & Contracts First', desc: 'Migrations, data models, and API contracts are defined before the UI. From Mongoose schemas and TypeORM entities to Laravel migrations, the data layer drives the app.' },
+              { num: '02', icon: 'fa-lock', title: 'Auth & Payments Wired In', desc: 'JWT and Sanctum for sessions, OAuth 2.0 for social login, Stripe PaymentIntents and PayPal orders for money. Security decisions made at the start, not bolted on.' },
               { num: '03', icon: 'fa-bolt', title: 'Real-Time Where It Matters', desc: 'Socket.io WebSocket servers power live messaging (Gigora), replacing REST polling for the parts of the product that change constantly.' },
             ].map((item) => (
               <div key={item.title} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '44px 36px' }}>
@@ -116,7 +116,7 @@ export default function FullStackArchitecturePage() {
       <section style={{ background: 'rgba(255,255,255,0.82)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
         <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#BE185D' }}>
-            <span style={{ display: 'block', width: '20px', height: '2px', background: '#BE185D' }}></span>
+            <span style={{ display: 'block', width: '6px', height: '6px', borderRadius: '50%', background: '#BE185D' }}></span>
             Technologies
           </div>
           <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '48px' }}>The stack the projects actually run on.</h2>
@@ -145,7 +145,7 @@ export default function FullStackArchitecturePage() {
       <section style={{ background: 'rgba(255,255,255,0.6)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
         <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#BE185D' }}>
-            <span style={{ display: 'block', width: '20px', height: '2px', background: '#BE185D' }}></span>
+            <span style={{ display: 'block', width: '6px', height: '6px', borderRadius: '50%', background: '#BE185D' }}></span>
             Proven in Production
           </div>
           <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '48px' }}>Shipped with this stack.</h2>

@@ -10,7 +10,7 @@ export default function FintechSystemsPage() {
     <div style={{ fontFamily: 'Inter, sans-serif', color: '#0F172A' }}>
       <Navbar />
       <Seo
-        title="Fintech Systems Development — Payments, Ledgers, Stripe, Paystack | DevOmogo"
+        title="Fintech Systems Development | Payments, Ledgers, Stripe, Paystack | DevOmogo"
         description="Fintech platform development by Omogo Peter Onyedika: payment integration (Stripe, PayPal, Paystack), membership and billing platforms, real-time equity systems, and secure transaction flows."
         keywords="fintech development, payment integration, Stripe developer, Paystack, membership platform, real-time WebSocket, MongoDB, MySQL"
       />
@@ -77,7 +77,7 @@ export default function FintechSystemsPage() {
       <section style={{ background: 'rgba(255,255,255,0.6)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
         <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#BE185D' }}>
-            <span style={{ display: 'block', width: '20px', height: '2px', background: '#BE185D' }}></span>
+            <span style={{ display: 'block', width: '6px', height: '6px', borderRadius: '50%', background: '#BE185D' }}></span>
             My approach
           </div>
           <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '56px' }}>How I build financial systems.</h2>
@@ -104,7 +104,7 @@ export default function FintechSystemsPage() {
       <section style={{ background: 'rgba(255,255,255,0.82)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
         <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#BE185D' }}>
-            <span style={{ display: 'block', width: '20px', height: '2px', background: '#BE185D' }}></span>
+            <span style={{ display: 'block', width: '6px', height: '6px', borderRadius: '50%', background: '#BE185D' }}></span>
             Related Work
           </div>
           <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '12px' }}>Discount Club Cayman: Membership Platform</h2>

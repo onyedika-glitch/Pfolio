@@ -4,11 +4,15 @@ import CaseStudyLayout from '../components/CaseStudyLayout'
 export default function YouExtractorCaseStudy() {
   return (
     <CaseStudyLayout
+      links={[
+        { label: 'Visit youextractor.me', href: 'https://youextractor.me', icon: 'fas fa-arrow-up-right-from-square' },
+        { label: 'Add to Chrome', href: 'https://chromewebstore.google.com/detail/ihajahjkhnelimamilebbcjibbhghbcn', icon: 'fab fa-chrome' },
+      ]}
       eyebrow="Case Study · AI Developer Tools"
       headline={<>YouExtractor<br />Tutorial → Course &amp; Code Generator</>}
       subhead="A Laravel platform that turns YouTube coding tutorials into structured written guides and complete, runnable code projects using AI."
       metrics={[
-        { value: 'V2.0', label: 'Current Version' },
+        { value: 'Live', label: 'youextractor.me' },
         { value: '4', label: 'AI Providers' },
         { value: '1-Click', label: 'Chrome Extension' },
         { value: 'ZIP', label: 'Runnable Projects' },
@@ -32,7 +36,7 @@ export default function YouExtractorCaseStudy() {
       archSubhead="A Laravel app coordinated around pluggable AI providers."
       archCards={[
         { num: 'Layer 01', icon: 'fa-film', title: 'Video Intake', desc: 'Fetches YouTube metadata and transcripts for any tutorial video, storing extractions in PostgreSQL/MySQL.' },
-        { num: 'Layer 02', icon: 'fa-brain', title: 'AI Extraction', desc: 'Pluggable LLM drivers with provider priority — DeepSeek default, then Claude, Gemini, and OpenAI — coordinated by a PromptFactory and CodeExtractorService.' },
+        { num: 'Layer 02', icon: 'fa-brain', title: 'AI Extraction', desc: 'Pluggable LLM drivers with provider priority: DeepSeek default, then Claude, Gemini, and OpenAI, coordinated by a PromptFactory and CodeExtractorService.' },
         { num: 'Layer 03', icon: 'fa-file-zipper', title: 'Project Packaging', desc: 'ProjectPackager turns generated code into complete, downloadable ZIP projects instead of loose snippets.' },
         { num: 'Layer 04', icon: 'fa-magnifying-glass', title: 'Library & Search', desc: 'Dark-mode dashboard with search and filters over your previously extracted videos and guides.' },
       ]}
@@ -72,7 +76,7 @@ export default function YouExtractorCaseStudy() {
       ]}
       resultBody="YouExtractor is live at youextractor.me: extract video metadata, generate structured tutorials, and download complete runnable project files from any YouTube coding tutorial."
       founderNote1="I built YouExtractor because I wanted to learn faster: instead of scrubbing videos for code, the AI turns the tutorial into a course and a working project."
-      founderNote2="Making the AI layer pluggable mattered — no single provider owns the product, and a provider outage shouldn't stop extractions."
+      founderNote2="Making the AI layer pluggable mattered. No single provider owns the product, and a provider outage shouldn't stop extractions."
       nextCaseTitle="Gigora Network: Web3 Freelance Marketplace"
       nextCaseDesc="Community-driven freelance marketplace with vetted talent and secure escrow."
       nextCaseLink="/work/gigora-network"

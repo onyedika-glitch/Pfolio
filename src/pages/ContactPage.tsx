@@ -9,7 +9,7 @@ export default function ContactPage() {
     <div style={{ fontFamily: 'Inter, sans-serif', color: '#0F172A' }}>
       <Navbar />
       <Seo
-        title="Contact Omogo Peter Onyedika — Start a Project | DevOmogo"
+        title="Contact Omogo Peter Onyedika | Start a Project | DevOmogo"
         description="Get in touch with Omogo Peter Onyedika to start a project: email omogopeter@devomogo.tech. Full-stack, fintech, healthcare and AI development."
         keywords="contact DevOmogo, start a project, hire software engineer, omogopeter@devomogo.tech"
       />

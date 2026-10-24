@@ -10,7 +10,7 @@ export default function HealthcarePlatformsPage() {
     <div style={{ fontFamily: 'Inter, sans-serif', color: '#0F172A' }}>
       <Navbar />
       <Seo
-        title="Healthcare Platform Development — Appointment Systems, NestJS, Mobile | DevOmogo"
+        title="Healthcare Platform Development | Appointment Systems, NestJS, Mobile | DevOmogo"
         description="Healthcare management system development: appointment booking, recurring appointments and reminders, clinical modules, chat, and React web + Expo mobile apps on a NestJS backend."
         keywords="healthcare software development, appointment booking system, NestJS, TypeORM, React, Expo, mobile healthcare app"
       />
@@ -77,7 +77,7 @@ export default function HealthcarePlatformsPage() {
       <section style={{ background: 'rgba(255,255,255,0.6)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
         <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#BE185D' }}>
-            <span style={{ display: 'block', width: '20px', height: '2px', background: '#BE185D' }}></span>
+            <span style={{ display: 'block', width: '6px', height: '6px', borderRadius: '50%', background: '#BE185D' }}></span>
             My approach
           </div>
           <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '56px' }}>How I build healthcare systems.</h2>
@@ -104,14 +104,14 @@ export default function HealthcarePlatformsPage() {
       <section style={{ background: 'rgba(255,255,255,0.82)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
         <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#BE185D' }}>
-            <span style={{ display: 'block', width: '20px', height: '2px', background: '#BE185D' }}></span>
+            <span style={{ display: 'block', width: '6px', height: '6px', borderRadius: '50%', background: '#BE185D' }}></span>
             Related Work
           </div>
           <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
             <div>
               <h2 style={{ fontSize: 'clamp(22px, 2.5vw, 28px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '12px' }}>Unlimited Healthcare: Management System</h2>
               <p style={{ fontSize: '16px', color: '#64748B', lineHeight: 1.65, maxWidth: '600px', marginBottom: '24px' }}>
-                Healthcare management system with a React + TypeScript web app, an Expo React Native mobile app, and a NestJS backend — appointments, recurring bookings, reminders, clinical modules, and chat.
+                Healthcare management system with a React + TypeScript web app, an Expo React Native mobile app, and a NestJS backend: appointments, recurring bookings, reminders, clinical modules, and chat.
               </p>
               <Link to="/work/unlimited-healthcare" className="inline-flex items-center gap-2 no-underline transition-all duration-200"
                 style={{ fontSize: '14px', fontWeight: 700, color: '#fff', background: '#BE185D', padding: '14px 28px', borderRadius: '8px' }}>

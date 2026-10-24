@@ -12,7 +12,7 @@ export default function DiscountClubCaymanCaseStudy() {
       metrics={[
         { value: '5', label: 'User roles' },
         { value: '$119.99/yr', label: 'Individual plan' },
-        { value: 'Stripe', label: 'Card payments' },
+        { value: 'Live', label: 'discountclubcayman.com' },
         { value: 'QR', label: 'Digital membership' },
       ]}
       metaItems={[
@@ -33,7 +33,7 @@ export default function DiscountClubCaymanCaseStudy() {
       archTitle="Architecture Overview"
       archSubhead="An Express + MongoDB API with a React frontend and companion Flutter apps."
       archCards={[
-        { num: 'Layer 01', icon: 'fa-user-shield', title: 'Role System', desc: 'Member, employer, business, association, B2B, and admin roles — each with its own sign-up path and dashboard.' },
+        { num: 'Layer 01', icon: 'fa-user-shield', title: 'Role System', desc: 'Member, employer, business, association, B2B, and admin roles, each with its own sign-up path and dashboard.' },
         { num: 'Layer 02', icon: 'fa-credit-card', title: 'Membership & Payments', desc: 'Stripe PaymentIntent flow for individual/family plans ($119.99/yr and $300/yr) plus PayPal orders for post-signup subscriptions.' },
         { num: 'Layer 03', icon: 'fa-qrcode', title: 'Certificates & QR', desc: 'Auto-generated certificate codes and QR data; members present a rotating QR card in-store and businesses scan to verify and redeem.' },
         { num: 'Layer 04', icon: 'fa-plane', title: 'Travel & Directory', desc: 'Travel deals across hotels, flights, car rentals, activities, and packages, plus a searchable business directory and category pages.' },
@@ -70,8 +70,8 @@ export default function DiscountClubCaymanCaseStudy() {
         { value: 'Stripe+PayPal', label: 'Payment rails' },
         { value: 'Flutter', label: 'Member + business apps' },
       ]}
-      resultBody="Discount Club Cayman is live at discountclubcayman.com — memberships, discount offers, certificates, travel deals, and a full admin dashboard."
-      founderNote1="The platform had to work for five different audiences without becoming five different products — the role system kept it to one codebase."
+      resultBody="Discount Club Cayman is live at discountclubcayman.com with memberships, discount offers, certificates, travel deals, and a full admin dashboard."
+      founderNote1="The platform had to work for five different audiences without becoming five different products. The role system kept it to one codebase."
       founderNote2="Certificate redemption was the feature that mattered most: an offline-friendly, scan-to-verify flow businesses actually use."
       nextCaseTitle="Unlimited Healthcare: Management System"
       nextCaseDesc="Healthcare management system with appointments, clinical modules, and mobile apps."

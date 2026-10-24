@@ -6,10 +6,8 @@ import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
 import AppShowcase from '../components/AppShowcase'
 import { mobileApps } from '../data/mobileApps'
+import { PINK, INK, MUTED, card, glass, Eyebrow, Heading, Lead } from '../components/ui'
 
-const PINK = '#BE185D'
-const INK = '#0F172A'
-const MUTED = '#475569'
 
 const projects = [
   { name: 'Japa Coach', link: '/work/japa-coach' },
@@ -31,48 +29,12 @@ const recent = [
   { name: 'Unlimited Healthcare', what: 'Clinical app for a care provider', link: '/work/unlimited-healthcare' },
 ]
 
-const card: React.CSSProperties = {
-  background: '#fff',
-  border: '1px solid rgba(15,23,42,0.08)',
-  borderRadius: '16px',
-  boxShadow: '0 1px 2px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.08)',
-}
-
-const glass: React.CSSProperties = {
-  background: 'rgba(255,255,255,0.55)',
-  backdropFilter: 'blur(6px)',
-  WebkitBackdropFilter: 'blur(6px)',
-  borderTop: '1px solid rgba(15,23,42,0.06)',
-  borderBottom: '1px solid rgba(15,23,42,0.06)',
-}
-
-function Eyebrow({ children }: { children: React.ReactNode }) {
-  return (
-    <div data-reveal className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '12px', fontWeight: 600, color: PINK, background: '#fff', border: '1px solid rgba(190,24,93,0.18)', padding: '6px 12px', borderRadius: '100px' }}>
-      <span style={{ display: 'block', width: '6px', height: '6px', borderRadius: '50%', background: PINK }}></span>
-      {children}
-    </div>
-  )
-}
-
-function Heading({ children }: { children: React.ReactNode }) {
-  return (
-    <h2 data-reveal style={{ fontSize: 'clamp(28px, 5vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1.08, color: INK, marginBottom: '14px' }}>{children}</h2>
-  )
-}
-
-function Lead({ children }: { children: React.ReactNode }) {
-  return (
-    <p data-reveal style={{ fontSize: '16px', fontWeight: 500, color: '#1E293B', lineHeight: 1.65, maxWidth: '560px', marginBottom: '40px' }}>{children}</p>
-  )
-}
-
 export default function HomePage() {
   return (
     <div style={{ fontFamily: 'Inter, sans-serif', color: INK, position: 'relative' }}>
       <Navbar />
       <Seo
-        title="DevOmogo — Senior Software Infrastructure Engineer | Fintech, Healthcare & AI Systems"
+        title="DevOmogo | Senior Software Infrastructure Engineer | Fintech, Healthcare & AI Systems"
         description="Omogo Peter Onyedika is a Senior Software Infrastructure Engineer building production systems across fintech, healthcare, AI, marketplaces and web platforms, including YouExtractor, Gigora Network and Sadar Properties."
         keywords="software engineering, full-stack developer, fintech development, healthcare platform development, AI integration, Laravel developer, React developer, Nigeria software engineer, DevOmogo"
         jsonLd={{ "@context": "https://schema.org", "@type": "WebSite", name: 'DevOmogo', url: 'https://devomogo.tech/', description: 'Portfolio of Omogo Peter Onyedika, a software engineer building fintech, healthcare, AI and web platforms.' }}
@@ -182,7 +144,7 @@ export default function HomePage() {
           <Lead>A couple of recent favourites. There's plenty more on the work page.</Lead>
           <div data-reveal-group className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7">
             {[
-              { img: 'youextractor_llm_ai_pipeline_dark_dashboard.jpg', alt: 'YouExtractor AI developer tool dashboard', cat: 'AI · Developer Tool', title: 'YouExtractor', desc: 'Paste a YouTube coding tutorial, get back a structured course and a runnable code project. Powered by DeepSeek, Claude, Gemini and GPT-4.', link: '/work/youextractor', live: 'https://youextractor.me' },
+              { img: 'youextractor_llm_ai_pipeline_dark_dashboard.jpg', alt: 'YouExtractor AI developer tool dashboard', cat: 'AI · Developer Tool', title: 'YouExtractor', desc: 'Paste a YouTube coding tutorial, get back a structured course and a runnable code project. Powered by DeepSeek, Claude, Gemini and GPT-4.', link: '/work/youextractor', live: 'https://youextractor.me', extension: 'https://chromewebstore.google.com/detail/ihajahjkhnelimamilebbcjibbhghbcn' },
               { img: 'discount_club_cayman_membership_savings_platform_dashboard_amber.jpg', alt: 'Discount Club Cayman membership dashboard', cat: 'Fintech · Membership Platform', title: 'Discount Club Cayman', desc: 'Members across the Cayman Islands flash a QR code and save at local businesses, plus certificates and travel deals in one place.', link: '/work/discount-club-cayman', live: 'https://discountclubcayman.com' },
             ].map((w) => (
               <div key={w.title} data-reveal onClick={() => (w.live ? window.open(w.live, '_blank', 'noopener,noreferrer') : null)} className="overflow-hidden transition-all duration-300 hover:-translate-y-1" style={{ ...card, cursor: w.live ? 'pointer' : 'default' }}>
@@ -197,6 +159,12 @@ export default function HomePage() {
                     style={{ fontSize: '13px', fontWeight: 600, color: '#fff', background: INK, padding: '10px 20px', borderRadius: '100px' }}>
                     Read the story <i className="fas fa-arrow-right" style={{ fontSize: '11px' }}></i>
                   </Link>
+                  {'extension' in w && (
+                    <a href={w.extension} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="inline-flex items-center gap-1.5 no-underline ml-2"
+                      style={{ fontSize: '13px', fontWeight: 600, color: INK, background: '#fff', border: '1px solid rgba(15,23,42,0.12)', padding: '9px 18px', borderRadius: '100px' }}>
+                      <i className="fab fa-chrome" style={{ fontSize: '13px' }}></i> Add to Chrome
+                    </a>
+                  )}
                 </div>
               </div>
             ))}

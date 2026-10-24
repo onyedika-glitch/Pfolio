@@ -32,7 +32,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               {['linkedin-in', 'github', 'x-twitter'].map((icon) => (
-                <a key={icon} href={icon === 'github' ? 'https://github.com/onyedika-glitch' : icon === 'x-twitter' ? 'https://x.com/peteromogo2' : '#'} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-9 h-9 rounded-lg no-underline transition-all duration-200"
+                <a key={icon} href={icon === 'github' ? 'https://github.com/onyedika-glitch' : icon === 'x-twitter' ? 'https://x.com/peteromogo2' : 'https://www.linkedin.com/in/webdev-omogo-5a6980345'} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-9 h-9 rounded-lg no-underline transition-all duration-200"
                   style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.5)', fontSize: '14px' }}
                 >
                   <i className={`fab fa-${icon}`}></i>
@@ -73,7 +73,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between" style={{ paddingTop: '28px', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
           <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.25)', letterSpacing: '0.01em' }}>© 2026 DevOmogo · devomogo.tech. All rights reserved.</div>
-          <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.25)', letterSpacing: '0.01em' }}>Enterprise Software · Built to Last</div>
+          <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.25)', letterSpacing: '0.01em' }}>Designed and built by Omogo Peter Onyedika</div>
         </div>
       </div>
     </footer>

@@ -45,7 +45,7 @@ export default function ServicesPage() {
     <div style={{ fontFamily: 'Inter, sans-serif', color: '#0F172A' }}>
       <Navbar />
       <Seo
-        title="Services — Full-Stack, Fintech, Healthcare & AI Development | DevOmogo"
+        title="Services | Full-Stack, Fintech, Healthcare & AI Development | DevOmogo"
         description="What Omogo Peter Onyedika builds: full-stack architecture (Laravel, React, NestJS), fintech systems (Stripe, Paystack, ledgers), healthcare platforms (appointments, HIPAA-aligned), and AI integration (LLM pipelines)."
         keywords="full-stack development services, fintech development, healthcare software development, AI integration, Laravel, React, NestJS, Node.js"
         jsonLd={{ "@context": "https://schema.org", "@type": "ItemList", itemListElement: services.map((s, i) => ({ "@type": 'ListItem', position: i + 1, name: s.title, description: s.desc })) }}
@@ -89,7 +89,7 @@ export default function ServicesPage() {
             <div className="grid gap-8 md:gap-16 items-start grid-cols-1 lg:grid-cols-2">
               <div>
                 <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#BE185D' }}>
-                  <span style={{ display: 'block', width: '20px', height: '2px', background: '#BE185D' }}></span>
+                  <span style={{ display: 'block', width: '6px', height: '6px', borderRadius: '50%', background: '#BE185D' }}></span>
                   Expertise
                 </div>
                 <div style={{ width: '56px', height: '56px', background: 'rgba(190,24,93,0.07)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '24px' }}>

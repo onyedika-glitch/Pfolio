@@ -10,7 +10,7 @@ export default function AIIntegrationPage() {
     <div style={{ fontFamily: 'Inter, sans-serif', color: '#0F172A' }}>
       <Navbar />
       <Seo
-        title="AI Integration & LLM Pipelines — Laravel, DeepSeek, Claude, Gemini, GPT-4 | DevOmogo"
+        title="AI Integration & LLM Pipelines | Laravel, DeepSeek, Claude, Gemini, GPT-4 | DevOmogo"
         description="AI-powered product development: pluggable LLM pipelines, tutorial-to-code generation, AI talent matching, and practical AI features in production (Laravel, DeepSeek, Claude, Gemini, GPT-4)."
         keywords="AI development, LLM integration, Laravel AI, DeepSeek, Claude, Gemini, GPT-4, AI matching"
       />
@@ -77,7 +77,7 @@ export default function AIIntegrationPage() {
       <section style={{ background: 'rgba(255,255,255,0.6)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
         <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#BE185D' }}>
-            <span style={{ display: 'block', width: '20px', height: '2px', background: '#BE185D' }}></span>
+            <span style={{ display: 'block', width: '6px', height: '6px', borderRadius: '50%', background: '#BE185D' }}></span>
             My approach
           </div>
           <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '56px' }}>How I add AI to products.</h2>
@@ -104,12 +104,12 @@ export default function AIIntegrationPage() {
       <section style={{ background: 'rgba(255,255,255,0.82)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
         <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#BE185D' }}>
-            <span style={{ display: 'block', width: '20px', height: '2px', background: '#BE185D' }}></span>
+            <span style={{ display: 'block', width: '6px', height: '6px', borderRadius: '50%', background: '#BE185D' }}></span>
             Related Work
           </div>
           <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '12px' }}>YouExtractor: Tutorial → Course & Code Generator</h2>
           <p style={{ fontSize: '16px', color: '#64748B', lineHeight: 1.65, maxWidth: '600px', marginBottom: '32px' }}>
-            A Laravel app that turns YouTube coding tutorials into structured written guides and complete, runnable code projects using pluggable AI providers — DeepSeek, Claude, Gemini, and GPT-4.
+            A Laravel app that turns YouTube coding tutorials into structured written guides and complete, runnable code projects using pluggable AI providers: DeepSeek, Claude, Gemini, and GPT-4.
           </p>
           <Link to="/work/youextractor" className="inline-flex items-center gap-2 no-underline transition-all duration-200"
             style={{ fontSize: '14px', fontWeight: 700, color: '#fff', background: '#BE185D', padding: '14px 28px', borderRadius: '8px' }}>

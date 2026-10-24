@@ -22,7 +22,7 @@ export default function GigoraNetworkPage() {
       resultCards={[{ value:'3', label:'User roles' },{ value:'8', label:'Languages' },{ value:'Real-Time', label:'Messaging + notifications' },{ value:'Live', label:'gigoranetwork.com' }]}
       resultBody="Gigora Network is live at gigoranetwork.com: browse and filter freelancers, post projects, review proposals, chat in real time, and get paid through escrow-protected flows."
       founderNote1="I built Gigora because the freelance economy has a trust problem. When profiles are vetted and payments are escrowed, both sides finally have something to lose by not delivering."
-      founderNote2="The escrow and dispute system was the hardest part to get right — it's what separates a marketplace people use from one people abandon."
+      founderNote2="The escrow and dispute system was the hardest part to get right. It's what separates a marketplace people use from one people abandon."
       nextCaseTitle="Discount Club Cayman: Membership Platform" nextCaseDesc="Membership discounts and benefits platform for the Cayman Islands." nextCaseLink="/work/discount-club-cayman"
       accentColor="#7C3AED" codeBg="#1E1B4B"
     />

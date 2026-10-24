@@ -7,7 +7,7 @@ export default function JapaCoachPage() {
       mobileApps={mobileApps.filter(a => a.slug === 'japa-coach')}
       eyebrow="Case Study · AI EdTech"
       headline={<>Japa Coach<br />AI IELTS Practice</>}
-      subhead="An AI IELTS coach for Nigerians preparing to study, work or settle abroad. Speak your answers out loud, write essays, take full Reading and Listening tests, and get an estimated band with specific fixes in minutes. Web app plus a native Android app. Founded."
+      subhead="An AI IELTS coach for Nigerians preparing to study, work or settle abroad. Speak your answers out loud, write essays, take full Reading and Listening tests, and get an estimated band with specific fixes in minutes. Web app plus a native Android app."
       metrics={[{ value:'4', label:'IELTS Modules' },{ value:'96', label:'Speaking Questions' },{ value:'160', label:'Practice Questions' },{ value:'Live', label:'japacoach.com' }]}
       metaItems={[{ label:'Category', value:'AI EdTech · Test Prep' },{ label:'Role', value:'Founder' },{ label:'Stack', value:'Laravel 13 · Vue 3 · Flutter · FastAPI · Whisper · PostgreSQL · Docker' }]}
       projectDetails={[{ label:'Company', value:'Japa Coach' },{ label:'Type', value:'AI IELTS Practice Platform' },{ label:'Platforms', value:'Web + Android (Flutter)' },{ label:'Role', value:'Founder' },{ label:'Status', value:'live' }]}

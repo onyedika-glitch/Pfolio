@@ -10,10 +10,10 @@ export default function TeamPage() {
     <div style={{ fontFamily: 'Inter, sans-serif', color: '#0F172A' }}>
       <Navbar />
       <Seo
-        title="About — Omogo Peter Onyedika, Senior Software Infrastructure Engineer | DevOmogo"
+        title="About | Omogo Peter Onyedika, Senior Software Infrastructure Engineer | DevOmogo"
         description="Omogo Peter Onyedika is a Senior Software Infrastructure Engineer and the founder of Japa Coach, YouExtractor, Gigora Network and Sadar Properties."
         keywords="Omogo Peter Onyedika, software engineer, founder, DevOmogo, senior software infrastructure engineer"
-        jsonLd={{ "@context": "https://schema.org", "@type": "Person", name: 'Omogo Peter Onyedika', jobTitle: 'Senior Software Infrastructure Engineer', url: 'https://devomogo.tech/team', sameAs: ['https://github.com/onyedika-glitch', 'https://x.com/peteromogo2'] }}
+        jsonLd={{ "@context": "https://schema.org", "@type": "Person", name: 'Omogo Peter Onyedika', jobTitle: 'Senior Software Infrastructure Engineer', url: 'https://devomogo.tech/team', sameAs: ['https://github.com/onyedika-glitch', 'https://x.com/peteromogo2', 'https://www.linkedin.com/in/webdev-omogo-5a6980345'] }}
       />
 
       {/* HERO */}
@@ -92,7 +92,7 @@ export default function TeamPage() {
       <section style={{ background: 'rgba(255,255,255,0.6)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
         <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#BE185D' }}>
-            <span style={{ display: 'block', width: '20px', height: '2px', background: '#BE185D' }}></span>
+            <span style={{ display: 'block', width: '6px', height: '6px', borderRadius: '50%', background: '#BE185D' }}></span>
             What I believe
           </div>
           <div className="grid gap-5 md:gap-6 mt-10 md:mt-16 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">

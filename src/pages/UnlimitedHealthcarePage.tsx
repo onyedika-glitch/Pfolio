@@ -19,7 +19,7 @@ export default function UnlimitedHealthcarePage() {
       decisionCards={[{ num:'01', title:'Recurring + Reminders', desc:'Recurring appointments and a reminders cron keep schedules and follow-ups on track automatically.' },{ num:'02', title:'One Codebase, Two Clients', desc:'Capacitor web wrapper and an Expo app let the same React/TypeScript logic reach both platforms.' }]}
       resultCards={[{ value:'NestJS', label:'Typed backend' },{ value:'3', label:'Web + mobile clients' },{ value:'Audit', label:'Logged changes' },{ value:'Live', label:'unlimitedhealthcares.com' }]}
       resultBody="Unlimited Healthcare is live at unlimitedhealthcares.com as a healthcare management system serving appointment booking, clinical modules, chat, and mobile access."
-      founderNote1="Appointments and reminders were the system's backbone — the recurring-appointments and reminders-cron services run quietly in the background keeping everything scheduled."
+      founderNote1="Appointments and reminders were the system's backbone. The recurring-appointments and reminders-cron services run quietly in the background keeping everything scheduled."
       founderNote2="Audit logging everywhere was non-negotiable for a healthcare system: every change needs a trail."
       nextCaseTitle="SSABHI: Brain Health Initiative" nextCaseDesc="WordPress feature work on a live nonprofit: membership, programs, jobs, and Elementor pages." nextCaseLink="/work/ssabhi"
       accentColor="#0D9488" codeBg="#031917"

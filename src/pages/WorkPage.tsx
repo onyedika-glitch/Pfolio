@@ -4,19 +4,8 @@ import Navbar from '../components/Navbar'
 import Seo from '../components/Seo'
 import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
+import { projects } from '../data/projects'
 
-const projects = [
-  { id: 22, cat: 'ai', catLabel: 'AI · EdTech · Founded', catColor: '#01B8C6', bg: '#032A2E', img: 'japa_coach_ai_ielts_practice_app_teal.jpg', icon: 'fa-microphone-lines', topBar: 'linear-gradient(90deg, #01B8C6, #F5A524)', title: 'Japa Coach: AI IELTS Practice', desc: 'AI IELTS coach for Nigerians: speak answers out loud, get an estimated band and sentence-level fixes in minutes. Web app plus a native Flutter Android app. Founded.', tags: ['Laravel', 'Vue 3', 'Flutter', 'FastAPI', 'Whisper', 'PostgreSQL'], link: '/work/japa-coach', live: 'https://japacoach.com' },
-  { id: 1, cat: 'ai', catLabel: 'AI · Developer Tool', catColor: '#BE185D', bg: '#0F172A', img: 'youextractor_llm_ai_pipeline_dark_dashboard.jpg', icon: 'fa-brain', topBar: 'linear-gradient(90deg, #BE185D, #6366F1)', title: 'YouExtractor: Tutorial → Course & Code Generator', desc: 'Turns YouTube coding tutorials into structured guides and runnable code projects using AI (DeepSeek, Claude, Gemini, GPT-4).', tags: ['Laravel', 'PHP', 'Blade', 'TailwindCSS', 'Gemini', 'GPT-4'], link: '/work/youextractor', live: 'https://youextractor.me' },
-  { id: 18, cat: 'marketplace', catLabel: 'Web3 · Marketplace', catColor: '#7C3AED', bg: '#1E1B4B', img: 'fintech_dashboard_dark_ui.jpg', icon: 'fa-globe', topBar: 'linear-gradient(90deg, #7C3AED, #A855F7)', title: 'Gigora Network: Web3 Freelance Marketplace', desc: 'Community-driven Web3 freelance marketplace. Vetted talent, secure on-chain escrow, and a global remote job board.', tags: ['React', 'Node.js', 'Web3', 'Blockchain', 'Escrow', 'Marketplace'], link: '/work/gigora-network', live: 'https://gigoranetwork.com' },
-  { id: 11, cat: 'web', catLabel: 'WordPress · Incubation Hub', catColor: '#D97706', bg: '#1C1000', img: 'sparks_ventures_hub_startup_accelerator_saas_dashboard_amber.jpg', icon: 'fa-building', topBar: 'linear-gradient(90deg, #F59E0B, #FBBF24)', title: 'Sparks Ventures Hub: Business Incubation Hub', desc: 'WordPress feature work on a live incubation hub: Tutor LMS academy, WooCommerce courses, Elementor program pages, and events.', tags: ['WordPress', 'Elementor', 'Tutor LMS', 'WooCommerce'], link: '/work/sparks-ventures', live: 'https://sparksventureshub.com' },
-  { id: 19, cat: 'web', catLabel: 'Program Landing · EdTech', catColor: '#D97706', bg: '#1C1000', img: 'sparksefp.jpg', icon: 'fa-graduation-cap', topBar: 'linear-gradient(90deg, #F59E0B, #FBBF24)', title: 'Sparks EFP: 4-Week Foundation Programme', desc: 'Laravel landing page for a four-week virtual entrepreneurship programme: Discover / Build / Launch curriculum, graduation package, and Paystack checkout.', tags: ['Laravel', 'Blade', 'Paystack', 'PHP'], link: '/work/sparks-efp', live: 'https://efp.sparksventureshub.com' },
-  { id: 20, cat: 'web', catLabel: 'Marketing Funnel · SaaS', catColor: '#D97706', bg: '#1C1000', img: 'sparksfunnel.jpg', icon: 'fa-filter', topBar: 'linear-gradient(90deg, #F59E0B, #FBBF24)', title: 'Sparks Ventures Hub: Lead Funnel', desc: 'Laravel marketing funnel: service pages, lead capture, consultation bookings, Paystack payments, and an admin dashboard.', tags: ['Laravel', 'Blade', 'Paystack', 'PHP'], link: '/work/sparks-funnel', live: 'https://funnel.sparksventureshub.com' },
-  { id: 13, cat: 'realestate', catLabel: 'Real Estate CRM · Founded', catColor: '#B45309', bg: '#1A0E00', img: 'sadar_properties_real_estate_wholesaling_crm_dashboard_warm_brown.jpg', icon: 'fa-house-chimney', topBar: 'linear-gradient(90deg, #B45309, #D97706)', title: 'Sadar Properties: Wholesaling Toolkit', desc: 'Real estate wholesaling toolkit: deal math (MAO, assignment fee), buyer matching, and CSV/Excel import-export. Founded.', tags: ['React', 'Vite', 'Tailwind', 'Express', 'PostgreSQL', 'OAuth 2.0'], link: '/work/sadar-properties' },
-  { id: 14, cat: 'healthcare', catLabel: 'Healthcare · Management System', catColor: '#0D9488', bg: '#031917', img: 'unlimited_healthcare_uhc_clinical_ai_mobile_app_teal.jpg', icon: 'fa-stethoscope', topBar: 'linear-gradient(90deg, #0D9488, #2DD4BF)', title: 'Unlimited Healthcare: Management System', desc: 'Healthcare management system: appointments, recurring bookings and reminders, clinical modules, chat, and mobile apps.', tags: ['React', 'TypeScript', 'NestJS', 'Capacitor', 'Expo', 'TypeORM'], link: '/work/unlimited-healthcare', live: 'https://unlimitedhealthcares.com' },
-  { id: 21, cat: 'healthcare', catLabel: 'WordPress · Brain Health', catColor: '#0D9488', bg: '#031917', img: 'ssabhi_brain_health_initiative_wordpress_teal.jpg', icon: 'fa-brain', topBar: 'linear-gradient(90deg, #0D9488, #2DD4BF)', title: 'SSABHI: Brain Health Initiative', desc: 'WordPress feature work on a live nonprofit: membership, programs, jobs, and Elementor pages for Sub-Saharan Africa brain health.', tags: ['WordPress', 'Elementor', 'Fluent Forms', 'PHP'], link: '/work/ssabhi', live: 'https://ssabhi.org' },
-  { id: 16, cat: 'fintech', catLabel: 'Fintech · Membership Platform', catColor: '#B45309', bg: '#1A0800', img: 'discount_club_cayman_membership_savings_platform_dashboard_amber.jpg', icon: 'fa-tag', topBar: 'linear-gradient(90deg, #B45309, #D97706)', title: 'Discount Club Cayman: Membership Platform', desc: 'Membership discounts platform for the Cayman Islands: role-based dashboards, Stripe/PayPal billing, QR membership, certificates, and travel deals.', tags: ['React', 'Vite', 'Express', 'MongoDB', 'Stripe', 'PayPal', 'Flutter'], link: '/work/discount-club-cayman', live: 'https://discountclubcayman.com' },
-]
 
 const filters = [
   { key: 'all', label: 'All', count: 10 },
@@ -46,8 +35,8 @@ export default function WorkPage() {
     <div style={{ fontFamily: 'Inter, sans-serif', color: '#0F172A' }}>
       <Navbar />
       <Seo
-        title="Work & Case Studies — DevOmogo | Fintech, Healthcare, AI, Marketplace, Real Estate"
-        description="Production systems built by Omogo Peter Onyedika: AI developer tools, freelance marketplaces, fintech platforms, healthcare systems, incubation hubs, and real estate tools — each with a live site and full case study."
+        title="Work & Case Studies | DevOmogo | Fintech, Healthcare, AI, Marketplace, Real Estate"
+        description="Production systems built by Omogo Peter Onyedika: AI developer tools, freelance marketplaces, fintech platforms, healthcare systems, incubation hubs, and real estate tools, each with a live site and full case study."
         keywords="portfolio, case studies, fintech platform development, healthcare system development, AI tool development, marketplace development, Laravel, React, NestJS"
         jsonLd={{ "@context": "https://schema.org", "@type": "ItemList", itemListElement: projects.map((p, i) => ({ "@type": 'ListItem', position: i + 1, name: p.title, url: 'https://devomogo.tech' + p.link })) }}
       />
@@ -130,6 +119,12 @@ export default function WorkPage() {
                     style={{ fontSize: '12.5px', fontWeight: 700, color: '#fff', background: '#0F172A', padding: '10px 20px', borderRadius: '8px' }}>
                     View case study <i className="fas fa-arrow-right" style={{ fontSize: '11px' }}></i>
                   </Link>
+                  {'extension' in p && (
+                    <a href={p.extension} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="inline-flex items-center gap-1.5 no-underline mt-3"
+                      style={{ fontSize: '12.5px', fontWeight: 600, color: '#BE185D' }}>
+                      <i className="fab fa-chrome" style={{ fontSize: '13px' }}></i> Get the Chrome extension
+                    </a>
+                  )}
                 </div>
               </div>
             ))}

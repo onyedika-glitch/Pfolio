@@ -57,7 +57,7 @@ export default function ProjectDetailLayout({
 
       <section style={{ background: '#F1F5F9' }} className="section-pad">
         <div className="site-container">
-          <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: bg }}><span style={{ display: 'block', width: '20px', height: '2px', background: bg }}></span>Key Features</div>
+          <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: bg }}><span style={{ display: 'block', width: '6px', height: '6px', borderRadius: '50%', background: bg }}></span>Key Features</div>
           <div className="grid gap-5 mt-8 md:mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {features.map(f => (
               <div key={f.title} className="p-6 md:p-8" style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: '12px' }}>
