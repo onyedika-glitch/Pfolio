@@ -6,7 +6,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!assets/|og-image\\.jpg|og-image\\.png|robots\\.txt|sitemap\\.xml|favicon\\.ico|work/|services/|tech-stack|team|contact|.*\\.[a-zA-Z0-9]+$).*)",
+      "source": "/((?!api/|assets/|og-image\\.jpg|og-image\\.png|robots\\.txt|sitemap\\.xml|favicon\\.ico|work/|services/|tech-stack|team|contact|.*\\.[a-zA-Z0-9]+$).*)",
       "destination": "/index.html"
     }
   ],

@@ -22,15 +22,27 @@ const field: React.CSSProperties = { width: '100%', padding: '13px 16px', border
 const label: React.CSSProperties = { fontSize: '12.5px', fontWeight: 600, color: '#334155', marginBottom: '6px', display: 'block' }
 
 export default function ContactPage() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', message: '', company: '' })
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [error, setError] = useState('')
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setForm({ ...form, [k]: e.target.value })
 
-  // No backend: hand the message to the visitor's email app, already filled in.
-  const send = (e: React.FormEvent) => {
+  // Posts to the Vercel function in /api/contact, which emails it to me through Resend.
+  const send = async (e: React.FormEvent) => {
     e.preventDefault()
-    const subject = `Project enquiry from ${form.name || 'your website'}`
-    const body = `${form.message}\n\n${form.name}${form.email ? ` (${form.email})` : ''}`
-    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    setStatus('sending')
+    setError('')
+    try {
+      const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(form) })
+      const data = await res.json().catch(() => ({}))
+      // Only trust an explicit ok from the function, never just a 200 (a misrouted request returns the HTML page).
+      if (!res.ok || data.ok !== true) throw new Error(data.error || 'Couldn’t send right now.')
+      setStatus('sent')
+      setForm({ name: '', email: '', message: '', company: '' })
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Couldn’t send right now.')
+      setStatus('error')
+    }
   }
 
   return (
@@ -74,10 +86,10 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <form onSubmit={send} className="fade-in-3 p-6 sm:p-8 lg:p-10 flex flex-col gap-5" style={card}>
+          <form onSubmit={send} className="fade-in-3 relative p-6 sm:p-8 lg:p-10 flex flex-col gap-5" style={card}>
             <div>
               <h2 style={{ fontSize: '22px', fontWeight: 900, letterSpacing: '-0.03em', color: INK, marginBottom: '6px' }}>Send me a message</h2>
-              <p style={{ fontSize: '14px', color: MUTED }}>This opens your email app with everything filled in.</p>
+              <p style={{ fontSize: '14px', color: MUTED }}>It lands straight in my inbox. I usually reply within 24 hours.</p>
             </div>
             <div>
               <label htmlFor="c-name" style={label}>Your name</label>
@@ -91,9 +103,24 @@ export default function ContactPage() {
               <label htmlFor="c-msg" style={label}>What are you building?</label>
               <textarea id="c-msg" rows={6} required placeholder="A few lines about the project, your timeline and anything that's worrying you." value={form.message} onChange={set('message')} style={{ ...field, resize: 'vertical' }} />
             </div>
-            <button type="submit" className="inline-flex items-center justify-center gap-2 border-0 cursor-pointer"
+            {/* Honeypot: hidden from people, tempting to bots. */}
+            <input type="text" name="company" tabIndex={-1} autoComplete="off" aria-hidden="true" value={form.company} onChange={set('company')}
+              style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }} />
+            {status === 'sent' && (
+              <div role="status" className="flex items-start gap-3 p-4" style={{ background: '#ECFDF5', border: '1px solid #A7F3D0', borderRadius: '12px', fontSize: '14px', color: '#065F46' }}>
+                <i className="fas fa-circle-check" style={{ marginTop: '2px' }}></i>
+                <span>Thanks, your message is on its way. I'll get back to you within 24 hours.</span>
+              </div>
+            )}
+            {status === 'error' && (
+              <div role="alert" className="flex items-start gap-3 p-4" style={{ background: '#FDF2F8', border: '1px solid rgba(190,24,93,0.25)', borderRadius: '12px', fontSize: '14px', color: '#9D174D' }}>
+                <i className="fas fa-circle-exclamation" style={{ marginTop: '2px' }}></i>
+                <span>{error} You can also email me directly at <a href={`mailto:${EMAIL}`} style={{ color: PINK, fontWeight: 700 }}>{EMAIL}</a>.</span>
+              </div>
+            )}
+            <button type="submit" disabled={status === 'sending'} className="inline-flex items-center justify-center gap-2 border-0 cursor-pointer disabled:opacity-60 disabled:cursor-wait"
               style={{ background: INK, color: '#fff', padding: '15px 28px', borderRadius: '100px', fontSize: '15px', fontWeight: 700, fontFamily: 'inherit' }}>
-              Send message <i className="fas fa-arrow-right" style={{ fontSize: '12px' }}></i>
+              {status === 'sending' ? 'Sending…' : 'Send message'} {status !== 'sending' && <i className="fas fa-arrow-right" style={{ fontSize: '12px' }}></i>}
             </button>
           </form>
         </div>
