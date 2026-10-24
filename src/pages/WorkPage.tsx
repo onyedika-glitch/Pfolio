@@ -47,7 +47,7 @@ export default function WorkPage() {
       <Navbar />
       <Seo
         title="Work & Case Studies — DevOmogo | Fintech, Healthcare, AI, Marketplace, Real Estate"
-        description="Production systems built by DevOmogo: AI developer tools, freelance marketplaces, fintech platforms, healthcare systems, incubation hubs, and real estate tools — each with a live site and full case study."
+        description="Production systems built by Omogo Peter Onyedika: AI developer tools, freelance marketplaces, fintech platforms, healthcare systems, incubation hubs, and real estate tools — each with a live site and full case study."
         keywords="portfolio, case studies, fintech platform development, healthcare system development, AI tool development, marketplace development, Laravel, React, NestJS"
         jsonLd={{ "@context": "https://schema.org", "@type": "ItemList", itemListElement: projects.map((p, i) => ({ "@type": 'ListItem', position: i + 1, name: p.title, url: 'https://devomogo.tech' + p.link })) }}
       />
@@ -62,7 +62,7 @@ export default function WorkPage() {
             Selected Work
           </div>
           <h1 className="fade-in-2" style={{ fontSize: 'clamp(36px, 9vw, 80px)', fontWeight: 900, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#fff', marginBottom: '20px' }}>All Work</h1>
-          <p className="fade-in-3" style={{ fontSize: 'clamp(15px, 2.5vw, 17px)', color: 'rgba(255,255,255,0.65)', lineHeight: 1.65, maxWidth: '680px', marginBottom: '40px' }}>Production systems across AI, fintech, healthcare, edtech, and web platforms. Every project built with senior engineering judgment.</p>
+          <p className="fade-in-3" style={{ fontSize: 'clamp(15px, 2.5vw, 17px)', color: 'rgba(255,255,255,0.65)', lineHeight: 1.65, maxWidth: '680px', marginBottom: '40px' }}>Everything I've shipped, from AI tools and fintech platforms to healthcare apps and websites. Each one is live, with the full story behind it.</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-0.5 rounded-xl overflow-hidden fade-in-4" style={{ background: 'rgba(255,255,255,0.08)', maxWidth: '680px' }}>
             {[['10', 'Projects', 'Shipped to Production'], ['5+', 'Years', 'Engineering Experience'], ['6', 'Domains', 'Healthcare · Fintech · AI · Web · Marketplace · Real Estate']].map(([val, main, sub]) => (
               <div key={main} className="p-5 md:p-7" style={{ background: 'rgba(255,255,255,0.04)' }}>

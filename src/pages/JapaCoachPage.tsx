@@ -1,8 +1,10 @@
 import React from 'react'
 import CaseStudyLayout from '../components/CaseStudyLayout'
+import { mobileApps } from '../data/mobileApps'
 export default function JapaCoachPage() {
   return (
     <CaseStudyLayout
+      mobileApps={mobileApps.filter(a => a.slug === 'japa-coach')}
       eyebrow="Case Study · AI EdTech"
       headline={<>Japa Coach<br />AI IELTS Practice</>}
       subhead="An AI IELTS coach for Nigerians preparing to study, work or settle abroad. Speak your answers out loud, write essays, take full Reading and Listening tests, and get an estimated band with specific fixes in minutes. Web app plus a native Android app. Founded."

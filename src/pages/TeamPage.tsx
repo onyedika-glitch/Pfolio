@@ -10,8 +10,8 @@ export default function TeamPage() {
     <div style={{ fontFamily: 'Inter, sans-serif', background: '#F8FAFC', color: '#0F172A' }}>
       <Navbar />
       <Seo
-        title="The Team — Omogo Peter Onyedika, Founder & Senior Software Infrastructure Engineer | DevOmogo"
-        description="DevOmogo was founded by Omogo Peter Onyedika, a Senior Software Infrastructure Engineer and founder of Japa Coach, YouExtractor, Gigora Network, and Sadar Properties."
+        title="About — Omogo Peter Onyedika, Senior Software Infrastructure Engineer | DevOmogo"
+        description="Omogo Peter Onyedika is a Senior Software Infrastructure Engineer and the founder of Japa Coach, YouExtractor, Gigora Network and Sadar Properties."
         keywords="Omogo Peter Onyedika, software engineer, founder, DevOmogo, senior software infrastructure engineer"
         jsonLd={{ "@context": "https://schema.org", "@type": "Person", name: 'Omogo Peter Onyedika', jobTitle: 'Senior Software Infrastructure Engineer', url: 'https://devomogo.tech/team', sameAs: ['https://github.com/onyedika-glitch', 'https://x.com/peteromogo2'] }}
       />
@@ -22,13 +22,13 @@ export default function TeamPage() {
         <div className="site-container relative z-10">
           <div className="inline-flex items-center gap-2 mb-6 fade-in" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#3B82F6' }}>
             <span style={{ display: 'block', width: '24px', height: '2px', background: '#3B82F6' }}></span>
-            About the Firm
+            About me
           </div>
           <h1 className="fade-in-2" style={{ fontSize: 'clamp(32px, 8vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#fff', marginBottom: '24px', maxWidth: '900px' }}>
-            Founded by an engineer,<br />for engineers.
+            Hi, I'm<br />Omogo Peter Onyedika.
           </h1>
           <p className="fade-in-3" style={{ fontSize: '18px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, maxWidth: '640px', marginBottom: '48px' }}>
-            DevOmogo is a specialist firm, not an agency that takes any project that walks through the door. We work with a small number of clients at any time, and every engagement is led by the founder.
+            I'm a software engineer who builds the hard parts of products: payments, patient data, and AI that actually ships. I work with a few clients at a time, and I write the code myself.
           </p>
           <div className="fade-in-4 flex items-stretch gap-0.5 rounded-xl overflow-hidden" style={{ background: 'rgba(255,255,255,0.08)', maxWidth: '600px' }}>
             {[['5+', 'Years', 'in practice'], ['10', 'Systems', 'shipped to production'], ['6', 'Domains', 'Healthcare · Fintech · AI · Web · Marketplace · Real Estate']].map(([val, main, sub]) => (
@@ -52,13 +52,13 @@ export default function TeamPage() {
                 <span style={{ color: '#3B82F6', fontSize: 'clamp(20px, 1.5vw, 28px)' }}>Founder · Senior Software Infrastructure Engineer</span>
               </h2>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '24px' }}>
-                DevOmogo was founded by <strong>Omogo Peter Onyedika</strong>, a Senior Software Infrastructure Engineer with over 5 years building complex, production-grade systems for healthcare providers, fintech companies, and data platforms across Africa and beyond.
+                For over 5 years I've been building production software for healthcare providers, fintech companies and data platforms, across Africa and beyond.
               </p>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '24px' }}>
-                He holds a degree in Software Engineering from FUTO and is the founder of Japa Coach, YouExtractor, Gigora Network, and Sadar Properties. He has built production systems across fintech, healthcare, and developer tools.
+                I studied Software Engineering at FUTO, and I'm the founder of Japa Coach, YouExtractor, Gigora Network and Sadar Properties, so I know what it feels like to be the one waiting on software to ship.
               </p>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '32px' }}>
-                He believes that great software comes from deep understanding of the problem, the user, and the tradeoffs. Every project at DevOmogo gets his direct attention.
+                I believe good software comes from really understanding the problem, the people using it, and the trade-offs. That's why every project I take on gets my direct attention.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="https://x.com/peteromogo2" target="_blank" rel="noopener noreferrer"
@@ -94,13 +94,13 @@ export default function TeamPage() {
         <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#3B82F6' }}>
             <span style={{ display: 'block', width: '20px', height: '2px', background: '#3B82F6' }}></span>
-            Our Philosophy
+            What I believe
           </div>
           <div className="grid gap-5 md:gap-6 mt-10 md:mt-16 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { icon: 'fa-gem', title: 'Depth over breadth', desc: 'We specialise in complex, high-stakes systems. We do not take every project, only the ones where our expertise makes a measurable difference.' },
-              { icon: 'fa-eye', title: 'Full transparency', desc: 'Every commit, every decision, every tradeoff is visible to you. No black boxes, no surprises, no vendor lock-in.' },
-              { icon: 'fa-handshake', title: 'You own the system', desc: 'We build systems your team can own from day one. Full documentation, runbooks, and knowledge transfer are part of every engagement.' },
+              { icon: 'fa-gem', title: 'Depth over breadth', desc: 'I focus on complex, high-stakes systems, and I only take on projects where I can make a real difference.' },
+              { icon: 'fa-eye', title: 'Full transparency', desc: 'You see every commit, every decision and every trade-off. No black boxes, no surprises, no lock-in.' },
+              { icon: 'fa-handshake', title: 'You own the system', desc: 'You should be able to run what I build without me. Docs, runbooks and a proper handover come with every project.' },
             ].map((item) => (
               <div key={item.title} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '48px 40px' }}>
                 <div style={{ width: '48px', height: '48px', background: 'rgba(30,58,138,0.07)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '24px' }}>

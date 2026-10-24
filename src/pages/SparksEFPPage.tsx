@@ -20,7 +20,7 @@ export default function SparksEFPPage() {
       resultCards={[{ value:'4', label:'Week programme' },{ value:'Virtual', label:'Live format' },{ value:'Paystack', label:'Seat checkout' },{ value:'Live', label:'efp.sparksventureshub.com' }]}
       resultBody="Sparks EFP is live at efp.sparksventureshub.com as a four-week virtual foundation programme: Discover, Build, Launch, a graduation toolkit, and Paystack checkout for the Virtual package."
       founderNote1="The curriculum is the product: week one validates the idea, week two builds budget and marketing, week three pitches, week four is the launch challenge. The landing page is just that sequence, sold clearly."
-      founderNote2="Virtual-only pricing and Paystack meant we did not keep selling Physical or three-day packages the programme no longer runs."
+      founderNote2="Virtual-only pricing and Paystack meant the site stopped selling Physical or three-day packages the programme no longer runs."
       nextCaseTitle="Sparks Ventures Hub: Lead Funnel" nextCaseDesc="Marketing funnel with lead capture, consultation bookings, and Paystack payments." nextCaseLink="/work/sparks-funnel"
       accentColor="#D97706" codeBg="#1C1000"
     />

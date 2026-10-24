@@ -1,9 +1,11 @@
 import React from 'react'
 import CaseStudyLayout from '../components/CaseStudyLayout'
+import { mobileApps } from '../data/mobileApps'
 
 export default function DiscountClubCaymanCaseStudy() {
   return (
     <CaseStudyLayout
+      mobileApps={mobileApps.filter(a => a.slug.startsWith('dcc-'))}
       eyebrow="Case Study · Membership Platform · Fintech"
       headline={<>Discount Club Cayman<br />Membership Discounts Platform</>}
       subhead="A membership-based discount and benefits platform for the Cayman Islands: role-based dashboards, Stripe and PayPal billing, digital QR membership, certificates, and travel deals."

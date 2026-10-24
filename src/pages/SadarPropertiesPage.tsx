@@ -19,7 +19,7 @@ export default function SadarPropertiesPage() {
       decisionCards={[{ num:'01', title:'Backend from Day One', desc:'Rebuilt from localStorage to a real Express + PostgreSQL API with social login before adding the heavier features.' },{ num:'02', title:'CSV-First Workflow', desc:'Manual CSV upload is the primary workflow — scrapers stay optional for anyone who wants them.' }]}
       resultCards={[{ value:'3', label:'Sellers · Buyers · Investors' },{ value:'MAO', label:'Deal math built in' },{ value:'CSV/Excel', label:'Import & export' },{ value:'OAuth', label:'Google + Facebook login' }]}
       resultBody="Sadar Properties is live in production, giving the team one place to track sellers, buyers, properties, and deals instead of spreadsheets."
-      founderNote1="Founding taught me that the best software solves a real, painful problem. We automated spreadsheet-based workflows."
+      founderNote1="Founding taught me that the best software solves a real, painful problem. So I automated the spreadsheet-based workflows."
       founderNote2="The buy-box matching and deal-score math are the features the team actually reaches for every day."
       nextCaseTitle="YouExtractor: Tutorial to Course & Code Generator" nextCaseDesc="Turns YouTube coding tutorials into structured guides and runnable code projects using AI." nextCaseLink="/work/youextractor"
       accentColor="#B45309" codeBg="#1A0E00"

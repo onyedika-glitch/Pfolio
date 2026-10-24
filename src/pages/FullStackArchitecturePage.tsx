@@ -23,7 +23,7 @@ export default function FullStackArchitecturePage() {
       <Navbar />
       <Seo
         title="Full-Stack Architecture — Laravel, React, NestJS, Node.js Development | DevOmogo"
-        description="End-to-end full-stack development with the stack DevOmogo actually ships: Laravel, NestJS, Node.js, React + TypeScript, Flutter, Expo, PostgreSQL, MySQL, MongoDB, Stripe, and Paystack."
+        description="End-to-end full-stack development with the stack Omogo Peter Onyedika actually ships: Laravel, NestJS, Node.js, React + TypeScript, Flutter, Expo, PostgreSQL, MySQL, MongoDB, Stripe, and Paystack."
         keywords="full-stack developer, Laravel development, React development, NestJS, Node.js developer, PostgreSQL, web application development"
       />
 
@@ -56,7 +56,7 @@ export default function FullStackArchitecturePage() {
         <div className="site-container">
           <div className="grid gap-8 md:gap-16 grid-cols-1 md:grid-cols-2">
             <div>
-              <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '20px' }}>What we build</h2>
+              <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '20px' }}>What I build</h2>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '28px' }}>
                 The stack below isn't aspirational — it's the stack the shipped projects in this portfolio actually run on. Laravel for structured, long-lived PHP applications. NestJS with TypeORM for typed, modular TypeScript backends. Express and Node.js for real-time WebSocket systems. React + Vite + TypeScript for the frontends, with Flutter and Expo for mobile.
               </p>
@@ -68,7 +68,7 @@ export default function FullStackArchitecturePage() {
               <h3 style={{ fontSize: '13px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#64748B', marginBottom: '24px' }}>What you get</h3>
               <ul className="list-none flex flex-col gap-5" style={{ padding: 0, margin: 0 }}>
                 {[
-                  'Full-stack apps in the stacks this studio actually ships',
+                  'Full-stack apps in the stacks I actually ship with',
                   'Typed backends (NestJS/TypeScript) or structured PHP (Laravel) with migrations and seeders',
                   'React + Vite + TypeScript frontends with Tailwind CSS',
                   'Mobile apps with Flutter and Expo React Native, plus Capacitor web wrappers',
@@ -91,7 +91,7 @@ export default function FullStackArchitecturePage() {
         <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#3B82F6' }}>
             <span style={{ display: 'block', width: '20px', height: '2px', background: '#3B82F6' }}></span>
-            How We Work
+            How I work
           </div>
           <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '56px' }}>How the shipped systems were built.</h2>
           <div className="grid gap-5 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">

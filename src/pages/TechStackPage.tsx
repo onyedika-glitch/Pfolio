@@ -49,7 +49,7 @@ export default function TechStackPage() {
       <Navbar />
       <Seo
         title="Tech Stack — Laravel, React, NestJS, Node.js, PostgreSQL, MySQL, MongoDB | DevOmogo"
-        description="The technology stack DevOmogo ships with: Laravel, PHP, NestJS, Node.js/Express, React + Vite + TypeScript, Flutter, Expo, PostgreSQL, MySQL, MongoDB, Stripe, Paystack, Docker, Vercel, and Render."
+        description="The tools Omogo Peter Onyedika builds with: Laravel, PHP, NestJS, Node.js/Express, React + Vite + TypeScript, Flutter, Expo, PostgreSQL, MySQL, MongoDB, Stripe, Paystack, Docker, Vercel, and Render."
         keywords="tech stack, Laravel, React, NestJS, Node.js, TypeScript, Flutter, PostgreSQL, MySQL, MongoDB, Stripe, Paystack"
       />
 
@@ -59,13 +59,13 @@ export default function TechStackPage() {
         <div className="site-container relative z-10">
           <div className="inline-flex items-center gap-2 mb-6 fade-in" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#3B82F6' }}>
             <span style={{ display: 'block', width: '24px', height: '2px', background: '#3B82F6' }}></span>
-            Full Technical Stack
+            What I build with
           </div>
           <h1 className="fade-in-2" style={{ fontSize: 'clamp(32px, 8vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#fff', marginBottom: '24px', maxWidth: '900px' }}>
-            The tools we<br />reach for.
+            The tools I<br />reach for.
           </h1>
           <p className="fade-in-3" style={{ fontSize: '18px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, maxWidth: '640px', marginBottom: '48px' }}>
-            From frontend pixels to infrastructure topology: every layer, every tool, production-tested. Here is the full technical stack we use to ship enterprise-grade systems.
+            I pick what fits the job, not what's trending. Here's everything I use, from the screens people tap to the servers underneath, and all of it has run in production.
           </p>
           <div className="fade-in-4 flex flex-wrap gap-3">
             {techCategories.map(c => (
@@ -90,11 +90,11 @@ export default function TechStackPage() {
                 </div>
                 <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '16px' }}>{cat.title}</h2>
                 <p style={{ fontSize: '16px', lineHeight: 1.7, color: '#64748B', marginBottom: '32px' }}>
-                  {cat.title === 'Frontend & UI' && 'Modern, responsive, and accessible interfaces built with the latest frameworks. From component design systems to pixel-perfect implementations, we ship frontends that users love.'}
-                  {cat.title === 'Backend & APIs' && 'Scalable, type-safe server architectures with well-documented APIs. REST or GraphQL, we design backends that handle millions of requests with grace.'}
-                  {cat.title === 'Databases & Caching' && 'Relational, document, and in-memory data stores optimised for your access patterns. We design schemas that scale and queries that perform.'}
-                  {cat.title === 'DevOps & Cloud' && 'Infrastructure as code, automated deployments, and containerised environments. We build pipelines that ship reliably and roll back safely.'}
-                  {cat.title === 'Integrations & AI' && 'Payment gateways, third-party APIs, LLM pipelines, and intelligent automation. We connect systems and embed AI where it delivers measurable value.'}
+                  {cat.title === 'Frontend & UI' && 'Fast, responsive screens that work for everyone, on any device. From reusable components to pixel-perfect pages, I build frontends people actually enjoy using.'}
+                  {cat.title === 'Backend & APIs' && 'Typed, well-documented APIs that stay calm when traffic spikes. REST or GraphQL, I build backends that are easy to reason about and hard to break.'}
+                  {cat.title === 'Databases & Caching' && 'SQL, NoSQL or in-memory, chosen for how your app actually reads and writes data. I design schemas that grow with you and queries that stay quick.'}
+                  {cat.title === 'DevOps & Cloud' && 'Containers, automated deploys and repeatable environments. Shipping should be boring: push, deploy, and roll back in seconds if something looks off.'}
+                  {cat.title === 'Integrations & AI' && 'Payments, third-party APIs, LLMs and automation. I connect the services you rely on and add AI where it genuinely saves time or money.'}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {cat.tags.map(t => (
@@ -123,7 +123,7 @@ export default function TechStackPage() {
             <div>
               <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#fff', marginBottom: '12px' }}>Open source &amp; public work</h2>
               <p style={{ fontSize: '16px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, maxWidth: '520px' }}>
-                Browse repositories, contributions, and public code on GitHub. Every project reflects our engineering standards.
+                Browse repositories, contributions, and public code on GitHub. It's a good way to see how I write code.
               </p>
             </div>
             <a href="https://github.com/onyedika-glitch" target="_blank" rel="noopener noreferrer"

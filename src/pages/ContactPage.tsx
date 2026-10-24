@@ -9,8 +9,8 @@ export default function ContactPage() {
     <div style={{ fontFamily: 'Inter, sans-serif', background: '#F8FAFC', color: '#0F172A' }}>
       <Navbar />
       <Seo
-        title="Contact DevOmogo — Start a Project | omogopeter@devomogo.tech"
-        description="Contact DevOmogo to start a project: email omogopeter@devomogo.tech. Full-stack, fintech, healthcare, and AI development from a senior engineering studio."
+        title="Contact Omogo Peter Onyedika — Start a Project | DevOmogo"
+        description="Get in touch with Omogo Peter Onyedika to start a project: email omogopeter@devomogo.tech. Full-stack, fintech, healthcare and AI development."
         keywords="contact DevOmogo, start a project, hire software engineer, omogopeter@devomogo.tech"
       />
 
@@ -20,13 +20,13 @@ export default function ContactPage() {
         <div className="site-container relative z-10">
           <div className="inline-flex items-center gap-2 mb-6 fade-in" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#3B82F6' }}>
             <span style={{ display: 'block', width: '24px', height: '2px', background: '#3B82F6' }}></span>
-            Start a Conversation
+            Say hello
           </div>
           <h1 className="fade-in-2" style={{ fontSize: 'clamp(32px, 8vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#fff', marginBottom: '24px', maxWidth: '900px' }}>
-            Let's build something<br />exceptional.
+            Got an idea?<br />Let's talk it through.
           </h1>
           <p className="fade-in-3" style={{ fontSize: '18px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, maxWidth: '640px', marginBottom: '48px' }}>
-            Every engagement starts with a 60-minute technical deep-dive. No pitch decks. No sales pressure. Just honest engineering judgment from someone who has built production systems at scale.
+            It all starts with an hour-long call. No pitch decks, no sales pressure, just an honest conversation with someone who has shipped real products to real users.
           </p>
         </div>
       </section>
@@ -38,7 +38,7 @@ export default function ContactPage() {
             <div>
               <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 36px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '20px' }}>Get in touch</h2>
               <p style={{ fontSize: '16px', lineHeight: 1.75, color: '#64748B', marginBottom: '40px', maxWidth: '480px' }}>
-                Tell us about your project. We will respond within 24 hours to schedule a discovery call.
+                Tell me about your project. I'll get back to you within 24 hours to set up a call.
               </p>
 
               <div className="flex flex-col gap-8">
@@ -52,7 +52,7 @@ export default function ContactPage() {
                       style={{ fontSize: '12px', fontWeight: 600, color: '#fff', background: '#3B82F6', padding: '8px 12px', borderRadius: '8px', wordBreak: 'break-all' }}>
                       omogopeter@devomogo.tech
                     </a>
-                    <p style={{ fontSize: '13px', color: '#64748B', marginTop: '4px' }}>We aim to respond within 24 hours.</p>
+                    <p style={{ fontSize: '13px', color: '#64748B', marginTop: '4px' }}>I usually reply within 24 hours.</p>
                   </div>
                 </div>
 
@@ -61,9 +61,9 @@ export default function ContactPage() {
                     <i className="fas fa-calendar" style={{ fontSize: '18px', color: '#1E3A8A' }}></i>
                   </div>
                   <div>
-                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#0F172A', marginBottom: '4px' }}>Discovery Call</div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#0F172A', marginBottom: '4px' }}>Intro call</div>
                     <p style={{ fontSize: '15px', color: '#64748B', margin: 0 }}>
-                      A 60-minute technical deep-dive. We map your system requirements, constraints, and commercial goals.
+                      An hour together. You walk me through what you're building, and I ask about your goals, your users and what's getting in the way.
                     </p>
                   </div>
                 </div>
@@ -83,7 +83,7 @@ export default function ContactPage() {
             </div>
 
             <div className="p-6 md:p-10" style={{ background: '#F1F5F9', border: '1px solid #E2E8F0', borderRadius: '12px' }}>
-              <h3 style={{ fontSize: '13px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#64748B', marginBottom: '24px' }}>Send us a message</h3>
+              <h3 style={{ fontSize: '13px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#64748B', marginBottom: '24px' }}>Send me a message</h3>
               <form className="flex flex-col gap-6" onSubmit={e => e.preventDefault()}>
                 <div>
                   <label style={{ fontSize: '12px', fontWeight: 600, color: '#334155', marginBottom: '6px', display: 'block' }}>Name</label>
@@ -97,7 +97,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <label style={{ fontSize: '12px', fontWeight: 600, color: '#334155', marginBottom: '6px', display: 'block' }}>Message</label>
-                  <textarea rows={5} placeholder="Tell us about your project..."
+                  <textarea rows={5} placeholder="Tell me about your project..."
                     style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #E2E8F0', fontSize: '14px', background: '#fff', outline: 'none', resize: 'vertical', boxSizing: 'border-box', fontFamily: 'inherit' }} />
                 </div>
                 <a href="mailto:omogopeter@devomogo.tech"
@@ -115,8 +115,8 @@ export default function ContactPage() {
       <section style={{ background: '#F1F5F9', padding: '80px 0' }}>
         <div className="site-container flex flex-col sm:flex-row sm:items-center sm:justify-between flex-wrap gap-6">
           <div>
-            <h2 style={{ fontSize: '28px', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '8px' }}>Follow our work</h2>
-            <p style={{ fontSize: '15px', color: '#64748B' }}>See what we are building and sharing.</p>
+            <h2 style={{ fontSize: '28px', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '8px' }}>Follow along</h2>
+            <p style={{ fontSize: '15px', color: '#64748B' }}>See what I'm building and sharing.</p>
           </div>
           <div className="flex gap-4">
             <a href="https://x.com/peteromogo2" target="_blank" rel="noopener noreferrer"

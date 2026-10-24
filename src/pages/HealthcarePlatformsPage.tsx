@@ -44,12 +44,12 @@ export default function HealthcarePlatformsPage() {
         <div className="site-container">
           <div className="grid gap-8 md:gap-16 grid-cols-1 md:grid-cols-2">
             <div>
-              <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '20px' }}>What we build</h2>
+              <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '20px' }}>What I build</h2>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '28px' }}>
-                Healthcare software has zero margin for error. We design systems with granular access controls, immutable audit logs, and strict data segregation. From FHIR-compliant APIs to offline-capable clinical interfaces, we build for reliability and regulatory confidence.
+                In healthcare, mistakes cost more than money. I build systems where people only see what they're meant to see, every change is logged and can't be quietly edited, and patient data stays properly separated. From FHIR-compliant APIs to screens that keep working offline, the goal is software clinicians and regulators can both trust.
               </p>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '28px' }}>
-                Our healthcare work spans patient management platforms, clinical workflow tools, and interoperability solutions, each built with data privacy as the foundational design constraint.
+                I've built patient management platforms, clinical workflow tools and systems that let different healthcare software talk to each other. In every one of them, keeping patient data private came first.
               </p>
             </div>
             <div style={{ background: '#F1F5F9', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '40px' }}>
@@ -79,14 +79,14 @@ export default function HealthcarePlatformsPage() {
         <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#818CF8' }}>
             <span style={{ display: 'block', width: '20px', height: '2px', background: '#818CF8' }}></span>
-            Our Approach
+            My approach
           </div>
-          <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '56px' }}>How we build healthcare systems.</h2>
+          <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '56px' }}>How I build healthcare systems.</h2>
           <div className="grid gap-5 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { num: '01', icon: 'fa-shield-halved', title: 'Privacy by Design', desc: 'Data privacy is the foundational constraint. We design systems where patient data is encrypted, segregated, and accessible only through granular, audited permissions.' },
+              { num: '01', icon: 'fa-shield-halved', title: 'Privacy by Design', desc: 'Privacy isn’t a feature I add at the end. Patient data is encrypted, kept separate, and only reachable by the right people, with every access logged.' },
               { num: '02', icon: 'fa-arrows-left-right', title: 'Interoperability First', desc: 'HL7 FHIR-compliant APIs ensure your system can communicate with existing healthcare infrastructure: labs, pharmacies, insurance, and national health systems.' },
-              { num: '03', icon: 'fa-wifi', title: 'Offline-First Capability', desc: 'Clinical workflows cannot wait for internet connectivity. We build offline-capable interfaces that sync seamlessly when connectivity is restored.' },
+              { num: '03', icon: 'fa-wifi', title: 'Offline-First Capability', desc: 'A clinic can’t stop because the Wi-Fi dropped. I build screens that keep working offline and quietly sync once the connection is back.' },
             ].map((item) => (
               <div key={item.title} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '44px 36px' }}>
                 <div style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.1em', color: '#818CF8', marginBottom: '20px', fontFamily: 'Courier New, monospace' }}>{item.num}</div>

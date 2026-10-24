@@ -4,6 +4,8 @@ import Navbar from './Navbar'
 import Seo from './Seo'
 import Footer from './Footer'
 import CTABanner from './CTABanner'
+import AppShowcase from './AppShowcase'
+import { MobileApp } from '../data/mobileApps'
 
 interface MetricCard {
   value: string | React.ReactNode
@@ -65,13 +67,14 @@ interface Props {
   accentColor?: string
   heroBg?: string
   codeBg?: string
+  mobileApps?: MobileApp[]
 }
 
 export default function CaseStudyLayout({
   eyebrow, headline, subhead, metrics, metaItems, projectDetails, breadcrumbLabel,
   overviewProblem, overviewRole, archTitle, archSubhead, archCards, codeFilename, codeLines,
   pullQuote, decisionCards, resultCards, resultBody, founderNote1, founderNote2,
-  nextCaseTitle, nextCaseDesc, nextCaseLink, accentColor = '#3B82F6', heroBg = '#1E3A8A', codeBg = '#1E3A8A'
+  nextCaseTitle, nextCaseDesc, nextCaseLink, accentColor = '#3B82F6', heroBg = '#1E3A8A', codeBg = '#1E3A8A', mobileApps = []
 }: Props) {
   const pageUrl = typeof window !== 'undefined' ? window.location.origin + window.location.pathname : ''
   return (
@@ -176,6 +179,20 @@ export default function CaseStudyLayout({
         </div>
       </section>
 
+      {mobileApps.length > 0 && (
+        <section className="section-pad" style={{ background: '#fff', borderTop: '1px solid #E2E8F0' }}>
+          <div className="site-container">
+            <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: accentColor }}>
+              <span style={{ display: 'block', width: '20px', height: '2px', background: accentColor }}></span>
+              {mobileApps.length > 1 ? 'The Mobile Apps' : 'The Mobile App'}
+            </div>
+            <div className="flex flex-col gap-6">
+              {mobileApps.map((app) => <AppShowcase key={app.slug} app={{ ...app, caseStudy: undefined }} />)}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ARCHITECTURE */}
       <section style={{ background: '#F1F5F9' }} className="section-pad">
         <div className="site-container">
@@ -251,7 +268,7 @@ export default function CaseStudyLayout({
       {/* RESULTS */}
       <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden' }} className="section-pad">
         <div className="site-container relative z-10">
-          <h2 style={{ fontSize: 'clamp(28px, 5vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#fff', marginBottom: '32px' }}>What We Shipped</h2>
+          <h2 style={{ fontSize: 'clamp(28px, 5vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#fff', marginBottom: '32px' }}>What I Shipped</h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-0.5 rounded-xl overflow-hidden mb-10" style={{ background: 'rgba(255,255,255,0.08)' }}>
             {resultCards.map((r, i) => {
               const value = String(r.value)

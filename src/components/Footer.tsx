@@ -28,7 +28,7 @@ export default function Footer() {
               <Logo size={72} variant="blue" textColor="rgba(255,255,255,0.9)" subColor="rgba(59,130,246,0.8)" />
             </Link>
             <p style={{ fontSize: '13.5px', lineHeight: 1.7, color: 'rgba(255,255,255,0.4)', maxWidth: '320px', marginTop: '20px', marginBottom: '28px' }}>
-              A senior engineering firm specialising in enterprise software, fintech, and healthcare systems. London-informed. Africa-built.
+              Senior software engineer building fintech, healthcare and AI systems. London-informed. Africa-built.
             </p>
             <div className="flex gap-3">
               {['linkedin-in', 'github', 'x-twitter'].map((icon) => (
@@ -41,11 +41,11 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: '20px' }}>Studio</div>
+            <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: '20px' }}>Explore</div>
             <ul className="list-none flex flex-col gap-2.5" style={{ padding: 0, margin: 0 }}>
-              <li><Link to="/work" style={btnStyle}>Our Work</Link></li>
+              <li><Link to="/work" style={btnStyle}>Work</Link></li>
               <li><Link to="/services" style={btnStyle}>Services</Link></li>
-              <li><Link to="/team" style={btnStyle}>The Team</Link></li>
+              <li><Link to="/team" style={btnStyle}>About</Link></li>
               <li><Link to="/contact" style={btnStyle}>Contact</Link></li>
             </ul>
           </div>

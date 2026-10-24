@@ -6,7 +6,7 @@ const links = [
   { to: '/work', label: 'Work', match: (p: string) => p.startsWith('/work') },
   { to: '/services', label: 'Services', match: (p: string) => p.startsWith('/services') },
   { to: '/tech-stack', label: 'Tech Stack', match: (p: string) => p === '/tech-stack' },
-  { to: '/team', label: 'The Team', match: (p: string) => p === '/team' },
+  { to: '/team', label: 'About', match: (p: string) => p === '/team' },
   { to: '/contact', label: 'Contact', match: (p: string) => p === '/contact' },
 ]
 

@@ -1,8 +1,10 @@
 import React from 'react'
 import CaseStudyLayout from '../components/CaseStudyLayout'
+import { mobileApps } from '../data/mobileApps'
 export default function GigoraNetworkPage() {
   return (
     <CaseStudyLayout
+      mobileApps={mobileApps.filter(a => a.slug === 'gigora-network')}
       eyebrow="Case Study · Web3 Marketplace"
       headline={<>Gigora Network<br />Freelance Marketplace</>}
       subhead="A full-featured freelance marketplace connecting freelancers and clients, built with Laravel 13, PostgreSQL, Cloudinary, and Resend."

@@ -44,12 +44,12 @@ export default function AIIntegrationPage() {
         <div className="site-container">
           <div className="grid gap-8 md:gap-16 grid-cols-1 md:grid-cols-2">
             <div>
-              <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '20px' }}>What we build</h2>
+              <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '20px' }}>What I build</h2>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '28px' }}>
-                We bridge the gap between AI research and production deployment. Multi-model orchestration, prompt engineering, embeddings pipelines, and cost-optimised inference. Every AI integration is built with observability, fallback strategies, and human-in-the-loop safeguards.
+                There's a big gap between an impressive AI demo and something you can rely on every day. I close it by combining models, writing and testing prompts, building embeddings pipelines and keeping costs down. Everything ships with monitoring, a plan B when a model fails, and a human in the loop where it matters.
               </p>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '28px' }}>
-                Whether you need to extract structured data from unstructured documents, build a RAG-powered knowledge base, or automate complex workflows with LLM agents, we design practical AI systems that work reliably in production.
+                Maybe you need to pull clean data out of messy documents, let people search and ask questions across your own knowledge base, or hand repetitive work to an AI agent. Whatever it is, I build AI that works on a Monday morning, not just in a demo.
               </p>
             </div>
             <div style={{ background: '#F1F5F9', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '40px' }}>
@@ -79,14 +79,14 @@ export default function AIIntegrationPage() {
         <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#A78BFA' }}>
             <span style={{ display: 'block', width: '20px', height: '2px', background: '#A78BFA' }}></span>
-            Our Approach
+            My approach
           </div>
-          <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '56px' }}>How we integrate AI.</h2>
+          <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '56px' }}>How I add AI to products.</h2>
           <div className="grid gap-5 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { num: '01', icon: 'fa-puzzle-piece', title: 'Practical Pipelines', desc: 'We build chained LLM pipelines that combine multiple models for extraction, reasoning, and generation. Each stage is observable and fallback-safe.' },
+              { num: '01', icon: 'fa-puzzle-piece', title: 'Practical Pipelines', desc: 'I chain models together, one to pull out the facts, one to reason, one to write, and you can see what each step did. If a model fails, there’s always a fallback.' },
               { num: '02', icon: 'fa-database', title: 'RAG & Embeddings', desc: 'Retrieval-augmented generation grounded in your data. Vector embeddings, hybrid search, and context window optimisation for accurate, relevant outputs.' },
-              { num: '03', icon: 'fa-chart-simple', title: 'Measure & Optimise', desc: 'Token usage, latency, cost per query: every metric is tracked. We optimise model selection and prompt structure to deliver maximum value per dollar.' },
+              { num: '03', icon: 'fa-chart-simple', title: 'Measure & Optimise', desc: 'Token usage, latency, cost per query: every metric is tracked. I keep tuning which model and which prompt to use, so you get the most out of every dollar.' },
             ].map((item) => (
               <div key={item.title} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '44px 36px' }}>
                 <div style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.1em', color: '#A78BFA', marginBottom: '20px', fontFamily: 'Courier New, monospace' }}>{item.num}</div>

@@ -10,32 +10,32 @@ const services = [
     id: 'full-stack-architecture',
     icon: 'fa-layer-group',
     title: 'Full-Stack Architecture',
-    desc: 'End-to-end system design from data models and API contracts to frontend interfaces. We build scalable, maintainable codebases with clean separation of concerns.',
-    details: 'Every layer of the stack is engineered with production in mind, from database schema design and API gateway configuration through to responsive, accessible frontend components. We use modern tooling, typed languages, and rigorous code review to ship systems that teams can own and evolve.',
+    desc: 'From the database to the buttons your users tap. I build codebases that are easy to grow, easy to change, and easy for the next developer to pick up.',
+    details: 'I build every layer with real users in mind: how the data is stored, how the API talks to the frontend, and the screens people actually use. Typed code, careful reviews and modern tooling, so you end up with something your team can own and keep improving.',
     tags: ['Node.js', 'React', 'PostgreSQL', 'GraphQL', 'TypeScript', 'AWS'],
   },
   {
     id: 'fintech-systems',
     icon: 'fa-landmark',
     title: 'Fintech Systems',
-    desc: 'Payment infrastructure, ledger systems, transaction processing, and compliance-grade reporting. Built for auditability, security, and regulatory requirements.',
-    details: 'Financial systems demand precision. We build double-entry ledgers, reconcile payment rails, and implement idempotent transaction flows that prevent duplication. Every integration is designed with PCI-DSS principles and real-time monitoring.',
+    desc: 'Wallets, payments, ledgers and reports that reconcile down to the last cent. Built so your users trust it and your auditors don’t lose sleep.',
+    details: 'Money software has to be exact. I build double-entry ledgers, reconcile payment providers, and make sure a payment can never go through twice, even when the network hiccups. Every integration follows PCI-DSS principles and is monitored in real time.',
     tags: ['PCI-DSS', 'Real-time Ledger', 'Stripe', 'Paystack', 'Idempotency'],
   },
   {
     id: 'healthcare-platforms',
     icon: 'fa-heart-pulse',
     title: 'Healthcare Platforms',
-    desc: 'Clinical workflow tools, patient data systems, and interoperability solutions. HIPAA-aligned architecture with strict data governance and audit trails.',
-    details: 'Healthcare software has zero margin for error. We design systems with granular access controls, immutable audit logs, and strict data segregation. From FHIR-compliant APIs to offline-capable clinical interfaces, we build for reliability and regulatory confidence.',
+    desc: 'Tools clinicians actually want to open. Patient records and clinical workflows that keep data private by default, with a clear trail of who touched what.',
+    details: 'In healthcare, mistakes cost more than money. I build systems where people only see what they’re meant to see, every change is logged and can’t be quietly edited, and patient data stays properly separated. From FHIR-compliant APIs to screens that keep working offline, the goal is software clinicians and regulators can both trust.',
     tags: ['HIPAA', 'HL7 FHIR', 'EHR', 'DICOM', 'Audit Trails'],
   },
   {
     id: 'ai-integration',
     icon: 'fa-brain',
     title: 'AI Integration',
-    desc: 'LLM pipelines, retrieval-augmented generation, and intelligent automation. Practical AI deployed in production with measurable outcomes.',
-    details: 'We bridge the gap between AI research and production deployment. Multi-model orchestration, prompt engineering, embeddings pipelines, and cost-optimised inference. Every AI integration is built with observability, fallback strategies, and human-in-the-loop safeguards.',
+    desc: 'AI features that do real work: LLM pipelines, search over your own data, and automation that saves people time. Shipped to production, not stuck in a demo.',
+    details: 'There’s a big gap between an impressive AI demo and something you can rely on every day. I close it by combining models, writing and testing prompts, building embeddings pipelines and keeping costs down. Everything ships with monitoring, a plan B when a model fails, and a human in the loop where it matters.',
     tags: ['LLM', 'RAG', 'Claude API', 'Gemini', 'Embeddings', 'Observability'],
   },
 ]
@@ -46,7 +46,7 @@ export default function ServicesPage() {
       <Navbar />
       <Seo
         title="Services — Full-Stack, Fintech, Healthcare & AI Development | DevOmogo"
-        description="DevOmogo services: full-stack architecture (Laravel, React, NestJS), fintech systems (Stripe, Paystack, ledgers), healthcare platforms (appointments, HIPAA-aligned), and AI integration (LLM pipelines)."
+        description="What Omogo Peter Onyedika builds: full-stack architecture (Laravel, React, NestJS), fintech systems (Stripe, Paystack, ledgers), healthcare platforms (appointments, HIPAA-aligned), and AI integration (LLM pipelines)."
         keywords="full-stack development services, fintech development, healthcare software development, AI integration, Laravel, React, NestJS, Node.js"
         jsonLd={{ "@context": "https://schema.org", "@type": "ItemList", itemListElement: services.map((s, i) => ({ "@type": 'ListItem', position: i + 1, name: s.title, description: s.desc })) }}
       />
@@ -57,13 +57,13 @@ export default function ServicesPage() {
         <div className="site-container relative z-10">
           <div className="inline-flex items-center gap-2 mb-6 fade-in" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#3B82F6' }}>
             <span style={{ display: 'block', width: '24px', height: '2px', background: '#3B82F6' }}></span>
-            What We Do
+            What I do
           </div>
           <h1 className="fade-in-2" style={{ fontSize: 'clamp(32px, 8vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#fff', marginBottom: '24px', maxWidth: '900px' }}>
-            Precision engineering<br />across every layer.
+            The hard parts,<br />handled.
           </h1>
           <p className="fade-in-3" style={{ fontSize: '18px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, maxWidth: '640px', marginBottom: '56px' }}>
-            We don't dabble. We go deep, building systems that handle millions of users and billions in transactions. Here is how we do it.
+            I don't dabble. I go deep on a few things: software that moves money, software that looks after patient data, and AI that actually ships. Here's what that looks like.
           </p>
           <div className="fade-in-4 flex flex-wrap gap-3">
             {[
@@ -108,10 +108,10 @@ export default function ServicesPage() {
                 <h3 style={{ fontSize: '13px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#64748B', marginBottom: '24px' }}>What this means for you</h3>
                 <ul className="list-none flex flex-col gap-5" style={{ padding: 0, margin: 0 }}>
                   {[
-                    'Production-grade code from day one: no prototypes, no throwaway work.',
-                    'Systems designed for scale, security, and maintainability.',
-                    'Transparent delivery with fortnightly sprint reviews.',
-                    'Full documentation, runbooks, and knowledge transfer included.',
+                    'Real, production-ready code from day one. No throwaway prototypes.',
+                    'Built to grow, stay secure, and be easy to look after.',
+                    'A demo every two weeks, so you always know where things stand.',
+                    'Docs, walkthroughs and a proper handover when the project wraps up.',
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3" style={{ fontSize: '15px', lineHeight: 1.5, color: '#334155' }}>
                       <span style={{ color: '#3B82F6', flexShrink: 0, marginTop: '2px' }}><i className="fas fa-check-circle" style={{ fontSize: '16px' }}></i></span>
@@ -130,11 +130,11 @@ export default function ServicesPage() {
         <div className="site-container">
           <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#fff', marginBottom: '20px' }}>Ready to get started?</h2>
           <p style={{ fontSize: '17px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.65, maxWidth: '580px', marginBottom: '48px' }}>
-            Every engagement begins with a 60-minute technical deep-dive. No pitch decks. No sales pressure. Just honest engineering judgment.
+            Every project starts with an hour-long call. No pitch decks, no sales pressure, just an honest take on what you're building.
           </p>
           <Link to="/contact" className="inline-flex items-center gap-2 no-underline transition-all duration-200"
             style={{ background: '#fff', color: '#1E3A8A', padding: '16px 36px', borderRadius: '6px', fontSize: '15px', fontWeight: 700, letterSpacing: '-0.02em' }}>
-            Book a Discovery Call
+            Book a call
             <i className="fas fa-arrow-right" style={{ fontSize: '12px' }}></i>
           </Link>
         </div>

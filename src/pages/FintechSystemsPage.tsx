@@ -11,7 +11,7 @@ export default function FintechSystemsPage() {
       <Navbar />
       <Seo
         title="Fintech Systems Development — Payments, Ledgers, Stripe, Paystack | DevOmogo"
-        description="Fintech platform development by DevOmogo: payment integration (Stripe, PayPal, Paystack), membership and billing platforms, real-time equity systems, and secure transaction flows."
+        description="Fintech platform development by Omogo Peter Onyedika: payment integration (Stripe, PayPal, Paystack), membership and billing platforms, real-time equity systems, and secure transaction flows."
         keywords="fintech development, payment integration, Stripe developer, Paystack, membership platform, real-time WebSocket, MongoDB, MySQL"
       />
 
@@ -44,12 +44,12 @@ export default function FintechSystemsPage() {
         <div className="site-container">
           <div className="grid gap-8 md:gap-16 grid-cols-1 md:grid-cols-2">
             <div>
-              <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '20px' }}>What we build</h2>
+              <h2 style={{ fontSize: 'clamp(28px, 2.5vw, 38px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '20px' }}>What I build</h2>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '28px' }}>
-                Financial systems demand precision. We build double-entry ledgers, reconcile payment rails, and implement idempotent transaction flows that prevent duplication. Every integration is designed with PCI-DSS principles and real-time monitoring.
+                Money software has to be exact. I build double-entry ledgers, reconcile payment providers, and make sure a payment can never go through twice, even when the network hiccups. Every integration follows PCI-DSS principles and is monitored in real time.
               </p>
               <p style={{ fontSize: '17px', lineHeight: 1.75, color: '#64748B', marginBottom: '28px' }}>
-                From payment gateway integrations to custom financial reporting dashboards, our fintech work is built for auditability, security, and scale. We have processed millions in daily transaction volume across multiple African markets.
+                From plugging in payment providers to building custom finance dashboards, I make sure every number can be traced, every system is locked down, and nothing falls over as you grow. I've worked on systems handling millions in daily transaction volume across multiple African markets.
               </p>
             </div>
             <div style={{ background: '#F1F5F9', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '40px' }}>
@@ -79,14 +79,14 @@ export default function FintechSystemsPage() {
         <div className="site-container">
           <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#14B8A6' }}>
             <span style={{ display: 'block', width: '20px', height: '2px', background: '#14B8A6' }}></span>
-            Our Approach
+            My approach
           </div>
-          <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '56px' }}>How we build financial systems.</h2>
+          <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '56px' }}>How I build financial systems.</h2>
           <div className="grid gap-5 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { num: '01', icon: 'fa-book', title: 'Ledger-First Design', desc: 'Every financial system starts with the ledger. We design for double-entry accounting principles from day one, ensuring every transaction is traceable and reconcilable.' },
+              { num: '01', icon: 'fa-book', title: 'Ledger-First Design', desc: 'I always start with the ledger. Double-entry accounting from day one means every transaction can be traced and every balance adds up.' },
               { num: '02', icon: 'fa-shield', title: 'Security & Compliance', desc: 'PCI-DSS alignment, encryption at rest and in transit, granular access controls, and immutable audit logs. Security is not a feature. It is the foundation.' },
-              { num: '03', icon: 'fa-chart-line', title: 'Real-Time Operations', desc: 'Real-time balance checks, transaction status webhooks, instant reconciliation, and monitoring dashboards. Your team sees what is happening as it happens.' },
+              { num: '03', icon: 'fa-chart-line', title: 'Real-Time Operations', desc: 'Real-time balance checks, transaction status webhooks, instant reconciliation, and monitoring dashboards. You see what’s happening as it happens.' },
             ].map((item) => (
               <div key={item.title} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '44px 36px' }}>
                 <div style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.1em', color: '#14B8A6', marginBottom: '20px', fontFamily: 'Courier New, monospace' }}>{item.num}</div>
