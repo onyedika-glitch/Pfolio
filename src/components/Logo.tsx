@@ -31,7 +31,7 @@ export default function Logo({ size = 44, variant = 'navy', textColor, subColor 
           fontWeight: 600,
           letterSpacing: '0.15em',
           textTransform: 'uppercase',
-          color: subColor || '#3B82F6',
+          color: subColor || '#BE185D',
           lineHeight: 1,
         }}>Software Engineer</span>
       </div>

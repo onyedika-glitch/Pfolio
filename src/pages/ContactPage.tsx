@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 
 export default function ContactPage() {
   return (
-    <div style={{ fontFamily: 'Inter, sans-serif', background: '#F8FAFC', color: '#0F172A' }}>
+    <div style={{ fontFamily: 'Inter, sans-serif', color: '#0F172A' }}>
       <Navbar />
       <Seo
         title="Contact Omogo Peter Onyedika — Start a Project | DevOmogo"
@@ -15,24 +15,23 @@ export default function ContactPage() {
       />
 
       {/* HERO */}
-      <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>
-        <div className="absolute pointer-events-none" style={{ top: '-120px', right: '-80px', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(59,130,246,0.14) 0%, transparent 65%)' }} />
+      <section style={{ background: 'transparent', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>
         <div className="site-container relative z-10">
-          <div className="inline-flex items-center gap-2 mb-6 fade-in" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#3B82F6' }}>
-            <span style={{ display: 'block', width: '24px', height: '2px', background: '#3B82F6' }}></span>
+          <div className="inline-flex items-center gap-2 mb-6 fade-in" style={{ background: '#fff', border: '1px solid rgba(190,24,93,0.18)', padding: '6px 12px', borderRadius: '100px', fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#BE185D' }}>
+            <span style={{ display: 'block', width: '6px', height: '6px', borderRadius: '50%', background: '#BE185D' }}></span>
             Say hello
           </div>
-          <h1 className="fade-in-2" style={{ fontSize: 'clamp(32px, 8vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#fff', marginBottom: '24px', maxWidth: '900px' }}>
+          <h1 className="fade-in-2" style={{ fontSize: 'clamp(32px, 8vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '24px', maxWidth: '900px' }}>
             Got an idea?<br />Let's talk it through.
           </h1>
-          <p className="fade-in-3" style={{ fontSize: '18px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, maxWidth: '640px', marginBottom: '48px' }}>
+          <p className="fade-in-3" style={{ fontSize: '18px', color: '#1E293B', lineHeight: 1.6, maxWidth: '640px', marginBottom: '48px' }}>
             It all starts with an hour-long call. No pitch decks, no sales pressure, just an honest conversation with someone who has shipped real products to real users.
           </p>
         </div>
       </section>
 
       {/* CONTACT OPTIONS */}
-      <section style={{ background: '#fff', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
+      <section style={{ background: 'rgba(255,255,255,0.82)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
         <div className="site-container">
           <div className="grid gap-8 md:gap-12 grid-cols-1 md:grid-cols-2">
             <div>
@@ -43,13 +42,13 @@ export default function ContactPage() {
 
               <div className="flex flex-col gap-8">
                 <div className="flex items-start gap-4">
-                  <div style={{ width: '48px', height: '48px', background: 'rgba(30,58,138,0.07)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                    <i className="fas fa-envelope" style={{ fontSize: '18px', color: '#1E3A8A' }}></i>
+                  <div style={{ width: '48px', height: '48px', background: 'rgba(190,24,93,0.07)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <i className="fas fa-envelope" style={{ fontSize: '18px', color: '#0F172A' }}></i>
                   </div>
                   <div>
                     <div style={{ fontSize: '14px', fontWeight: 700, color: '#0F172A', marginBottom: '4px' }}>Email</div>
                     <a href="mailto:omogopeter@devomogo.tech" className="no-underline inline-flex items-center gap-1.5 transition-all duration-200 max-w-full"
-                      style={{ fontSize: '12px', fontWeight: 600, color: '#fff', background: '#3B82F6', padding: '8px 12px', borderRadius: '8px', wordBreak: 'break-all' }}>
+                      style={{ fontSize: '12px', fontWeight: 600, color: '#fff', background: '#BE185D', padding: '8px 12px', borderRadius: '8px', wordBreak: 'break-all' }}>
                       omogopeter@devomogo.tech
                     </a>
                     <p style={{ fontSize: '13px', color: '#64748B', marginTop: '4px' }}>I usually reply within 24 hours.</p>
@@ -57,8 +56,8 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div style={{ width: '48px', height: '48px', background: 'rgba(30,58,138,0.07)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                    <i className="fas fa-calendar" style={{ fontSize: '18px', color: '#1E3A8A' }}></i>
+                  <div style={{ width: '48px', height: '48px', background: 'rgba(190,24,93,0.07)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <i className="fas fa-calendar" style={{ fontSize: '18px', color: '#0F172A' }}></i>
                   </div>
                   <div>
                     <div style={{ fontSize: '14px', fontWeight: 700, color: '#0F172A', marginBottom: '4px' }}>Intro call</div>
@@ -69,8 +68,8 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div style={{ width: '48px', height: '48px', background: 'rgba(30,58,138,0.07)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                    <i className="fas fa-globe" style={{ fontSize: '18px', color: '#1E3A8A' }}></i>
+                  <div style={{ width: '48px', height: '48px', background: 'rgba(190,24,93,0.07)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <i className="fas fa-globe" style={{ fontSize: '18px', color: '#0F172A' }}></i>
                   </div>
                   <div>
                     <div style={{ fontSize: '14px', fontWeight: 700, color: '#0F172A', marginBottom: '4px' }}>Based in</div>
@@ -102,7 +101,7 @@ export default function ContactPage() {
                 </div>
                 <a href="mailto:omogopeter@devomogo.tech"
                   className="inline-flex items-center justify-center gap-2 no-underline transition-all duration-200"
-                  style={{ background: '#1E3A8A', color: '#fff', padding: '14px 32px', borderRadius: '8px', fontSize: '15px', fontWeight: 700, letterSpacing: '-0.01em' }}>
+                  style={{ background: '#0F172A', color: '#fff', padding: '14px 32px', borderRadius: '8px', fontSize: '15px', fontWeight: 700, letterSpacing: '-0.01em' }}>
                   Send Message <i className="fas fa-arrow-right" style={{ fontSize: '12px' }}></i>
                 </a>
               </form>
@@ -112,7 +111,7 @@ export default function ContactPage() {
       </section>
 
       {/* SOCIAL */}
-      <section style={{ background: '#F1F5F9', padding: '80px 0' }}>
+      <section style={{ background: 'rgba(255,255,255,0.6)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', padding: '80px 0' }}>
         <div className="site-container flex flex-col sm:flex-row sm:items-center sm:justify-between flex-wrap gap-6">
           <div>
             <h2 style={{ fontSize: '28px', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '8px' }}>Follow along</h2>
@@ -121,13 +120,13 @@ export default function ContactPage() {
           <div className="flex gap-4">
             <a href="https://x.com/peteromogo2" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 no-underline transition-all duration-200"
-              style={{ fontSize: '14px', fontWeight: 600, color: '#fff', background: '#1E3A8A', padding: '12px 24px', borderRadius: '8px' }}>
+              style={{ fontSize: '14px', fontWeight: 600, color: '#fff', background: '#0F172A', padding: '12px 24px', borderRadius: '8px' }}>
               <i className="fab fa-x-twitter"></i>
               X (Twitter)
             </a>
             <a href="https://github.com/onyedika-glitch" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 no-underline transition-all duration-200"
-              style={{ fontSize: '14px', fontWeight: 600, color: '#fff', background: '#1E3A8A', padding: '12px 24px', borderRadius: '8px' }}>
+              style={{ fontSize: '14px', fontWeight: 600, color: '#fff', background: '#0F172A', padding: '12px 24px', borderRadius: '8px' }}>
               <i className="fab fa-github"></i>
               GitHub
             </a>

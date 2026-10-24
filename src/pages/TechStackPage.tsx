@@ -9,7 +9,7 @@ const techCategories = [
   {
     icon: 'fa-display',
     title: 'Frontend & UI',
-    color: '#3B82F6',
+    color: '#BE185D',
     bg: '#0F172A',
     tags: ['React.js', 'Next.js', 'React Native', 'Angular', 'Tailwind CSS', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Figma', 'Framer Motion', 'Vue'],
   },
@@ -45,7 +45,7 @@ const techCategories = [
 
 export default function TechStackPage() {
   return (
-    <div style={{ fontFamily: 'Inter, sans-serif', background: '#F8FAFC', color: '#0F172A' }}>
+    <div style={{ fontFamily: 'Inter, sans-serif', color: '#0F172A' }}>
       <Navbar />
       <Seo
         title="Tech Stack — Laravel, React, NestJS, Node.js, PostgreSQL, MySQL, MongoDB | DevOmogo"
@@ -54,23 +54,22 @@ export default function TechStackPage() {
       />
 
       {/* HERO */}
-      <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>
-        <div className="absolute pointer-events-none" style={{ top: '-120px', right: '-80px', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(59,130,246,0.14) 0%, transparent 65%)' }} />
+      <section style={{ background: 'transparent', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>
         <div className="site-container relative z-10">
-          <div className="inline-flex items-center gap-2 mb-6 fade-in" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#3B82F6' }}>
-            <span style={{ display: 'block', width: '24px', height: '2px', background: '#3B82F6' }}></span>
+          <div className="inline-flex items-center gap-2 mb-6 fade-in" style={{ background: '#fff', border: '1px solid rgba(190,24,93,0.18)', padding: '6px 12px', borderRadius: '100px', fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#BE185D' }}>
+            <span style={{ display: 'block', width: '6px', height: '6px', borderRadius: '50%', background: '#BE185D' }}></span>
             What I build with
           </div>
-          <h1 className="fade-in-2" style={{ fontSize: 'clamp(32px, 8vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#fff', marginBottom: '24px', maxWidth: '900px' }}>
+          <h1 className="fade-in-2" style={{ fontSize: 'clamp(32px, 8vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '24px', maxWidth: '900px' }}>
             The tools I<br />reach for.
           </h1>
-          <p className="fade-in-3" style={{ fontSize: '18px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, maxWidth: '640px', marginBottom: '48px' }}>
+          <p className="fade-in-3" style={{ fontSize: '18px', color: '#1E293B', lineHeight: 1.6, maxWidth: '640px', marginBottom: '48px' }}>
             I pick what fits the job, not what's trending. Here's everything I use, from the screens people tap to the servers underneath, and all of it has run in production.
           </p>
           <div className="fade-in-4 flex flex-wrap gap-3">
             {techCategories.map(c => (
               <a key={c.title} href={`#${c.title.toLowerCase().replace(/[\s&]+/g, '-')}`} className="no-underline transition-all duration-200"
-                style={{ fontSize: '12px', fontWeight: 500, color: 'rgba(255,255,255,0.7)', background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.1)', padding: '10px 20px', borderRadius: '100px' }}>
+                style={{ fontSize: '12px', fontWeight: 500, color: '#1E293B', background: '#fff', border: '1px solid rgba(15,23,42,0.1)', padding: '10px 20px', borderRadius: '100px' }}>
                 <i className={`fas ${c.icon}`} style={{ marginRight: '8px', fontSize: '12px' }}></i>
                 {c.title}
               </a>
@@ -81,7 +80,7 @@ export default function TechStackPage() {
 
       {/* CATEGORIES */}
       {techCategories.map((cat, idx) => (
-        <section key={cat.title} id={cat.title.toLowerCase().replace(/[\s&]+/g, '-')} style={{ background: idx % 2 === 0 ? '#fff' : '#F1F5F9', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0', scrollMarginTop: '120px' }}>
+        <section key={cat.title} id={cat.title.toLowerCase().replace(/[\s&]+/g, '-')} style={{ ...(idx % 2 === 0 ? { background: 'rgba(255,255,255,0.82)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)' } : { background: 'rgba(255,255,255,0.6)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)' }), padding: 'clamp(3.5rem, 8vw, 6.25rem) 0', scrollMarginTop: '120px' }}>
           <div className="site-container">
             <div className="grid gap-8 md:gap-16 items-start grid-cols-1 lg:grid-cols-2">
               <div>
@@ -116,8 +115,8 @@ export default function TechStackPage() {
       ))}
 
       {/* OPEN SOURCE */}
-      <section style={{ background: '#1E3A8A', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0', position: 'relative', overflow: 'hidden' }}>
-        <div className="absolute pointer-events-none" style={{ top: '-100px', right: '-100px', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(59,130,246,0.2) 0%, transparent 70%)' }} />
+      <section style={{ background: '#0F172A', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0', position: 'relative', overflow: 'hidden' }}>
+        <div className="absolute pointer-events-none" style={{ top: '-100px', right: '-100px', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(236,72,153,0.2) 0%, transparent 70%)' }} />
         <div className="site-container relative z-10">
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '40px', flexWrap: 'wrap' }}>
             <div>

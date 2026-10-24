@@ -25,7 +25,7 @@ export default function Footer() {
         <div className="grid gap-10 md:gap-12 mb-12 md:mb-16 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 lg:col-span-1">
             <Link to="/" className="inline-flex no-underline mb-0">
-              <Logo size={72} variant="blue" textColor="rgba(255,255,255,0.9)" subColor="rgba(59,130,246,0.8)" />
+              <Logo size={72} variant="blue" textColor="rgba(255,255,255,0.9)" subColor="rgba(236,72,153,0.8)" />
             </Link>
             <p style={{ fontSize: '13.5px', lineHeight: 1.7, color: 'rgba(255,255,255,0.4)', maxWidth: '320px', marginTop: '20px', marginBottom: '28px' }}>
               Senior software engineer building fintech, healthcare and AI systems. London-informed. Africa-built.

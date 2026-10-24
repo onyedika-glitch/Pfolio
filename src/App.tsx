@@ -1,4 +1,6 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import useReveal from './hooks/useReveal'
+import DitherBackground from './components/DitherBackground'
 import HomePage from './pages/HomePage'
 import WorkPage from './pages/WorkPage'
 import ServicesPage from './pages/ServicesPage'
@@ -21,7 +23,12 @@ import SadarPropertiesPage from './pages/SadarPropertiesPage'
 import JapaCoachPage from './pages/JapaCoachPage'
 
 export default function App() {
+  const { pathname } = useLocation()
+  useReveal(pathname)
+
   return (
+    <>
+    <DitherBackground />
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/work" element={<WorkPage />} />
@@ -44,5 +51,6 @@ export default function App() {
       <Route path="/work/sadar-properties" element={<SadarPropertiesPage />} />
       <Route path="/work/japa-coach" element={<JapaCoachPage />} />
     </Routes>
+    </>
   )
 }

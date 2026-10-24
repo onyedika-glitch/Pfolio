@@ -60,7 +60,7 @@ export default function Navbar() {
             <Link
               to="/contact"
               className="text-[13px] font-semibold no-underline px-5 py-2.5 rounded-full transition-all duration-200"
-              style={{ background: '#1E3A8A', color: '#fff', letterSpacing: '0.01em' }}
+              style={{ background: '#0F172A', color: '#fff', letterSpacing: '0.01em' }}
             >
               Start a Project
             </Link>
@@ -73,7 +73,7 @@ export default function Navbar() {
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
           className="md:hidden flex items-center justify-center w-11 h-11 rounded-lg border-0 cursor-pointer"
-          style={{ background: open ? '#1E3A8A' : 'rgba(30,58,138,0.08)', color: open ? '#fff' : '#1E3A8A' }}
+          style={{ background: open ? '#0F172A' : 'rgba(190,24,93,0.08)', color: open ? '#fff' : '#0F172A' }}
           onClick={() => setOpen((v) => !v)}
         >
           <i className={`fas ${open ? 'fa-times' : 'fa-bars'}`} style={{ fontSize: '18px' }} />
@@ -95,8 +95,8 @@ export default function Navbar() {
                     to={l.to}
                     className="block no-underline rounded-xl px-4 py-3.5 text-[15px] font-semibold"
                     style={{
-                      color: active ? '#1E3A8A' : '#0F172A',
-                      background: active ? 'rgba(30,58,138,0.08)' : 'transparent',
+                      color: active ? '#0F172A' : '#0F172A',
+                      background: active ? 'rgba(190,24,93,0.08)' : 'transparent',
                     }}
                   >
                     {l.label}
@@ -108,7 +108,7 @@ export default function Navbar() {
               <Link
                 to="/contact"
                 className="block text-center no-underline rounded-xl px-4 py-3.5 text-[15px] font-bold"
-                style={{ background: '#1E3A8A', color: '#fff' }}
+                style={{ background: '#0F172A', color: '#fff' }}
               >
                 Start a Project
               </Link>

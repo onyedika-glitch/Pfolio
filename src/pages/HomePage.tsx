@@ -4,8 +4,6 @@ import Navbar from '../components/Navbar'
 import Seo from '../components/Seo'
 import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
-import DitherBackground from '../components/DitherBackground'
-import useReveal from '../hooks/useReveal'
 import AppShowcase from '../components/AppShowcase'
 import { mobileApps } from '../data/mobileApps'
 
@@ -70,11 +68,8 @@ function Lead({ children }: { children: React.ReactNode }) {
 }
 
 export default function HomePage() {
-  useReveal()
-
   return (
     <div style={{ fontFamily: 'Inter, sans-serif', color: INK, position: 'relative' }}>
-      <DitherBackground />
       <Navbar />
       <Seo
         title="DevOmogo — Senior Software Infrastructure Engineer | Fintech, Healthcare & AI Systems"

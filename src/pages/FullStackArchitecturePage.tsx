@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 import CTABanner from '../components/CTABanner'
 
 const shipped = [
-  { title: 'YouExtractor', stack: 'Laravel 11 · PHP 8.2+ · Blade · TailwindCSS · Alpine.js · PostgreSQL/MySQL · DeepSeek / Claude / Gemini / GPT-4', link: '/work/youextractor', color: '#3B82F6', icon: 'fa-brain' },
+  { title: 'YouExtractor', stack: 'Laravel 11 · PHP 8.2+ · Blade · TailwindCSS · Alpine.js · PostgreSQL/MySQL · DeepSeek / Claude / Gemini / GPT-4', link: '/work/youextractor', color: '#BE185D', icon: 'fa-brain' },
   { title: 'Gigora Network', stack: 'Laravel 13 · PostgreSQL · Cloudinary · Resend · Sanctum · Alpine.js · AI matching · Escrow + disputes', link: '/work/gigora-network', color: '#7C3AED', icon: 'fa-globe' },
   { title: 'Discount Club Cayman', stack: 'React 19 · Vite · Express 5 · MongoDB · Stripe · PayPal · Flutter (member + business apps)', link: '/work/discount-club-cayman', color: '#B45309', icon: 'fa-tag' },
   { title: 'Unlimited Healthcare', stack: 'NestJS · TypeORM · PostgreSQL · React (Vite) · TypeScript · Capacitor · Expo React Native', link: '/work/unlimited-healthcare', color: '#0D9488', icon: 'fa-stethoscope' },
@@ -19,7 +19,7 @@ const shipped = [
 
 export default function FullStackArchitecturePage() {
   return (
-    <div style={{ fontFamily: 'Inter, sans-serif', background: '#F8FAFC', color: '#0F172A' }}>
+    <div style={{ fontFamily: 'Inter, sans-serif', color: '#0F172A' }}>
       <Navbar />
       <Seo
         title="Full-Stack Architecture — Laravel, React, NestJS, Node.js Development | DevOmogo"
@@ -28,31 +28,30 @@ export default function FullStackArchitecturePage() {
       />
 
       {/* HERO */}
-      <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>
-        <div className="absolute pointer-events-none" style={{ top: '-120px', right: '-80px', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(59,130,246,0.14) 0%, transparent 65%)' }} />
+      <section style={{ background: 'transparent', position: 'relative', overflow: 'hidden', padding: 'clamp(6.5rem, 14vw, 10rem) 0 clamp(3.5rem, 8vw, 6.25rem)' }}>
         <div className="site-container relative z-10">
-          <div className="inline-flex items-center gap-2 mb-6 fade-in" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#3B82F6' }}>
+          <div className="inline-flex items-center gap-2 mb-6 fade-in" style={{ background: '#fff', border: '1px solid rgba(190,24,93,0.18)', padding: '6px 12px', borderRadius: '100px', fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#BE185D' }}>
             <Link to="/services" className="no-underline transition-all duration-200"
-              style={{ color: '#fff', background: 'rgba(255,255,255,0.1)', padding: '6px 14px', borderRadius: '6px', fontSize: '11px', fontWeight: 600 }}>Services</Link>
-            <span style={{ color: 'rgba(255,255,255,0.3)' }}>/</span>
-            <span style={{ color: 'rgba(255,255,255,0.5)' }}>Full-Stack Architecture</span>
+              style={{ color: '#0F172A', background: '#fff', padding: '6px 14px', borderRadius: '6px', fontSize: '11px', fontWeight: 600 }}>Services</Link>
+            <span style={{ color: '#475569' }}>/</span>
+            <span style={{ color: '#475569' }}>Full-Stack Architecture</span>
           </div>
-          <h1 className="fade-in-2" style={{ fontSize: 'clamp(32px, 8vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#fff', marginBottom: '24px', maxWidth: '900px' }}>
+          <h1 className="fade-in-2" style={{ fontSize: 'clamp(32px, 8vw, 76px)', fontWeight: 900, lineHeight: 1.02, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '24px', maxWidth: '900px' }}>
             Full-Stack<br />Architecture
           </h1>
-          <p className="fade-in-3" style={{ fontSize: '18px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, maxWidth: '640px', marginBottom: '48px' }}>
-            Every project on this site was engineered end-to-end: Laravel and NestJS backends, React + Vite + TypeScript frontends, Flutter and Expo mobile apps, on PostgreSQL, MySQL, and MongoDB.
+          <p className="fade-in-3" style={{ fontSize: '18px', color: '#1E293B', lineHeight: 1.6, maxWidth: '640px', marginBottom: '48px' }}>
+            Every project on this site I built end to end: Laravel and NestJS backends, React + TypeScript frontends, Flutter and Expo mobile apps, on PostgreSQL, MySQL and MongoDB.
           </p>
           <div className="fade-in-4 flex flex-wrap gap-2">
             {['Laravel', 'PHP', 'NestJS', 'Node.js', 'React', 'TypeScript', 'Flutter', 'PostgreSQL', 'MySQL', 'MongoDB', 'Docker'].map(t => (
-              <span key={t} style={{ fontSize: '12px', fontWeight: 500, padding: '6px 14px', borderRadius: '100px', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)' }}>{t}</span>
+              <span key={t} style={{ fontSize: '12px', fontWeight: 500, padding: '6px 14px', borderRadius: '100px', background: '#fff', border: '1px solid rgba(15,23,42,0.1)', color: '#1E293B' }}>{t}</span>
             ))}
           </div>
         </div>
       </section>
 
       {/* OVERVIEW */}
-      <section style={{ background: '#fff', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
+      <section style={{ background: 'rgba(255,255,255,0.82)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
         <div className="site-container">
           <div className="grid gap-8 md:gap-16 grid-cols-1 md:grid-cols-2">
             <div>
@@ -76,7 +75,7 @@ export default function FullStackArchitecturePage() {
                   'Deployed on Docker, Vercel, Render, and Hostinger VPS',
                 ].map((item, i) => (
                   <li key={i} className="flex gap-3" style={{ fontSize: '15px', lineHeight: 1.5, color: '#334155' }}>
-                    <span style={{ color: '#3B82F6', flexShrink: 0, marginTop: '2px' }}><i className="fas fa-check-circle" style={{ fontSize: '16px' }}></i></span>
+                    <span style={{ color: '#BE185D', flexShrink: 0, marginTop: '2px' }}><i className="fas fa-check-circle" style={{ fontSize: '16px' }}></i></span>
                     {item}
                   </li>
                 ))}
@@ -87,10 +86,10 @@ export default function FullStackArchitecturePage() {
       </section>
 
       {/* APPROACH */}
-      <section style={{ background: '#F1F5F9', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
+      <section style={{ background: 'rgba(255,255,255,0.6)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
         <div className="site-container">
-          <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#3B82F6' }}>
-            <span style={{ display: 'block', width: '20px', height: '2px', background: '#3B82F6' }}></span>
+          <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#BE185D' }}>
+            <span style={{ display: 'block', width: '20px', height: '2px', background: '#BE185D' }}></span>
             How I work
           </div>
           <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '56px' }}>How the shipped systems were built.</h2>
@@ -101,11 +100,11 @@ export default function FullStackArchitecturePage() {
               { num: '03', icon: 'fa-bolt', title: 'Real-Time Where It Matters', desc: 'Socket.io WebSocket servers power live messaging (Gigora), replacing REST polling for the parts of the product that change constantly.' },
             ].map((item) => (
               <div key={item.title} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '44px 36px' }}>
-                <div style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.1em', color: '#3B82F6', marginBottom: '20px', fontFamily: 'Courier New, monospace' }}>{item.num}</div>
-                <div style={{ width: '44px', height: '44px', background: 'rgba(30,58,138,0.07)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
-                  <i className={`fas ${item.icon}`} style={{ fontSize: '18px', color: '#1E3A8A' }}></i>
+                <div style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.1em', color: '#BE185D', marginBottom: '20px', fontFamily: 'Courier New, monospace' }}>{item.num}</div>
+                <div style={{ width: '44px', height: '44px', background: 'rgba(190,24,93,0.07)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
+                  <i className={`fas ${item.icon}`} style={{ fontSize: '18px', color: '#0F172A' }}></i>
                 </div>
-                <h3 style={{ fontSize: '18px', fontWeight: 800, letterSpacing: '-0.03em', color: '#1E3A8A', marginBottom: '12px' }}>{item.title}</h3>
+                <h3 style={{ fontSize: '18px', fontWeight: 800, letterSpacing: '-0.03em', color: '#0F172A', marginBottom: '12px' }}>{item.title}</h3>
                 <p style={{ fontSize: '14px', lineHeight: 1.7, color: '#64748B' }}>{item.desc}</p>
               </div>
             ))}
@@ -114,10 +113,10 @@ export default function FullStackArchitecturePage() {
       </section>
 
       {/* TECH STACK */}
-      <section style={{ background: '#fff', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
+      <section style={{ background: 'rgba(255,255,255,0.82)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
         <div className="site-container">
-          <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#3B82F6' }}>
-            <span style={{ display: 'block', width: '20px', height: '2px', background: '#3B82F6' }}></span>
+          <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#BE185D' }}>
+            <span style={{ display: 'block', width: '20px', height: '2px', background: '#BE185D' }}></span>
             Technologies
           </div>
           <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '48px' }}>The stack the projects actually run on.</h2>
@@ -130,7 +129,7 @@ export default function FullStackArchitecturePage() {
               { cat: 'Deployment', items: ['Docker', 'Docker Compose', 'Vercel', 'Render', 'Hostinger VPS', 'Cloudinary', 'Resend'] },
             ].map(group => (
               <div key={group.cat} style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: '10px', padding: '28px 24px' }}>
-                <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#3B82F6', marginBottom: '16px' }}>{group.cat}</div>
+                <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#BE185D', marginBottom: '16px' }}>{group.cat}</div>
                 <div className="flex flex-wrap gap-2">
                   {group.items.map(item => (
                     <span key={item} style={{ fontSize: '12px', fontWeight: 500, color: '#334155', background: '#fff', border: '1px solid #E2E8F0', padding: '4px 10px', borderRadius: '4px' }}>{item}</span>
@@ -143,10 +142,10 @@ export default function FullStackArchitecturePage() {
       </section>
 
       {/* PROVEN IN PRODUCTION */}
-      <section style={{ background: '#F1F5F9', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
+      <section style={{ background: 'rgba(255,255,255,0.6)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', padding: 'clamp(3.5rem, 8vw, 6.25rem) 0' }}>
         <div className="site-container">
-          <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#3B82F6' }}>
-            <span style={{ display: 'block', width: '20px', height: '2px', background: '#3B82F6' }}></span>
+          <div className="inline-flex items-center gap-2 mb-5" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#BE185D' }}>
+            <span style={{ display: 'block', width: '20px', height: '2px', background: '#BE185D' }}></span>
             Proven in Production
           </div>
           <h2 style={{ fontSize: 'clamp(32px, 3vw, 48px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '48px' }}>Shipped with this stack.</h2>

@@ -7,7 +7,7 @@ import CTABanner from '../components/CTABanner'
 
 const projects = [
   { id: 22, cat: 'ai', catLabel: 'AI · EdTech · Founded', catColor: '#01B8C6', bg: '#032A2E', img: 'japa_coach_ai_ielts_practice_app_teal.jpg', icon: 'fa-microphone-lines', topBar: 'linear-gradient(90deg, #01B8C6, #F5A524)', title: 'Japa Coach: AI IELTS Practice', desc: 'AI IELTS coach for Nigerians: speak answers out loud, get an estimated band and sentence-level fixes in minutes. Web app plus a native Flutter Android app. Founded.', tags: ['Laravel', 'Vue 3', 'Flutter', 'FastAPI', 'Whisper', 'PostgreSQL'], link: '/work/japa-coach', live: 'https://japacoach.com' },
-  { id: 1, cat: 'ai', catLabel: 'AI · Developer Tool', catColor: '#3B82F6', bg: '#0F172A', img: 'youextractor_llm_ai_pipeline_dark_dashboard.jpg', icon: 'fa-brain', topBar: 'linear-gradient(90deg, #3B82F6, #6366F1)', title: 'YouExtractor: Tutorial → Course & Code Generator', desc: 'Turns YouTube coding tutorials into structured guides and runnable code projects using AI (DeepSeek, Claude, Gemini, GPT-4).', tags: ['Laravel', 'PHP', 'Blade', 'TailwindCSS', 'Gemini', 'GPT-4'], link: '/work/youextractor', live: 'https://youextractor.me' },
+  { id: 1, cat: 'ai', catLabel: 'AI · Developer Tool', catColor: '#BE185D', bg: '#0F172A', img: 'youextractor_llm_ai_pipeline_dark_dashboard.jpg', icon: 'fa-brain', topBar: 'linear-gradient(90deg, #BE185D, #6366F1)', title: 'YouExtractor: Tutorial → Course & Code Generator', desc: 'Turns YouTube coding tutorials into structured guides and runnable code projects using AI (DeepSeek, Claude, Gemini, GPT-4).', tags: ['Laravel', 'PHP', 'Blade', 'TailwindCSS', 'Gemini', 'GPT-4'], link: '/work/youextractor', live: 'https://youextractor.me' },
   { id: 18, cat: 'marketplace', catLabel: 'Web3 · Marketplace', catColor: '#7C3AED', bg: '#1E1B4B', img: 'fintech_dashboard_dark_ui.jpg', icon: 'fa-globe', topBar: 'linear-gradient(90deg, #7C3AED, #A855F7)', title: 'Gigora Network: Web3 Freelance Marketplace', desc: 'Community-driven Web3 freelance marketplace. Vetted talent, secure on-chain escrow, and a global remote job board.', tags: ['React', 'Node.js', 'Web3', 'Blockchain', 'Escrow', 'Marketplace'], link: '/work/gigora-network', live: 'https://gigoranetwork.com' },
   { id: 11, cat: 'web', catLabel: 'WordPress · Incubation Hub', catColor: '#D97706', bg: '#1C1000', img: 'sparks_ventures_hub_startup_accelerator_saas_dashboard_amber.jpg', icon: 'fa-building', topBar: 'linear-gradient(90deg, #F59E0B, #FBBF24)', title: 'Sparks Ventures Hub: Business Incubation Hub', desc: 'WordPress feature work on a live incubation hub: Tutor LMS academy, WooCommerce courses, Elementor program pages, and events.', tags: ['WordPress', 'Elementor', 'Tutor LMS', 'WooCommerce'], link: '/work/sparks-ventures', live: 'https://sparksventureshub.com' },
   { id: 19, cat: 'web', catLabel: 'Program Landing · EdTech', catColor: '#D97706', bg: '#1C1000', img: 'sparksefp.jpg', icon: 'fa-graduation-cap', topBar: 'linear-gradient(90deg, #F59E0B, #FBBF24)', title: 'Sparks EFP: 4-Week Foundation Programme', desc: 'Laravel landing page for a four-week virtual entrepreneurship programme: Discover / Build / Launch curriculum, graduation package, and Paystack checkout.', tags: ['Laravel', 'Blade', 'Paystack', 'PHP'], link: '/work/sparks-efp', live: 'https://efp.sparksventureshub.com' },
@@ -43,7 +43,7 @@ export default function WorkPage() {
   const visible = activeFilter === 'all' ? projects : projects.filter(p => p.cat === activeFilter)
 
   return (
-    <div style={{ fontFamily: 'Inter, sans-serif', background: '#F8FAFC', color: '#0F172A' }}>
+    <div style={{ fontFamily: 'Inter, sans-serif', color: '#0F172A' }}>
       <Navbar />
       <Seo
         title="Work & Case Studies — DevOmogo | Fintech, Healthcare, AI, Marketplace, Real Estate"
@@ -53,22 +53,21 @@ export default function WorkPage() {
       />
 
       {/* PAGE HERO */}
-      <section style={{ background: '#1E3A8A', position: 'relative', overflow: 'hidden' }} className="pt-28 md:pt-40 pb-12 md:pb-20">
-        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
-        <div className="absolute pointer-events-none hidden sm:block" style={{ top: '-120px', right: '-80px', width: '700px', height: '700px', background: 'radial-gradient(circle, rgba(59,130,246,0.14) 0%, transparent 65%)' }} />
+      <section style={{ background: 'transparent', position: 'relative', overflow: 'hidden' }} className="pt-28 md:pt-40 pb-12 md:pb-20">
+        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(236,72,153,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(236,72,153,0.04) 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
         <div className="site-container relative z-10">
-          <div className="inline-flex items-center gap-2 mb-6 fade-in" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#3B82F6' }}>
-            <span style={{ display: 'block', width: '24px', height: '2px', background: '#3B82F6' }}></span>
+          <div className="inline-flex items-center gap-2 mb-6 fade-in" style={{ background: '#fff', border: '1px solid rgba(190,24,93,0.18)', padding: '6px 12px', borderRadius: '100px', fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#BE185D' }}>
+            <span style={{ display: 'block', width: '6px', height: '6px', borderRadius: '50%', background: '#BE185D' }}></span>
             Selected Work
           </div>
-          <h1 className="fade-in-2" style={{ fontSize: 'clamp(36px, 9vw, 80px)', fontWeight: 900, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#fff', marginBottom: '20px' }}>All Work</h1>
-          <p className="fade-in-3" style={{ fontSize: 'clamp(15px, 2.5vw, 17px)', color: 'rgba(255,255,255,0.65)', lineHeight: 1.65, maxWidth: '680px', marginBottom: '40px' }}>Everything I've shipped, from AI tools and fintech platforms to healthcare apps and websites. Each one is live, with the full story behind it.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-0.5 rounded-xl overflow-hidden fade-in-4" style={{ background: 'rgba(255,255,255,0.08)', maxWidth: '680px' }}>
+          <h1 className="fade-in-2" style={{ fontSize: 'clamp(36px, 9vw, 80px)', fontWeight: 900, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#0F172A', marginBottom: '20px' }}>All Work</h1>
+          <p className="fade-in-3" style={{ fontSize: 'clamp(15px, 2.5vw, 17px)', color: '#1E293B', lineHeight: 1.65, maxWidth: '680px', marginBottom: '40px' }}>Everything I've shipped, from AI tools and fintech platforms to healthcare apps and websites. Each one is live, with the full story behind it.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-0.5 rounded-xl overflow-hidden fade-in-4" style={{ background: '#fff', maxWidth: '680px' }}>
             {[['10', 'Projects', 'Shipped to Production'], ['5+', 'Years', 'Engineering Experience'], ['6', 'Domains', 'Healthcare · Fintech · AI · Web · Marketplace · Real Estate']].map(([val, main, sub]) => (
-              <div key={main} className="p-5 md:p-7" style={{ background: 'rgba(255,255,255,0.04)' }}>
-                <div style={{ fontSize: 'clamp(24px, 5vw, 32px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#fff', lineHeight: 1, marginBottom: '8px' }}>{val}</div>
-                <div style={{ fontSize: '13px', fontWeight: 600, color: 'rgba(255,255,255,0.75)', marginBottom: '2px' }}>{main}</div>
-                <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.02em' }}>{sub}</div>
+              <div key={main} className="p-5 md:p-7" style={{ background: '#fff' }}>
+                <div style={{ fontSize: 'clamp(24px, 5vw, 32px)', fontWeight: 900, letterSpacing: '-0.04em', color: '#0F172A', lineHeight: 1, marginBottom: '8px' }}>{val}</div>
+                <div style={{ fontSize: '13px', fontWeight: 600, color: '#1E293B', marginBottom: '2px' }}>{main}</div>
+                <div style={{ fontSize: '11px', color: '#475569', letterSpacing: '0.02em' }}>{sub}</div>
               </div>
             ))}
           </div>
@@ -90,7 +89,7 @@ export default function WorkPage() {
                 fontWeight: 600,
                 cursor: 'pointer',
                 border: activeFilter === f.key ? 'none' : '1.5px solid #E2E8F0',
-                background: activeFilter === f.key ? '#1E3A8A' : 'transparent',
+                background: activeFilter === f.key ? '#0F172A' : 'transparent',
                 color: activeFilter === f.key ? '#fff' : '#64748B',
               }}
             >
@@ -101,7 +100,7 @@ export default function WorkPage() {
       </div>
 
       {/* PROJECTS */}
-      <section style={{ background: '#F8FAFC', padding: '56px 0 100px' }}>
+      <section style={{ background: 'rgba(255,255,255,0.6)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', padding: '56px 0 100px' }}>
         <div className="site-container">
           <div style={{ fontSize: '12px', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#64748B', marginBottom: '32px' }}>
             Showing {visible.length} project{visible.length !== 1 ? 's' : ''}{activeFilter !== 'all' ? ` in ${filters.find(f => f.key === activeFilter)?.label}` : ''}
@@ -125,10 +124,10 @@ export default function WorkPage() {
                   <h3 style={{ fontSize: '18px', fontWeight: 800, letterSpacing: '-0.03em', color: '#0F172A', marginBottom: '8px', lineHeight: 1.2 }}>{p.title}</h3>
                   <p style={{ fontSize: '13.5px', lineHeight: 1.65, color: '#64748B', marginBottom: '20px', flex: 1 }}>{p.desc}</p>
                   <div className="flex flex-wrap gap-1.5 mb-5">
-                    {p.tags.map(t => <span key={t} style={{ fontSize: '10.5px', fontWeight: 500, padding: '3px 9px', borderRadius: '4px', background: 'rgba(30,58,138,0.06)', color: '#1E3A8A' }}>{t}</span>)}
+                    {p.tags.map(t => <span key={t} style={{ fontSize: '10.5px', fontWeight: 500, padding: '3px 9px', borderRadius: '4px', background: 'rgba(190,24,93,0.06)', color: '#0F172A' }}>{t}</span>)}
                   </div>
                   <Link to={p.link} onClick={(e) => e.stopPropagation()} className="inline-flex items-center gap-1.5 no-underline transition-all duration-200"
-                    style={{ fontSize: '12.5px', fontWeight: 700, color: '#fff', background: '#1E3A8A', padding: '10px 20px', borderRadius: '8px' }}>
+                    style={{ fontSize: '12.5px', fontWeight: 700, color: '#fff', background: '#0F172A', padding: '10px 20px', borderRadius: '8px' }}>
                     View case study <i className="fas fa-arrow-right" style={{ fontSize: '11px' }}></i>
                   </Link>
                 </div>
