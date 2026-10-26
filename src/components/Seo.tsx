@@ -38,6 +38,19 @@ export default function Seo({ title, description, keywords, jsonLd }: SeoProps) 
     }
     canonical.href = window.location.origin + window.location.pathname
 
+    // For AI agents: a plain summary and the markdown copy built by scripts/markdown/build.mjs
+    upsertMeta('name', 'ai-summary', description)
+    let alternate = document.head.querySelector('link[rel="alternate"][type="text/markdown"]') as HTMLLinkElement | null
+    if (!alternate) {
+      alternate = document.createElement('link')
+      alternate.rel = 'alternate'
+      alternate.type = 'text/markdown'
+      alternate.title = 'Markdown version'
+      document.head.appendChild(alternate)
+    }
+    const path = window.location.pathname.replace(/\/$/, '')
+    alternate.setAttribute('href', path ? `${path}.md` : '/index.md')
+
     // Replace previously injected JSON-LD blocks with this page's data
     document.head.querySelectorAll('script[data-seo-jsonld]').forEach(el => el.remove())
     if (jsonLd) {

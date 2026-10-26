@@ -1,22 +1,33 @@
 # https://devomogo.tech/robots.txt
+# Keep in sync with /llms.txt and /ai.txt
+# AI agents: site guide at https://devomogo.tech/llms.txt, usage policy at https://devomogo.tech/ai.txt,
+# markdown copy of any page at /<page>.md (home: /index.md)
+
 User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: https://devomogo.tech/sitemap.xml
+# Search and AI crawlers are all welcome, including for training.
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: ClaudeBot
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Bytespider
+Allow: /
 
-# Common social / search crawlers
+# Social link previews
 User-agent: WhatsApp
-Allow: /
-
 User-agent: facebookexternalhit
-Allow: /
-
 User-agent: Twitterbot
-Allow: /
-
 User-agent: LinkedInBot
 Allow: /
 
-User-agent: Googlebot
-Allow: /
+Sitemap: https://devomogo.tech/sitemap.xml

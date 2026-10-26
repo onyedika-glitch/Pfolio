@@ -2,7 +2,68 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/work/(aning|atom-group|caremandate|chef-academy|eportal|floorhosting|handyman-ng|ilearnova|more|pension-app|placebet247|restaurant-ui|selfany|sportal|student-board|unlimited-healthcare)", "destination": "/work", "permanent": true }
+    {
+      "source": "/work/(aning|atom-group|caremandate|chef-academy|eportal|floorhosting|handyman-ng|ilearnova|more|pension-app|placebet247|restaurant-ui|selfany|sportal|student-board|unlimited-healthcare)",
+      "destination": "/work",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/markdown.*"
+        }
+      ],
+      "missing": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/html.*"
+        }
+      ],
+      "destination": "/index.md",
+      "permanent": false
+    },
+    {
+      "source": "/:page(work|services|tech-stack|team|contact)",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/markdown.*"
+        }
+      ],
+      "missing": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/html.*"
+        }
+      ],
+      "destination": "/:page.md",
+      "permanent": false
+    },
+    {
+      "source": "/:section(work|services)/:slug([a-z0-9-]+)",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/markdown.*"
+        }
+      ],
+      "missing": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/html.*"
+        }
+      ],
+      "destination": "/:section/:slug.md",
+      "permanent": false
+    }
   ],
   "rewrites": [
     {
@@ -14,23 +75,346 @@
     {
       "source": "/og-image.jpg",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" },
-        { "key": "Content-Type", "value": "image/jpeg" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        },
+        {
+          "key": "Content-Type",
+          "value": "image/jpeg"
+        }
       ]
     },
     {
       "source": "/sitemap.xml",
       "headers": [
-        { "key": "Content-Type", "value": "application/xml; charset=utf-8" },
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" }
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
       ]
     },
     {
       "source": "/robots.txt",
       "headers": [
-        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/((?:work|services|tech-stack|team|contact)(?:/[a-z0-9-]+)?)?",
+      "headers": [
+        {
+          "key": "Vary",
+          "value": "Accept"
+        },
+        {
+          "key": "Link",
+          "value": "</llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.md",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, follow"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/(llms\\.txt|llms-full\\.txt|ai\\.txt)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=86400, stale-while-revalidate=604800"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/index.md",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://devomogo.tech/>; rel=\"canonical\""
+        },
+        {
+          "key": "Content-Location",
+          "value": "https://devomogo.tech/"
+        }
+      ]
+    },
+    {
+      "source": "/work.md",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://devomogo.tech/work>; rel=\"canonical\""
+        },
+        {
+          "key": "Content-Location",
+          "value": "https://devomogo.tech/work"
+        }
+      ]
+    },
+    {
+      "source": "/services.md",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://devomogo.tech/services>; rel=\"canonical\""
+        },
+        {
+          "key": "Content-Location",
+          "value": "https://devomogo.tech/services"
+        }
+      ]
+    },
+    {
+      "source": "/tech-stack.md",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://devomogo.tech/tech-stack>; rel=\"canonical\""
+        },
+        {
+          "key": "Content-Location",
+          "value": "https://devomogo.tech/tech-stack"
+        }
+      ]
+    },
+    {
+      "source": "/team.md",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://devomogo.tech/team>; rel=\"canonical\""
+        },
+        {
+          "key": "Content-Location",
+          "value": "https://devomogo.tech/team"
+        }
+      ]
+    },
+    {
+      "source": "/contact.md",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://devomogo.tech/contact>; rel=\"canonical\""
+        },
+        {
+          "key": "Content-Location",
+          "value": "https://devomogo.tech/contact"
+        }
+      ]
+    },
+    {
+      "source": "/services/fullstackarchitecture.md",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://devomogo.tech/services/fullstackarchitecture>; rel=\"canonical\""
+        },
+        {
+          "key": "Content-Location",
+          "value": "https://devomogo.tech/services/fullstackarchitecture"
+        }
+      ]
+    },
+    {
+      "source": "/services/fintechsystems.md",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://devomogo.tech/services/fintechsystems>; rel=\"canonical\""
+        },
+        {
+          "key": "Content-Location",
+          "value": "https://devomogo.tech/services/fintechsystems"
+        }
+      ]
+    },
+    {
+      "source": "/services/healthcareplatforms.md",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://devomogo.tech/services/healthcareplatforms>; rel=\"canonical\""
+        },
+        {
+          "key": "Content-Location",
+          "value": "https://devomogo.tech/services/healthcareplatforms"
+        }
+      ]
+    },
+    {
+      "source": "/services/aiintegration.md",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://devomogo.tech/services/aiintegration>; rel=\"canonical\""
+        },
+        {
+          "key": "Content-Location",
+          "value": "https://devomogo.tech/services/aiintegration"
+        }
+      ]
+    },
+    {
+      "source": "/work/youextractor.md",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://devomogo.tech/work/youextractor>; rel=\"canonical\""
+        },
+        {
+          "key": "Content-Location",
+          "value": "https://devomogo.tech/work/youextractor"
+        }
+      ]
+    },
+    {
+      "source": "/work/gigora-network.md",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://devomogo.tech/work/gigora-network>; rel=\"canonical\""
+        },
+        {
+          "key": "Content-Location",
+          "value": "https://devomogo.tech/work/gigora-network"
+        }
+      ]
+    },
+    {
+      "source": "/work/discount-club-cayman.md",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://devomogo.tech/work/discount-club-cayman>; rel=\"canonical\""
+        },
+        {
+          "key": "Content-Location",
+          "value": "https://devomogo.tech/work/discount-club-cayman"
+        }
+      ]
+    },
+    {
+      "source": "/work/ssabhi.md",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://devomogo.tech/work/ssabhi>; rel=\"canonical\""
+        },
+        {
+          "key": "Content-Location",
+          "value": "https://devomogo.tech/work/ssabhi"
+        }
+      ]
+    },
+    {
+      "source": "/work/sparks-ventures.md",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://devomogo.tech/work/sparks-ventures>; rel=\"canonical\""
+        },
+        {
+          "key": "Content-Location",
+          "value": "https://devomogo.tech/work/sparks-ventures"
+        }
+      ]
+    },
+    {
+      "source": "/work/sparks-efp.md",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://devomogo.tech/work/sparks-efp>; rel=\"canonical\""
+        },
+        {
+          "key": "Content-Location",
+          "value": "https://devomogo.tech/work/sparks-efp"
+        }
+      ]
+    },
+    {
+      "source": "/work/sparks-funnel.md",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://devomogo.tech/work/sparks-funnel>; rel=\"canonical\""
+        },
+        {
+          "key": "Content-Location",
+          "value": "https://devomogo.tech/work/sparks-funnel"
+        }
+      ]
+    },
+    {
+      "source": "/work/sadar-properties.md",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://devomogo.tech/work/sadar-properties>; rel=\"canonical\""
+        },
+        {
+          "key": "Content-Location",
+          "value": "https://devomogo.tech/work/sadar-properties"
+        }
+      ]
+    },
+    {
+      "source": "/work/japa-coach.md",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://devomogo.tech/work/japa-coach>; rel=\"canonical\""
+        },
+        {
+          "key": "Content-Location",
+          "value": "https://devomogo.tech/work/japa-coach"
+        }
       ]
     }
   ]
